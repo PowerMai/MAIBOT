@@ -1,52 +1,25 @@
 {
   "user_id": "default",
-  "updated_at": "2026-03-11T11:29:18.701778",
+  "updated_at": "2026-03-11T18:06:28.643420",
   "records": [
     {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/ea0742b408a85d56.md",
-      "domain": "contract",
-      "updated_at": "2026-03-09T21:01:42.962053",
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/eed226fa07fd5d1b.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T13:06:19.074202",
       "style_profile": {
         "doc_type": "md",
         "style_signals": {
           "has_headings": true,
           "has_bullets": true,
-          "avg_sentence_len": 40.43,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [
-          "美元的"
-        ],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/ac91829d44af1907.md",
-      "domain": "management",
-      "updated_at": "2026-03-09T21:01:43.046584",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 47.08,
+          "avg_sentence_len": 42.92,
           "paragraph_count": 5
         },
         "preferred_terms": [
           "日前",
-          "历史数据显示",
-          "年间",
-          "伊朗通胀率多在",
-          "区间",
-          "据伊朗国家统计局",
-          "的数据",
-          "月的通货膨胀率比",
-          "去年同期上升至",
-          "年至",
-          "伊朗消费者物价指",
-          "月的"
+          "伊朗",
+          "中国古人云",
+          "兵者",
+          "凶器也"
         ],
         "sample_headings": [
           "## 1."
@@ -54,21 +27,19 @@
       }
     },
     {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/ffff1d75a7a1f8ab.md",
-      "domain": "general",
-      "updated_at": "2026-03-09T21:01:43.133491",
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/5cb6ae19bf77b957.md",
+      "domain": "contract",
+      "updated_at": "2026-03-11T13:06:19.176425",
       "style_profile": {
         "doc_type": "md",
         "style_signals": {
           "has_headings": true,
           "has_bullets": true,
-          "avg_sentence_len": 38.14,
+          "avg_sentence_len": 50.91,
           "paragraph_count": 5
         },
         "preferred_terms": [
-          "同比下降",
-          "个百分点",
-          "年全球青年就业趋"
+          "总量的"
         ],
         "sample_headings": [
           "## 1."
@@ -76,23 +47,20 @@
       }
     },
     {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/68b7ccacbab88c80.md",
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/b7db7ed79f222fd5.md",
       "domain": "general",
-      "updated_at": "2026-03-09T21:01:43.426115",
+      "updated_at": "2026-03-11T13:06:19.277601",
       "style_profile": {
         "doc_type": "md",
         "style_signals": {
           "has_headings": true,
           "has_bullets": true,
-          "avg_sentence_len": 51.73,
+          "avg_sentence_len": 40.64,
           "paragraph_count": 5
         },
         "preferred_terms": [
-          "货币贬值",
-          "里亚尔",
-          "万里亚尔兑",
-          "美元可兑换",
-          "伊朗里亚尔"
+          "哈梅内伊的女儿",
+          "女婿"
         ],
         "sample_headings": [
           "## 1."
@@ -100,265 +68,9 @@
       }
     },
     {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/f314e7a70663107f.md",
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/0906c26ec5006ba3.md",
       "domain": "general",
-      "updated_at": "2026-03-09T21:01:43.516322",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 57.8,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [
-          "居世界第",
-          "美元",
-          "美元的",
-          "亿美元",
-          "人均只有"
-        ],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/2acd6121d92bbad3.md",
-      "domain": "general",
-      "updated_at": "2026-03-09T21:06:59.896046",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 70.75,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/92133d6b1a421e89.md",
-      "domain": "general",
-      "updated_at": "2026-03-09T21:07:00.214102",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 71.75,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/1442e55034b8447c.md",
-      "domain": "general",
-      "updated_at": "2026-03-09T21:07:00.313789",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 51.64,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [
-          "即约",
-          "双鱼座",
-          "年偏移"
-        ],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/8641c171086a587e.md",
-      "domain": "general",
-      "updated_at": "2026-03-09T21:28:05.952088",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 56.5,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [
-          "日本",
-          "都道府県",
-          "页面存档备份",
-          "存于",
-          "互联网档案馆",
-          "地区经济",
-          "地区的经济"
-        ],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/d08c2e2f24197163.md",
-      "domain": "general",
-      "updated_at": "2026-03-09T21:28:06.051400",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 48.67,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [
-          "日立",
-          "富士通",
-          "日立製作所",
-          "国内",
-          "前年",
-          "日本",
-          "市場",
-          "成長",
-          "維持",
-          "上位",
-          "浮上",
-          "億円"
-        ],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/7c4855333956257a.md",
-      "domain": "general",
-      "updated_at": "2026-03-09T21:28:06.141713",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 37.4,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [
-          "万人",
-          "少子化",
-          "年日本厚生劳动省",
-          "人口下降了",
-          "年的",
-          "同時",
-          "進行"
-        ],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/a3c7b9fd858a7b29.md",
-      "domain": "general",
-      "updated_at": "2026-03-09T21:28:06.230467",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 58.2,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [
-          "科技行业",
-          "年秋季策略会速递",
-          "日本论坛",
-          "中国企业出海和日",
-          "企全球竞争力",
-          "我们在华泰策略会",
-          "上组织了日本投资",
-          "相关分论坛",
-          "本次论坛",
-          "我们邀请到东京证",
-          "券交易所",
-          "三井住友"
-        ],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/0a60c48e8f7479f1.md",
-      "domain": "general",
-      "updated_at": "2026-03-09T21:28:06.321411",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 35.44,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/208edaefa3a066fa.md",
-      "domain": "general",
-      "updated_at": "2026-03-09T21:28:06.413218",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 47.5,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/330dd4b7cc2d6ab9.md",
-      "domain": "technical",
-      "updated_at": "2026-03-09T21:28:06.504120",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 57.8,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [
-          "日本",
-          "億米",
-          "市場規模",
-          "今後",
-          "亿美元"
-        ],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/39e5f76ae1accfc5.md",
-      "domain": "finance",
-      "updated_at": "2026-03-09T21:28:06.600634",
+      "updated_at": "2026-03-11T13:06:19.378400",
       "style_profile": {
         "doc_type": "md",
         "style_signals": {
@@ -367,8 +79,28 @@
           "avg_sentence_len": 47.42,
           "paragraph_count": 5
         },
+        "preferred_terms": [],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/7368d4be112ca134.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T13:06:19.481596",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 60.56,
+          "paragraph_count": 5
+        },
         "preferred_terms": [
-          "数字厅"
+          "安理会否决旨在延",
+          "中古",
+          "時間前"
         ],
         "sample_headings": [
           "## 1."
@@ -376,15 +108,126 @@
       }
     },
     {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/a9d1436f50e5a0e9.md",
-      "domain": "technical",
-      "updated_at": "2026-03-09T21:28:06.697302",
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/e055d8af0e6b8bb6.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T13:06:19.583372",
       "style_profile": {
         "doc_type": "md",
         "style_signals": {
           "has_headings": true,
           "has_bullets": true,
-          "avg_sentence_len": 82.71,
+          "avg_sentence_len": 52.45,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [
+          "核设施",
+          "以色列于",
+          "即国际原子能机构",
+          "指控伊朗违反核不",
+          "扩散义务的翌日发",
+          "动突袭",
+          "主要锁定军事及核",
+          "设施及相关人员",
+          "击毙多名伊斯兰革",
+          "命卫队高层及主要",
+          "核科学家",
+          "以军亦摧毁数个空"
+        ],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/0468c238a568438e.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T13:36:53.644036",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 43.85,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [
+          "生态学",
+          "可能给环境带来灾",
+          "难性后果",
+          "这场"
+        ],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/f218f8ec00e81516.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T13:36:53.945919",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 43.77,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [
+          "亿美元",
+          "斯兰",
+          "另据",
+          "国家通讯社",
+          "石油收入近年来占",
+          "其政府预算收入的",
+          "比例约为",
+          "路透社",
+          "年曾估算",
+          "日均出口",
+          "万桶石油",
+          "油价按"
+        ],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/3ce3ce7c9f1a72df.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T13:36:54.046290",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 47.67,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [
+          "万人",
+          "陆军",
+          "空军",
+          "伊朗空军",
+          "其中",
+          "海军",
+          "防空军"
+        ],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/8582a5496219f529.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T13:36:54.146999",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 51.73,
           "paragraph_count": 5
         },
         "preferred_terms": [],
@@ -394,42 +237,21 @@
       }
     },
     {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/b78ced589d4d6de3.md",
-      "domain": "general",
-      "updated_at": "2026-03-09T21:28:06.789751",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 63.44,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [
-          "年度对日投资报告"
-        ],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/451a956146840ffc.md",
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/34e32a4db8479100.md",
       "domain": "technical",
-      "updated_at": "2026-03-09T21:28:07.073593",
+      "updated_at": "2026-03-11T13:36:54.249441",
       "style_profile": {
         "doc_type": "md",
         "style_signals": {
           "has_headings": true,
           "has_bullets": true,
-          "avg_sentence_len": 71.25,
+          "avg_sentence_len": 63.89,
           "paragraph_count": 5
         },
         "preferred_terms": [
-          "日本",
-          "万亿日元",
-          "产业",
-          "名义"
+          "来源",
+          "习近平",
+          "卫星通讯社"
         ],
         "sample_headings": [
           "## 1."
@@ -437,15 +259,51 @@
       }
     },
     {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/9b6098738498a637.md",
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/70a2946fb3f7d585.md",
       "domain": "general",
-      "updated_at": "2026-03-09T21:28:07.172469",
+      "updated_at": "2026-03-11T13:36:54.355031",
       "style_profile": {
         "doc_type": "md",
         "style_signals": {
           "has_headings": true,
           "has_bullets": true,
-          "avg_sentence_len": 65.11,
+          "avg_sentence_len": 56.6,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/5e9ee78da0fd7d4b.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T13:36:54.457541",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 56.7,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/2cf29c336a93eb70.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T13:36:54.561121",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 46.67,
           "paragraph_count": 5
         },
         "preferred_terms": [
@@ -457,26 +315,56 @@
       }
     },
     {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/a63983889f9c4fde.md",
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/120ec68253f68244.md",
       "domain": "general",
-      "updated_at": "2026-03-09T21:28:07.274140",
+      "updated_at": "2026-03-11T13:36:54.664956",
       "style_profile": {
         "doc_type": "md",
         "style_signals": {
           "has_headings": true,
           "has_bullets": true,
-          "avg_sentence_len": 56.6,
+          "avg_sentence_len": 52.45,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/02fbfb10b3b82853.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T13:36:54.768841",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 46.75,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/0f8d33291e6e4289.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T13:36:54.871303",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 52.0,
           "paragraph_count": 5
         },
         "preferred_terms": [
-          "人口",
-          "万人",
-          "推計",
-          "令和",
-          "日現在",
-          "日本",
-          "経済",
-          "減少"
+          "打仗",
+          "怎么办"
         ],
         "sample_headings": [
           "## 1."
@@ -484,19 +372,19 @@
       }
     },
     {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/c2b5f20c6c2181dd.md",
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/34ce328381bc3db1.md",
       "domain": "general",
-      "updated_at": "2026-03-09T21:28:07.372958",
+      "updated_at": "2026-03-11T13:36:54.976859",
       "style_profile": {
         "doc_type": "md",
         "style_signals": {
           "has_headings": true,
           "has_bullets": true,
-          "avg_sentence_len": 34.75,
+          "avg_sentence_len": 43.38,
           "paragraph_count": 5
         },
         "preferred_terms": [
-          "日本"
+          "穆杰塔巴"
         ],
         "sample_headings": [
           "## 1."
@@ -504,22 +392,22 @@
       }
     },
     {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/887a9a56195f5ab8.md",
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/77da4465361e4640.md",
       "domain": "general",
-      "updated_at": "2026-03-09T21:33:22.422871",
+      "updated_at": "2026-03-11T13:36:55.080797",
       "style_profile": {
         "doc_type": "md",
         "style_signals": {
           "has_headings": true,
           "has_bullets": true,
-          "avg_sentence_len": 43.69,
+          "avg_sentence_len": 51.67,
           "paragraph_count": 5
         },
         "preferred_terms": [
-          "賃上",
-          "春季生活闘争",
-          "大手企業",
-          "推移"
+          "断情录",
+          "冲突",
+          "价格",
+          "国际能源署"
         ],
         "sample_headings": [
           "## 1."
@@ -527,9 +415,9 @@
       }
     },
     {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/7c4855333956257a.md",
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/dead4f7fddf7659e.md",
       "domain": "general",
-      "updated_at": "2026-03-09T21:33:22.515184",
+      "updated_at": "2026-03-11T13:36:55.187101",
       "style_profile": {
         "doc_type": "md",
         "style_signals": {
@@ -538,14 +426,50 @@
           "avg_sentence_len": 56.5,
           "paragraph_count": 5
         },
+        "preferred_terms": [],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/4fda0024065ca4f1.md",
+      "domain": "contract",
+      "updated_at": "2026-03-11T13:36:55.297980",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 44.38,
+          "paragraph_count": 5
+        },
         "preferred_terms": [
-          "日本",
-          "高齢化率",
-          "人口",
-          "少子化",
-          "连续",
+          "中国",
+          "波斯语",
+          "中伊",
+          "年全面合作协议"
+        ],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/7fad0461c9181849.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T13:36:55.401577",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 48.0,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [
           "万人",
-          "歳以上"
+          "年是"
         ],
         "sample_headings": [
           "## 1."
@@ -553,36 +477,15 @@
       }
     },
     {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/cf83f53d49aa3d09.md",
-      "domain": "general",
-      "updated_at": "2026-03-09T21:33:22.607284",
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/a31384982b60b6d7.md",
+      "domain": "contract",
+      "updated_at": "2026-03-11T13:36:55.505249",
       "style_profile": {
         "doc_type": "md",
         "style_signals": {
           "has_headings": true,
           "has_bullets": true,
-          "avg_sentence_len": 115.2,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [
-          "経済",
-          "日本"
-        ],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/097144056728fe58.md",
-      "domain": "general",
-      "updated_at": "2026-03-09T21:33:22.699394",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 61.78,
+          "avg_sentence_len": 41.43,
           "paragraph_count": 5
         },
         "preferred_terms": [],
@@ -592,25 +495,27 @@
       }
     },
     {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/48edb9fd236df08f.md",
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/f0c43f197d89fc89.md",
       "domain": "general",
-      "updated_at": "2026-03-09T21:33:22.792950",
+      "updated_at": "2026-03-11T13:36:55.609797",
       "style_profile": {
         "doc_type": "md",
         "style_signals": {
           "has_headings": true,
           "has_bullets": true,
-          "avg_sentence_len": 47.17,
+          "avg_sentence_len": 43.31,
           "paragraph_count": 5
         },
         "preferred_terms": [
-          "日本",
-          "万亿日元",
-          "月期",
-          "兆円",
-          "实际",
-          "同比增长",
-          "名义"
+          "伊朗",
+          "失业率",
+          "青年",
+          "根据",
+          "同比下降",
+          "个百分点",
+          "年至",
+          "年第四季度",
+          "年第四季度达到历"
         ],
         "sample_headings": [
           "## 1."
@@ -618,63 +523,15 @@
       }
     },
     {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/07c617bbdcda5f3f.md",
-      "domain": "legal",
-      "updated_at": "2026-03-09T21:33:22.886446",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 51.27,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [
-          "日本",
-          "安全保障",
-          "日米",
-          "平和",
-          "基本法",
-          "制定",
-          "情勢"
-        ],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/c526b1e8813acb7d.md",
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/c0b7082393cb29ce.md",
       "domain": "general",
-      "updated_at": "2026-03-09T21:33:22.980143",
+      "updated_at": "2026-03-11T13:36:55.716122",
       "style_profile": {
         "doc_type": "md",
         "style_signals": {
           "has_headings": true,
           "has_bullets": true,
-          "avg_sentence_len": 44.83,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [
-          "石破茂",
-          "石破茂首相",
-          "自民党総裁"
-        ],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/2e4410fefa002a9a.md",
-      "domain": "general",
-      "updated_at": "2026-03-09T21:33:23.074682",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 54.4,
+          "avg_sentence_len": 52.36,
           "paragraph_count": 5
         },
         "preferred_terms": [],
@@ -684,9 +541,112 @@
       }
     },
     {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/bbc1778fb1dd2c4b.md",
-      "domain": "technical",
-      "updated_at": "2026-03-09T21:38:40.607868",
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/80f7a94bd1907262.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T13:36:55.819880",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 37.87,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/253b9f2c66070b08.md",
+      "domain": "contract",
+      "updated_at": "2026-03-11T13:36:55.923491",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 57.0,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [
+          "俄罗斯",
+          "中国",
+          "伊朗"
+        ],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/381e1f03151ee10d.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T13:36:56.028990",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 44.0,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/78cdaf110efa9bb1.md",
+      "domain": "contract",
+      "updated_at": "2026-03-11T13:36:56.133179",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 44.0,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [
+          "伊朗",
+          "沙特",
+          "和解",
+          "阿联酋",
+          "外长侯赛因",
+          "阿米尔",
+          "阿卜杜拉希安与",
+          "外长费萨尔"
+        ],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/7b22ef3cbffd0919.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T13:36:56.236812",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 44.23,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/8c3458a1e3947672.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T13:36:56.353857",
       "style_profile": {
         "doc_type": "md",
         "style_signals": {
@@ -696,8 +656,9 @@
           "paragraph_count": 5
         },
         "preferred_terms": [
-          "亿日元",
-          "日本对华"
+          "斯兰",
+          "哈梅内",
+          "之子继任"
         ],
         "sample_headings": [
           "## 1."
@@ -705,20 +666,20 @@
       }
     },
     {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/2fb9fc6dfc2da158.md",
-      "domain": "technical",
-      "updated_at": "2026-03-09T21:38:40.712625",
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/a06929c1abf1289e.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T13:36:56.460683",
       "style_profile": {
         "doc_type": "md",
         "style_signals": {
           "has_headings": true,
           "has_bullets": true,
-          "avg_sentence_len": 52.09,
+          "avg_sentence_len": 43.46,
           "paragraph_count": 5
         },
         "preferred_terms": [
-          "日本",
-          "最大受援國"
+          "人死亡",
+          "截至"
         ],
         "sample_headings": [
           "## 1."
@@ -726,21 +687,22 @@
       }
     },
     {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/1675e9688dc66c53.md",
-      "domain": "technical",
-      "updated_at": "2026-03-09T21:38:40.807633",
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/0468c238a568438e.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T13:42:20.055315",
       "style_profile": {
         "doc_type": "md",
         "style_signals": {
           "has_headings": true,
           "has_bullets": true,
-          "avg_sentence_len": 81.86,
+          "avg_sentence_len": 43.85,
           "paragraph_count": 5
         },
         "preferred_terms": [
-          "日本",
-          "援助",
-          "中国"
+          "生态学",
+          "可能给环境带来灾",
+          "难性后果",
+          "这场"
         ],
         "sample_headings": [
           "## 1."
@@ -748,9 +710,851 @@
       }
     },
     {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/1f60ae8662eb6c95.md",
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/f218f8ec00e81516.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T13:42:20.154159",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 43.77,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [
+          "亿美元",
+          "斯兰",
+          "另据",
+          "国家通讯社",
+          "石油收入近年来占",
+          "其政府预算收入的",
+          "比例约为",
+          "路透社",
+          "年曾估算",
+          "日均出口",
+          "万桶石油",
+          "油价按"
+        ],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/3ce3ce7c9f1a72df.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T13:42:20.251866",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 47.67,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [
+          "万人",
+          "陆军",
+          "空军",
+          "伊朗空军",
+          "其中",
+          "海军",
+          "防空军"
+        ],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/8582a5496219f529.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T13:42:20.349284",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 51.73,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/34e32a4db8479100.md",
       "domain": "technical",
-      "updated_at": "2026-03-09T21:38:40.903878",
+      "updated_at": "2026-03-11T13:42:20.449993",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 63.89,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [
+          "来源",
+          "习近平",
+          "卫星通讯社"
+        ],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/70a2946fb3f7d585.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T13:42:20.549996",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 56.6,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/5e9ee78da0fd7d4b.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T13:42:20.649615",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 56.7,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/2cf29c336a93eb70.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T13:42:20.748935",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 46.67,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [
+          "来源"
+        ],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/120ec68253f68244.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T13:42:20.847172",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 52.45,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/02fbfb10b3b82853.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T13:42:20.944864",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 46.75,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/0f8d33291e6e4289.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T13:42:21.043611",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 52.0,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [
+          "打仗",
+          "怎么办"
+        ],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/34ce328381bc3db1.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T13:42:21.141658",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 43.38,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [
+          "穆杰塔巴"
+        ],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/77da4465361e4640.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T13:42:21.240934",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 51.67,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [
+          "断情录",
+          "冲突",
+          "价格",
+          "国际能源署"
+        ],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/dead4f7fddf7659e.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T13:42:21.337140",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 56.5,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/4fda0024065ca4f1.md",
+      "domain": "contract",
+      "updated_at": "2026-03-11T13:42:21.435375",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 44.38,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [
+          "中国",
+          "波斯语",
+          "中伊",
+          "年全面合作协议"
+        ],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/7fad0461c9181849.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T13:42:21.533416",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 48.0,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [
+          "万人",
+          "年是"
+        ],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/a31384982b60b6d7.md",
+      "domain": "contract",
+      "updated_at": "2026-03-11T13:42:21.631377",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 41.43,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/f0c43f197d89fc89.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T13:42:21.729018",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 43.31,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [
+          "伊朗",
+          "失业率",
+          "青年",
+          "根据",
+          "同比下降",
+          "个百分点",
+          "年至",
+          "年第四季度",
+          "年第四季度达到历"
+        ],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/c0b7082393cb29ce.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T13:42:21.827589",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 52.36,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/80f7a94bd1907262.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T13:42:21.925159",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 37.87,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/253b9f2c66070b08.md",
+      "domain": "contract",
+      "updated_at": "2026-03-11T13:42:22.021212",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 57.0,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [
+          "俄罗斯",
+          "中国",
+          "伊朗"
+        ],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/381e1f03151ee10d.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T13:42:22.119877",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 44.0,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/78cdaf110efa9bb1.md",
+      "domain": "contract",
+      "updated_at": "2026-03-11T13:42:22.218769",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 44.0,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [
+          "伊朗",
+          "沙特",
+          "和解",
+          "阿联酋",
+          "外长侯赛因",
+          "阿米尔",
+          "阿卜杜拉希安与",
+          "外长费萨尔"
+        ],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/7b22ef3cbffd0919.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T13:42:22.315503",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 44.23,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/8c3458a1e3947672.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T13:42:22.413816",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 52.55,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [
+          "斯兰",
+          "哈梅内",
+          "之子继任"
+        ],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/a06929c1abf1289e.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T13:42:22.513139",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 43.46,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [
+          "人死亡",
+          "截至"
+        ],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/f54945bd6061a0f5.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T13:42:22.611851",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 64.22,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [
+          "导弹",
+          "巡航",
+          "公里",
+          "马赫迪",
+          "公里的"
+        ],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/dde4f3541f7fe8c1.md",
+      "domain": "management",
+      "updated_at": "2026-03-11T13:42:22.711786",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 47.25,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [
+          "经济",
+          "伊斯兰",
+          "革命"
+        ],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/d40120f74fcffaa1.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T13:42:22.812910",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 43.54,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [
+          "里亚尔",
+          "多种汇率并存",
+          "滋生了巨",
+          "相继跌破",
+          "万关口",
+          "截至",
+          "美元已可兑换约",
+          "万伊朗里亚尔",
+          "较政策",
+          "美元兑"
+        ],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/93706a8f26b45072.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T13:42:22.910574",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 57.6,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [
+          "的生产",
+          "武器",
+          "俄外交官",
+          "提升",
+          "令人遗憾"
+        ],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/529c61ce49aebee1.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T13:42:23.168206",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 47.08,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [
+          "伊朗",
+          "通货膨胀率",
+          "伊朗通货膨胀率",
+          "月的",
+          "通胀率",
+          "根据",
+          "通胀",
+          "个百分点"
+        ],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/4859a5b7155a410d.md",
+      "domain": "management",
+      "updated_at": "2026-03-11T14:11:51.819408",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 51.18,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [
+          "伊朗",
+          "腐败",
+          "经济结构",
+          "经济"
+        ],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/cfbe49ec666b1ca8.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T14:11:51.929235",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 47.42,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/f171b579b41039c0.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T14:11:52.035034",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 46.83,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [
+          "万桶"
+        ],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/1d3a846bfc4c3124.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T14:11:52.143829",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 63.56,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [
+          "汇率",
+          "伊朗",
+          "里亚",
+          "美元兑",
+          "货币",
+          "贬值",
+          "万关口"
+        ],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/dfc16dc5bd1612f8.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T14:54:08.629304",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 29.53,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [
+          "最近去世的前任伊"
+        ],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/41730c6c7b531a6f.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T14:54:08.736401",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 40.0,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [
+          "伊朗"
+        ],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/29b31959f7e1ad15.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T14:54:08.840308",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 47.08,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [
+          "美元",
+          "货币贬值",
+          "万里亚尔兑",
+          "万里亚尔"
+        ],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/b7da73eac6b086a1.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T15:03:53.916883",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 43.46,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [
+          "伊朗",
+          "抗议",
+          "经济",
+          "危机"
+        ],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/47ace6fc29f3ec63.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T15:03:54.016207",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 116.2,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/8a02bebc87f846aa.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T15:03:54.117227",
       "style_profile": {
         "doc_type": "md",
         "style_signals": {
@@ -760,13 +1564,7 @@
           "paragraph_count": 5
         },
         "preferred_terms": [
-          "医院",
-          "非洲",
-          "铁路",
-          "项目",
-          "中国",
-          "国家",
-          "援助"
+          "伊朗"
         ],
         "sample_headings": [
           "## 1."
@@ -774,31 +1572,27 @@
       }
     },
     {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/a1f8b0d9b3d1fb46.md",
-      "domain": "contract",
-      "updated_at": "2026-03-09T21:38:41.002532",
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/9a42b6b3dba5f8c7.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T15:47:22.923107",
       "style_profile": {
         "doc_type": "md",
         "style_signals": {
           "has_headings": true,
           "has_bullets": true,
-          "avg_sentence_len": 51.36,
+          "avg_sentence_len": 39.93,
           "paragraph_count": 5
         },
-        "preferred_terms": [
-          "其中",
-          "亿美元",
-          "占比为"
-        ],
+        "preferred_terms": [],
         "sample_headings": [
           "## 1."
         ]
       }
     },
     {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/6eeef20644b1a8f7.md",
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/9c0cb7a47435d3ef.md",
       "domain": "general",
-      "updated_at": "2026-03-09T21:38:41.103256",
+      "updated_at": "2026-03-11T15:47:23.029199",
       "style_profile": {
         "doc_type": "md",
         "style_signals": {
@@ -814,22 +1608,22 @@
       }
     },
     {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/8b176f22db5374f3.md",
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/3969b471ea154c17.md",
       "domain": "general",
-      "updated_at": "2026-03-09T21:38:41.205918",
+      "updated_at": "2026-03-11T17:51:02.171845",
       "style_profile": {
         "doc_type": "md",
         "style_signals": {
           "has_headings": true,
           "has_bullets": true,
-          "avg_sentence_len": 39.93,
+          "avg_sentence_len": 71.5,
           "paragraph_count": 5
         },
         "preferred_terms": [
-          "日本",
-          "停止",
-          "结束",
-          "对华"
+          "伊朗",
+          "波斯语",
+          "资料图",
+          "伊朗总统佩泽希齐"
         ],
         "sample_headings": [
           "## 1."
@@ -837,221 +1631,22 @@
       }
     },
     {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/1cde67d680a8fcab.md",
-      "domain": "technical",
-      "updated_at": "2026-03-09T21:38:41.304345",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 56.7,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [
-          "援助",
-          "约合",
-          "亿美元",
-          "日本",
-          "万亿日元",
-          "終了"
-        ],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/3a84d56e8280ce5f.md",
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/e9116f3c96a4a7bc.md",
       "domain": "general",
-      "updated_at": "2026-03-09T21:38:41.405043",
+      "updated_at": "2026-03-11T17:51:02.275996",
       "style_profile": {
         "doc_type": "md",
         "style_signals": {
           "has_headings": true,
           "has_bullets": true,
-          "avg_sentence_len": 71.88,
+          "avg_sentence_len": 42.58,
           "paragraph_count": 5
         },
         "preferred_terms": [
-          "年我",
-          "共建"
-        ],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/7c8f9e9f3b7be1b7.md",
-      "domain": "contract",
-      "updated_at": "2026-03-09T21:38:41.504030",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 63.56,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [
-          "亿美元",
-          "占比为",
-          "简称"
-        ],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/de25cb816d093751.md",
-      "domain": "general",
-      "updated_at": "2026-03-09T21:38:41.610316",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 57.5,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [
-          "情况说明",
-          "日期间通过的决议"
-        ],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/4ecc8b4ce47e441a.md",
-      "domain": "technical",
-      "updated_at": "2026-03-09T21:43:56.219268",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 40.64,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/250d246d02d08027.md",
-      "domain": "technical",
-      "updated_at": "2026-03-09T21:43:56.308177",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 40.57,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/8c0d138939622216.md",
-      "domain": "general",
-      "updated_at": "2026-03-09T21:43:56.398127",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 37.8,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [
-          "斯日产",
-          "基里巴斯位于太平",
-          "洋中部",
-          "个大小岛屿组成",
-          "淡水资源匮乏",
-          "投运现场",
-          "接水居民络绎不绝",
-          "喜悦之情难掩"
-        ],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/2cbb86cbd34269c9.md",
-      "domain": "general",
-      "updated_at": "2026-03-09T21:43:56.486955",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 57.4,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [
-          "缅甸",
-          "柬埔寨",
-          "老挝",
-          "越南",
-          "澜沧江",
-          "泰国",
-          "项目",
-          "近日",
-          "湄公河合作是中国"
-        ],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/8a2d23d966907b67.md",
-      "domain": "general",
-      "updated_at": "2026-03-09T21:43:56.578288",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 52.64,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [
-          "吉尔吉斯斯坦",
-          "公里"
-        ],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/30b375f99c0988cf.md",
-      "domain": "general",
-      "updated_at": "2026-03-09T21:43:56.667896",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 57.0,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [
+          "俄罗斯卫星通讯社",
           "来源",
-          "晚间新闻"
+          "德黑兰",
+          "哈梅内"
         ],
         "sample_headings": [
           "## 1."
@@ -1059,104 +1654,31 @@
       }
     },
     {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/e95b7416d002605b.md",
-      "domain": "technical",
-      "updated_at": "2026-03-09T21:43:56.757825",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 51.36,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/91d9d3f24816737a.md",
-      "domain": "contract",
-      "updated_at": "2026-03-09T21:43:56.849042",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 43.85,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [
-          "伊拉克",
-          "当天"
-        ],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/04c785d65fb33e0e.md",
-      "domain": "technical",
-      "updated_at": "2026-03-09T21:43:56.941033",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 41.29,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/6d6347e8d3316999.md",
-      "domain": "management",
-      "updated_at": "2026-03-09T21:43:57.030311",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 57.2,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/49bddd5d6014d6ba.md",
-      "domain": "management",
-      "updated_at": "2026-03-09T21:43:57.120963",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 64.33,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [
-          "能力"
-        ],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/4a01be1b65c082c2.md",
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/0e07c5baa1082ea0.md",
       "domain": "general",
-      "updated_at": "2026-03-09T21:43:57.213146",
+      "updated_at": "2026-03-11T17:51:02.376363",
+      "style_profile": {
+        "doc_type": "md",
+        "style_signals": {
+          "has_headings": true,
+          "has_bullets": true,
+          "avg_sentence_len": 36.27,
+          "paragraph_count": 5
+        },
+        "preferred_terms": [
+          "哈梅内伊",
+          "穆杰塔巴",
+          "时间"
+        ],
+        "sample_headings": [
+          "## 1."
+        ]
+      }
+    },
+    {
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/2078bc51eeb669dc.md",
+      "domain": "general",
+      "updated_at": "2026-03-11T17:51:02.489006",
       "style_profile": {
         "doc_type": "md",
         "style_signals": {
@@ -1166,414 +1688,8 @@
           "paragraph_count": 5
         },
         "preferred_terms": [
-          "委内瑞拉",
-          "拉美",
-          "古巴"
-        ],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/9b1424a614c1f83c.md",
-      "domain": "contract",
-      "updated_at": "2026-03-09T21:43:57.492581",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 57.1,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [
-          "南亚",
-          "太平洋岛国",
-          "东南亚",
-          "高质量基础设施",
-          "援助"
-        ],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/1ea2b8bac63ede99.md",
-      "domain": "general",
-      "updated_at": "2026-03-09T22:20:49.717766",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 47.58,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [
-          "个百分点"
-        ],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/db171b9db8dbe05c.md",
-      "domain": "general",
-      "updated_at": "2026-03-09T22:20:49.821389",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 51.82,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [
-          "美元",
-          "油价走势预测"
-        ],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/5e9af9eb75f053b4.md",
-      "domain": "general",
-      "updated_at": "2026-03-09T22:20:49.922305",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 56.9,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [
-          "万桶",
-          "占全球海运石油贸",
-          "易的",
-          "霍尔木兹海峡紧扼",
-          "咽喉"
-        ],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/04a765da00bbfb77.md",
-      "domain": "general",
-      "updated_at": "2026-03-09T22:20:50.017589",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 43.15,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [
-          "计划"
-        ],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/eefa325fbb65ea5e.md",
-      "domain": "general",
-      "updated_at": "2026-03-09T22:20:50.115422",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 47.17,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [
-          "万桶",
-          "亿桶",
-          "年全球石油需求将"
-        ],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/28f840b57ba1e4b6.md",
-      "domain": "general",
-      "updated_at": "2026-03-09T22:20:50.215846",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 51.55,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [
-          "以色列",
-          "伊朗",
-          "代理人",
-          "叙利亚",
-          "冲突"
-        ],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/41af072a146f3aea.md",
-      "domain": "legal",
-      "updated_at": "2026-03-09T22:20:50.313099",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 40.0,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/46bf29ac439cf347.md",
-      "domain": "general",
-      "updated_at": "2026-03-09T22:20:50.412448",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 43.62,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [
-          "万桶",
-          "伊朗石油产量"
-        ],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/c564e5a93d4b0b44.md",
-      "domain": "contract",
-      "updated_at": "2026-03-09T22:20:50.510857",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 40.5,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [
-          "德國",
-          "法國"
-        ],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/aac77165b7c964e6.md",
-      "domain": "general",
-      "updated_at": "2026-03-09T22:20:50.613526",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 40.93,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [
-          "伊朗",
-          "导弹袭击",
-          "华尔街日报"
-        ],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/e81d64d965444b79.md",
-      "domain": "general",
-      "updated_at": "2026-03-09T22:20:50.711110",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 82.57,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [
-          "阿拉伯語",
-          "伊拉克",
-          "海湾战争",
-          "两伊战争",
-          "波斯語",
-          "英语",
-          "是指",
-          "日至",
-          "美国",
-          "领导的",
-          "前期部队集合期间",
-          "代号"
-        ],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/9b0a23763354d4aa.md",
-      "domain": "general",
-      "updated_at": "2026-03-09T22:20:50.811804",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 82.43,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [
-          "世界",
-          "国家分类",
-          "展望",
-          "案例",
-          "研究"
-        ],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/4c28b37dfe3f6484.md",
-      "domain": "general",
-      "updated_at": "2026-03-11T11:29:16.979989",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 82.0,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [
-          "宣誓效忠",
-          "俄罗斯卫星通讯社",
-          "官方变相确认",
-          "志子遭空袭重伤"
-        ],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/ad16b95bc6a5b721.md",
-      "domain": "general",
-      "updated_at": "2026-03-11T11:29:17.100130",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 35.44,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/58735513437f46da.md",
-      "domain": "general",
-      "updated_at": "2026-03-11T11:29:17.258963",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 72.38,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [
-          "伊朗",
-          "美国",
-          "以色列",
-          "军事"
-        ],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/c4208ae49d85955c.md",
-      "domain": "contract",
-      "updated_at": "2026-03-11T11:29:17.420743",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 36.8,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [
-          "短短两个月内",
-          "再往前追溯至",
-          "折算率还维持在",
-          "美元可兑换",
-          "万里亚尔的水平",
-          "伊朗里亚尔贬值超"
-        ],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/8715a0418b6d7586.md",
-      "domain": "technical",
-      "updated_at": "2026-03-11T11:29:17.539242",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 46.92,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [
-          "伊朗",
-          "人均",
-          "美元",
           "经济",
-          "万美元"
+          "民生"
         ],
         "sample_headings": [
           "## 1."
@@ -1581,167 +1697,9 @@
       }
     },
     {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/592d803b1b66d943.md",
+      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/021a4eafa5de5fff.md",
       "domain": "general",
-      "updated_at": "2026-03-11T11:29:17.654891",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 52.09,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [
-          "年的中东",
-          "仍行走在冲突与转",
-          "型交织的历史断层",
-          "之上",
-          "战争的阴影尚未散",
-          "停火与和谈反复拉",
-          "国家治理的新变与",
-          "旧疾并存",
-          "地区秩序在博弈中",
-          "孕育",
-          "也在震荡中重塑",
-          "从巴以问题的结构"
-        ],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/8159277e4bcb7591.md",
-      "domain": "general",
-      "updated_at": "2026-03-11T11:29:17.777138",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 57.0,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/cebedf261421222e.md",
-      "domain": "general",
-      "updated_at": "2026-03-11T11:29:17.917995",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 43.92,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [
-          "日前"
-        ],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/61753b336d9793e8.md",
-      "domain": "general",
-      "updated_at": "2026-03-11T11:29:18.045305",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 51.18,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [
-          "海峡",
-          "石油",
-          "伊朗",
-          "内容提要",
-          "革命卫队宣布禁止",
-          "船只通行",
-          "全球多家",
-          "巨头和航运公司随",
-          "即暂停相关运输",
-          "该海峡每日通过约",
-          "万桶原油",
-          "占全球石油消费"
-        ],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/e57687fa1808ac55.md",
-      "domain": "general",
-      "updated_at": "2026-03-11T11:29:18.222924",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 51.09,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/94d9fb805e56e104.md",
-      "domain": "contract",
-      "updated_at": "2026-03-11T11:29:18.332118",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 43.62,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [
-          "美元的"
-        ],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/7fa13ce4803ad886.md",
-      "domain": "general",
-      "updated_at": "2026-03-11T11:29:18.473087",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 52.27,
-          "paragraph_count": 5
-        },
-        "preferred_terms": [
-          "镇压"
-        ],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/13aa55db796dcf90.md",
-      "domain": "general",
-      "updated_at": "2026-03-11T11:29:18.591159",
+      "updated_at": "2026-03-11T18:06:28.643415",
       "style_profile": {
         "doc_type": "md",
         "style_signals": {
@@ -1750,26 +1708,8 @@
           "avg_sentence_len": 116.4,
           "paragraph_count": 5
         },
-        "preferred_terms": [],
-        "sample_headings": [
-          "## 1."
-        ]
-      }
-    },
-    {
-      "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/d05a7e9d617a5319.md",
-      "domain": "general",
-      "updated_at": "2026-03-11T11:29:18.701773",
-      "style_profile": {
-        "doc_type": "md",
-        "style_signals": {
-          "has_headings": true,
-          "has_bullets": true,
-          "avg_sentence_len": 49.18,
-          "paragraph_count": 5
-        },
         "preferred_terms": [
-          "伊朗"
+          "来源"
         ],
         "sample_headings": [
           "## 1."

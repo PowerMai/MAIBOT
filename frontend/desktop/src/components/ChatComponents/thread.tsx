@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useMemo, useRef, useState, memo } from "react";
+import React, { useCallback, useEffect, useMemo, useRef, useState, memo, lazy, Suspense } from "react";
 import type { FC, PropsWithChildren } from "react";
 import {
   UserMessageAttachments,
@@ -67,7 +67,7 @@ import { ChatModeContext, TurnModeContext } from "./threadContexts";
 import { ThreadWelcomeInline } from "./ThreadWelcomeInline";
 import { useAgentProgress, useNativeReasoningBlocks } from "./thread/useThreadStreamState";
 import { MODE_BADGE_STYLES } from "../../lib/chatModeState";
-import { ArtifactPanel } from "./ArtifactPanel";
+const ArtifactPanel = lazy(() => import("./ArtifactPanel").then((m) => ({ default: m.ArtifactPanel })));
 import {
   RunTodoListCard,
   RunTodoSummaryButton,
@@ -2073,7 +2073,11 @@ export const Thread: FC<{ connectionHealthy?: boolean }> = React.memo(function T
           </div>
         </ThreadPrimitive.ViewportFooter>
     </ThreadPrimitive.Viewport>
-    <ArtifactPanel />
+    <ErrorBoundary fallback={null}>
+      <Suspense fallback={null}>
+        <ArtifactPanel />
+      </Suspense>
+    </ErrorBoundary>
       </div>
       </InterruptStateContext.Provider>
       </ToolActionContext.Provider>
@@ -2779,7 +2783,7 @@ const ToolGroupBlock: FC<PropsWithChildren<{ startIndex: number; endIndex: numbe
     let runningAskUser: number | null = null;
     parts.forEach((p, i) => {
       if (!p || (p as { type?: string }).type !== "tool-call") return;
-      const name = (p as { toolCall?: { name?: string } }).toolCall?.name ?? "";
+      const name = (p as { toolCall?: { name?: string }; name?: string }).toolCall?.name ?? (p as { name?: string }).name ?? "";
       if (getToolTier(name) === "hidden") return;
       visible.push(i);
       if (name === "ask_user" && (p as { status?: { type?: string } }).status?.type === "running" && runningAskUser === null) {
@@ -2794,8 +2798,9 @@ const ToolGroupBlock: FC<PropsWithChildren<{ startIndex: number; endIndex: numbe
     let count = 0;
     for (let i = visibleIndices.length - 1; i >= 0; i--) {
       const localIdx = visibleIndices[i];
-      const part = parts[localIdx] as { toolCall?: { name?: string }; status?: { type?: string }; args?: Record<string, unknown>; result?: unknown } | undefined;
-      const keyInfo = part ? getPartKeyInfo({ toolCall: part.toolCall, args: part.args }) : "";
+      const part = parts[localIdx] as { toolCall?: { name?: string }; name?: string; status?: { type?: string }; args?: Record<string, unknown>; result?: unknown } | undefined;
+      const partName = part?.toolCall?.name ?? part?.name ?? "";
+      const keyInfo = part ? getPartKeyInfo({ toolCall: { name: partName }, args: part.args }) : "";
       const hasResult = part?.result != null && (typeof part.result !== "string" || (part.result as string).trim().length > 0);
       const isRunning = (part?.status as { type?: string } | undefined)?.type === "running";
       if (!keyInfo && !hasResult && !isRunning) count++;
@@ -2810,10 +2815,11 @@ const ToolGroupBlock: FC<PropsWithChildren<{ startIndex: number; endIndex: numbe
   return (
     <div className="my-1 space-y-1.5" role="list">
       {visibleIndices.map((localIdx) => {
-        const part = parts[localIdx] as { toolCall?: { id?: string; name?: string }; status?: { type?: string }; args?: Record<string, unknown>; result?: unknown; [k: string]: unknown } | undefined;
+        const part = parts[localIdx] as { toolCall?: { id?: string; name?: string }; name?: string; status?: { type?: string }; args?: Record<string, unknown>; result?: unknown; [k: string]: unknown } | undefined;
         const label = part ? getStepLabelForPart(part, executionStepsFromContext) : "";
         const isRunningAsk = runningAskUserIndex === localIdx;
-        const keyInfo = part ? getPartKeyInfo({ toolCall: part.toolCall, args: part.args }) : "";
+        const toolName = part?.toolCall?.name ?? part?.name ?? "";
+        const keyInfo = part ? getPartKeyInfo({ toolCall: { name: toolName }, args: part.args }) : "";
         const hasResult = part?.result != null && (typeof part.result !== "string" || part.result.trim().length > 0);
         const isRunning = (part?.status as { type?: string } | undefined)?.type === "running";
         const isEmptyCard = !keyInfo && !hasResult && !isRunning;
@@ -2822,15 +2828,22 @@ const ToolGroupBlock: FC<PropsWithChildren<{ startIndex: number; endIndex: numbe
         if (isInTrailingRun && !isMergeRow) return null;
         if (isMergeRow) {
           const trailingIndices = visibleIndices.slice(visibleIndices.length - trailingEmptyCount);
-          const names = trailingIndices.map((idx) => getToolDisplayName((parts[idx] as { toolCall?: { name?: string } })?.toolCall?.name ?? ""));
+          const names = trailingIndices.map((idx) => {
+            const px = parts[idx] as { toolCall?: { name?: string }; name?: string };
+            return getToolDisplayName(px?.toolCall?.name ?? px?.name ?? "");
+          });
           const summary = names.length > 0 ? names.join("、") : "";
           const firstWithInfo = trailingIndices.find((idx) => {
-            const p = parts[idx] as { args?: Record<string, unknown>; result?: unknown };
-            const ki = p ? getPartKeyInfo({ toolCall: (parts[idx] as { toolCall?: { name?: string } })?.toolCall, args: p.args }) : "";
+            const p = parts[idx] as { toolCall?: { name?: string }; name?: string; args?: Record<string, unknown>; result?: unknown };
+            const name = p?.toolCall?.name ?? p?.name ?? "";
+            const ki = p ? getPartKeyInfo({ toolCall: { name }, args: p.args }) : "";
             return ki && ki.length > 0;
           });
           const detailSnippet = firstWithInfo != null
-            ? getPartKeyInfo({ toolCall: (parts[firstWithInfo] as { toolCall?: { name?: string } })?.toolCall, args: (parts[firstWithInfo] as { args?: Record<string, unknown> })?.args })
+            ? (() => {
+                const p0 = parts[firstWithInfo] as { toolCall?: { name?: string }; name?: string; args?: Record<string, unknown> };
+                return getPartKeyInfo({ toolCall: { name: p0?.toolCall?.name ?? p0?.name ?? "" }, args: p0?.args });
+              })()
             : "";
           const detailText = detailSnippet && detailSnippet.length > 60 ? `${detailSnippet.slice(0, 58)}…` : detailSnippet;
           return (
@@ -3065,6 +3078,7 @@ const AssistantMessage: FC = memo(function AssistantMessage() {
     return null;
   });
   const messageText = useMessage(_extractMessageText);
+  /** 推理块：来自 content 中 type===reasoning 的 part（custom 通道 content_parts 经 SDK 合并后） */
   const hasNativeReasoningParts = useMessage((s) => Array.isArray(s.content) && s.content.some((p: { type?: string }) => p.type === "reasoning"));
   const parsedThinking = React.useMemo(() => parseThinkingContent(messageText), [messageText]);
   const nativeReasoning = useNativeReasoningBlocks(currentMessageId || undefined, isRunning, threadId || undefined);
@@ -3216,12 +3230,6 @@ const AssistantMessage: FC = memo(function AssistantMessage() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ content }),
       });
-      if (!res.ok) {
-        const errData = await res.json().catch(() => ({}));
-        const err = errData && typeof errData === "object" ? (errData as { detail?: string; error?: string }).detail ?? (errData as { error?: string }).error : undefined;
-        toast.error(err ?? "保存失败");
-        return;
-      }
       const data = await res.json().catch(() => ({ __parseError: true } as const));
       if ((data as { __parseError?: boolean }).__parseError) {
         toast.error(t("composer.responseParseFailed"));
@@ -3231,7 +3239,7 @@ const AssistantMessage: FC = memo(function AssistantMessage() {
         toast.success(t("thread.toastSavedToMemory"));
         window.dispatchEvent(new CustomEvent("memory_entries_updated"));
       } else {
-        toast.error((data as { detail?: string; error?: string })?.detail ?? (data as { error?: string })?.error ?? "保存失败");
+        toast.error(data.detail || data.error || "保存失败");
       }
     } catch {
       toast.error(t("thread.saveFailed"));

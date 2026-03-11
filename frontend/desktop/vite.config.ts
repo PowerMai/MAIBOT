@@ -27,8 +27,8 @@ export default defineConfig(({ command }) => ({
       '@': path.resolve(__dirname, './src'),
       // dompurify ESM 入口，避免 Rollup build 时 resolve 失败（pnpm 下需显式指向）
       'dompurify': path.resolve(__dirname, 'node_modules/.pnpm/dompurify@3.3.1/node_modules/dompurify/dist/purify.es.mjs'),
-      // react-syntax-highlighter 为嵌套依赖，build 时需显式指向以便 dist/esm/styles/prism 等子路径可解析
-      'react-syntax-highlighter': path.resolve(__dirname, 'node_modules/.pnpm/react-syntax-highlighter@16.1.0_react@18.3.1/node_modules/react-syntax-highlighter'),
+      // react-syntax-highlighter 需指向 package 根目录，以便 dist/esm/styles/prism 等子路径可解析（已作为直接依赖安装）
+      'react-syntax-highlighter': path.resolve(__dirname, 'node_modules/react-syntax-highlighter'),
       // 版本化包别名
       'vaul@1.1.2': 'vaul',
       'sonner@2.0.3': 'sonner',
@@ -86,8 +86,14 @@ export default defineConfig(({ command }) => ({
             if (id.includes('xlsx') || id.includes('xlsx.js')) return 'xlsx';
             if (id.includes('@assistant-ui') || id.includes('@langchain/langgraph-sdk')) return 'chat';
             if (id.includes('pdfjs-dist') && !id.includes('pdf.worker')) return 'pdfjs';
+            if (id.includes('mermaid')) return 'vendor-mermaid';
+            if (id.includes('shiki')) return 'vendor-shiki';
+            if (id.includes('mammoth')) return 'vendor-mammoth';
+            if (id.includes('jszip')) return 'vendor-jszip';
             return 'vendor-misc';
           }
+          // 聊天区重组件按需拆包，减轻主 chunk 体积
+          if (id.includes('ArtifactPanel')) return 'chat-artifact';
         },
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
@@ -125,6 +131,8 @@ export default defineConfig(({ command }) => ({
       'react-syntax-highlighter',
       'secure-json-parse',
       '@assistant-ui/react-langgraph',
+      'mermaid',
+      'shiki',
     ],
     // 不预构建该包会导致其请求 assistant-stream/utils 子路径走 node_modules，进而 secure-json-parse 以 CJS 裸加载无 default；故保留预构建，仅关闭 minify 避免 esbuild 产出非法语法（if 块花括号被删）
     esbuildOptions: {
