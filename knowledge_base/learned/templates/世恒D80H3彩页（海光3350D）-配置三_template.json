@@ -1,0 +1,13 @@
+{
+  "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/global/domain/bidding/基础资料/产品资料/终端部材料/02-终端整机资料/0203-海光终端/世恒D80H3 所有资料/世恒D80H3彩页（海光3350D）-配置三.pdf",
+  "domain": "bidding",
+  "created_at": "2026-03-05T22:09:35.379412",
+  "template": {
+    "doc_type": "pdf",
+    "sections": [
+      "2.8GHz,加速频率3.0GHz，支持双"
+    ],
+    "placeholders": [],
+    "template_excerpt": "\n海光最新HG3350D处理器，主频\n2.8GHz,加速频率3.0GHz，支持双\n通道DDR4内存/NVMe/SSD高速硬\n盘。读写速率快人一步，任务轻松\n驾驭。\n2 8\n海光3350D(八核，主频2.8GHz,加速频率3.0GHz)"
+  }
+}

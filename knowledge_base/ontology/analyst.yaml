@@ -1,0 +1,16 @@
+version: 1
+domain: analyst
+entities:
+  Dataset:
+    fields: [name, rows, columns, time_range, quality_score]
+  Metric:
+    fields: [name, value, unit, confidence_interval]
+  Hypothesis:
+    fields: [statement, method, p_value, result]
+relations:
+  - from: Dataset
+    to: Metric
+    type: computes
+  - from: Hypothesis
+    to: Metric
+    type: validates

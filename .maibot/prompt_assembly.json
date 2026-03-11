@@ -1,0 +1,60 @@
+{
+  "detail_level": {
+    "default": "concise",
+    "model_overrides": {
+      "qwen/qwen3.5-35b-a3b": "detailed",
+      "qwen3.5-35b-a3b": "detailed",
+      "qwen/qwen3.5-32b": "detailed"
+    }
+  },
+  "always_load": [
+    "identity/core_identity",
+    "safety/destructive_operations",
+    "doing_tasks/cognitive_activation",
+    "identity/cognitive_drive",
+    "doing_tasks/reflection_protocol",
+    "doing_tasks/evidence_rules",
+    "doing_tasks/reasoning_guide"
+  ],
+  "tool_conditional": {
+    "python_run": "tool_usage/python_run",
+    "shell_run": "tool_usage/shell_run",
+    "search_knowledge": "tool_usage/search_knowledge",
+    "critic_review": "tool_usage/critic_review",
+    "task": "tool_usage/task"
+  },
+  "mode_conditional": {
+    "ask": [
+      "modes/ask_hint",
+      "reminders/upstream_artifacts",
+      "interaction/reverse_prompting"
+    ],
+    "plan": [
+      "modes/plan_hint",
+      "reminders/plan_to_agent_handoff"
+    ],
+    "agent": [
+      "modes/agent_hint",
+      "reminders/upstream_artifacts",
+      "interaction/reverse_prompting"
+    ],
+    "review": [
+      "modes/review_hint",
+      "reminders/upstream_artifacts"
+    ],
+    "debug": [
+      "modes/debug_hint",
+      "reminders/upstream_artifacts"
+    ]
+  },
+  "role_conditional": {
+    "solution_expert": "roles/solution_expert",
+    "contract_specialist": "roles/contract_specialist",
+    "executive_assistant": "roles/executive_assistant",
+    "data_analyst": "roles/data_analyst",
+    "knowledge_manager": "roles/knowledge_manager",
+    "resource_manager": "roles/resource_manager",
+    "workflow_designer": "roles/workflow_designer"
+  }
+}
+

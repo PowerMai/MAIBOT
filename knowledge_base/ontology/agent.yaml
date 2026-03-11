@@ -1,0 +1,37 @@
+version: 1
+domain: agent
+entities:
+  Tool:
+    fields: [name, protocol, source, risk_level, status]
+  Protocol:
+    fields: [name, version, endpoint, compatibility]
+  Resource:
+    fields: [name, type, cost, owner, availability]
+  Model:
+    fields: [name, provider, latency, quality, cost]
+  Capability:
+    fields: [name, level, confidence, domain]
+  Goal:
+    fields: [title, priority, status, deadline]
+  Task:
+    fields: [id, subject, type, status, owner]
+relations:
+  - from: Agent
+    to: Tool
+    type: uses
+  - from: Agent
+    to: Protocol
+    type: communicates_via
+  - from: Agent
+    to: Resource
+    type: consumes
+  - from: Agent
+    to: Capability
+    type: has_capability
+  - from: Goal
+    to: Task
+    type: decomposes
+  - from: Task
+    to: Capability
+    type: requires
+

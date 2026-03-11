@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "slack": {},
+    "linear": {},
+    "asana": {},
+    "atlassian": {},
+    "notion": {},
+    "github": {},
+    "pagerduty": {},
+    "datadog": {},
+    "google-calendar": {},
+    "gmail": {}
+  }
+}

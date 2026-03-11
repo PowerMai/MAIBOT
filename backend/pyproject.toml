@@ -1,0 +1,131 @@
+[project]
+name = "maibot-backend"
+version = "0.1.0"
+description = "MAIBOT Orchestrator Agent - 通用AI决策支持系统"
+requires-python = ">=3.11"
+dependencies = [
+    # ============================================================
+    # 核心依赖 - LangChain 生态
+    # ============================================================
+    "langchain>=1.2.10",
+    "langchain-community>=0.3.30",
+    "langchain-text-splitters>=0.3.10",
+    "langchain-experimental>=0.3.4",  # PythonREPLTool
+    "langchain-openai>=1.0.2",        # LM Studio 兼容
+    "langchain-tavily>=0.2.13",       # Tavily 搜索
+    "langgraph-cli[inmem]>=0.4.0",    # LangGraph Server（含最新 API）
+    "deepagents>=0.4.3",              # DeepAgent 框架
+    
+    # ============================================================
+    # 基础工具
+    # ============================================================
+    "pydantic>=2.0.0",
+    "python-dotenv>=1.0.0",
+    "httpx>=0.28.1",
+    "rich>=14.0.0",                   # 终端美化输出
+    
+    # ============================================================
+    # 知识库 - 向量检索（FAISS/sentence-transformers 移为可选，见 local-embedding）
+    # ============================================================
+    "rank-bm25>=0.2.2",               # BM25 关键词检索（无额外重量级依赖）
+
+    # ============================================================
+    # 文档解析 - 轻量级方案
+    # ============================================================
+    "python-docx>=1.1.0",             # Word
+    "pandas>=2.0.0",                  # 数据处理
+    "openpyxl>=3.1.0",                # Excel
+    "python-pptx>=0.6.21",            # PowerPoint
+    "pdfplumber>=0.10.0",             # PDF（轻量）
+    "pypdf>=3.17.0",                  # PDF（备用）
+    
+    # ============================================================
+    # API 支持
+    # ============================================================
+    "fastapi>=0.100.0",                # FastAPI Web 框架
+    "uvicorn>=0.20.0",                 # ASGI 服务器
+    "python-multipart>=0.0.9",        # 文件上传
+    "slowapi>=0.1.9",                  # API 速率限制（按 IP）
+    
+    # ============================================================
+    # MCP 支持（Model Context Protocol）
+    # ============================================================
+    "langchain-mcp-adapters>=0.1.0",  # LangChain 官方 MCP 适配器
+]
+
+[project.optional-dependencies]
+dev = [
+    "mypy>=1.11.1",
+    "ruff>=0.6.1",
+    "pytest>=8.0.0",
+]
+
+# 可选：Jupyter 开发环境（仅开发时需要）
+notebook = [
+    "jupyter>=1.0.0",
+    "ipykernel>=6.20.0",
+]
+
+# 可选：额外的 LLM 提供商
+llm-providers = [
+    "langchain-anthropic>=1.1.0",
+    "langchain-google-genai>=3.1.0",
+]
+
+# 可选：本地向量检索（FAISS + sentence-transformers，会拉入 PyTorch，约 1.5GB 磁盘 + 500MB 内存）
+# 不安装时嵌入走 HTTP API（OpenAIEmbeddings），向量索引不可用，仅 BM25/缓存
+local-embedding = [
+    "faiss-cpu>=1.7.0",
+    "sentence-transformers>=2.2.0",
+]
+
+# 可选：高级文档解析（会安装 torch，内存占用大）
+# 注意：仅在需要 OCR 或复杂文档解析时安装
+advanced-docs = [
+    "unstructured[local-inference]>=0.11.0",
+]
+
+# 可选：外部知识源（Wikipedia / Wikidata，供知识管理师等使用；安装后 registry 注册 wikipedia_search / wikidata_search）
+external-knowledge = [
+    "wikipedia>=1.4.0",
+    "wikibase-rest-api-client>=0.0.6",
+    "mediawikiapi>=0.6.0",
+]
+
+[build-system]
+requires = ["setuptools>=73.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = []
+
+[tool.setuptools.package-data]
+"*" = ["py.typed"]
+
+[tool.pytest.ini_options]
+pythonpath = ["..", "."]
+testpaths = ["tests"]
+
+[tool.ruff]
+lint.select = [
+    "E",    # pycodestyle
+    "F",    # pyflakes
+    "I",    # isort
+    "D",    # pydocstyle
+    "D401", # First line should be in imperative mood
+    "T201",
+    "UP",
+]
+lint.ignore = [
+    "UP006",
+    "UP007",
+    "UP035",
+    "D417",
+    "E501",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["D", "UP"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"

@@ -1,0 +1,14 @@
+{
+  "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/36a895fee0e75910.md",
+  "domain": "legal",
+  "created_at": "2026-03-08T14:56:43.786350",
+  "template": {
+    "doc_type": "md",
+    "sections": [
+      "# Web cache: openclaw 插件系统 插件开发 官方插件",
+      "## 1."
+    ],
+    "placeholders": [],
+    "template_excerpt": "# Web cache: openclaw 插件系统 插件开发 官方插件\n\n> 时间: 2026-03-08 06:52\n\n\n## 1. \n- 来源: duckduckgo\n\n2 weeks ago - 从使用者到贡献者：手把手教你为 OpenClaw 开发专属 Skill 插件 ... OpenClaw作为开源AI框架，其核心优势在于灵活的Skill插件系统，允许开发者扩展AI能力。本文详细介绍了如何开发自定义Skill：从环境准备到创建插件目录，包括编写TypeScript逻辑代码和配置JSON元数据。以\"本地硬件控制器\"为例，演示了控制设备电源状态的具体实现，并分享了私有API交互技巧。文章还提供了调试方法和开源贡献建议，帮助开发者快速上手插件开发，突破AI模型限制，实现本地硬件控制和私有系统集成。 3 weeks ago - 摘要： OpenClaw 通过插件系统将私人助理功能无缝集成到用户常用渠道，解决了入口摩擦问题。其核心是模块化的 ChannelPlugin 架构，允许按需组合渠道能力。插件不仅是工具注册入口，还能批量注册多种能力类型（服务、工具、网关方法等），通过统一的 PluginRegistry 管理。这种设计使 OpenClaw 能在不改变用户工作流的情况下，提供一致的助理体验。文章从源码角度解析了插件系统的实现细节，包括能力注册机制和"
+  }
+}

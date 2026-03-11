@@ -1,0 +1,11 @@
+{
+  "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/global/domain/bidding/基础资料/产品资料/服务器产品投标知识库/0105-AI 服务器/010504-擎天GH7280 V5产品资料/擎天GH7280 v5彩页.pdf",
+  "domain": "bidding",
+  "created_at": "2026-03-05T22:19:10.354180",
+  "template": {
+    "doc_type": "pdf",
+    "sections": [],
+    "placeholders": [],
+    "template_excerpt": "擎天GH7280 V5\n异构加速GPU服务器\n海 光 新 一 代 通 用 人 工 智 能 训 练 服 务 器\n擎天GH7280 V5基于最新的海光7000处理器开发的一款高规格GPU服务器，产品采用\n异构解耦合设计，GPU 架 构可灵活调整，是PCle扩展密度最高的深度学习训练平台。\n强 劲 算 力\n2颗海光7000处理器，64个核心，提高VDI实例数量。\n内存容量高达4T, 可进行强大的数据库分析，加速内存密集型应用性能。\n支持100G\\200G网络高速互联，为GPU计算集群提供高密度、高性能节点平台。\n极 致 扩 展\n扩展12个PCle 4.0x16插槽，整机通信带宽翻倍。\n4U 空间可容纳8个双宽GPU卡加速卡，提供强大的训练应用性能。\n支持24个3.5寸SAS/SATA硬盘，最高支持16个NVMe SSD,提供丰富的存储扩展能力。\n优化设计\nCPU 和GPU 解耦合设计， CPU 和GPU 独立演进，支持不同形态加速卡灵活配置。\n系统在5-35℃稳定运行，PID精细化无极调速、部件精准监控。\n擎天GH7280 V5技术参数\n处理器 支持2颗HYGON 7000系列处理器，最高支持64物理核心\n内存 提供32个DDR4内存插槽，支持RDIMM内存，最高工作频率3200MHz\n网络 支持1G/10G/25G/40G/100G/200G等多种网络\n最大可扩展12个PCle4.0x16插槽\nPCIe 扩展 1个OCP 3.0网卡插槽\n专用双RAID卡插槽\nGPU 最高支持8个GPU加速卡、提供强大的训练应用性能\n板载SATA硬盘控制器\nSAS卡控制器，支持RAID0/1/10\n存储控制器\nRAID卡控制器，支持RAID 0/1/5/6/10/50/60\n支持Cache超级电容保护，提供RAID状态迁移、RAID配置记忆等功能\n前置：24x2.5”或24×3.5”SAS/SATA或最高支持16x2.5”NVMe U.2 SSD\n存储方案\n内置：支持2个板载M.2 SSD\n2个VGA接口，1个位于机箱后部，1个位于机箱前部\n其他端口 4个USB接口，2个位于机箱后部、2个位于机箱前部\n1个RJ-45管理接口位于机箱后部\n电源 支持3+1或2+2冗余，支持1600W/2000W/2200W CRPS高效电源\n散热 8个系统风扇模组，支持N+1冗余\n集成BMC芯片，对外提供1个1Gbps RJ45管理口，支持IPMI2.0、Redfish、SNMP等标准接口\n管理功能\n基于IKVM/HTML5的远程管理界面，提供全面的故障诊断、自动化运维和远程管理的功能\n显示 集成显示控制器，最大分辨率1920x1080\nMicrosoft Windows Server、Red Hat Enterprise Linux、SUSE Linux Enterprise Server、Ce"
+  }
+}

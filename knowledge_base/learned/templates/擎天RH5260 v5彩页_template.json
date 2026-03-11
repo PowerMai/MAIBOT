@@ -1,0 +1,14 @@
+{
+  "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/global/domain/bidding/基础资料/产品资料/服务器产品投标知识库/0103-海光服务器/010303-擎天RH5260 V5产品资料/擎天RH5260 v5彩页.pdf",
+  "domain": "bidding",
+  "created_at": "2026-03-05T22:35:21.383636",
+  "template": {
+    "doc_type": "pdf",
+    "sections": [
+      "87.8mm(高)x 448mm(宽)x729.8mm(深)",
+      "87.8mm(高)x 482 (含箱耳)mm(宽)x729.8 (含手拧螺钉)mm(深)"
+    ],
+    "placeholders": [],
+    "template_excerpt": "擎天RH5260 V5\n基 于 海 光 平 台 打 造 的 主 流 均 衡 型 � U 双 路 服 务 器\n擎天RH5260 V5服务器是基于Hygon 5000系列处理器推出的一款高性价比2U双路\n服务器，性能卓越、兼具强大的计算及扩展能力，支撑政府、企业、运营商、金融、交通等\n行业数据中心关键业务应用。\n均衡配置、主流性能\n双路经济性产品，根据处理器型号不同，双处理器物理核心数最高可实现32核。\n满足主流双路产品计算力和性能应用，适应数据中心不断更新变化的需求，实现资源与成本平衡。\n模块设计 、灵活扩展\n处理器SoC设计，无板载桥片，可降低传输延迟，在提升计算能力的同时，降低能耗。\n计算、网络、电源、存储子系统，具备出色的可整合性和可扩展性。\n安全易用、智能运维\n基于国密算法进行加密、层次化逐级认证，保障系统安全启动。\nCPU内置安全协处理器，提供芯片级根信任，内置的Boot ROM提供比TPM更高级别的安全机制。\n简洁易用的Web管理平台，可以实现跨地域企业级管理维护功能。\n设备自动值守、核心部件实时监控、故障精细化分类上报，为数据中心运维提供全面保障。\n擎天RH5260 V5技术参数\n处理器 支持2颗Hygon 5000系列处理器，最高支持32个物理核心\n16根DDR4 内存插槽\n内存\n支持DDR4 ECC内存(内存频率最高可支持到3200MHz)\n板载集成I350双口1G RJ45，支持扩展双口10G RJ45、双口10G SFP+\n网络\n双口25G、40G QSFP+及100G等多种网络\nPCIe 扩展 最大可扩展6个PCIe 4.0插槽(含1个Storage专用插槽和1个OCP插槽)\n集成SATA硬盘控制器\nSAS卡，支持RAID0/1/10\n存储控制器\nSAS RAID卡，支持RAID 0/1/5/6/50/60\n支持Cache超级电容保护，提供RAID状态迁移、RAID配置记忆等功能\n12盘位机型：\n前置最高支持12 LFF/SFF，支持SAS/SATA硬盘混插\n硬盘方案 支持后置2SFF\n内置1个M.2 插槽\n内置1个SD卡插槽\n1个RJ-45管理接口和1个VGA接口位于机箱后部\n其他IO端口\n4个USB接口，2个位于机箱后部、2个位于机箱前部\n电源 可选550W 或1200W CRPS高效白金电源，可增配至1+1冗余\n散热 3个风扇模组\n集成BMC芯片，支持自主研发的管理芯片，支持IPMI2.0、SOL、KVM Over IP、虚拟媒介等高级管理功能\n管理功能\n对外提供1个1Gbps RJ45管理口，可支持NCSI功能\n显卡 集成显示控制器，最大分辨率1920x1080\nMicrosoft Windows Server、Red Hat Enterprise Linux、SUSE Linux Enterprise Server、CentO"
+  }
+}

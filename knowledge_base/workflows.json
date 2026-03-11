@@ -1,0 +1,48 @@
+{
+  "version": "2.0",
+  "description": "工作流参考 - 嵌入 SKILL.md，非工具调用",
+  
+  "_note": "业界顶级做法：Workflow 嵌入 prompt/skill，LLM 直接执行工具，无需查询元数据",
+  
+  "task_patterns": {
+    "document_analysis": {
+      "description": "文档分析任务模式",
+      "typical_flow": "read_file → python_run(extract) → search_knowledge → python_run(analyze)",
+      "key_tools": ["read_file", "python_run", "search_knowledge"],
+      "output": "结构化分析结果"
+    },
+    "document_generation": {
+      "description": "文档生成任务模式", 
+      "typical_flow": "search_knowledge(template) → python_run(generate) → write_file",
+      "key_tools": ["search_knowledge", "python_run", "write_file"],
+      "output": "生成的文档"
+    },
+    "knowledge_query": {
+      "description": "知识查询任务模式",
+      "typical_flow": "search_knowledge → (optional)extract_ontology",
+      "key_tools": ["search_knowledge", "extract_ontology"],
+      "output": "检索结果"
+    }
+  },
+  
+  "domain_methods": {
+    "bidding": {
+      "analysis_method": "五维分析 (D1项目→D2资格→D3技术→D4商务→D5评分)",
+      "priority": "D2资格 > D5评分 > D3技术",
+      "key_extractions": ["废标条款", "★条款", "评分标准", "资格要求"],
+      "skill_path": "/knowledge_base/skills/bidding/SKILL.md"
+    },
+    "contracts": {
+      "analysis_method": "三层审查 (L1形式→L2实质→L3风险)",
+      "priority": "L1形式 > L2实质 > L3风险",
+      "key_extractions": ["主体信息", "权利义务", "违约责任", "争议解决"],
+      "skill_path": "/knowledge_base/skills/contracts/SKILL.md"
+    },
+    "reports": {
+      "analysis_method": "四阶段模型 (P1收集→P2分析→P3撰写→P4美化)",
+      "priority": "准确性 > 完整性 > 可读性",
+      "key_extractions": ["数据源", "关键指标", "结论"],
+      "skill_path": "/knowledge_base/skills/reports/SKILL.md"
+    }
+  }
+}

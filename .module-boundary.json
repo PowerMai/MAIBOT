@@ -1,0 +1,31 @@
+{
+  "open": [
+    "backend/engine/core/",
+    "backend/engine/agent/",
+    "backend/engine/state/",
+    "backend/engine/modes/",
+    "backend/engine/prompts/",
+    "backend/engine/plugins/",
+    "backend/tools/base/registry.py",
+    "backend/tools/base/file_ops.py",
+    "backend/tools/base/code_execution.py",
+    "knowledge_base/skills/",
+    "plugins/",
+    "frontend/desktop/src/components/ChatComponents/",
+    "frontend/desktop/src/lib/"
+  ],
+  "commercial": [
+    "backend/engine/middleware/skill_evolution_middleware.py",
+    "backend/engine/middleware/distillation_middleware.py",
+    "backend/engine/middleware/reflection_middleware.py",
+    "backend/engine/middleware/self_improvement_middleware_v10.py",
+    "backend/engine/middleware/ontology_middleware.py",
+    "backend/engine/idle/",
+    "backend/engine/evolution/",
+    "backend/engine/organization/",
+    "backend/engine/tasks/",
+    "plugins/sales/",
+    "plugins/legal/",
+    "plugins/knowledge-engineering/"
+  ]
+}

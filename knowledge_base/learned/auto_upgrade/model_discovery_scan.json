@@ -1,0 +1,124 @@
+{
+  "generated_at": "2026-02-26T06:17:05.457590+00:00",
+  "default_model": "qwen/qwen3-coder-30b",
+  "total_models": 5,
+  "enabled_models": 1,
+  "reachable_endpoints": 3,
+  "models": [
+    {
+      "id": "bytedance/seed-oss-36b",
+      "name": "Seed OSS 36B",
+      "enabled": false,
+      "tier": "local",
+      "priority": 2,
+      "provider": "openai",
+      "context_length": 65536,
+      "is_reasoning_model": false,
+      "capability": {
+        "reasoning_depth": 0.72,
+        "coding_quality": 0.78,
+        "tool_use": 0.76,
+        "planning": 0.74,
+        "retrieval": 0.73,
+        "writing": 0.71,
+        "stability": 0.8
+      },
+      "endpoint_probe": {
+        "reachable": true,
+        "status_code": 200
+      }
+    },
+    {
+      "id": "qwen/qwen3-coder-30b",
+      "name": "Qwen3 Coder 30B",
+      "enabled": true,
+      "tier": "local",
+      "priority": 1,
+      "provider": "openai",
+      "context_length": 131072,
+      "is_reasoning_model": false,
+      "capability": {
+        "reasoning_depth": 0.8,
+        "coding_quality": 0.9,
+        "tool_use": 0.84,
+        "planning": 0.83,
+        "retrieval": 0.82,
+        "writing": 0.79,
+        "stability": 0.86
+      },
+      "endpoint_probe": {
+        "reachable": true,
+        "status_code": 200
+      }
+    },
+    {
+      "id": "deepseek/deepseek-r1",
+      "name": "DeepSeek R1",
+      "enabled": false,
+      "tier": "cloud-reasoning",
+      "priority": 10,
+      "provider": "openai",
+      "context_length": 131072,
+      "is_reasoning_model": true,
+      "capability": {
+        "reasoning_depth": 0.93,
+        "coding_quality": 0.81,
+        "tool_use": 0.86,
+        "planning": 0.9,
+        "retrieval": 0.82,
+        "writing": 0.84,
+        "stability": 0.83
+      },
+      "endpoint_probe": {
+        "reachable": true,
+        "status_code": 401
+      }
+    },
+    {
+      "id": "claude-sonnet-4-20250514",
+      "name": "Claude Sonnet 4",
+      "enabled": false,
+      "tier": "cloud-strong",
+      "priority": 20,
+      "provider": "anthropic",
+      "context_length": 200000,
+      "is_reasoning_model": true,
+      "capability": {
+        "reasoning_depth": 0.92,
+        "coding_quality": 0.93,
+        "tool_use": 0.92,
+        "planning": 0.94,
+        "retrieval": 0.9,
+        "writing": 0.92,
+        "stability": 0.94
+      },
+      "endpoint_probe": {
+        "reachable": false,
+        "reason": "empty_url"
+      }
+    },
+    {
+      "id": "claude-opus-4-20250514",
+      "name": "Claude Opus 4",
+      "enabled": false,
+      "tier": "cloud-premium",
+      "priority": 30,
+      "provider": "anthropic",
+      "context_length": 200000,
+      "is_reasoning_model": true,
+      "capability": {
+        "reasoning_depth": 0.97,
+        "coding_quality": 0.95,
+        "tool_use": 0.95,
+        "planning": 0.97,
+        "retrieval": 0.94,
+        "writing": 0.96,
+        "stability": 0.96
+      },
+      "endpoint_probe": {
+        "reachable": false,
+        "reason": "empty_url"
+      }
+    }
+  ]
+}

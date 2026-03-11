@@ -1,0 +1,11 @@
+{
+  "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/global/domain/bidding/基础资料/产品资料/服务器产品投标知识库/0105-AI 服务器/010503-擎天GI7290 V5产品资料/擎天GI7290 V5 服务器产品彩页.pdf",
+  "domain": "bidding",
+  "created_at": "2026-03-05T22:20:55.766646",
+  "template": {
+    "doc_type": "pdf",
+    "sections": [],
+    "placeholders": [],
+    "template_excerpt": "擎天GI7290 V5 服务器\n产品定位\n擎天GI7290 V5 是基于Intel 最新Eagle stream 平台开发的\n最高性能 GPU 服务器，支持 Nvidia H800 模组、Intel\nGaudi 模组以及其他面向大模型训练的 GPU 模组，是面向\nAI 训练及大模型推理业务场景的最佳选择\n应用场景\n大模型训练、大模型推理、HPC\n产品特性\n领先的架构设计\n Intel 至强可扩展第四代处理器平台，TDP 350W\n 支持业界最新的AI训练模组\n CPU-Switch支持双互联模式，发挥平台最高性能\n灵活的方案选择\n CPU-Switch可选X32 或X16 带宽互联\n 支持NVidia H800模组、Intel Gaudi 模组及其他OAM模组\n 按需选配全高、半高网卡\n稳定的产品质量\n N+N冗余电源设计\n 高效散热设计，保障高环温下稳定工作\n 同平台多款模组型产品开发及debug经验\n产品规格\n擎天GI7290 V5 服务器\nCPU  2 个第四代英特尔®至强®可扩展处理器，TDP 350W\n内存  最大支持32条DDR5内存，每颗CPU支持8个内存通道\n 默认8个 NVMe/SATA SSD 支持8个 PCle X16和4个PCleX8 1个板载\n存储\nM.2 SSD\n增持2个 NVME/SATA SSD 支持8个 PCle X16和3个PCle X8（CPU资源）\n\n互斥\n支持8个全高或半高PCIe插槽（Switch资源）\n\nPCIe 扩展\n\n支持4个全高或半高PCIe插槽（CPU资源）\n管理  AST2600, 1 个RJ45 千兆管理网口\n 2x USB, Type-A\n 1x PWR BTN with LED\n 1x UID BTN with LED\n基础 IO\n 1x Status LED\n 1x Console PORT, TypeC\n 1x FrontVGA\n 15 个高性能热插拔风扇，支持N+1 冗余\n散热\n 可选冷板散热\n温度  5ºC - 35ºC\n 2 个 12V CRPS 电源（主板），1+1 冗余\n电源\n 6个54V CRPS电源（GPU 模组），支持3+3 冗余\n尺寸  900mm*447mm*352mm\n版权所有©中国长城科技集团股份有限公司2023。保留一切权利。\n文中相关图片及文字仅供参考，详细规格请咨询长城销售网点或代理商"
+  }
+}

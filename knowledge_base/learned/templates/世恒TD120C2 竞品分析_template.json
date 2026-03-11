@@ -1,0 +1,11 @@
+{
+  "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/global/domain/bidding/基础资料/产品资料/终端部材料/02-终端整机资料/0202-兆芯终端/世恒TD120C2 所有资料/世恒TD120C2 竞品分析.pdf",
+  "domain": "bidding",
+  "created_at": "2026-03-05T21:12:23.967825",
+  "template": {
+    "doc_type": "pdf",
+    "sections": [],
+    "placeholders": [],
+    "template_excerpt": "TD120C2兆芯技术路线产品竞争分析\n长城 紫光 浪潮 浪潮 联想 同方\n控标点\nTD120C2 D3890 G2 英政CE300Z 英政CE520Z/CE720Z 开天M730Z 超翔TZ830\n机箱 13L 10L 17L 13L/8L 18L 13L\n内存 2*DIMM 最大32G 2*DIMM 最大32G 2*DIMM 最大32G 2*DIMM 最大32G 2*DIMM 最大32G 4*DIMM 最大64G\n4*USB3.0+8*USB2.0 8*USB3. 0\nUSB接口 8*USB3. 0 4*USB3.0+4*USB2.0 4*USB3.0+2*USB2.0 4*USB3.0+4*USB2.0 4*USB3.0+2*USB2.0\nPS/2 键盘、鼠标 键盘、鼠标 键盘、鼠标 无 无 键鼠合一 PS/2接口\n1*PCIex16（x8信号） 1*PCIe X16+2*PCIe X1 1*PCIe X16+2*PCIe X1 1*PCIe X16+2*PCIe X1 1*PCIe X16+2*PCIe X1 1*PCIe X16+1*PCIe 2*PCIex16插槽\nPCIe +1*PCIex16（x1信号） X8+1*PCIe X4+1*PCIe\n+1*PCIex1 X1\n存储 2*SATA+1*M.2 3*SATA+1*M.2 3*SATA+1*M.2 2*SATA+1*M.2 2*SATA+1*M.2 4*SATA+1*M.2\n网络 1*RJ45 1*RJ45 1*RJ45 1*RJ45 1*RJ45 1*RJ45\n集显VGA+HDMI+DP 集显VGA+HDMI 集显VGA+HDMI 集显VGA+HDMI 集显VGA+HDMI 集显DP+HDMI VGA+HDMI+DP\n显示\n独显VGA+HDMI 独显VGA+HDMI 独显VGA+HDMI 独显VGA+HDMI 独显VGA+HDMI 独显VGA+HDMI 三显示输出\n指纹模组 不支持 不支持 不支持 可选支持 不支持 不支持\nWi-Fi 不支持 不支持 不支持 不支持 不支持 不支持\n顶置提手 支持 不支持 不支持 不支持 支持 不支持 顶置提手\n内置音箱 不支持 不支持 不支持 可选支持 不支持 不支持\n开盖报警 不支持 不支持 不支持 可选支持 不支持 不支持"
+  }
+}

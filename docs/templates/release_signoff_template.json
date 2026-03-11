@@ -1,0 +1,16 @@
+{
+  "release_profile": "production",
+  "release_version": "v0.0.0",
+  "approved": true,
+  "approved_by": "owner@example.com",
+  "approved_at": "2026-03-02T00:00:00Z",
+  "checklist_ref": "docs/release-readiness-checklist_2026-03-02.md",
+  "rollback_runbook_ref": "docs/templates/rollback_runbook_template.md",
+  "business_metrics": {
+    "activation_rate": "0.00",
+    "conversion_rate": "0.00",
+    "retention_d7": "0.00",
+    "trial_to_paid_days": "0"
+  },
+  "notes": "风险接受与上线窗口说明"
+}

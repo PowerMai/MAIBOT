@@ -1,0 +1,48 @@
+{
+  "version": "v1",
+  "description": "Runtime write policy for LLM-driven optimization.",
+  "levels": {
+    "runtime_safe": "可在运行时自动改写（低风险、可回滚）",
+    "gated": "需门禁通过（gate_passed=true）后改写",
+    "human_review": "仅生成人类审阅草案，不自动改写",
+    "readonly": "运行时只读，不允许自动改写"
+  },
+  "rules": [
+    {
+      "path": "knowledge_base/learned/auto_upgrade/rollout_policy.json",
+      "level": "runtime_safe",
+      "reason": "策略图可由系统自优化调整"
+    },
+    {
+      "path": "knowledge_base/learned/auto_upgrade/release_profile.json",
+      "level": "runtime_safe",
+      "reason": "灰度发布状态由编排自动维护"
+    },
+    {
+      "path": "knowledge_base/learned/auto_upgrade/rollout_state.json",
+      "level": "runtime_safe",
+      "reason": "运行时状态持久化"
+    },
+    {
+      "path": "knowledge_base/skills/**/*.md",
+      "level": "gated",
+      "reason": "技能描述改写需质量门禁"
+    },
+    {
+      "path": "backend/engine/prompts/*.py",
+      "level": "gated",
+      "reason": "提示词核心逻辑影响全局行为"
+    },
+    {
+      "path": "backend/config/models.json",
+      "level": "human_review",
+      "reason": "模型路由配置需人审防止成本/质量失衡"
+    },
+    {
+      "path": "backend/**/*.py",
+      "level": "readonly",
+      "reason": "核心执行代码默认只读，避免无门禁自改"
+    }
+  ],
+  "project_root": "/Users/workspace/DevelopProjects/ccb-v0.378"
+}

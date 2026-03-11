@@ -1,0 +1,14 @@
+{
+  "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/9714cb19fc0d3793.md",
+  "domain": "management",
+  "created_at": "2026-03-08T14:56:46.423419",
+  "template": {
+    "doc_type": "md",
+    "sections": [
+      "# Web cache: openclaw 六阶段流水线 深度剖析 汤师爷 2026 年 2 月 2 日 万字图文",
+      "## 1."
+    ],
+    "placeholders": [],
+    "template_excerpt": "# Web cache: openclaw 六阶段流水线 深度剖析 汤师爷 2026 年 2 月 2 日 万字图文\n\n> 时间: 2026-03-08 06:56\n\n\n## 1. \n- 来源: duckduckgo\n\n一文彻底搞懂 OpenClaw 的架构设计与运行原理（万字图文） 摘要： 大家好，我是汤师爷，南京大学硕士，前华为、阿里 AI架构师。 全网10万粉AI博主，2本畅销书作家（第3本写作中）。 本文深度解析OpenClaw（原Clawdbot/Moltbot）的技术架构，提供2026年最新的一键部署方案。 涵盖硬件选型、环境配置、权限管理等全流程，结合自动化脚本与最佳实践，帮助开发者快速构建智能对话系统，降低技术门槛与运维成本。 本文深入剖析 OpenClaw （原名 Moltbot）的技术架构，涵盖基于 TypeScript 的 CLI 核心、Lane 任务队列、双重记忆系统及语义化浏览器快照等前沿 AI 技术细节。 在AI Agent技术快速发展的2026年，OpenClaw作为最热门的开源AI Agent网关项目之一，其多智能体协同能力为构建企业级AI应用提供了全新范式。本文将从架构设计、工程实现到实战优化，全面解析如何基于OpenClaw构建稳定、高效的多智能体系统，涵盖从单Agent到复杂团队协作的完整演进路径。 🦞 OpenClaw (原ClawdBot) 开源项目深度分析 "
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "status": "skipped",
+  "reason": "insufficient_distillation_samples",
+  "detail": "当前样本数 0，低于建议门槛 20。",
+  "count": 0
+}

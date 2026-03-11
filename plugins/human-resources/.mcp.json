@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "slack": {},
+    "workday": {},
+    "greenhouse": {},
+    "lever": {},
+    "bamboohr": {},
+    "notion": {},
+    "google-calendar": {},
+    "gmail": {}
+  }
+}

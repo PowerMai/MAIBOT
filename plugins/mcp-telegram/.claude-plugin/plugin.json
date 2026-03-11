@@ -1,0 +1,20 @@
+{
+  "name": "mcp-telegram",
+  "description": "Telegram 连接插件。",
+  "version": "1.0.0",
+  "author": {
+    "name": "maibot"
+  },
+  "license": "commercial",
+  "requires_tier": "pro",
+  "compatibility": {
+    "min_version": "0.378.0"
+  },
+  "components": {
+    "skills": [],
+    "commands": [],
+    "agents": [],
+    "hooks": [],
+    "mcp": []
+  }
+}

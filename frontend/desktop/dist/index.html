@@ -1,0 +1,34 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <!-- 开发环境：Electron 会提示 Insecure Content-Security-Policy（Vite HMR 需 unsafe-eval），打包后消失。若出现 chunk 404，请执行 pnpm run dev:fresh 或删除 node_modules/.vite 后重启。 -->
+      <title>Electron App UI Design</title>
+      <script>
+        try {
+          var dark = localStorage.getItem('maibot_settings_darkMode') === 'true' || localStorage.getItem('ccb_settings_darkMode') === 'true';
+          if (dark) document.documentElement.classList.add('dark');
+          else document.documentElement.classList.remove('dark');
+        } catch (e) {}
+      </script>
+      <script type="module" crossorigin src="./assets/index-Cll277La.js"></script>
+      <link rel="modulepreload" crossorigin href="./assets/vendor-radix-y6iYnnH8.js">
+      <link rel="modulepreload" crossorigin href="./assets/chat-W8P3dq0w.js">
+      <link rel="modulepreload" crossorigin href="./assets/vendor-markdown-BVijLt88.js">
+      <link rel="modulepreload" crossorigin href="./assets/vendor-recharts-DFJs1Qmh.js">
+      <link rel="modulepreload" crossorigin href="./assets/pdfjs-Cpj0DfXb.js">
+      <link rel="modulepreload" crossorigin href="./assets/vendor-misc-DV-oHjLp.js">
+      <link rel="modulepreload" crossorigin href="./assets/vendor-react-D7-H-9Bx.js">
+      <link rel="modulepreload" crossorigin href="./assets/monaco-CyXOfDcd.js">
+      <link rel="stylesheet" crossorigin href="./assets/vendor-markdown-D2lIc1rk.css">
+      <link rel="stylesheet" crossorigin href="./assets/vendor-misc-BeX4gNfh.css">
+      <link rel="stylesheet" crossorigin href="./assets/index-DPxlXAWf.css">
+    </head>
+
+    <body>
+      <div id="root"></div>
+    </body>
+  </html>
+  

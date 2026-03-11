@@ -1,0 +1,18 @@
+{
+  "name": "productivity",
+  "version": "1.0.0",
+  "description": "Daily productivity workflows for dashboarding, memory hygiene, and task execution.",
+  "author": {
+    "name": "maibot"
+  },
+  "compatibility": {
+    "min_version": "0.378.0"
+  },
+  "components": {
+    "skills": [],
+    "commands": [],
+    "agents": [],
+    "hooks": [],
+    "mcp": []
+  }
+}

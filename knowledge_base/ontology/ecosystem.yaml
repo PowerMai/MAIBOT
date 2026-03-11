@@ -1,0 +1,28 @@
+version: 1
+domain: ecosystem
+entities:
+  MCPServer:
+    fields: [name, transport, auth, tools_count, status]
+  A2ANode:
+    fields: [node_id, base_url, card_url, status]
+  ACPService:
+    fields: [service_id, category, price, reputation]
+  Marketplace:
+    fields: [name, protocol, settlement_token, region]
+relations:
+  - from: MCPServer
+    to: Tool
+    type: provides_tool
+  - from: A2ANode
+    to: A2ANode
+    type: discovers
+  - from: ACPService
+    to: Marketplace
+    type: listed_on
+  - from: Agent
+    to: ACPService
+    type: trades_with
+  - from: Agent
+    to: Agent
+    type: competes_with
+

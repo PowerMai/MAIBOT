@@ -1,0 +1,59 @@
+---
+description: Skills 使用规范（基于 Anthropic Agent Skills Best Practices）
+globs: knowledge_base/skills/**/*.md
+alwaysApply: false
+---
+
+# Skills 使用规范
+
+基于 Anthropic Agent Skills 最佳实践。
+
+## 渐进式披露
+
+```
+Level 1: name + description (~100 tokens) - 启动时加载
+Level 2: SKILL.md 完整内容 - 触发时读取  
+Level 3: scripts/ 可执行脚本 - 执行时调用
+```
+
+## SKILL.md 结构
+
+```yaml
+---
+name: skill-name  # 小写字母、数字、连字符
+description: |
+  Use this skill when... [触发条件]
+  Available scripts: [如有]
+---
+
+# Skill Title
+
+## Quick start
+[快速使用方法]
+
+## Workflow
+[详细工作流程]
+
+## Scripts
+[脚本说明和使用方法]
+```
+
+## description 设计
+
+```yaml
+# 好的示例
+description: |
+  Use this skill for debugging. Available scripts:
+  - scripts/analyze_error.py: Parse error stack
+  - scripts/collect_logs.py: Collect logs
+
+# 不好的示例
+description: "调试技能"  # 太模糊
+```
+
+## 脚本优先原则
+
+SKILL 中的脚本比生成代码更可靠：
+- 脚本经过测试
+- 脚本代码不进入上下文
+- 只返回脚本输出

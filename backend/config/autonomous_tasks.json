@@ -1,0 +1,202 @@
+[
+  {
+    "id": "daily-learning-review",
+    "subject": "每日学习复盘",
+    "description": "扫描 .learnings/ 中的错误与纠正，提炼可晋升规则。",
+    "task_type": "learning_review",
+    "schedule": "daily 09:00",
+    "auto_assign": true,
+    "enabled": true
+  },
+  {
+    "id": "weekly-capability-assessment",
+    "subject": "每周能力评估",
+    "description": "对比本地与云端模型在关键任务上的表现，输出评估摘要。",
+    "task_type": "capability_assessment",
+    "schedule": "weekly monday 09:00",
+    "auto_assign": true,
+    "enabled": true
+  },
+  {
+    "id": "weekly-update-check",
+    "subject": "检查系统更新",
+    "description": "检查技能市场、规则与提示词模块更新。",
+    "task_type": "update_check",
+    "schedule": "weekly friday 18:00",
+    "auto_assign": false,
+    "enabled": true
+  },
+  {
+    "id": "weekly-plugin-sync",
+    "subject": "插件源同步",
+    "description": "同步远程插件源清单，更新本地 plugin cache。",
+    "task_type": "plugin_sync",
+    "schedule": "weekly sunday 03:30",
+    "auto_assign": false,
+    "enabled": true
+  },
+  {
+    "id": "daily-model-scan",
+    "subject": "模型更新扫描",
+    "description": "扫描 models.json 中模型可用性与端点健康状态，生成可升级建议。",
+    "task_type": "model_scan",
+    "schedule": "daily 06:00",
+    "auto_assign": false,
+    "enabled": false
+  },
+  {
+    "id": "daily-autonomous-prep",
+    "subject": "自主准备工作检查",
+    "description": "提前整理工作区资料、分解待办并生成执行前准备建议。",
+    "task_type": "autonomous_prep",
+    "schedule": "daily 08:30",
+    "auto_assign": true,
+    "enabled": true
+  },
+  {
+    "id": "daily-inbox-triage",
+    "subject": "收件箱任务分拣",
+    "description": "自动整理未处理输入，按紧急度与可执行性生成今日行动序列。",
+    "task_type": "inbox_triage",
+    "schedule": "daily 08:10",
+    "auto_assign": true,
+    "enabled": true
+  },
+  {
+    "id": "daily-knowledge-digest",
+    "subject": "知识增量摘要",
+    "description": "汇总新增文档与会话要点，调用 scan_and_learn 进行知识扫描，沉淀今日知识摘要与后续建议，并回写本体增量。",
+    "task_type": "knowledge_digest",
+    "schedule": "daily 18:10",
+    "auto_assign": true,
+    "enabled": true
+  },
+  {
+    "id": "daily-resource-scan",
+    "subject": "资源与依赖扫描",
+    "description": "扫描关键资源状态（模型、技能、工作区）并输出风险提示。",
+    "task_type": "resource_scan",
+    "schedule": "daily 07:40",
+    "auto_assign": true,
+    "enabled": true
+  },
+  {
+    "id": "weekly-ontology-self-improve",
+    "subject": "本体维护增量更新",
+    "description": "对新增资料执行概念提取、与现有本体 diff 并生成合并建议。",
+    "task_type": "ontology_self_improve",
+    "required_skills": ["ontology-management", "knowledge-building"],
+    "schedule": "weekly sunday 09:00",
+    "auto_assign": true,
+    "enabled": true
+  },
+  {
+    "id": "weekly-learning-maintenance",
+    "subject": "学习数据衰减维护",
+    "description": "执行学习数据健康维护：调用 apply_confidence_decay，清理低置信度模式并输出维护摘要。",
+    "task_type": "learning_maintenance",
+    "schedule": "weekly saturday 08:30",
+    "auto_assign": true,
+    "enabled": true
+  },
+  {
+    "id": "weekly-distillation-export",
+    "subject": "微调样本导出",
+    "description": "执行 export_for_finetuning 并将结果写入 knowledge_base/learned/distillation_samples.jsonl，同时输出导出统计。",
+    "task_type": "distillation_export",
+    "schedule": "weekly saturday 09:00",
+    "auto_assign": true,
+    "enabled": true
+  },
+  {
+    "id": "bootstrap-bidding-kb",
+    "subject": "启动构建招投标知识库",
+    "description": "首次启动时构建招投标基础知识与本体，沉淀产品线、法规、废标案例。",
+    "task_type": "bootstrap_bidding_kb",
+    "schedule": "daily 00:05",
+    "auto_assign": true,
+    "enabled": true,
+    "role_id": "default",
+    "required_skills": [
+      "kb-ontology-import",
+      "kb-web-harvest",
+      "kb-entity-extract",
+      "kb-quality-audit"
+    ],
+    "startup_once": true,
+    "steps": [
+      "kb-ontology-import",
+      "kb-web-harvest",
+      "kb-entity-extract",
+      "kb-quality-audit"
+    ]
+  },
+  {
+    "id": "bootstrap-office-kb",
+    "subject": "启动构建办公知识库",
+    "description": "首次启动时构建办公模板、写作规范与互联网通用素材知识。",
+    "task_type": "bootstrap_office_kb",
+    "schedule": "daily 00:10",
+    "auto_assign": true,
+    "enabled": true,
+    "role_id": "default",
+    "required_skills": [
+      "kb-ontology-import",
+      "kb-web-harvest",
+      "kb-user-ingest",
+      "kb-quality-audit"
+    ],
+    "startup_once": true,
+    "steps": [
+      "kb-ontology-import",
+      "kb-web-harvest",
+      "kb-user-ingest",
+      "kb-quality-audit"
+    ]
+  },
+  {
+    "id": "daily-kb-gap-check",
+    "subject": "每日知识缺口检查",
+    "description": "执行缺口分析并输出 gap_report，作为后续任务自动规划输入。",
+    "task_type": "kb_gap_check",
+    "schedule": "daily 05:30",
+    "auto_assign": true,
+    "enabled": true,
+    "role_id": "default",
+    "required_skills": ["kb-gap-analysis"]
+  },
+  {
+    "id": "weekly-kb-expansion",
+    "subject": "每周知识库扩充计划",
+    "description": "根据 gap_report 自动生成并执行知识补齐任务。",
+    "task_type": "kb_expansion",
+    "schedule": "weekly monday 06:00",
+    "auto_assign": true,
+    "enabled": true,
+    "role_id": "default",
+    "required_skills": ["kb-gap-analysis", "kb-web-harvest", "kb-entity-extract"]
+  },
+  {
+    "id": "weekly-ontology-refinement",
+    "subject": "每周本体一致性维护",
+    "description": "审计本体实体与关系一致性，合并重复实体并修复断链关系。",
+    "task_type": "ontology_refinement",
+    "schedule": "weekly wednesday 06:20",
+    "auto_assign": true,
+    "enabled": true,
+    "role_id": "default",
+    "required_skills": ["kb-ontology-import", "kb-quality-audit"]
+  },
+  {
+    "id": "weekly-auto-upgrade",
+    "subject": "每周自动升级评估与发布",
+    "description": "先执行 export_for_finetuning 生成蒸馏样本，再执行 auto_rollout_upgrade.py 进行升级评估与灰度发布建议。",
+    "task_type": "auto_upgrade",
+    "schedule": "weekly sunday 04:00",
+    "auto_assign": true,
+    "enabled": true,
+    "role_id": "default",
+    "required_skills": ["self-evolution", "auto-discovery", "verification"]
+  }
+]
+

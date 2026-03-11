@@ -1,0 +1,67 @@
+---
+description: Agent 系统提示词架构设计
+alwaysApply: true
+---
+
+# Agent 系统提示词 5 层架构
+
+## 最终提示词 = Layer 0-4（agent_prompts.py）+ project_memory + BUNDLE + 中间件注入 + Layer 5（动态）
+
+```
+Layer 0: 核心身份（identity）                     — 有角色时动态生成，无角色时通用身份
+Layer 1: OS 层（system_communication / request_routing / tool_calling /
+         tone_and_style / resource_awareness / drive_and_responsibility /
+         collaboration_protocol / tool_usage / task_management /
+         security / workspace_layout / version_awareness / error_recovery /
+         making_changes / document_quality_check / output_format）
+Layer 2: 模式层（mode_behavior: supersedes 声明 + permissions + cognitive_framework + output_expectations + completion_criteria）
+Layer 3: 角色层（role_persona / role_cognitive_style / role_interaction / role_quality / role_drive）
+Layer 4: 业务能力层（use_skills / knowledge_graph_context + BUNDLE + project_memory）
+Layer 5: 运行时上下文（inject_user_context + user_preferences / human_checkpoints）
+  + 中间件注入（TodoList / Filesystem / SubAgent 工具 schema，默认英文提示词按项目策略替换/禁用）
+  + BASE_AGENT_PROMPT（deepagents 库基础提示词）
+```
+
+长期记忆：LangGraph Store（SQLite）+ langmem 工具（manage_memory、search_memory），由 DeepAgent/Store 提供。
+
+## 分工原则
+
+| 来源 | 内容 |
+|------|------|
+| 中间件（system_prompt） | 工具 schema + 用法示例（按项目策略替换为中文或禁用） |
+| agent_prompts.py Layer 0-1 | 基础身份 + 所有角色/模式共享的行为规范 |
+| mode_config.py Layer 2 | 模式硬约束（权限/认知框架/输出期望/完成条件） |
+| roles.json Layer 3 | 角色人格（结构化：persona/cognitive_style/interaction/quality/drive） |
+| BUNDLE/Skills Layer 4 | 业务能力速查 + 按需加载的专业流程 |
+
+## SubAgent 架构（2+N）
+
+Orchestrator 是项目经理，五种模式（Agent/Plan/Ask/Debug/Review）均通过 Orchestrator 统一调度；SubAgent 是专家（隔离上下文执行）。
+
+| Layer | Agent | 来源 | 默认启用 | 说明 |
+|-------|-------|------|----------|------|
+| 1 | general-purpose（内置） | SubAgentMiddleware | 是 | 通用多步任务、上下文隔离 |
+| 2 | explore-agent | 项目 default_specs | 是 | 文件搜索与环境探索 |
+| 3 | knowledge/planning/executor/自定义 | `.maibot/agents/*.yaml` | 按资源启用 | 专项能力扩展 |
+
+**模式与 SubAgent**：
+- Agent：Layer 1+2 始终可用；有云端资源时启用 Layer 3 扩展。
+- Plan：Layer 1+2 始终可用；有云端资源时可启用 planning/knowledge 扩展。
+- Debug：Layer 1+2 始终可用；有云端资源时可启用 knowledge 扩展。
+- Ask：仅保留 general-purpose（不暴露专用扩展 SubAgent）。
+
+**Skills vs Knowledge**：
+- Skills（方法论）：怎么做 → 自定义工具 + BUNDLE.md 内联
+- Knowledge（本地知识）：知道什么 → search_knowledge 或 knowledge-agent
+
+**路由规则**：1–2 步能完成则直接执行；否则按场景选 SubAgent；独立任务可并行 task()，有依赖则串行。纯本地优先直接执行，有云端资源时再扩大并行委派。
+
+## 输出语言规范
+
+- **与用户的所有文本输出默认使用简体中文**，除非用户明确要求其他语言。该原则在 Layer 1（tone_and_style）与各 SubAgent 模板中统一落实，便于审计与扩展。
+
+## 修改注意
+
+- 小幅度精准修改
+- 保持 XML 标签格式
+- 不重复中间件内容

@@ -1,0 +1,8 @@
+# 可选：与 Cursor Verifier 类似，用于验证已完成工作。不作为默认子代理，按需启用。
+name: critic-agent
+description: Evidence and calculation reviewer for high-stakes outputs.
+tool_group: critic
+prompt_template: critic
+use_bundle_context: false
+structured_output: critic
+model_alias: planning

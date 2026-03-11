@@ -1,0 +1,139 @@
+{
+  "source_type": "local",
+  "skills": [
+    {
+      "id": "skill-knowledge-building-basic",
+      "name": "知识构建助手（基础版）",
+      "domain": "knowledge",
+      "description": "扫描文档并生成结构化知识摘要、术语清单、主题索引，适合个人知识库起步。",
+      "version": "1.0.0",
+      "requires_tier": "free",
+      "source_type": "local",
+      "url": "",
+      "preview": "输入一批文档，输出主题索引 + 关键信息摘要 + 后续学习建议。",
+      "preview_output": "示例输出：主题A/主题B；关键结论5条；待补充资料3项。"
+    },
+    {
+      "id": "skill-ontology-management-core",
+      "name": "本体管理工作流（Core）",
+      "domain": "knowledge",
+      "description": "执行概念抽取、关系梳理、版本化差异对比，支持知识本体维护。",
+      "version": "1.0.0",
+      "requires_tier": "free",
+      "source_type": "local",
+      "preview": "输入领域资料，输出候选实体、关系草案和本体变更建议。",
+      "preview_output": "示例输出：新增实体12个，关系8条，冲突项2条。"
+    },
+    {
+      "id": "skill-document-generation-pro",
+      "name": "专业文档生成（Pro）",
+      "domain": "general",
+      "description": "根据目标自动组织章节结构、关键信息与交付格式，提升文档可读性和一致性。",
+      "version": "1.1.0",
+      "requires_tier": "pro",
+      "source_type": "local",
+      "preview": "输入目标和素材，生成结构化报告与检查清单。",
+      "preview_output": "示例输出：执行摘要、风险表、行动计划、附录清单。"
+    },
+    {
+      "id": "skill-report-generation-pro",
+      "name": "报告生成与复盘（Pro）",
+      "domain": "general",
+      "description": "适合周报/月报/专项报告，自动提取关键指标并形成结论与建议。",
+      "version": "1.1.0",
+      "requires_tier": "pro",
+      "source_type": "local",
+      "preview": "输入数据和文本，输出图表建议 + 结论 + 下一步计划。",
+      "preview_output": "示例输出：关键指标趋势、异常项、改进优先级。"
+    },
+    {
+      "id": "skill-data-analysis-pro",
+      "name": "数据分析增强（Pro）",
+      "domain": "analytics",
+      "description": "提供数据清洗、指标拆解、异常识别和可视化建议的完整流程。",
+      "version": "1.0.3",
+      "requires_tier": "pro",
+      "source_type": "local",
+      "preview": "输入数据表，输出分析摘要 + 指标解释 + 风险提示。",
+      "preview_output": "示例输出：TOP 指标、异常记录、后续采集建议。"
+    },
+    {
+      "id": "skill-bidding-analysis-enterprise",
+      "name": "招标文件深度分析（Enterprise）",
+      "domain": "sales",
+      "description": "覆盖评分标准、废标条款、资格要求、技术规格响应等关键环节。",
+      "version": "2.0.0",
+      "requires_tier": "enterprise",
+      "source_type": "local",
+      "preview": "输入招标文件，输出风险清单、评分策略和应答映射。",
+      "preview_output": "示例输出：废标条款8项、评分权重表、响应缺口列表。"
+    },
+    {
+      "id": "skill-proposal-writing-enterprise",
+      "name": "投标方案撰写（Enterprise）",
+      "domain": "sales",
+      "description": "围绕技术、商务、实施计划进行整体方案编排，适合复杂项目投标。",
+      "version": "2.0.0",
+      "requires_tier": "enterprise",
+      "source_type": "local",
+      "preview": "输入项目需求，输出投标方案骨架与关键章节草稿。",
+      "preview_output": "示例输出：技术架构、实施计划、服务承诺、风险对策。"
+    },
+    {
+      "id": "skill-compliance-check-pro",
+      "name": "合规审查助手（Pro）",
+      "domain": "contract",
+      "description": "自动检查条款风险与合规性，输出问题项与修订建议。",
+      "version": "1.2.0",
+      "requires_tier": "pro",
+      "source_type": "local",
+      "preview": "输入合同或规范文本，输出风险等级与条款建议。",
+      "preview_output": "示例输出：高风险3项，中风险5项，建议修订段落。"
+    },
+    {
+      "id": "skill-project-management-basic",
+      "name": "项目任务编排（基础版）",
+      "domain": "general",
+      "description": "将目标拆解为可执行计划，附带里程碑、负责人和验收标准建议。",
+      "version": "1.0.0",
+      "requires_tier": "free",
+      "source_type": "local",
+      "preview": "输入目标，输出任务拆分与执行节奏建议。",
+      "preview_output": "示例输出：阶段计划、关键节点、阻塞风险。"
+    },
+    {
+      "id": "skill-workflow-design-pro",
+      "name": "流程编排设计（Pro）",
+      "domain": "workflow",
+      "description": "从跨角色协作视角设计流程、检查点和自动化触发策略。",
+      "version": "1.0.1",
+      "requires_tier": "pro",
+      "source_type": "local",
+      "preview": "输入业务流程目标，输出流程图建议与优化点。",
+      "preview_output": "示例输出：关键步骤、审批节点、自动化建议。"
+    },
+    {
+      "id": "skill-external-resources-basic",
+      "name": "外部资源融合（基础版）",
+      "domain": "knowledge",
+      "description": "结合本地资料与外部公开资源做增量补全，提升知识覆盖率。",
+      "version": "1.0.0",
+      "requires_tier": "free",
+      "source_type": "local",
+      "preview": "输入主题，输出本地缺口与外部补全建议。",
+      "preview_output": "示例输出：缺失概念列表、建议来源、补全优先级。"
+    },
+    {
+      "id": "skill-visualization-pro",
+      "name": "可视化产出增强（Pro）",
+      "domain": "analytics",
+      "description": "面向分析结果快速生成图表建议、指标看板结构和解读话术。",
+      "version": "1.0.2",
+      "requires_tier": "pro",
+      "source_type": "local",
+      "preview": "输入分析结论，输出图表类型建议与展示结构。",
+      "preview_output": "示例输出：趋势图/对比图建议、图表标题和结论模板。"
+    }
+  ],
+  "description": "Skills 市场列表（source_type=local|remote；remote 模式可配置 remote_url 拉取远程 JSON；条目可含 url 指向 SKILL.md 纯文本地址以便一键安装；见 docs/skills_market_and_install.md）"
+}

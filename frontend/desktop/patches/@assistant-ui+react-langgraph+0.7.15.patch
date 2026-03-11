@@ -1,0 +1,154 @@
+diff --git a/node_modules/@assistant-ui/react-langgraph/dist/appendLangChainChunk.js b/node_modules/@assistant-ui/react-langgraph/dist/appendLangChainChunk.js
+--- a/node_modules/@assistant-ui/react-langgraph/dist/appendLangChainChunk.js
++++ b/node_modules/@assistant-ui/react-langgraph/dist/appendLangChainChunk.js
+@@ -4,17 +4,41 @@ function contentPartsToMerged(parts) {
+     if (!Array.isArray(parts) || parts.length === 0)
+         return undefined;
+-    return parts.map((p) => {
++    const mapped = parts.map((p) => {
+         if (p?.type === "text")
+             return { type: "text", text: p.text ?? "" };
++        if (p?.type === "reasoning")
++            return { type: "reasoning", text: p.text ?? "" };
+         if (p?.type === "tool-call") {
+             const out = { type: "tool-call", id: p.id ?? "", name: p.name ?? "", args: p.args ?? {} };
+             if (p.result !== undefined && p.result !== null)
+                 out.result = typeof p.result === "string" ? p.result : String(p.result);
+             return out;
+         }
+         return null;
+-    }).filter(Boolean);
++    }).filter(Boolean);
++    if (mapped.length === 0)
++        return undefined;
++    const merged = [];
++    for (let i = 0; i < mapped.length; i++) {
++        const p = mapped[i];
++        if (p.type === "text" && merged.length > 0 && merged[merged.length - 1].type === "text") {
++            merged[merged.length - 1].text = (merged[merged.length - 1].text || "") + (p.text || "");
++        } else if (p.type === "reasoning" && merged.length > 0 && merged[merged.length - 1].type === "reasoning") {
++            merged[merged.length - 1].text = (merged[merged.length - 1].text || "") + "\n\n" + (p.text || "");
++        } else {
++            merged.push(p);
++        }
++    }
++    // 全段合并：避免后端多次 flush 导致多个 text/reasoning 造成句子断裂或思考块割裂（最多各保留一段）
++    let allText = "";
++    let allReasoning = "";
++    const toolCalls = [];
++    let firstTextIdx = -1;
++    let firstReasoningIdx = -1;
++    for (let i = 0; i < merged.length; i++) {
++        const p = merged[i];
++        if (p.type === "text") {
++            allText += (p.text || "");
++            if (firstTextIdx < 0) firstTextIdx = i;
++        } else if (p.type === "reasoning") {
++            allReasoning += (allReasoning ? "\n\n" : "") + (p.text || "");
++            if (firstReasoningIdx < 0) firstReasoningIdx = i;
++        } else {
++            toolCalls.push(p);
++        }
++    }
++    const out = [];
++    const textFirst = firstReasoningIdx < 0 || (firstTextIdx >= 0 && firstTextIdx < firstReasoningIdx);
++    if (textFirst && allText) out.push({ type: "text", text: allText });
++    if (allReasoning) out.push({ type: "reasoning", text: allReasoning });
++    if (!textFirst && allText) out.push({ type: "text", text: allText });
++    for (const t of toolCalls) out.push(t);
++    return out.length ? out : merged;
+ }
+ export const appendLangChainChunk = (prev, curr) => {
+diff --git a/node_modules/@assistant-ui/react-langgraph/dist/convertLangChainMessages.js b/node_modules/@assistant-ui/react-langgraph/dist/convertLangChainMessages.js
+--- a/node_modules/@assistant-ui/react-langgraph/dist/convertLangChainMessages.js
++++ b/node_modules/@assistant-ui/react-langgraph/dist/convertLangChainMessages.js
+@@ -12,37 +12,45 @@ const warnForUnknownMessagePartType = (type) => {
+ };
+ const contentToParts = (content) => {
+-    if (typeof content === "string")
++    if (content == null || (typeof content !== "string" && !Array.isArray(content)))
++        return [];
++    if (typeof content === "string")
+         return [{ type: "text", text: content }];
++    if (!Array.isArray(content))
++        return [];
+     return content
+         .map((part) => {
++        if (part == null || typeof part !== "object")
++            return null;
+         const type = part.type;
+         switch (type) {
+             case "text":
+                 return { type: "text", text: part.text };
+             case "text_delta":
+                 return { type: "text", text: part.text };
+             case "image_url":
+-                if (typeof part.image_url === "string") {
++                if (part.image_url == null)
++                    return { type: "image", image: "" };
++                if (typeof part.image_url === "string") {
+                     return { type: "image", image: part.image_url };
+                 }
+-                else {
+-                    return {
+-                        type: "image",
+-                        image: part.image_url.url,
+-                    };
+-                }
++                return {
++                    type: "image",
++                    image: (part.image_url && typeof part.image_url === "object" && part.image_url.url != null) ? part.image_url.url : "",
++                };
+             case "file":
+-                return {
+-                    type: "file",
+-                    filename: part.file.filename,
+-                    data: part.file.file_data,
+-                    mimeType: part.file.mime_type,
+-                };
++                if (part.file == null || typeof part.file !== "object")
++                    return { type: "file", filename: "", data: "", mimeType: "" };
++                return {
++                    type: "file",
++                    filename: part.file.filename ?? "",
++                    data: part.file.file_data ?? "",
++                    mimeType: part.file.mime_type ?? "",
++                };
+             case "thinking":
+-                return { type: "reasoning", text: part.thinking };
++                return { type: "reasoning", text: part.thinking ?? "" };
+             case "reasoning":
+                 return {
+                     type: "reasoning",
+-                    text: part.summary.map((s) => s.text).join("\n\n\n"),
++                    text: (part.summary && Array.isArray(part.summary))
++                        ? part.summary.map((s) => s && s.text).filter(Boolean).join("\n\n\n")
++                        : (part.text != null ? String(part.text) : ""),
+                 };
+             case "tool_use":
+@@ -68,19 +85,19 @@
+export const convertLangChainMessages = (message) => {
++    if (message == null || typeof message !== "object")
++        return { role: "user", id: "", content: [] };
+     switch (message.type) {
+         case "system":
+             return {
+                 role: "system",
+                 id: message.id,
+-                content: [{ type: "text", text: message.content }],
++                content: [{ type: "text", text: message.content != null ? message.content : "" }],
+             };
+         case "human":
+             return {
+                 role: "user",
+                 id: message.id,
+                 content: contentToParts(message.content),
+             };
+         case "ai": {
+-            const normalizedContent = typeof message.content === "string"
+-                ? [{ type: "text", text: message.content }]
+-                : message.content;
++            const normalizedContent = typeof message.content === "string"
++                ? [{ type: "text", text: message.content }]
++                : (message.content != null && Array.isArray(message.content) ? message.content : []);
+             const hasToolCallInContent = Array.isArray(normalizedContent) && normalizedContent.some((p) => p?.type === "tool-call");

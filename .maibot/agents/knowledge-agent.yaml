@@ -1,0 +1,7 @@
+# 高级/实验：主 Agent 可直接 search_knowledge，此子代理为可选扩展。仅当 enable_yaml_subagents 时启用。
+name: knowledge-agent
+description: Domain knowledge retrieval agent for multi-source synthesis.
+tool_group: knowledge
+prompt_template: knowledge
+use_bundle_context: false
+model_alias: knowledge

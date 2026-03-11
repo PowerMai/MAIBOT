@@ -1,0 +1,7 @@
+# 高级/实验：执行阶段由主 Agent 按 plan_file_path 承担，此子代理为可选扩展。仅当 enable_yaml_subagents 且理解与 Plan 执行阶段区别时启用。
+name: executor-agent
+description: Read-write execution agent that follows approved plans.
+tool_group: executor
+prompt_template: executor
+use_bundle_context: true
+model_alias: executor

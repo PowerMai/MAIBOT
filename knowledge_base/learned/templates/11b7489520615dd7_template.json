@@ -1,0 +1,14 @@
+{
+  "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/11b7489520615dd7.md",
+  "domain": "contract",
+  "created_at": "2026-03-08T14:56:45.262103",
+  "template": {
+    "doc_type": "md",
+    "sections": [
+      "# Web cache: openclaw 六阶段流水线 深度剖析 汤师爷 架构设计 site:infoq.cn",
+      "## 1."
+    ],
+    "placeholders": [],
+    "template_excerpt": "# Web cache: openclaw 六阶段流水线 深度剖析 汤师爷 架构设计 site:infoq.cn\n\n> 时间: 2026-03-08 06:55\n\n\n## 1. \n- 来源: duckduckgo\n\n在构建高安全、自托管的运维告警体系时，选择一个可控且功能完整的 IM 通道至关重要。 近期我在 Open CloudOS 9.4系统上成功部署了 Open C law ——一款支持多协议智能消息中枢的开源框架，并通 名字变迁：Clawdbot -> Moltbot -> Open C law 用到的工具：Agent-Sandbox GitHub安装效果预览：一，用Agent-Sandbox 中创建一个 Open C law 本篇文章来自社区开发者的投稿作为一名AI coding专家，我用 3 天时间把 Open C law 部署上线并对接飞书，踩了一堆坑，也收获了不少经验。 本文是我的完整实战记录，希望能帮助更多开发者少走弯路 Feb 5, 2026 · 无论是豆包手机、具身智能，还是引发广泛关注的 Open C law ，这些爆火的案例都在验证一个趋势：智能终端正在成为大模型能力向用户延伸的重要载体。 刘知远认为，这些探索共同指向一个核心愿景：大模型将越来越贴近用户。 6 days ago · 那么， 为什么 Open C law 能火？ 我认为关键在于它重新定义了人与 AI 的交互"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/cc791037dad3c6c4.md",
+  "domain": "legal",
+  "created_at": "2026-03-08T14:56:44.448003",
+  "template": {
+    "doc_type": "md",
+    "sections": [
+      "# Web cache: openclaw 六阶段流水线 深度剖析 汤师爷 架构设计 site:github.com",
+      "## 1."
+    ],
+    "placeholders": [],
+    "template_excerpt": "# Web cache: openclaw 六阶段流水线 深度剖析 汤师爷 架构设计 site:github.com\n\n> 时间: 2026-03-08 06:55\n\n\n## 1. \n- 来源: duckduckgo\n\n2 weeks ago - Gateway/Restart: fix restart-loop edge cases by keeping openclaw.mjs -> dist/entry.js bootstrap detection explicit, reacquiring the gateway lock for in-process restart fallback paths, and tightening restart-loop regression coverage. 3 weeks ago - This optimization is critical for OpenClaw's economics - sessions load substantial context (skills, memory, system prompts) that would be expensive to re-send uncached on every turn. 1 week ago - 项目推荐 我开发了一个开源项目 ClawBus，专门为 OpenClaw 设计的多 A"
+  }
+}

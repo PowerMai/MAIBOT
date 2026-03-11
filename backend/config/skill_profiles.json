@@ -1,0 +1,70 @@
+{
+  "max_skills_per_session": 20,
+  "profiles": {
+    "general": {
+      "label": "通用能力",
+      "description": "默认加载内置 Skills，并在运行时叠加已启用插件 Skills。",
+      "capabilities_summary": "Claude 风格的通用技能基座",
+      "paths": [
+        "knowledge_base/skills/"
+      ]
+    },
+    "bidding": {
+      "label": "招投标",
+      "description": "解决方案专家场景：基座能力 + 招投标专项，单会话约 10 个技能。",
+      "capabilities_summary": "L1+L2+L3 基座 + bidding 专项",
+      "paths": [
+        "knowledge_base/skills/reasoning",
+        "knowledge_base/skills/ask",
+        "knowledge_base/skills/plan",
+        "knowledge_base/skills/debug",
+        "knowledge_base/skills/review",
+        "knowledge_base/skills/pdf",
+        "knowledge_base/skills/docx",
+        "knowledge_base/skills/xlsx",
+        "knowledge_base/skills/pptx",
+        "knowledge_base/skills/bidding"
+      ]
+    },
+    "analyst": {
+      "label": "分析师",
+      "description": "分析场景：L1 推理与咨询 + L3 格式与数据，单会话约 11 个技能内。",
+      "capabilities_summary": "L1 + L3 格式（含文档/表格/演示）",
+      "paths": [
+        "knowledge_base/skills/reasoning",
+        "knowledge_base/skills/ask",
+        "knowledge_base/skills/pdf",
+        "knowledge_base/skills/docx",
+        "knowledge_base/skills/xlsx",
+        "knowledge_base/skills/pptx"
+      ]
+    },
+    "office": {
+      "label": "办公助手",
+      "description": "办公场景：L1 基本 + L3 文档格式，单会话约 9 个技能内。",
+      "capabilities_summary": "L1 + L3 格式",
+      "paths": [
+        "knowledge_base/skills/reasoning",
+        "knowledge_base/skills/ask",
+        "knowledge_base/skills/pdf",
+        "knowledge_base/skills/docx",
+        "knowledge_base/skills/xlsx",
+        "knowledge_base/skills/pptx"
+      ]
+    },
+    "knowledge_engineering": {
+      "label": "知识工程",
+      "description": "知识工程师场景：L1+L2 核心 + L3 格式 + kb-* 专长，单会话约 16 个技能内。",
+      "capabilities_summary": "L1+L2 核心 + 格式 2 + kb-* 7",
+      "paths": [
+        "knowledge_base/skills/reasoning",
+        "knowledge_base/skills/ask",
+        "knowledge_base/skills/plan",
+        "knowledge_base/skills/debug",
+        "knowledge_base/skills/pdf",
+        "knowledge_base/skills/docx",
+        "knowledge_base/skills/knowledge_engineering"
+      ]
+    }
+  }
+}

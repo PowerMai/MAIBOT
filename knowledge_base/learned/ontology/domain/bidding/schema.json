@@ -1,0 +1,66 @@
+{
+  "domain": "bidding_it_products",
+  "version": "1.0",
+  "description": "招投标IT产品领域本体模式",
+  "entity_types": {
+    "ORGANIZATION": {
+      "label": "组织机构",
+      "properties": ["name", "type", "registration_no", "qualifications"],
+      "subtypes": ["manufacturer", "supplier", "purchaser", "agency"]
+    },
+    "PRODUCT": {
+      "label": "产品",
+      "properties": ["model", "series", "cpu_arch", "specs", "price_range"],
+      "subtypes": ["server", "terminal", "monitor", "storage", "network", "software"]
+    },
+    "PRODUCT_SERIES": {
+      "label": "产品系列",
+      "properties": ["name", "manufacturer", "cpu_platform"]
+    },
+    "CERTIFICATION": {
+      "label": "认证资质",
+      "properties": ["name", "issuer", "valid_from", "valid_until", "cert_no"],
+      "subtypes": ["company_cert", "product_cert", "personnel_cert", "compatibility_cert"]
+    },
+    "PERSONNEL": {
+      "label": "人员",
+      "properties": ["name", "title", "certifications", "department"]
+    },
+    "REQUIREMENT": {
+      "label": "招标要求",
+      "properties": ["category", "mandatory", "scoring_weight", "clause_ref"],
+      "subtypes": ["technical", "commercial", "qualification", "service"]
+    },
+    "SCORING_ITEM": {
+      "label": "评分项",
+      "properties": ["name", "max_score", "weight", "evaluation_method"]
+    },
+    "TECHNICAL_SPEC": {
+      "label": "技术规格",
+      "properties": ["parameter", "value", "unit", "benchmark"]
+    },
+    "SERVICE": {
+      "label": "服务",
+      "properties": ["type", "scope", "duration", "sla"],
+      "subtypes": ["warranty", "maintenance", "training", "deployment"]
+    },
+    "PROJECT": {
+      "label": "项目",
+      "properties": ["name", "budget", "deadline", "industry"]
+    }
+  },
+  "relation_types": {
+    "manufactures": {"source": "ORGANIZATION", "target": "PRODUCT", "label": "生产"},
+    "belongs_to_series": {"source": "PRODUCT", "target": "PRODUCT_SERIES", "label": "属于系列"},
+    "has_certification": {"source": ["ORGANIZATION", "PRODUCT"], "target": "CERTIFICATION", "label": "持有认证"},
+    "compatible_with": {"source": "PRODUCT", "target": "PRODUCT", "label": "兼容"},
+    "meets_requirement": {"source": "PRODUCT", "target": "REQUIREMENT", "label": "满足要求"},
+    "has_spec": {"source": "PRODUCT", "target": "TECHNICAL_SPEC", "label": "具有规格"},
+    "provides_service": {"source": "ORGANIZATION", "target": "SERVICE", "label": "提供服务"},
+    "employs": {"source": "ORGANIZATION", "target": "PERSONNEL", "label": "雇用"},
+    "holds_cert": {"source": "PERSONNEL", "target": "CERTIFICATION", "label": "持有证书"},
+    "requires": {"source": "PROJECT", "target": "REQUIREMENT", "label": "要求"},
+    "scores_by": {"source": "REQUIREMENT", "target": "SCORING_ITEM", "label": "评分依据"},
+    "supersedes": {"source": "PRODUCT", "target": "PRODUCT", "label": "替代"}
+  }
+}

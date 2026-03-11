@@ -1,0 +1,14 @@
+{
+  "sources": [
+    {
+      "name": "claude-official",
+      "url": "https://plugins.anthropic.com/manifest.json",
+      "enabled": true
+    },
+    {
+      "name": "local",
+      "url": "file://plugins/",
+      "enabled": true
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "tiers": {
+    "free": {
+      "label": "Free",
+      "allow_tools": ["*"],
+      "allow_skills": ["platform/*", "foundation/*", "general/*", "format/*", "modes/*", "community/*"],
+      "allow_plugins": ["productivity", "data"],
+      "max_autonomy_level": "L1",
+      "allow_mcp_servers": ["filesystem", "sqlite"],
+      "allow_middleware": [
+        "content_fix",
+        "mode_permission",
+        "mcp",
+        "inject_user_context",
+        "inject_context_budget",
+        "reflection",
+        "loop_detector"
+      ],
+      "limits": {
+        "max_custom_skills": 5,
+        "max_mcp_connections": 2,
+        "max_daily_autonomous_tasks": 3,
+        "max_plugins": 2,
+        "cloud_model_requests_daily": 0,
+        "memory_enabled": false,
+        "research_enabled": false,
+        "evolution_enabled": false,
+        "parallel_agents": 1
+      }
+    },
+    "pro": {
+      "label": "Pro",
+      "allow_tools": ["*"],
+      "allow_skills": ["*"],
+      "allow_plugins": ["official/*"],
+      "max_autonomy_level": "L2",
+      "allow_mcp_servers": ["*"],
+      "allow_middleware": ["*"],
+      "limits": {
+        "max_custom_skills": 50,
+        "max_mcp_connections": 10,
+        "max_daily_autonomous_tasks": 50,
+        "max_plugins": 20,
+        "cloud_model_requests_daily": 500,
+        "memory_enabled": true,
+        "research_enabled": true,
+        "evolution_enabled": true,
+        "parallel_agents": 2
+      }
+    },
+    "max": {
+      "label": "Max",
+      "allow_tools": ["*"],
+      "allow_skills": ["*"],
+      "allow_plugins": ["*"],
+      "max_autonomy_level": "L3",
+      "allow_mcp_servers": ["*"],
+      "allow_middleware": ["*"],
+      "limits": {
+        "max_custom_skills": 200,
+        "max_mcp_connections": 30,
+        "max_daily_autonomous_tasks": 200,
+        "max_plugins": 50,
+        "cloud_model_requests_daily": 2500,
+        "memory_enabled": true,
+        "research_enabled": true,
+        "evolution_enabled": true,
+        "parallel_agents": 5,
+        "priority_access": true,
+        "early_access": true,
+        "distillation_enabled": true
+      }
+    },
+    "enterprise": {
+      "label": "Enterprise",
+      "max_autonomy_level": "L3",
+      "allow_tools": ["*"],
+      "allow_skills": ["*"],
+      "allow_plugins": ["*"],
+      "allow_mcp_servers": ["*"],
+      "allow_middleware": ["*"],
+      "limits": {
+        "max_custom_skills": -1,
+        "max_mcp_connections": -1,
+        "max_daily_autonomous_tasks": -1,
+        "max_plugins": -1,
+        "cloud_model_requests_daily": -1,
+        "memory_enabled": true,
+        "research_enabled": true,
+        "evolution_enabled": true,
+        "parallel_agents": -1,
+        "priority_access": true,
+        "early_access": true,
+        "distillation_enabled": true,
+        "private_plugin_marketplace": true,
+        "org_wide_skill_deployment": true,
+        "audit_logs": true
+      }
+    }
+  },
+  "default_tier": "free"
+}

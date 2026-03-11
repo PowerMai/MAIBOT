@@ -1,0 +1,18 @@
+{
+  "name": "enterprise-search",
+  "version": "1.0.0",
+  "description": "Claude-style enterprise search workflows for retrieval quality, source governance, and synthesis.",
+  "compatibility": {
+    "min_version": "0.378.0"
+  },
+  "components": {
+    "skills": [],
+    "commands": [],
+    "agents": [],
+    "hooks": [],
+    "mcp": []
+  },
+  "author": {
+    "name": "maibot"
+  }
+}

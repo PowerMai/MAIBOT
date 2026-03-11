@@ -1,0 +1,48 @@
+{
+  "sensitive_paths": [
+    "contracts/",
+    "finance/",
+    "*.secret.*"
+  ],
+  "prompt_modules": {
+    "enabled": true,
+    "enable_workspace_overrides": true,
+    "force_detail_level": "",
+    "warn_missing_modules": true
+  },
+  "execution_policy": {
+    "python": {
+      "max_timeout": 120,
+      "blocked_patterns": [
+        "os.system(",
+        "subprocess.Popen(",
+        "subprocess.run(",
+        "pty.spawn("
+      ]
+    },
+    "shell": {
+      "max_timeout": 60,
+      "allow_outside_workspace": false,
+      "blocked_patterns": [
+        "rm -rf /",
+        "mkfs",
+        "shutdown",
+        "reboot",
+        "curl | sh",
+        "wget | sh",
+        ":(){:|:&};:"
+      ],
+      "allow_commands": []
+    },
+    "file_write": {
+      "note": "写入工作区时可能弹出权限确认，请点击允许以继续。"
+    }
+  },
+  "upgrade": {
+    "remote_manifest_url": ""
+  },
+  "autonomous": {
+    "task_watcher_enabled": true,
+    "task_watcher_role_id": "assistant"
+  }
+}
