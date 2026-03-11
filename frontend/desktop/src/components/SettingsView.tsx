@@ -5087,7 +5087,7 @@ export function SettingsView({ onClose, initialSection }: SettingsViewProps) {
           </div>
           <DialogFooter>
             <Button variant="outline" size="sm" onClick={() => setConfigEditorOpen(false)}>
-              取消
+              {t('settings.cancel')}
             </Button>
             <Button size="sm" onClick={handleSaveConfig} disabled={configSaving || !configSelectedKey}>
               {configSaving ? '保存中...' : '保存'}
@@ -5134,7 +5134,7 @@ export function SettingsView({ onClose, initialSection }: SettingsViewProps) {
           </div>
           <DialogFooter>
             <Button variant="outline" size="sm" onClick={() => setShowCreateSkillModal(false)}>
-              取消
+              {t('settings.cancel')}
             </Button>
             <Button
               size="sm"

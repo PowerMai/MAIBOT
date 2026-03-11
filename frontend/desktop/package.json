@@ -72,6 +72,7 @@
             "react-markdown": "^10.1.0",
             "react-pdf": "^10.2.0",
             "react-resizable-panels": "^2.1.7",
+            "react-syntax-highlighter": "^16.0.0",
             "recharts": "^2.15.2",
             "secure-json-parse": "^4.1.0",
             "rehype-katex": "^7.0.1",

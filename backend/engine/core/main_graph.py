@@ -182,6 +182,18 @@ def _normalize_messages_system_first(messages: list) -> list:
     return [merged_system] + others
 
 
+def _content_blocks_to_str(content: Any) -> str:
+    """将 content 为 list（content_blocks）或非字符串时转为单字符串，避免上游 API 400 No schema matches。"""
+    from backend.engine.utils.message_normalize import content_blocks_to_str
+    return content_blocks_to_str(content)
+
+
+def _normalize_messages_content_to_string(messages: list) -> list:
+    """将 messages 中所有 content 非 string 的消息转为 content 为 string，避免第三轮及以后请求因 state 中 AIMessage.content 为 list 导致上游 API 400 No schema matches。"""
+    from backend.engine.utils.message_normalize import normalize_messages_content_to_string
+    return normalize_messages_content_to_string(messages)
+
+
 def plan_route_decision(state: AgentState) -> str:
     """Plan 模式路由：在 base=deepagent 时返回 deepagent_plan 或 deepagent_execute。供回归测试与图内条件边一致。"""
     base = route_decision(state)
@@ -1435,6 +1447,7 @@ def create_router_graph(
         messages = state.get("messages", [])
         _fixed_messages = _normalize_tool_message_ids(messages)
         _fixed_messages = _normalize_messages_system_first(_fixed_messages)
+        _fixed_messages = _normalize_messages_content_to_string(_fixed_messages)
         if _fixed_messages is not messages:
             state = {**state, "messages": _fixed_messages}
             messages = _fixed_messages
@@ -2715,7 +2728,8 @@ def create_router_graph(
                                     "[id_consistency] ToolMessage.tool_call_id=%s 不在上一轮 AI tool_calls id 集合 %s 中，可能导致前端 merge/证据区错位",
                                     _tid[:32] if _tid else "", list(_last_ai_ids)[:5],
                                 )
-                final_state = {"messages": _normalize_tool_message_ids(to_yield)}
+                # 写入 checkpoint 前将 content 归一化为 string，避免下一轮加载到 list 导致上游 API 400
+                final_state = {"messages": _normalize_messages_content_to_string(_normalize_tool_message_ids(to_yield))}
                 # #region agent log
                 _debug_log_agent("yield_final_state", {"accumulated_count": len(to_yield)}, "H5")
                 # #endregion
@@ -2723,7 +2737,7 @@ def create_router_graph(
             elif final_state:
                 raw_msgs = final_state.get("messages") or []
                 to_yield = raw_msgs[-_YIELD_MESSAGES_TAIL_MAX:] if len(raw_msgs) > _YIELD_MESSAGES_TAIL_MAX else raw_msgs
-                final_state = {"messages": _normalize_tool_message_ids(to_yield)}
+                final_state = {"messages": _normalize_messages_content_to_string(_normalize_tool_message_ids(to_yield))}
                 # #region agent log
                 _debug_log_agent("yield_final_state", {"from_final_state": True, "count": len(final_state["messages"])}, "H5")
                 # #endregion

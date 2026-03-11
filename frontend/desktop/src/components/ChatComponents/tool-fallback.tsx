@@ -1462,8 +1462,11 @@ export function getPartKeyInfo(part: { toolCall?: { name?: string }; args?: Reco
     const d = String(args.description);
     return d.length > 40 ? d.slice(0, 40) + "…" : d;
   }
-  // 兜底：任意 args 都尽量展示关键信息，避免「未知工具」无价值
-  const keys = Object.keys(args || {}).filter((k) => args![k] != null && String(args![k]).trim() !== "");
+  // 兜底：任意 args 都尽量展示关键信息，避免「未知工具」无价值；跳过 content/code 等大字段，避免整段代码刷屏
+  const SKIP_KEYS = new Set(["content", "code", "script", "data", "body", "text", "input"]);
+  const keys = Object.keys(args || {}).filter(
+    (k) => args![k] != null && String(args![k]).trim() !== "" && !SKIP_KEYS.has(k)
+  );
   if (keys.length === 0) return "";
   const first = keys[0];
   const v = args![first];
@@ -2602,15 +2605,13 @@ export const WriteFileBinaryToolUI = makeAssistantToolUI<WriteFileBinaryArgs, st
         isSuccess = displayResult.includes("✅") || (isComplete && !displayResult.includes("❌") && !displayResult.includes("失败"));
       }
     }
-    const isError = isComplete && !isSuccess;
-    const borderAccent = isRunning ? TOOL_CARD_BORDER_RUNNING : isComplete ? (isError ? TOOL_CARD_BORDER_ERROR : TOOL_CARD_BORDER_COMPLETE) : "";
 
     return (
-      <div className={cn("my-1.5", TOOL_CARD_CONTAINER_BASE, borderAccent)}>
+      <div className="my-1.5">
         <div className="inline-flex items-center gap-1.5 text-sm">
           <button type="button" className="inline-flex items-center gap-1.5 hover:bg-muted/30 rounded px-1.5 py-0.5 -ml-1.5 transition-colors cursor-default">
             {isRunning ? (
-              <LoaderIcon className="size-3.5 animate-spin text-violet-500" />
+              <LoaderIcon className="size-3.5 animate-spin text-amber-500" />
             ) : isSuccess ? (
               <CheckIcon className="size-3.5 text-emerald-500" />
             ) : (

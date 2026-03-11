@@ -1,0 +1,19 @@
+diff --git a/node_modules/@assistant-ui/react/dist/legacy-runtime/runtime-cores/external-store/external-message-converter.js b/node_modules/@assistant-ui/react/dist/legacy-runtime/runtime-cores/external-store/external-message-converter.js
+--- a/node_modules/@assistant-ui/react/dist/legacy-runtime/runtime-cores/external-store/external-message-converter.js
++++ b/node_modules/@assistant-ui/react/dist/legacy-runtime/runtime-cores/external-store/external-message-converter.js
+@@ -14,11 +14,14 @@ const joinExternalMessages = (messages) => {
+             if (toolCallIdx !== -1) {
+                 const toolCall = assistantMessage.content[toolCallIdx];
+                 if (output.toolName !== undefined) {
+-                    if (toolCall.toolName !== output.toolName)
++                    const existingName = toolCall.toolName;
++                    const canUpdateName = !existingName || existingName === "";
++                    if (!canUpdateName && existingName !== output.toolName)
+                         throw new Error(`Tool call name ${output.toolCallId} ${output.toolName} does not match existing tool call ${toolCall.toolName}`);
+                 }
+                 assistantMessage.content[toolCallIdx] = {
+                     ...toolCall,
++                    ...(output.toolName !== undefined ? { toolName: output.toolName } : {}),
+                     ...{
+                         [symbolInnerMessage]: [
+                             ...(toolCall[symbolInnerMessage] ?? []),

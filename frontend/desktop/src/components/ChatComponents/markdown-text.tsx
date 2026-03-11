@@ -15,8 +15,10 @@ import { makePrismSyntaxHighlighter } from "@assistant-ui/react-syntax-highlight
 import { useMessage } from "@assistant-ui/react";
 import React, { type FC, memo, useState, useEffect, useRef, useCallback, useMemo } from "react";
 import DOMPurify from "dompurify";
-import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
-import { oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
+import {
+  oneDark,
+  oneLight,
+} from "react-syntax-highlighter/dist/esm/styles/prism/index.js";
 import { CheckIcon, CopyIcon, PlayIcon, ExternalLinkIcon, FileIcon } from "lucide-react";
 import { remarkPluginsWithMath, rehypePluginsMath } from "../../lib/markdownRender";
 
@@ -600,20 +602,13 @@ function useIsDark(): boolean {
   const [isDark, setIsDark] = useState(
     () => typeof document !== "undefined" && document.documentElement.classList.contains("dark"),
   );
-  const mountedRef = React.useRef(true);
   useEffect(() => {
-    mountedRef.current = true;
     if (typeof document === "undefined") return;
     const el = document.documentElement;
-    const check = () => {
-      if (mountedRef.current) setIsDark(el.classList.contains("dark"));
-    };
+    const check = () => setIsDark(el.classList.contains("dark"));
     const obs = new MutationObserver(check);
     obs.observe(el, { attributes: true, attributeFilter: ["class"] });
-    return () => {
-      mountedRef.current = false;
-      obs.disconnect();
-    };
+    return () => obs.disconnect();
   }, []);
   return isDark;
 }

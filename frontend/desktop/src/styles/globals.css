@@ -758,6 +758,27 @@ code, pre, .font-mono {
   50% { opacity: 0; }
 }
 
+/* 聊天区换行：按词/句换行，避免中文等每字换行（不用 word-break: break-all） */
+.wrap-break-word {
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+/* 助手消息正文与 Markdown 区域：保证最小可读宽度，避免 flex 压成一条线；句子正常成行显示 */
+.aui-assistant-message-content {
+  min-width: min(22ch, 100%);
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+.aui-md-wrapper .aui-md,
+.aui-md-wrapper .aui-md p,
+.aui-md-wrapper .aui-md li,
+.aui-md-wrapper .aui-md blockquote {
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
 /* Action bar：桌面端 hover 才完全显示 */
 .aui-assistant-message-footer {
   opacity: 1;

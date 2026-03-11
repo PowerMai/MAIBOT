@@ -53,7 +53,7 @@ function isAllowedMessageType(type: string | undefined): boolean {
 /** 流式 partial 中单条消息形状（partialAiToChunkDeltas / preparePartialChunkPayload 单源，避免多处重复定义） */
 type StreamPartialAiMessage = { type?: string; id?: string; content?: unknown; tool_call_chunks?: unknown[] };
 
-/** Cursor 一致：messages/complete 时将 ToolMessage 合并进上一条 AI 消息的 tool-call part.result，工具卡片与本消息依据单源展示。
+/** Cursor 一致：将 ToolMessage 合并进上一条 AI 消息的 tool-call part.result，按后端/LLM 执行顺序展示（思考→工具1+结果→工具2+结果→…→正文），不重排、不合并 content。
  * @param omitContentParts 为 true 时（流式 partial）不写入 content_parts，避免 SDK 走替换分支；complete 时传 false/不传以保留。 */
 function mergeToolResultsIntoAiMessages(
   messages: Array<{ type?: string; id?: string; content?: unknown; tool_calls?: Array<{ id?: string; name?: string; args?: unknown }>; tool_call_id?: string; name?: string }>,
@@ -126,7 +126,7 @@ function mergeToolResultsIntoAiMessages(
           }).filter(Boolean) as typeof contentParts;
         } else {
           const textContent = typeof content === "string" ? content : "";
-          contentParts = [{ type: "text", text: textContent }];
+          contentParts = [];
           for (const tc of toolCalls) {
             const id = (tc as { id?: string }).id ?? "";
             contentParts.push({
@@ -137,6 +137,7 @@ function mergeToolResultsIntoAiMessages(
               result: toolResultById[id],
             });
           }
+          contentParts.push({ type: "text", text: textContent });
         }
       }
       if (
@@ -908,7 +909,6 @@ export function MyRuntimeProvider({
             );
           })
           .catch((e) => {
-            if (!isMountedRef.current) return;
             if (import.meta.env?.DEV) console.warn('[MyRuntimeProvider] updateThreadTitle failed', e);
           });
       }
@@ -1734,10 +1734,7 @@ export function MyRuntimeProvider({
             if (!isMountedRef.current) return;
             window.dispatchEvent(new CustomEvent(EVENTS.SESSION_CHANGED, { detail: { threadId: externalId, title: autoTitle } }));
           })
-          .catch((e) => {
-            if (!isMountedRef.current) return;
-            if (import.meta.env?.DEV) console.warn('[MyRuntimeProvider] updateThreadTitle failed', e);
-          });
+          .catch((e) => { if (import.meta.env?.DEV) console.warn('[MyRuntimeProvider] updateThreadTitle failed', e); });
       }
 
       let streamDone = false;
@@ -1977,9 +1974,10 @@ export function MyRuntimeProvider({
         let lastExecutionMetricsFingerprint = '';
         let lastExecutionMetricsEmitAt = 0;
         let pendingTaskProgressEvent: ToolStreamEvent | null = null;
-        // 单主通道：优先 custom(messages_partial)，若无则退回 messages/partial
+        // 单主通道：custom 优先（推理流 content_parts 仅 custom 下发）；main 仅在没有 custom 且连续 2+ partial 时锁定
         let primaryMessageChannel: "auto" | "custom" | "messages" = "auto";
-        /** 仅当已从 SDK messages 通道 yield 过内容时才跳过 root custom，避免误锁 messages 后丢掉后端 writer 的 custom messages_partial */
+        let hasSeenCustomPartialInRun = false;
+        let mainPartialCount = 0;
         let seenYieldFromMessagesChannel = false;
         let lastCustomMessageAt = 0;
         let partialSuppressedCount = 0;
@@ -2216,17 +2214,15 @@ export function MyRuntimeProvider({
         const runThreadIdRef = { current: streamThreadId };
         /** partial 时把 type=ai 转为 AIMessageChunk+delta，供 SDK append 而非 replace，避免碎片式显示 */
         const streamAiAccumulatedById = new Map<string, string>();
-        /** 本 run 内流式 AI 消息的稳定 id：同一 hintId 的 partial 共用一个 id，避免 SDK ensureMessageId 为无 id 的 chunk 各生成 uuid 导致「一行一个字」 */
-        const streamStableAiIdByHint = new Map<string, string>();
+        /** 本 run 内流式 AI 消息唯一稳定 id：后端每 chunk 可能发不同 id，若按 hintId 各自保留会变成多条消息导致断行；故整 run 只用一个 id（首包 hint 或生成一次 uuid） */
         let streamStableAiMessageIdFallback: string | null = null;
         const getOrCreateStableAiId = (hintId: string): string => {
-          if (hintId) {
-            if (!streamStableAiIdByHint.has(hintId)) streamStableAiIdByHint.set(hintId, hintId);
-            return streamStableAiIdByHint.get(hintId)!;
-          }
           if (streamStableAiMessageIdFallback) return streamStableAiMessageIdFallback;
-          const firstHint = streamStableAiIdByHint.values().next().value;
-          if (firstHint) return firstHint;
+          const trimmed = String(hintId ?? "").trim();
+          if (trimmed) {
+            streamStableAiMessageIdFallback = trimmed;
+            return trimmed;
+          }
           streamStableAiMessageIdFallback = typeof crypto !== "undefined" && crypto.randomUUID ? crypto.randomUUID() : `ai-${Date.now()}-${Math.random().toString(36).slice(2, 9)}`;
           return streamStableAiMessageIdFallback;
         };
@@ -2400,6 +2396,7 @@ export function MyRuntimeProvider({
                 continue;
               }
               if (d?.type === 'messages_partial' && Array.isArray(d.data) && d.data.length > 0) {
+                hasSeenCustomPartialInRun = true;
                 type StreamMsg = { type?: string; tool_calls?: unknown[]; tool_call_chunks?: unknown[]; content_parts?: unknown };
                 const raw = d.data as StreamMsg[];
                 let hasValid = false;
@@ -2426,11 +2423,9 @@ export function MyRuntimeProvider({
                   }
                   if (hasTc || hasTcc) hasToolCalls = true;
                 }
-                // 子图 custom（custom|node:run_id）始终 yield；仅当已从 SDK messages 通道 yield 过时才跳过 root custom；带 content_parts/工具/Tool 的 partial 不跳过（避免主通道先 yield 后丢掉后端思考+正文）
-                const wouldSkipRootCustom = primaryMessageChannel === "messages" && seenYieldFromMessagesChannel && !(typeof event.event === "string" && event.event.startsWith("custom|"));
-                const payloadMustShow = hasToolCalls || hasToolOrToolMessage || hasContentParts;
-                if (wouldSkipRootCustom && !payloadMustShow) continue;
-                if (wouldSkipRootCustom && import.meta.env?.DEV) console.log('[MyRuntimeProvider] yield custom messages_partial (had tool/tool_calls) despite primaryChannel=messages');
+                // 单源：主通道已定为 messages 时不再 yield root custom partial，与「主通道为 custom 时跳过 main partial」对称，避免双写
+                const wouldSkipRootCustom = primaryMessageChannel === "messages" && !(typeof event.event === "string" && event.event.startsWith("custom|"));
+                if (wouldSkipRootCustom) continue;
                 if (import.meta.env?.DEV) {
                   messagesPartialLogCount += 1;
                   if (messagesPartialLogCount <= 2 || messagesPartialLogCount % 50 === 0) {
@@ -2459,13 +2454,33 @@ export function MyRuntimeProvider({
                 }
                 // 后端 custom messages_partial 保留 content_parts，使 SDK 走 contentPartsToMerged 分支，得到「思考 → 正文 → 工具」按步展示；不调用 preparePartialChunkPayload 避免剥离 content_parts
                 const customMerged = mergeToolResultsIntoAiMessages(filteredNormalized as Array<{ type?: string; id?: string; content?: unknown; content_parts?: unknown; tool_calls?: Array<{ id?: string; name?: string; args?: unknown }>; tool_call_id?: string; name?: string }>, { omitContentParts: false });
-                for (const m of customMerged as Array<{ type?: string; id?: string; content_parts?: unknown }>) {
+                // 仅对最后一条 AI 赋 stableId，避免多轮时所有 AI 共用一个 id 导致历史被覆盖、顺序错乱（custom 通常单条，仅最后一条即当前 run）
+                let customLastAiIndex = -1;
+                for (let ci = customMerged.length - 1; ci >= 0; ci--) {
+                  const tt = String(customMerged[ci]?.type ?? "").toLowerCase();
+                  if (tt === "ai" || tt === "aimessage" || tt === "aimessagechunk") {
+                    customLastAiIndex = ci;
+                    break;
+                  }
+                }
+                const customMergedWithStableId = customMerged.map((m, ci) => {
+                  const mt = String(m?.type ?? "").toLowerCase();
+                  if (mt !== "ai" && mt !== "aimessage" && mt !== "aimessagechunk") return m;
+                  if (ci !== customLastAiIndex) {
+                    const keepId = m?.id && String(m.id).trim() !== "" ? m.id : (typeof crypto !== "undefined" && crypto.randomUUID ? crypto.randomUUID() : `ai-custom-${ci}-${Date.now()}`);
+                    return { ...m, id: keepId };
+                  }
+                  const stableId = getOrCreateStableAiId(String(m?.id ?? "").trim());
+                  return { ...m, id: stableId };
+                }) as typeof customMerged;
+                // content_parts 含 type "reasoning" 时 UI 展示推理块；仅 custom 通道保留 content_parts，complete 时据此回写
+                for (const m of customMergedWithStableId as Array<{ type?: string; id?: string; content_parts?: unknown }>) {
                   const mt = String(m?.type ?? "").toLowerCase();
                   if ((mt === "ai" || mt === "aimessagechunk") && m?.id && Array.isArray((m as { content_parts?: unknown }).content_parts) && (m as { content_parts: unknown[] }).content_parts.length > 0) {
                     lastContentPartsByMessageIdRef.current[m.id] = (m as { content_parts: Array<{ type: string; text?: string; id?: string; name?: string; args?: unknown; result?: string }> }).content_parts;
                   }
                 }
-                yield { ...event, event: 'messages/partial' as const, data: normalizeLangChainMessages(customMerged) as typeof filteredNormalized };
+                yield { ...event, event: 'messages/partial' as const, data: normalizeLangChainMessages(customMergedWithStableId) as typeof filteredNormalized };
                 continue;
               }
               if (d?.type === 'context_stats' && (d as { data?: Record<string, unknown> })?.data) {
@@ -2769,7 +2784,7 @@ export function MyRuntimeProvider({
                       const name = (cached.toolName || '').toLowerCase();
                       if (name === 'read_file') {
                         cb({ type: 'open', filePath });
-                      } else if (name === 'write_file' || name === 'edit_file' || name === 'create_file' || name === 'write_file_binary') {
+                      } else if (name === 'write_file' || name === 'edit_file' || name === 'create_file') {
                         cb({ type: 'open', filePath });
                       } else if (name === 'delete_file' || name === 'remove_file') {
                         cb({ type: 'close', filePath });
@@ -2797,21 +2812,8 @@ export function MyRuntimeProvider({
             baseEventType === 'messages';
 
           if (isMessageEvent) {
-            // 仅当主通道为 custom 且本条为 messages/partial 且 payload 既无 ToolMessage 也无 tool_calls/tool_call_chunks 时跳过，保证含工具调用/结果的主图 partial 仍 yield 到 UI
-            if (baseEventType === 'messages/partial' && primaryMessageChannel === "custom") {
-              const dataForSkip = event.data;
-              const arr = Array.isArray(dataForSkip) ? (dataForSkip as Array<{ type?: string; tool_calls?: unknown[]; tool_call_chunks?: unknown[] }>) : [];
-              const hasToolMessages = arr.some((m) => {
-                const t = String((m?.type ?? '')).toLowerCase();
-                return t === 'tool' || t === 'toolmessage';
-              });
-              const hasToolCallsOrChunks = arr.some(
-                (m) =>
-                  (Array.isArray(m?.tool_calls) && m.tool_calls.length > 0) ||
-                  (Array.isArray(m?.tool_call_chunks) && m.tool_call_chunks.length > 0)
-              );
-              if (!hasToolMessages && !hasToolCallsOrChunks) continue;
-            }
+            // 主通道为 custom 时，partial 只认 custom 单源，避免与 main messages/partial 双写导致重复句子、多光标、变慢；工具/正文均由 custom content_parts 展示
+            if (baseEventType === 'messages/partial' && primaryMessageChannel === "custom") continue;
             let data = event.data;
             let allMsgIds: string[] = [];
             if (Array.isArray(data) && data.length > 0) {
@@ -2913,14 +2915,18 @@ export function MyRuntimeProvider({
                 )
               : data;
             if (Array.isArray(filteredData) && filteredData.length === 0) continue;
-            // 仅在本次 payload 确有实质内容时锁定主通道，避免主图先发空 messages/partial 导致后续 custom(messages_partial) 被误跳过
+            if (baseEventType === 'messages/partial') mainPartialCount += 1;
+            // 首条不 yield 第一个 main partial，让 custom（带 content_parts/推理）有机会先到，避免先锁 messages 后 custom 被全跳过导致无推理、断行
+            if (baseEventType === 'messages/partial' && primaryMessageChannel === "auto" && mainPartialCount === 1) continue;
             const hasMeaningfulContent = Array.isArray(filteredData) && filteredData.some((m: { type?: string; content?: unknown; tool_calls?: unknown[] }) => {
               const hasToolCalls = Array.isArray((m as { tool_calls?: unknown[] }).tool_calls) && (m as { tool_calls: unknown[] }).tool_calls.length > 0;
               const c = (m as { content?: unknown }).content;
               const hasContent = c != null && (typeof c === 'string' ? c.length > 0 : Array.isArray(c) ? c.length > 0 : true);
               return hasToolCalls || hasContent;
             });
-            if (primaryMessageChannel === "auto" && hasMeaningfulContent && (baseEventType === "messages/partial" || baseEventType === "messages/complete")) {
+            // 仅在 complete 时锁定主通道，流式期间始终接纳 custom partial（推理 + 工具步骤），避免无推理、只显示「已执行 N 个工具」
+            const mayLockMessages = !hasSeenCustomPartialInRun && baseEventType === "messages/complete";
+            if (primaryMessageChannel === "auto" && hasMeaningfulContent && (baseEventType === "messages/partial" || baseEventType === "messages/complete") && mayLockMessages) {
               primaryMessageChannel = "messages";
             }
             markPayloadReceived();
@@ -2943,24 +2949,107 @@ export function MyRuntimeProvider({
               seenYieldFromMessagesChannel = true;
             }
             const dataToYield = Array.isArray(filteredData) && filteredData.length > 0
-              ? mergeToolResultsIntoAiMessages(filteredData as Array<{ type?: string; id?: string; content?: unknown; tool_calls?: Array<{ id?: string; name?: string; args?: unknown }>; tool_call_id?: string; name?: string }>, { omitContentParts: baseEventType === "messages/partial" })
+              ? mergeToolResultsIntoAiMessages(filteredData as Array<{ type?: string; id?: string; content?: unknown; tool_calls?: Array<{ id?: string; name?: string; args?: unknown }>; tool_call_id?: string; name?: string }>, { omitContentParts: false })
               : filteredData;
+            const completeToolResultById: Record<string, string> = {};
+            if (baseEventType === 'messages/complete') {
+              if (Array.isArray(filteredData)) {
+                for (const m of filteredData as Array<{ type?: string; tool_call_id?: string; toolCallId?: string; content?: unknown }>) {
+                  const t = String(m?.type ?? "").toLowerCase();
+                  if (t !== "tool" && t !== "toolmessage") continue;
+                  const tid = (m.tool_call_id ?? (m as { toolCallId?: string }).toolCallId ?? "").toString().trim();
+                  if (!tid) continue;
+                  const c = m.content;
+                  completeToolResultById[tid] = typeof c === "string" ? c : c != null ? String(c) : "";
+                }
+              }
+              const runTid = externalId ?? currentThreadIdRef.current ?? getCurrentThreadIdFromStorage() ?? "";
+              const steps = getStepsForThread(runTid || null);
+              for (const step of steps) {
+                const tid = (step.tool_call_id ?? (step as { id?: string }).id ?? "").toString().trim();
+                if (!tid || completeToolResultById[tid] != null) continue;
+                const preview = (step as { result_preview?: string }).result_preview;
+                if (typeof preview === "string" && preview.trim().length > 0) completeToolResultById[tid] = preview.trim();
+              }
+            }
             if (baseEventType === 'messages/complete' && Array.isArray(dataToYield)) {
-              for (const msg of dataToYield as Array<{ type?: string; id?: string; content?: unknown; content_parts?: unknown }>) {
+              const arr = dataToYield as Array<{ type?: string; id?: string; content?: unknown; content_parts?: unknown }>;
+              let lastAiIndex = -1;
+              for (let i = arr.length - 1; i >= 0; i--) {
+                const t = String(arr[i]?.type ?? "").toLowerCase();
+                if (t === "ai" || t === "aimessage") {
+                  lastAiIndex = i;
+                  break;
+                }
+              }
+              for (let i = 0; i < arr.length; i++) {
+                const msg = arr[i];
                 const mt = String(msg?.type ?? "").toLowerCase();
                 if (mt !== "ai" && mt !== "aimessage") continue;
+                const isLastAi = i === lastAiIndex;
+                if (!isLastAi) {
+                  if (!msg.id || String(msg.id).trim() === "") {
+                    (msg as { id?: string }).id = typeof crypto !== "undefined" && crypto.randomUUID ? crypto.randomUUID() : `ai-${i}-${Date.now()}-${Math.random().toString(36).slice(2, 9)}`;
+                  }
+                  continue;
+                }
                 const content = msg.content;
-                if (!Array.isArray(content)) continue;
+                const stableId = getOrCreateStableAiId(String(msg?.id ?? "").trim());
+                const cached = lastContentPartsByMessageIdRef.current[stableId] ?? (msg.id && msg.id !== stableId ? lastContentPartsByMessageIdRef.current[msg.id] : undefined);
+                const hasCachedReasoning = cached?.some((p: { type?: string }) => p?.type === "reasoning");
+
+                // content 为 string（后端归一化后）：用 cached 恢复 reasoning + 正文 + 工具结果；无 cache 时也转为 content_parts 单段，避免 complete 以 string 收尾导致「先断行再被整理到一行」
+                if (!Array.isArray(content)) {
+                  const mainText = typeof content === "string" ? content : "";
+                  const hasCachedToolCalls = cached?.some((p: { type?: string }) => p?.type === "tool-call");
+                  if (cached?.length && (hasCachedReasoning || hasCachedToolCalls)) {
+                    const reasoningParts = cached.filter((p: { type?: string }) => p?.type === "reasoning");
+                    const toolCallParts = cached.filter((p: { type?: string }) => p?.type === "tool-call").map((p: { type?: string; id?: string; name?: string; args?: unknown; result?: string }) => {
+                      if (p.type !== "tool-call" || !p.id) return p;
+                      const result = completeToolResultById[p.id] ?? p.result;
+                      const hasResult = result != null && String(result).trim().length > 0;
+                      return hasResult ? { ...p, result: String(result).trim() } : p;
+                    });
+                    const cachedText = cached.find((p: { type?: string; text?: string }) => p?.type === "text");
+                    const finalText = (mainText || (cachedText as { text?: string })?.text || "").trim();
+                    const mergedParts = [
+                      ...reasoningParts,
+                      ...(finalText ? [{ type: "text" as const, text: finalText }] : []),
+                      ...toolCallParts,
+                    ];
+                    (msg as { content: unknown; content_parts?: unknown }).content = mergedParts;
+                    (msg as { content_parts?: unknown }).content_parts = mergedParts;
+                    (msg as { id?: string }).id = stableId;
+                    if (stableId) delete lastContentPartsByMessageIdRef.current[stableId];
+                    if (msg.id && msg.id !== stableId) delete lastContentPartsByMessageIdRef.current[msg.id];
+                  } else {
+                    const singleTextPart = [{ type: "text" as const, text: mainText }];
+                    (msg as { content: unknown; content_parts?: unknown }).content = singleTextPart;
+                    (msg as { content_parts?: unknown }).content_parts = singleTextPart;
+                    (msg as { id?: string }).id = stableId;
+                  }
+                  continue;
+                }
+
                 const currentContent = content as Array<{ type?: string; id?: string; result?: string }>;
-                const cached = msg.id ? lastContentPartsByMessageIdRef.current[msg.id] : undefined;
                 const currentToolCount = currentContent.filter((p: { type?: string }) => p?.type === "tool-call").length;
                 const cachedToolCount = cached ? cached.filter((p: { type?: string }) => p?.type === "tool-call").length : 0;
                 if (currentToolCount > 0 && (!cached?.length || cachedToolCount === 0)) {
-                  if (msg.id) delete lastContentPartsByMessageIdRef.current[msg.id];
+                  if (stableId) delete lastContentPartsByMessageIdRef.current[stableId];
+                  if (msg.id && msg.id !== stableId) delete lastContentPartsByMessageIdRef.current[msg.id];
+                  (msg as { id?: string }).id = stableId;
+                  continue;
+                }
+                if (cached && cachedToolCount < currentToolCount) {
+                  if (stableId) delete lastContentPartsByMessageIdRef.current[stableId];
+                  if (msg.id && msg.id !== stableId) delete lastContentPartsByMessageIdRef.current[msg.id];
+                  (msg as { id?: string }).id = stableId;
                   continue;
                 }
                 if (!cached?.length || content.some((p: { type?: string }) => p?.type === "reasoning")) {
-                  if (msg.id && content.some((p: { type?: string }) => p?.type === "reasoning")) delete lastContentPartsByMessageIdRef.current[msg.id];
+                  if (stableId && content.some((p: { type?: string }) => p?.type === "reasoning")) delete lastContentPartsByMessageIdRef.current[stableId];
+                  if (msg.id && msg.id !== stableId) delete lastContentPartsByMessageIdRef.current[msg.id];
+                  (msg as { id?: string }).id = stableId;
                   continue;
                 }
                 const mergedParts = cached.map((p) => {
@@ -2972,7 +3061,10 @@ export function MyRuntimeProvider({
                 });
                 (msg as { content: unknown; content_parts?: unknown }).content = mergedParts;
                 (msg as { content_parts?: unknown }).content_parts = mergedParts;
-                if (msg.id) delete lastContentPartsByMessageIdRef.current[msg.id];
+                const oldId = msg.id;
+                if (stableId) delete lastContentPartsByMessageIdRef.current[stableId];
+                if (oldId && oldId !== stableId) delete lastContentPartsByMessageIdRef.current[oldId];
+                (msg as { id?: string }).id = stableId;
               }
             }
             let normalizedYield = normalizeLangChainMessages(dataToYield);
@@ -2981,7 +3073,6 @@ export function MyRuntimeProvider({
             }
             if (baseEventType === 'messages/complete' && Array.isArray(normalizedYield)) {
               streamStableAiMessageIdFallback = null;
-              streamStableAiIdByHint.clear();
               for (const m of normalizedYield as Array<{ type?: string; id?: string }>) {
                 const tid = String(m?.id ?? "").trim();
                 if (tid) streamAiAccumulatedById.delete(tid);

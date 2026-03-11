@@ -1,5 +1,6 @@
 /**
- * 规范化消息中的 tool_calls，确保每条 tool_call 有有效 name（避免 assistant-ui 报错）。
+ * 规范化消息中的 tool_calls，确保每条 tool_call 有 name（空时用 id 或空串）。
+ * 不用 "unknown_tool"：流式时首包 name 空会被填成 unknown_tool，后续包带真实 name 时 SDK 会报 "Tool call name does not match existing tool call"。
  * 从 MyRuntimeProvider 抽离，供 useThreadStateLoader 与流式处理共用。
  */
 
@@ -10,7 +11,7 @@ function ensureToolCallName<T extends { id?: string; name?: string | null; [k: s
   let name: string | null = typeof tc.name === "string" && tc.name ? tc.name : null;
   const id = tc.id != null ? String(tc.id) : undefined;
   if (!name && id && idToName) name = idToName.get(id) ?? null;
-  if (!name) name = id || "unknown_tool";
+  if (!name) name = id ?? "";
   if (name === tc.name && (id === undefined ? tc.id == null : id === tc.id)) return tc;
   return { ...tc, id: id ?? tc.id, name };
 }
