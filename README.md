@@ -1,4 +1,4 @@
-# CCB - AI 编辑器项目
+# MAIBOT - AI 编辑器项目
 
 基于 LangChain/LangGraph/DeepAgent 框架的智能编辑器系统。
 
