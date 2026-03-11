@@ -600,13 +600,20 @@ function useIsDark(): boolean {
   const [isDark, setIsDark] = useState(
     () => typeof document !== "undefined" && document.documentElement.classList.contains("dark"),
   );
+  const mountedRef = React.useRef(true);
   useEffect(() => {
+    mountedRef.current = true;
     if (typeof document === "undefined") return;
     const el = document.documentElement;
-    const check = () => setIsDark(el.classList.contains("dark"));
+    const check = () => {
+      if (mountedRef.current) setIsDark(el.classList.contains("dark"));
+    };
     const obs = new MutationObserver(check);
     obs.observe(el, { attributes: true, attributeFilter: ["class"] });
-    return () => obs.disconnect();
+    return () => {
+      mountedRef.current = false;
+      obs.disconnect();
+    };
   }, []);
   return isDark;
 }

@@ -3216,6 +3216,12 @@ const AssistantMessage: FC = memo(function AssistantMessage() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ content }),
       });
+      if (!res.ok) {
+        const errData = await res.json().catch(() => ({}));
+        const err = errData && typeof errData === "object" ? (errData as { detail?: string; error?: string }).detail ?? (errData as { error?: string }).error : undefined;
+        toast.error(err ?? "保存失败");
+        return;
+      }
       const data = await res.json().catch(() => ({ __parseError: true } as const));
       if ((data as { __parseError?: boolean }).__parseError) {
         toast.error(t("composer.responseParseFailed"));
@@ -3225,7 +3231,7 @@ const AssistantMessage: FC = memo(function AssistantMessage() {
         toast.success(t("thread.toastSavedToMemory"));
         window.dispatchEvent(new CustomEvent("memory_entries_updated"));
       } else {
-        toast.error(data.detail || data.error || "保存失败");
+        toast.error((data as { detail?: string; error?: string })?.detail ?? (data as { error?: string })?.error ?? "保存失败");
       }
     } catch {
       toast.error(t("thread.saveFailed"));
