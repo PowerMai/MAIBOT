@@ -39,7 +39,6 @@ FRONTEND_DIR="$PROJECT_ROOT/frontend/desktop"
 LOG_DIR="$PROJECT_ROOT/logs"
 PID_DIR="$PROJECT_ROOT/.pids"
 BACKEND_VENV_DIR="$BACKEND_DIR/.venv"
-ROOT_VENV_DIR="$PROJECT_ROOT/.venv"
 BACKEND_BASE_URL="${LANGGRAPH_API_URL:-http://127.0.0.1:2024}"
 LM_STUDIO_BASE_URL="${LM_STUDIO_URL:-http://localhost:1234/v1}"
 BACKEND_PORT="$(printf '%s\n' "$BACKEND_BASE_URL" | sed -E 's#^[a-zA-Z]+://[^:/]+:([0-9]+).*$#\1#')"
@@ -382,17 +381,11 @@ start_backend() {
     
     cd "$PROJECT_ROOT"
     
-    # 统一后端 Python 环境：优先 backend/.venv，兼容回退根目录 .venv
-    local venv_dir=""
-    if [ -d "$BACKEND_VENV_DIR" ]; then
-        venv_dir="$BACKEND_VENV_DIR"
-    elif [ -d "$ROOT_VENV_DIR" ]; then
-        log_warn "检测到根目录 .venv，建议迁移到 backend/.venv 以统一环境"
-        venv_dir="$ROOT_VENV_DIR"
-    else
+    # 统一使用 backend/.venv（项目唯一 Python 环境）
+    local venv_dir="$BACKEND_VENV_DIR"
+    if [ ! -d "$venv_dir" ]; then
         log_warn "后端虚拟环境不存在，正在创建 backend/.venv ..."
-        python3 -m venv "$BACKEND_VENV_DIR"
-        venv_dir="$BACKEND_VENV_DIR"
+        python3 -m venv "$venv_dir"
     fi
     
     # shellcheck disable=SC1090

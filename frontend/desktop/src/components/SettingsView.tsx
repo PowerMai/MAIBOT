@@ -2497,7 +2497,7 @@ export function SettingsView({ onClose, initialSection }: SettingsViewProps) {
 
                   {(capabilityModels.embedding || capabilityModels.rerank) && (
                     <div className="space-y-2 rounded-md border border-border/40 p-3">
-                      <Label className="text-xs font-medium">检索能力模型状态</Label>
+                      <Label className="text-xs font-medium">{t('settings.retrievalModelStatus')}</Label>
                       {(["embedding", "rerank"] as const).map((kind) => {
                         const m = capabilityModels[kind];
                         if (!m) return null;
@@ -2800,10 +2800,10 @@ export function SettingsView({ onClose, initialSection }: SettingsViewProps) {
                             }
                           }}
                         >
-                          确认添加
+                          {t('settings.confirmAdd')}
                         </Button>
                         <Button size="sm" variant="ghost" className="text-xs" onClick={() => setShowAddModel(false)}>
-                          取消
+                          {t('settings.cancel')}
                         </Button>
                       </div>
                     </div>
@@ -3164,7 +3164,7 @@ export function SettingsView({ onClose, initialSection }: SettingsViewProps) {
                                       disabled={pluginActionName === p.name}
                                       onClick={() => handleUninstallPlugin(p.name)}
                                     >
-                                      卸载
+                                      {t('settings.uninstall')}
                                     </Button>
                                   ) : (
                                     <Button
@@ -3182,7 +3182,7 @@ export function SettingsView({ onClose, initialSection }: SettingsViewProps) {
                                           : undefined
                                       }
                                     >
-                                      安装
+                                      {t('settings.install')}
                                     </Button>
                                   )}
                                 </div>
@@ -3342,13 +3342,13 @@ export function SettingsView({ onClose, initialSection }: SettingsViewProps) {
                         <div className="rounded-md border p-3 space-y-3">
                           <div className="flex items-center justify-between">
                             <div>
-                              <Label className="text-xs font-medium">用户偏好</Label>
+                              <Label className="text-xs font-medium">{t('settings.userPreferencesLabel')}</Label>
                               <p className="text-[11px] text-muted-foreground mt-0.5">
-                                告诉 AI 关于你的背景，AI 将据此调整回应深度与方式
+                                {t('settings.userPreferencesHint')}
                               </p>
                             </div>
                             <Button size="sm" variant="outline" onClick={handleSaveUserProfile} disabled={userProfileSaving}>
-                              {userProfileSaving ? '保存中...' : '保存偏好'}
+                              {userProfileSaving ? t('settings.saving') : t('settings.savePreferences')}
                             </Button>
                           </div>
                           <div className="grid gap-2">
@@ -4886,7 +4886,7 @@ export function SettingsView({ onClose, initialSection }: SettingsViewProps) {
                       />
                     </div>
                     <div className="rounded border p-2 space-y-2">
-                      <p className="text-[11px] font-medium text-muted-foreground">编辑书签</p>
+                      <p className="text-[11px] font-medium text-muted-foreground">{t('settings.editBookmark')}</p>
                       <p className="text-[11px] text-muted-foreground">
                         当前共 {getPromptTemplates().length} 条快捷模板；恢复默认将还原为内置列表。可添加自定义书签或删除单条。
                       </p>
@@ -4926,7 +4926,7 @@ export function SettingsView({ onClose, initialSection }: SettingsViewProps) {
                             setBookmarkAddOpen(true);
                           }}
                         >
-                          添加书签
+                          {t('settings.addBookmark')}
                         </Button>
                         <Button
                           type="button"
@@ -4946,7 +4946,7 @@ export function SettingsView({ onClose, initialSection }: SettingsViewProps) {
                     <Dialog open={bookmarkAddOpen} onOpenChange={setBookmarkAddOpen}>
                       <DialogContent className="max-w-lg">
                         <DialogHeader>
-                          <DialogTitle>添加书签</DialogTitle>
+                          <DialogTitle>{t('settings.addBookmark')}</DialogTitle>
                           <DialogDescription>新增一条 Composer 快捷提示词，可指定适用的对话模式。</DialogDescription>
                         </DialogHeader>
                         <div className="grid gap-3 py-2">
@@ -4991,7 +4991,7 @@ export function SettingsView({ onClose, initialSection }: SettingsViewProps) {
                         </div>
                         <DialogFooter>
                           <Button type="button" variant="outline" size="sm" onClick={() => setBookmarkAddOpen(false)}>
-                            取消
+                            {t('settings.cancel')}
                           </Button>
                           <Button
                             type="button"

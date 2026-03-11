@@ -908,6 +908,7 @@ export function MyRuntimeProvider({
             );
           })
           .catch((e) => {
+            if (!isMountedRef.current) return;
             if (import.meta.env?.DEV) console.warn('[MyRuntimeProvider] updateThreadTitle failed', e);
           });
       }
@@ -1733,7 +1734,10 @@ export function MyRuntimeProvider({
             if (!isMountedRef.current) return;
             window.dispatchEvent(new CustomEvent(EVENTS.SESSION_CHANGED, { detail: { threadId: externalId, title: autoTitle } }));
           })
-          .catch((e) => { if (import.meta.env?.DEV) console.warn('[MyRuntimeProvider] updateThreadTitle failed', e); });
+          .catch((e) => {
+            if (!isMountedRef.current) return;
+            if (import.meta.env?.DEV) console.warn('[MyRuntimeProvider] updateThreadTitle failed', e);
+          });
       }
 
       let streamDone = false;
@@ -2765,7 +2769,7 @@ export function MyRuntimeProvider({
                       const name = (cached.toolName || '').toLowerCase();
                       if (name === 'read_file') {
                         cb({ type: 'open', filePath });
-                      } else if (name === 'write_file' || name === 'edit_file' || name === 'create_file') {
+                      } else if (name === 'write_file' || name === 'edit_file' || name === 'create_file' || name === 'write_file_binary') {
                         cb({ type: 'open', filePath });
                       } else if (name === 'delete_file' || name === 'remove_file') {
                         cb({ type: 'close', filePath });

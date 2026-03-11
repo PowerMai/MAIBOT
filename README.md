@@ -29,25 +29,21 @@
 
 ## 项目结构
 
+- **Python 环境**：全项目统一使用 **`backend/.venv`**，根目录无需再保留 `.venv`（若有可删除以节省约 1.1G）。
+- 完整目录说明见 **[docs/PROJECT_STRUCTURE.md](docs/PROJECT_STRUCTURE.md)**。
+
 ```
-ccb-v0.378/
-├── backend/                 # 后端服务
+├── backend/                 # 后端（Python，唯一 venv: backend/.venv）
 │   ├── api/                 # FastAPI 接口
 │   ├── engine/              # LangGraph 引擎
-│   │   ├── agent/           # DeepAgent 配置
-│   │   ├── core/            # 主路由 Graph
-│   │   └── prompts/         # 提示词
 │   └── tools/               # 工具集
-├── frontend/                # 前端应用
-│   └── desktop/             # Electron 桌面应用
-├── scripts/                 # 脚本
-│   └── start.sh             # 统一启动脚本
-├── data/                    # 持久化数据（统一存储）
-│   ├── checkpoints.db       # 会话检查点 (SQLite)
-│   ├── store.db             # 长期记忆 (SQLite)
-│   └── vectorstore/         # 向量存储 (FAISS)
-│       └── unified/         # 统一向量索引
-└── logs/                    # 日志文件
+├── frontend/desktop/        # Electron 桌面前端
+├── knowledge_base/          # 知识库（skills、ontology 等）
+├── plugins/                 # 可插拔模块
+├── scripts/                 # 脚本（start.sh 等）
+├── docs/                    # 文档
+├── data/                    # 持久化数据（不提交）
+└── logs/                    # 日志（不提交）
 ```
 
 ## 存储架构（生产级）

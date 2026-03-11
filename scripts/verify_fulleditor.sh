@@ -23,7 +23,7 @@ if curl -s -o /dev/null -w "%{http_code}" http://127.0.0.1:2024/ok | grep -q "20
     echo "✅ 后端服务器运行正常 (http://127.0.0.1:2024)"
 else
     echo "⚠️  后端服务器未运行，请先启动："
-    echo "   source .venv/bin/activate && langgraph dev"
+    echo "   source backend/.venv/bin/activate && cd backend && langgraph dev"
 fi
 echo ""
 

@@ -6,11 +6,13 @@ echo "  多租户知识库系统 - 完整验证"
 echo "=================================================="
 echo ""
 
-cd /Users/workspace/DevelopProjects/ccb-v0.378
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+cd "$PROJECT_ROOT"
 
-# 激活虚拟环境
+# 激活虚拟环境（统一使用 backend/.venv）
 echo "1️⃣  激活虚拟环境..."
-source .venv/bin/activate
+source backend/.venv/bin/activate
 echo "   ✅ 虚拟环境已激活"
 echo ""
 

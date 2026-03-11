@@ -21,12 +21,12 @@ NC='\033[0m' # No Color
 echo -e "${GREEN}🚀 CCB Backend 启动脚本${NC}"
 echo "项目目录: $PROJECT_ROOT"
 
-# 检查 Python 环境
-if [ -d ".venv" ]; then
-    source .venv/bin/activate
-    echo -e "${GREEN}✅ 已激活虚拟环境${NC}"
+# 检查 Python 环境（统一使用 backend/.venv）
+if [ -d "backend/.venv" ]; then
+    source backend/.venv/bin/activate
+    echo -e "${GREEN}✅ 已激活虚拟环境 (backend/.venv)${NC}"
 else
-    echo -e "${YELLOW}⚠️  未找到 .venv，使用系统 Python${NC}"
+    echo -e "${YELLOW}⚠️  未找到 backend/.venv，使用系统 Python${NC}"
 fi
 
 # 清理过期缓存

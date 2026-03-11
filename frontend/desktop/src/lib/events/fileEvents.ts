@@ -120,6 +120,7 @@ class FileEventBus {
       case 'write_file':
       case 'edit_file':
       case 'create_file':
+      case 'write_file_binary':
         this.emit({ type: 'file_modified', path: filePath, source: 'ai' });
         break;
       case 'delete_file':

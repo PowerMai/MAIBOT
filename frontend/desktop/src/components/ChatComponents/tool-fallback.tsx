@@ -2602,13 +2602,15 @@ export const WriteFileBinaryToolUI = makeAssistantToolUI<WriteFileBinaryArgs, st
         isSuccess = displayResult.includes("✅") || (isComplete && !displayResult.includes("❌") && !displayResult.includes("失败"));
       }
     }
+    const isError = isComplete && !isSuccess;
+    const borderAccent = isRunning ? TOOL_CARD_BORDER_RUNNING : isComplete ? (isError ? TOOL_CARD_BORDER_ERROR : TOOL_CARD_BORDER_COMPLETE) : "";
 
     return (
-      <div className="my-1.5">
+      <div className={cn("my-1.5", TOOL_CARD_CONTAINER_BASE, borderAccent)}>
         <div className="inline-flex items-center gap-1.5 text-sm">
           <button type="button" className="inline-flex items-center gap-1.5 hover:bg-muted/30 rounded px-1.5 py-0.5 -ml-1.5 transition-colors cursor-default">
             {isRunning ? (
-              <LoaderIcon className="size-3.5 animate-spin text-amber-500" />
+              <LoaderIcon className="size-3.5 animate-spin text-violet-500" />
             ) : isSuccess ? (
               <CheckIcon className="size-3.5 text-emerald-500" />
             ) : (

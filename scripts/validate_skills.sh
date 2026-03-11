@@ -8,8 +8,8 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 cd "$PROJECT_ROOT"
 
-if [ -d ".venv" ]; then
-    source .venv/bin/activate
+if [ -d "backend/.venv" ]; then
+    source backend/.venv/bin/activate
 fi
 
 python -m backend.engine.skills.validate_skills
