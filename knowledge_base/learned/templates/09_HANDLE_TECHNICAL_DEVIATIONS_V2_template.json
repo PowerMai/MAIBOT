@@ -1,0 +1,52 @@
+{
+  "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/global/domain/bidding/02_operations/09_HANDLE_TECHNICAL_DEVIATIONS_V2.md",
+  "domain": "technical",
+  "created_at": "2026-03-05T21:07:23.082640",
+  "template": {
+    "doc_type": "md",
+    "sections": [
+      "# 09_HANDLE_TECHNICAL_DEVIATIONS",
+      "## KEYWORDS",
+      "## TASK",
+      "## INPUT",
+      "## OUTPUT",
+      "## DEVIATION_CLASSIFICATION (偏离分类)",
+      "### Type 1: MANDATORY_SPECS (强制规格-必须100%符合)",
+      "### Type 2: PERFORMANCE_SPECS (性能指标-可有小幅偏离)",
+      "### Type 3: OPTIONAL_FEATURES (可选特性-可以不提)",
+      "## DEVIATION_RESPONSE_MATRIX",
+      "## DEVIATION_HANDLING_WORKFLOW",
+      "### Step 1: IDENTIFY_DEVIATIONS (识别偏离)",
+      "### Step 2: CLASSIFY_DEVIATIONS (分类)",
+      "### Step 3: PREPARE_EXPLANATION (准备说明)",
+      "### Step 4: CREATE_DEVIATION_TABLE (生成偏离对照表)",
+      "## STRONG_DEVIATION_HANDLING (重大偏离的处理)",
+      "### Scenario 1: 无法完全满足但可升级",
+      "1. 在GO/NO-GO评估阶段就发现这个问题",
+      "2. 评估升级成本(金钱、时间)",
+      "3. 承诺在投标前升级:",
+      "4. 风险防控:",
+      "### Scenario 2: 性能明显低于标底",
+      "1. 解释清楚为什么无法达到:",
+      "2. 对标竞争对手:",
+      "3. 风险防控:",
+      "4. 补偿方案:",
+      "### Scenario 3: 无法满足,无升级计划",
+      "1. 诚实说明:",
+      "2. 风险评估:",
+      "3. 决策:"
+    ],
+    "placeholders": [
+      "为什么",
+      "其他方面如何弥补",
+      "实际",
+      "实际值",
+      "技术偏离对照表",
+      "技术偏离说明",
+      "标底",
+      "标底值",
+      "项目"
+    ],
+    "template_excerpt": "# 09_HANDLE_TECHNICAL_DEVIATIONS\n\n## KEYWORDS\n`deviation` `technical` `requirement` `compliance` `技术偏离` `偏离说明` `技术方案调整`\n\n---\n\n## TASK\n系统处理招标文件中的技术偏离 → 制定应对策略\n\n## INPUT\n- 招标文件技术规格\n- 公司产品/技术方案\n- 技术偏离对比分析\n\n## OUTPUT\n```\n技术偏离清单 + 应对方案\n├─ 必须满足的指标 (无偏离)\n├─ 可接受的小偏离 (有说明)\n└─ 无法满足的指标 (风险分析)\n```\n\n---\n\n## DEVIATION_CLASSIFICATION (偏离分类)\n\n### Type 1: MANDATORY_SPECS (强制规格-必须100%符合)\n\n```\n无法有任何偏离，必须100%满足:\n\n典型例子:\n  ├─ CPU架构: 必须X86/ARM (国产化要求时)\n  ├─ 操作系统: 必须Linux/Windows (合规性要求)\n  ├─ 协议标准: 必须TCP/IP v4/IPv6 (通信协议)\n  ├─ 合规认证: 必须ISO27001 (安全标准)\n  └─ 法律要求: 必须国产芯片 (政府采购)\n\n处理方式:\n  ✓ 如果我们符合 → 正常响应\n  ✗ 如果我们不符合 → 评估是否能快速升级\n    └─ 能升级 → 列计划和投入\n    └─ 不能升级 → 可能NO-GO\n```\n\n### Type 2: PERFORMANCE_SPECS (性能指标-可有小幅偏离)\n\n```\n通常允许±10-15%的浮动:\n\n典型例子:\n  ├─ 处理器性能: 标底5GHz → 我们4.8GHz (96%符合)\n  ├─ 内存容量: 标底256GB → 我们248GB (97%符合)\n  ├─ 存储速度: 标底500MB/s → 我们480MB/s (96%符合)\n  ├─ 响应时间: 标底<100ms → 我们<105ms (105%符合)\n  └─ 可用性: 标底99.9% → 我们99.8% (99.9%符合)\n\n处理方式:\n  小幅偏离(±5%):\n    └─ 直接说明，通常无问题\n  \n  中等偏离(5-15%):\n    ├─ 需要解释原因\n    ├─ 给出补偿方案 (其他方面更优)\n    └─ 说明对最终使用无实质影响\n  \n  大幅偏离(>15%):\n    ├─ 解释为什么不能达到\n    ├─ 证明我们方案更优 (其他维度)\n    └─ 给出具体的升级计划\n```\n\n### Type 3: OPTIONAL_FEATURES (可选特性-可以不提)\n\n```\n招标文件中有\"可选\"\"如无特殊说明\"\"鼓励配置\"等词:\n\n处理方式:\n  ✓ 有则"
+  }
+}

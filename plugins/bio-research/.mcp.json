@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "pubmed": {},
+    "clinicaltrials-gov": {},
+    "chembl": {},
+    "open-targets": {},
+    "biorxiv": {},
+    "benchling": {},
+    "wiley": {},
+    "synapse": {}
+  }
+}

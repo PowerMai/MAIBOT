@@ -1,0 +1,23 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <!-- 开发环境：Electron 会提示 Insecure Content-Security-Policy（Vite HMR 需 unsafe-eval），打包后消失。若出现 chunk 404，请执行 pnpm run dev:fresh 或删除 node_modules/.vite 后重启。 -->
+      <title>Electron App UI Design</title>
+      <script>
+        try {
+          var dark = localStorage.getItem('maibot_settings_darkMode') === 'true' || localStorage.getItem('ccb_settings_darkMode') === 'true';
+          if (dark) document.documentElement.classList.add('dark');
+          else document.documentElement.classList.remove('dark');
+        } catch (e) {}
+      </script>
+    </head>
+
+    <body>
+      <div id="root"></div>
+      <script type="module" src="/src/main.tsx"></script>
+    </body>
+  </html>
+  

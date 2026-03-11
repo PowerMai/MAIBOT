@@ -1,0 +1,34 @@
+{
+  "$schema": "https://langchain-ai.github.io/langgraph/schemas/langgraph.json",
+  "dependencies": ["."],
+  "graphs": {
+    "agent": {
+      "path": "backend.engine.core.main_graph:graph"
+    }
+  },
+  "env": ".env",
+  "http": {
+    "app": "backend.api.app:app"
+  },
+  "store": {
+    "class": "langgraph.store.sqlite.SqliteStore",
+    "config": {
+      "db_path": "./data/store.db"
+    },
+    "ttl": {
+      "refresh_on_read": true,
+      "default_ttl": 2592000
+    }
+  },
+  "checkpointer": {
+    "class": "langgraph.checkpoint.sqlite.aio.AsyncSqliteSaver",
+    "config": {
+      "db_path": "./data/checkpoints.db"
+    },
+    "ttl": {
+      "strategy": "delete",
+      "default_ttl": 604800,
+      "sweep_interval_minutes": 60
+    }
+  }
+}

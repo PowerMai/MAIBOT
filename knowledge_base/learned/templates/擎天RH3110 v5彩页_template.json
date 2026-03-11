@@ -1,0 +1,11 @@
+{
+  "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/global/domain/bidding/基础资料/产品资料/服务器产品投标知识库/0103-海光服务器/010301-擎天RH3110 V5产品资料/擎天RH3110 v5彩页.pdf",
+  "domain": "bidding",
+  "created_at": "2026-03-05T22:38:28.420065",
+  "template": {
+    "doc_type": "pdf",
+    "sections": [],
+    "placeholders": [],
+    "template_excerpt": "擎天RH3110 V5\n基 于 H y g o n 单 颗 � � � � 处 理 器\n入 门 级 � U 单 路 服 务 器\n擎天RH3110 V5服务器基于Hygon单颗3000处理器推出的一款入门级1U单路服务器，配备企业级存储和网络，兼具\n安全可靠特性，面向中小企业及行业客户，非常适合邮件服务、文件和打印服务、视频流媒体、CRM和POS终端服务，是\n一款性价比极高的信息承载平台。\n强大超值\n最大限度发挥Hygon 3000处理器核心和主频优势，配合CPU睿频加速技术和超线程技术，提供卓越的CPU处理运算能力、\n加速应用程序运行，客户可选择4核或8核处理器，构建经济高效的解决方案；\n整机系统具备低功耗、更经济的成本优势，提供给用户高性价比的解决方案。\n轻松扩展\n主板集成双千兆网口，支持低成本的板载直连存储和RAID存储，为中小企业和行业客户打造合适的信息承载平台；\n短1U空间内可支持1块NVIDIA TESLA T4，支持视频编解码及边缘端深度学习推理应用。\n安全易用\n企业级系统管理功能，关键部件实时监控、故障精细化分类上报，界面统一化管理，易用维\n护性高，无需专业IT人员维护。\n擎天RH3110 V5 技术参数\n处理器 支持1颗Hygon 3000系列处理器，最高支持8物理核心/16线程\n支持4根内存插槽，容量最高支持至256GB\n内存 支持DDR4 ECC内存（内存频率最高可支持到2666MHz）\n支持UDIMM、RDIMM内存\n网络\n板载集成千兆双口\n通过riser卡可提供2种PCIe选择：\nPCIe 扩展 最大可支持2个x8 PCIe 插槽，可支持1块全高半长加1块半高半长PCIe卡\n最大可支持1个x16 PCIe 插槽\n板载SATA控制器\nSAS卡，支持RAID0/1/10\n存储控制器 SAS RAID卡，支持RAID 0/1/5/6/50/60\n支持Cache超级电容保护，提供RAID状态迁移、RAID配置记忆等功能\n支持4个3.5寸/2.5寸 热插拔SSD/SAS/SATA\n硬盘方案\n内置1个Micro SD卡\n1个RJ-45管理接口、1个VGA接口和1个系统串口（选配）位于机箱后部\n其他IO端口 4个USB 3.0接口，2个位于机箱后部、2个位于机箱前部\n内置1个USB 2.0接口\n电源 单电源250W/350W\n散热 4个风扇模组\n集成BMC芯片，支持IPMI2.0、SOL、KVM Over IP、虚拟媒介等高级管理功能，\n管理功能\n对外提供1个1Gbps RJ45管理口，可支持NCSI功能\n显卡 集成显示控制器，最大分辨率1920x1080\nMicrosoft Windows Server、Red Hat Enterprise Linux、SUSE Linux Enterprise Server、CentOS、\n支持操作系统\nVmw"
+  }
+}

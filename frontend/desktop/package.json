@@ -1,0 +1,217 @@
+{
+      "name": "Electron App UI Design",
+      "version": "0.1.0",
+      "private": true,
+      "main": "src/electron/main.js",
+      "dependencies": {
+            "@assistant-ui/react": "^0.11.53",
+            "@assistant-ui/react-langgraph": "^0.7.13",
+            "@assistant-ui/react-markdown": "^0.11.9",
+            "@assistant-ui/react-syntax-highlighter": "^0.11.9",
+            "@langchain/core": "^1.1.8",
+            "@langchain/langgraph": "^1.0.7",
+            "@langchain/langgraph-sdk": "^1.3.1",
+            "@milkdown/core": "^7.18.0",
+            "@milkdown/kit": "^7.18.0",
+            "@milkdown/plugin-listener": "^7.18.0",
+            "@milkdown/preset-commonmark": "^7.18.0",
+            "@milkdown/preset-gfm": "^7.18.0",
+            "@milkdown/react": "^7.18.0",
+            "@milkdown/theme-nord": "^7.18.0",
+            "@monaco-editor/react": "^4.7.0",
+            "@radix-ui/react-accordion": "^1.2.3",
+            "@radix-ui/react-alert-dialog": "^1.1.6",
+            "@radix-ui/react-aspect-ratio": "^1.1.2",
+            "@radix-ui/react-avatar": "^1.1.3",
+            "@radix-ui/react-checkbox": "^1.1.4",
+            "@radix-ui/react-collapsible": "^1.1.3",
+            "@radix-ui/react-context-menu": "^2.2.6",
+            "@radix-ui/react-dialog": "^1.1.6",
+            "@radix-ui/react-dropdown-menu": "^2.1.6",
+            "@radix-ui/react-hover-card": "^1.1.6",
+            "@radix-ui/react-label": "^2.1.2",
+            "@radix-ui/react-menubar": "^1.1.6",
+            "@radix-ui/react-navigation-menu": "^1.2.5",
+            "@radix-ui/react-popover": "^1.1.6",
+            "@radix-ui/react-progress": "^1.1.2",
+            "@radix-ui/react-radio-group": "^1.2.3",
+            "@radix-ui/react-scroll-area": "^1.2.3",
+            "@radix-ui/react-select": "^2.1.6",
+            "@radix-ui/react-separator": "^1.1.2",
+            "@radix-ui/react-slider": "^1.2.3",
+            "@radix-ui/react-slot": "^1.1.2",
+            "@radix-ui/react-switch": "^1.1.3",
+            "@radix-ui/react-tabs": "^1.1.3",
+            "@radix-ui/react-toggle": "^1.1.2",
+            "@radix-ui/react-toggle-group": "^1.1.2",
+            "@radix-ui/react-tooltip": "^1.1.8",
+            "class-variance-authority": "^0.7.1",
+            "clsx": "^2.1.1",
+            "cmdk": "^1.1.1",
+            "dompurify": "^3.3.1",
+            "electron-updater": "^6.8.3",
+            "embla-carousel-react": "^8.6.0",
+            "input-otp": "^1.4.2",
+            "jszip": "^3.10.1",
+            "katex": "^0.16.28",
+            "lucide-react": "^0.487.0",
+            "mammoth": "^1.11.0",
+            "markmap-lib": "^0.18.2",
+            "markmap-view": "^0.18.2",
+            "mermaid": "^11.4.0",
+            "monaco-editor": "^0.55.1",
+            "motion": "^12.23.24",
+            "next-themes": "^0.4.6",
+            "pdfjs-dist": "^5.4.449",
+            "re-resizable": "^6.11.2",
+            "react": "^18.3.1",
+            "react-day-picker": "^8.10.1",
+            "react-dom": "^18.3.1",
+            "react-force-graph-2d": "^1.25.1",
+            "react-hook-form": "^7.55.0",
+            "react-markdown": "^10.1.0",
+            "react-pdf": "^10.2.0",
+            "react-resizable-panels": "^2.1.7",
+            "recharts": "^2.15.2",
+            "secure-json-parse": "^4.1.0",
+            "rehype-katex": "^7.0.1",
+            "remark-breaks": "^4.0.0",
+            "remark-gfm": "^4.0.1",
+            "remark-math": "^6.0.0",
+            "shiki": "^3.22.0",
+            "sonner": "^2.0.3",
+            "tailwind-merge": "^3.3.1",
+            "vaul": "^1.1.2",
+            "zustand": "^5.0.0",
+            "xlsx": "^0.18.5"
+      },
+      "devDependencies": {
+            "@tailwindcss/postcss": "^4.1.17",
+            "@vitejs/plugin-react": "^5.1.0",
+            "tailwindcss": "^4.1.17",
+            "@types/node": "^20.10.0",
+            "@types/react": "^18.3.27",
+            "@types/react-dom": "^18.3.7",
+            "@vitejs/plugin-react-swc": "^3.10.2",
+            "concurrently": "^8.2.2",
+            "cross-env": "^7.0.3",
+            "electron": "^28.1.0",
+            "electron-builder": "^24.9.1",
+            "vite": "6.3.5",
+            "vitest": "^2.1.0",
+            "wait-on": "^7.2.0",
+            "patch-package": "^8.0.0"
+      },
+      "scripts": {
+            "postinstall": "patch-package",
+            "dev": "vite",
+            "dev:fresh": "rm -rf node_modules/.vite && vite",
+            "test": "vitest",
+            "test:run": "vitest run",
+            "build": "vite build",
+            "preview": "vite preview",
+            "electron:dev": "concurrently \"npm run dev\" \"wait-on http://localhost:3000 && cross-env NODE_ENV=development electron .\"",
+            "electron:dev:fresh": "node scripts/kill-port-3000.js && rm -rf node_modules/.vite && concurrently \"npm run dev\" \"wait-on http://localhost:3000 && cross-env NODE_ENV=development electron .\"",
+            "electron:build": "npm run build && electron-builder",
+            "electron:build:mac": "npm run build && electron-builder --mac",
+            "electron:build:win": "npm run build && electron-builder --win",
+            "electron:build:linux": "npm run build && electron-builder --linux",
+            "contract:test": "node scripts/test-tender-contract.mjs",
+            "check:events": "node scripts/check-event-literals.mjs",
+            "check:editor-keys": "node scripts/check-editor-keyboard-wiring.mjs",
+            "check:session-state": "node scripts/check-session-state-wiring.mjs",
+            "check:session-flow": "node scripts/check-session-flow-readiness.mjs",
+            "check:role-mode-contract": "node scripts/check-role-mode-contract.mjs",
+            "check:slash-mode": "node scripts/check-slash-mode-consistency.mjs",
+            "check:command-palette": "node scripts/check-command-palette-liveness.mjs",
+            "check:task-entry": "node scripts/check-task-entry-consistency.mjs",
+            "check:single-agent": "node scripts/check-single-agent-readiness.mjs && node scripts/check-command-palette-liveness.mjs"
+      },
+      "build": {
+            "appId": "com.example.ai-assistant",
+            "productName": "AI智能助手",
+            "directories": {
+                  "output": "release",
+                  "buildResources": "src/build"
+            },
+            "files": [
+                  "dist/**/*",
+                  "src/electron/**/*",
+                  "package.json"
+            ],
+            "extraMetadata": {
+                  "main": "src/electron/main.js"
+            },
+            "mac": {
+                  "category": "public.app-category.productivity",
+                  "target": [
+                        {
+                              "target": "dmg",
+                              "arch": [
+                                    "x64",
+                                    "arm64"
+                              ]
+                        },
+                        {
+                              "target": "zip",
+                              "arch": [
+                                    "x64",
+                                    "arm64"
+                              ]
+                        }
+                  ],
+                  "icon": "src/build/icon.icns",
+                  "darkModeSupport": true,
+                  "hardenedRuntime": true,
+                  "gatekeeperAssess": false,
+                  "entitlements": "src/build/entitlements.mac.plist",
+                  "entitlementsInherit": "src/build/entitlements.mac.plist"
+            },
+            "win": {
+                  "target": [
+                        {
+                              "target": "nsis",
+                              "arch": [
+                                    "x64",
+                                    "ia32"
+                              ]
+                        },
+                        {
+                              "target": "portable",
+                              "arch": [
+                                    "x64"
+                              ]
+                        }
+                  ],
+                  "icon": "src/build/icon.ico",
+                  "artifactName": "${productName}-Setup-${version}.${ext}"
+            },
+            "nsis": {
+                  "oneClick": false,
+                  "allowToChangeInstallationDirectory": true,
+                  "perMachine": false,
+                  "createDesktopShortcut": true,
+                  "createStartMenuShortcut": true,
+                  "shortcutName": "AI智能助手"
+            },
+            "linux": {
+                  "target": [
+                        "AppImage",
+                        "deb",
+                        "rpm"
+                  ],
+                  "category": "Office",
+                  "icon": "src/build/icon.png"
+            }
+      },
+      "pnpm": {
+            "onlyBuiltDependencies": [
+                  "electron",
+                  "esbuild",
+                  "@swc/core"
+            ],
+            "overrides": {
+                  "pdfjs-dist": "5.4.296"
+            }
+      }
+}

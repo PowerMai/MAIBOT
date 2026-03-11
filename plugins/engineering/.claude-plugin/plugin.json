@@ -1,0 +1,18 @@
+{
+ "name": "engineering",
+ "version": "1.1.0",
+ "description": "Streamline engineering workflows — standups, code review, architecture decisions, incident response, and technical documentation. Works with your existing tools or standalone.",
+"compatibility": {
+"min_version": "0.378.0"
+},
+"components": {
+"skills": [],
+"commands": [],
+"agents": [],
+"hooks": [],
+"mcp": []
+},
+ "author": {
+ "name": "Anthropic"
+ }
+}

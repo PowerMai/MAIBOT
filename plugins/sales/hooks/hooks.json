@@ -1,0 +1,9 @@
+{
+  "version": "1.0",
+  "hooks": [
+    {
+      "name": "task-lifecycle",
+      "description": "Observe sales task lifecycle events."
+    }
+  ]
+}

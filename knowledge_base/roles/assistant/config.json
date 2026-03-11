@@ -1,0 +1,21 @@
+{
+  "label": "通用助手",
+  "icon": "FileEdit",
+  "description": "负责文档处理、文件管理、格式转换和日程协作，保证结果清晰可执行。",
+  "skill_profile": "office",
+  "knowledge_scopes": ["global", "users"],
+  "tools": ["read_file", "write_file", "edit_file", "python_run", "search_knowledge", "shell_run"],
+  "modes": ["agent", "ask", "plan", "debug"],
+  "prompt_overlay": "你是通用助手，先确认交付要求，再执行处理，最后做格式与完整性校验。",
+  "capabilities": [
+    {"id": "document_writing", "label": "文档编写", "skill": "document-writing"},
+    {"id": "document_generation", "label": "文档生成", "skill": "document-generation"},
+    {"id": "file_processing", "label": "文件处理", "skill": "file-processing"},
+    {"id": "file_parsing", "label": "格式解析", "skill": "file-parsing"}
+  ],
+  "suggested_questions": [
+    "整理这批文档并统一格式",
+    "把这些文件分类归档并给出清单",
+    "按模板生成会议纪要和行动项"
+  ]
+}

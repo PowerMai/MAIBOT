@@ -1,0 +1,14 @@
+{
+  "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/global/domain/bidding/基础资料/资质/资质证书/资质证书/资质明细台账（2024）-ZY（原版）.xls",
+  "domain": "bidding",
+  "created_at": "2026-03-05T22:58:59.983630",
+  "template": {
+    "doc_type": "xls",
+    "sections": [],
+    "placeholders": [
+      "2020",
+      "2022"
+    ],
+    "template_excerpt": "       类型     类别    细分                                            名称               实体                 原件日期                 截至日期  有效期                  编号             颁发机构      来源                 获取日期 Unnamed: 12   Unnamed: 13\n0    公司资料  供应商清单   NaN                           中国长城自主安全业务总部合格供应商清单   中国长城科技集团股份有限公司                    -                    -    -                 NaN              NaN     NaN                  NaN         NaN           NaN\n1    公司资料   服务能力   NaN                                  中国长城服务能力尽职调查   中国长城科技集团股份有限公司                    -                    -    -                 NaN              NaN     NaN                  NaN         NaN           NaN\n2    公司资料   营业执照   NaN                          营业执照-湖南长城科技信息有限公司-副本             湖南长科  2017-10-17 00:00:00                    -   长期                 NaN              NaN     NaN                  NaN         NaN           NaN\n3    公司资料   营业执照   NaN                         营业执照-吉林长城计算机系统有限公司-副本             吉林长城  2020-07-27 00:00:00                    -   长期                 NaN              NaN     NaN                  NaN         NaN           NaN\n4    公司资料   营业执照   NaN                         营业执照-江西长城计算机系统有限公司-副本       "
+  }
+}

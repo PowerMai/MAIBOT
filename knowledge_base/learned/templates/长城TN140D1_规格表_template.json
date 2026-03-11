@@ -1,0 +1,11 @@
+{
+  "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/global/domain/bidding/基础资料/产品资料/终端部材料/02-终端整机资料/0202-兆芯终端/长城TN140D1 所有资料/长城TN140D1_规格表.xlsx",
+  "domain": "bidding",
+  "created_at": "2026-03-05T21:12:30.577637",
+  "template": {
+    "doc_type": "xlsx",
+    "sections": [],
+    "placeholders": [],
+    "template_excerpt": "         项目                                                                                                                                                长城TN140D1\n0        型号                                                                                                                                                长城TN140D1\n1       处理器                                                                                                                              开先®KX-6000G处理器（4核，主频3.0GHz）\n2       TDP                                                                                                                                                      25W\n3      机身材质                                                                                                                                                A/C/D面铝合金\n4        内存                                                                                                               双通道双卡槽，最高支持32GB DDR4 3200Hz（支持单条8GB，16GB ）\n5        硬盘                                                                                                                     M.2 NVMe 固态硬盘扩展槽 *1（256GB\\512GB\\1TB）\n6        显卡                                  "
+  }
+}

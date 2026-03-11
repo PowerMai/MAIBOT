@@ -1,0 +1,26 @@
+{
+  "priority_order": [
+    "env",
+    "policy_profile",
+    "resource_adaptive",
+    "license",
+    "agent_profile"
+  ],
+  "profiles": {
+    "local": {
+      "max_parallel_llm": 1,
+      "max_parallel_agents": 2,
+      "max_parallel_tools_per_agent": 2
+    },
+    "cloud": {
+      "_comment": "仅在有云且 cloud_activation 满足时生效；资源充足时可提高以充分利用云端多任务并行",
+      "max_parallel_llm": 6,
+      "max_parallel_agents": 8,
+      "max_parallel_tools_per_agent": 3
+    }
+  },
+  "cloud_activation": {
+    "require_cloud_model_enabled": true,
+    "allow_force_env": "FORCE_CLOUD_PARALLEL"
+  }
+}

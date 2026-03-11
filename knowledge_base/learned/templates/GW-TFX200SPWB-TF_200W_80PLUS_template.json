@@ -1,0 +1,16 @@
+{
+  "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/global/domain/bidding/基础资料/产品资料/终端部材料/02-终端整机资料/0201-飞腾终端/020102-通用终端/世恒TD120A2 所有资料/GW-TFX200SPWB-TF_200W_80PLUS.pdf",
+  "domain": "bidding",
+  "created_at": "2026-03-05T21:54:15.989145",
+  "template": {
+    "doc_type": "pdf",
+    "sections": [
+      "0.25 0.87 46.04% 10% 25.24 11.85/0.99 11.57/0.02 3.4/0.84 5.04/0.84 5.11/0.16 19.87 78.71%",
+      "0.45 0.92 37.96% 20% 47.41 11.91/1.99 12.01/0.05 3.39/1.69 5.01/1.69 5.1/0.33 40.15 84.69%",
+      "1.04 0.96 27.63% 50% 114.31 11.97/4.96 11.8/0.12 3.38/4.22 4.95/4.18 5.07/0.82 99.86 87.36%",
+      "2.07 0.98 19.97% 100% 232.97 11.99/9.94 11.76/0.25 3.35/8.45 4.88/8.36 5.02/1.65 199.53 85.65%"
+    ],
+    "placeholders": [],
+    "template_excerpt": "80 PLUS Verification and Testing Report\nTYPICAL EFFICIENCY (50% Load): 87.36%\nAVERAGE EFFICIENCY : 85.90%\n80 PLUS COMPLIANT: YES\nID Number 6068\nInput Current and Voltage Waveforms\nManufacturer China Greatwall Technology Group Co.,Ltd.\nModel Number GW-TFX200SPWB-TF 200 20.0\nSerial Number N/A 15.0\nYear 2020 100 10.0\nT\nT\ne\ny\ns\np\nt\ne\nDate 8\nT\n/\nF\n2\nX\n5/20\n)V(\negatloV 0\n-0.002 0.003 0.008 0.013 -\n0\n5\n5\n.\n.\n0\n0\n.0\n)A(\ntnerruC\n-100 -10.0\nRated Specifications Value Units -15.0\nInput Voltage 100-240 Volts -200 -20.0\nInput Current 5-3 Amps Time (s)\nInput Frequency 60/50 Hz Voltage Current\nRated Output Power 200 Watts\nNote: All measurements were taken with input voltage at 115 V nominal at 60 Hz. Input AC Current Waveform (ITHD = 27.63%, 50% Load)\nInput DC Terminal Voltage (V)/ DC Load Current (A) Output\nIRMS PF ITHD Load\nWatts 12V (cumulative of 12V1, 12V2, etc.) -12V 3.3V 5V 5Vsb Watts\nEfficiency\n0.25 0.87 46.04% 10% 25.24 11.85/0.99 11.57/0.02 3.4/0.84 5.04/0.84 5.11/0.16 19.87 78.71%\n0.45 0.92 37.96% 20% 47.41 11.91/1.99 12.01/0.05 3.39/1.69 5.01/1.69 5.1/0.33 40.15 84.69%\n1.04 0.96 27.63% 50% 114.31 11.97/4.96 11.8/0.12 3.38/4.22 4.95/4.18 5.07/0.82 99.86 87.36%\n2.07 0.98 19.97% 100% 232"
+  }
+}

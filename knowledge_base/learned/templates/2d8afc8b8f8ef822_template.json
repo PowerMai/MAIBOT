@@ -1,0 +1,14 @@
+{
+  "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/2d8afc8b8f8ef822.md",
+  "domain": "legal",
+  "created_at": "2026-03-08T14:56:44.230941",
+  "template": {
+    "doc_type": "md",
+    "sections": [
+      "# Web cache: openclaw 记忆管理 三级存储 上下文压缩",
+      "## 1."
+    ],
+    "placeholders": [],
+    "template_excerpt": "# Web cache: openclaw 记忆管理 三级存储 上下文压缩\n\n> 时间: 2026-03-08 06:52\n\n\n## 1. \n- 来源: duckduckgo\n\n详解 OpenClaw 三 大 记 忆 崩坏模式，通过四步基础配置与 QMD/Mem0/Cognee/Obsidian 四大工具，构建高可靠 记 忆 系统，让 AI 真正 记 住关键信息。 OpenClaw 记 忆 系统崩溃？ MemOS OpenClaw 插件能够有效充当分布式 Agent 的\"外部长效 记 忆 \"，为多 OpenClaw 智能体协作提供稳定的 记 忆 共享与 上 下 文 传递能力。 OpenClaw в России: скачать бесплатно, установить на Mac, Windows, Linux. ИИ-агент OpenClaw — автономный ассистент с памятью. 别堆叠 上 下 文 token。 目前主流的 记 忆 外挂包括mem0插件（ openclaw -mem0-plugin）、memory-lancedb插件、MemOS Cloud插件，以及MemoryRelay AI插件，核心作用体现在 三 点： OpenClaw is an open -source personal AI assista"
+  }
+}

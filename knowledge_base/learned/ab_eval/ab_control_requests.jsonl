@@ -1,0 +1,4 @@
+{"id": "s3", "messages": [{"role": "user", "content": "请给出报价策略，并解释价格分公式对结果的影响。"}], "meta": {"variant": "control"}}
+{"id": "s4", "messages": [{"role": "user", "content": "请输出当前系统状态、门禁状态和灰度阶段。"}], "meta": {"variant": "control"}}
+{"id": "s6", "messages": [{"role": "user", "content": "请生成系统状态卡片 UI 数据，包含健康分、工具数量和技能数量。"}], "meta": {"variant": "control"}}
+{"id": "s7", "messages": [{"role": "user", "content": "请总结本次自动升级是否可以继续放量，并给出理由。"}], "meta": {"variant": "control"}}

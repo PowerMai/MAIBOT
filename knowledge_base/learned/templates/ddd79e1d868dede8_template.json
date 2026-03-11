@@ -1,0 +1,14 @@
+{
+  "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/ddd79e1d868dede8.md",
+  "domain": "legal",
+  "created_at": "2026-03-08T15:02:03.923793",
+  "template": {
+    "doc_type": "md",
+    "sections": [
+      "# Web cache: openclaw 六阶段流水线 深度剖析 汤师爷 2026 年 2 月 2 日 万字图文 site:dev.to",
+      "## 1."
+    ],
+    "placeholders": [],
+    "template_excerpt": "# Web cache: openclaw 六阶段流水线 深度剖析 汤师爷 2026 年 2 月 2 日 万字图文 site:dev.to\n\n> 时间: 2026-03-08 06:57\n\n\n## 1. \n- 来源: duckduckgo\n\n4 days ago · Here's the insight that separates OpenClaw from every chatbot wrapper: the model provides intelligence; OpenClaw provides the operating system. Most agent frameworks focus on prompt engineering — crafting the perfect system prompt, managing conversation history, and hoping the model behaves. 3 days ago · This article is based on source code analysis of OpenClaw 2026 .3.2. All data comes from actual code, with no subjective inference. -- * Originally published on Agent Internals Feb "
+  }
+}

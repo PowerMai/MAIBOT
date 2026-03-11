@@ -1,0 +1,11 @@
+{
+  "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/global/domain/bidding/基础资料/产品资料/服务器产品投标知识库/0103-海光服务器/010307-海光标底参数&规格速查/长城海光服务器规格参数（全产品）Sales PreSales 中电长城 产品中心202304.xlsx",
+  "domain": "bidding",
+  "created_at": "2026-03-05T22:32:25.747277",
+  "template": {
+    "doc_type": "xlsx",
+    "sections": [],
+    "placeholders": [],
+    "template_excerpt": "    服务器类型       长城产品型号                                                处理器                                                                   内存                                                                       网络                                                                          PCIe 扩展                       GPU                                                                                                       存储控制器                                                                                                   存储方案                                                                                       其他端口                                            电源                散热                                                                                                                            管理功能                       显示                                                                                                                       支持操作系统         电源电压          机箱                                                                        机箱尺寸                        重量                                                                    工作温度                  工作湿度 \n0   机架服务器  "
+  }
+}

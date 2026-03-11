@@ -1,0 +1,12 @@
+{
+  "hooks": {
+    "OnSchedule": [
+      {
+        "name": "kb-gap-check",
+        "cron": "daily 03:30",
+        "task": "kb_gap_check",
+        "description": "自动执行知识缺口检测"
+      }
+    ]
+  }
+}

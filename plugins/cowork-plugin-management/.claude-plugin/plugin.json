@@ -1,0 +1,18 @@
+{
+  "name": "cowork-plugin-management",
+  "version": "0.2.2",
+  "description": "Create, customize, and manage plugins tailored to your organization's tools and workflows.",
+  "compatibility": {
+    "min_version": "0.378.0"
+  },
+  "components": {
+    "skills": [],
+    "commands": [],
+    "agents": [],
+    "hooks": [],
+    "mcp": []
+  },
+  "author": {
+    "name": "Anthropic"
+  }
+}

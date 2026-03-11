@@ -1,0 +1,17 @@
+{
+  "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/global/domain/bidding/基础资料/产品资料/服务器产品投标知识库/0102-飞腾服务器/010208-擎天RF6260 V5产品资料/SMA和SMD维护工具介绍V1.0.pdf",
+  "domain": "bidding",
+  "created_at": "2026-03-05T22:28:26.304869",
+  "template": {
+    "doc_type": "pdf",
+    "sections": [
+      "01.",
+      "02.",
+      "03."
+    ],
+    "placeholders": [
+      "U盘或SD卡盘符"
+    ],
+    "template_excerpt": "SMA 和 SMD 维护工具介绍\n产品中心 系统与平台开发部 傅汝丹，陈运福\n2024/08/13\n目录\n01.\n维护工具概述\n02.\nSMA功能及使用方法\n03.\nSMD功能及使用方法\n维护工具概述\n⚫ 维护工具数量多且较零散，导致售后服务人员任务执行成本高、效率低、难度大，所以将服务日常需要用到的工具归结\n为SMA和SMD两个，提供统一的操作入口，提升维护效率：\n✓ SMA（Smart Management Assistant），中文名称为“智能管理助手”，目前支持内存诊断、固件升级等功能，\n解决内存条等部件更换后无法判断是否可正常使用的问题,功能不断在完善，对标H公司SmartKit。\n✓ SMD（Smart Maintenance Director），中文名称为“智能运维管家”，支持巡检工具、配置导入导出、固件升\n级、日志搜集等功能，提升维护效率，持续集成先进功能，对标H公司SP和Dell的LC。\n维护工具\n成熟\nSMA 智能管理助手 SMD 智能运维管家\nR\n规划\nB B A\n网\nM IO I 工具获取路径（售后内网可访问）\n卡\nC S D\nF 自\n固 固 卡\nW 研 https://10.46.16.231/ZZYF/GWRD/pdm/03_外\n件 件 F 配\n升 固\n升 升 W 置 发文件/3.2_服务资料/3.2.1_服务器产品/通用工\n级 巡 件 日\n级 级 升 导\n检 批 志 具/S5000C工具\n级 出\n工 量 搜\n或\n具 升 集\n网 导\n安 级\n卡 入\n硬 内 装 工\n及\n盘 存 操 具\n接\n诊 诊 作\n口\n断 断 系\n诊\n统\n断\nSMA功能及使用方法-应用场景和前置条件\n⚫ 应用场景：SMA“智能管理助手”支持S5000C内存诊断和固件升级功能，其中内存诊断功能在现网更换\n故障内存条后使用，确保内存更换后能正常使用，无内存本体故障或接触不良等问题。\n⚫ 前置条件：服务器配置了SD卡（生产默认在SD卡上安装了工具）或提前准备好U盘并安装好工具，安装\n步骤如下：\n✓ 第一步：获取系统安装包GWSMA-MiniOS-202231214-aarch64.tar.gz\n✓ 第二步：解压\n✓ 第三步：进入文件夹并打开终端\n✓ 第四步：输入“chmod +x installl2sd.sh”命令。\n✓ 第五步：输入“./install2sd.sh + [U盘或SD卡盘符] ”（如右下图）\nSMA工具放置在SD卡或者U盘中，在BIOS界面可按快捷键启动并运行工具\nCPU U盘\n智能管理助手相关软件\n（包含裁剪OS、OS安\n装工具、诊断工具、固\n件升级工具等）\nBIOS BMC SD卡\nSMA智能管理助手原理框图\nSMA功能及使用方法-启动软件\n⚫ 开机或重启服务器，等待约8分钟，待进入BIOS的长城LOGO界面时按F11从SD卡的MiniOS启动，系"
+  }
+}

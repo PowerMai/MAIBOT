@@ -1,0 +1,100 @@
+---
+description: Agent 架构设计规范（DeepAgent + LangChain 生态）
+alwaysApply: true
+---
+
+# Agent 架构规范
+
+## 设计哲学：给 AI 一台电脑
+
+参照 Claude Agent SDK，核心理念是**极简工具 + 对话驱动**：
+- 对话框 = 控制中心（用户用自然语言表达意图）
+- Agent 用极简核心工具组合实现任何功能
+- 不需要专门的"系统管理工具"
+
+## 核心工具（极简）
+
+| 来源 | 工具 | 用途 |
+|------|------|------|
+| DeepAgent | ls, read_file, write_file, edit_file, glob, grep | 文件操作 |
+| 补充 | python_run | 万能执行器 |
+| 补充 | shell_run | 系统命令 |
+| 补充 | search_knowledge | 知识检索 |
+
+## 对话驱动所有功能
+
+用户通过对话表达意图，Agent 用核心工具实现：
+
+| 用户意图 | Agent 实现方式 |
+|---------|---------------|
+| 查看系统状态 | python_run 执行代码读取模块状态 |
+| 学习这个目录的文档 | python_run 调用 KnowledgeLearner.scan_and_learn() |
+| 创建招标分析技能 | write_file 创建 knowledge_base/skills/bidding/SKILL.md |
+| 导出学习数据用于微调 | python_run 调用 export_for_finetuning() |
+| 列出所有技能 | glob 扫描 knowledge_base/skills/ |
+
+## 系统数据存储（文件即数据库）
+
+| 目录 | 内容 |
+|------|------|
+| knowledge_base/skills/ | 手动创建的 Skills |
+| knowledge_base/learned/ | 学习系统产出（DocMap、Skills、Ontology） |
+| .memory/ | 记忆数据 |
+| .env | 配置 |
+
+## Skills vs Agent 中间件
+
+- **Skills**：领域能力与工具注册（list_skills、match_skills、get_skill_info 及 BUNDLE 内联），决定「有什么能力」；DeepAgent 无 SkillsMiddleware，Skills 由本项目 skill_registry 与 core_tools 注入。
+- **Agent 中间件**：鉴权、流式、限流、反射、MCP 工具桥接等横切能力（见 middleware_chain.json），决定「怎么执行、谁可用、如何观测」。调用顺序：工具列表 = Skills + MCP 等 → 再经 mode_permission 等过滤 → model 调用与流式。详见 docs/main_pipeline_and_middleware_rationality.md。
+
+## 中间件自动提供（DeepAgent 原生）
+
+- **FilesystemMiddleware**: ls, read_file, write_file, edit_file, glob, grep
+- **TodoListMiddleware**: write_todos
+- **SubAgentMiddleware**: task（上下文隔离）
+- **Skills 工具**: list_skills, match_skills, get_skill_info（自定义注册）
+
+## 两套学习机制
+
+### 1. 任务学习（自动）
+- 任务完成时自动记录推理路径
+- 存储: ReasoningPath + success_patterns
+- 用途: 检索历史经验、导出用于 LLM 微调
+
+### 2. 知识学习（python_run 触发）
+- 调用: `python_run` 执行 `KnowledgeLearner.scan_and_learn()`
+- 产出: DocMap、Ontology、Skills
+- 位置: knowledge_base/learned/
+
+## SubAgent 架构（与 Cursor 对齐：仅上下文隔离型为默认）
+
+默认 SubAgent 仅保留「强上下文隔离需求」型（与 Cursor Explore/Bash/Browser 一致），规划与执行由主 Agent Plan 模式承担，不拆为默认子代理：
+
+| Layer | Agent | 来源 | 默认启用 |
+|-------|-------|------|---------|
+| 1 | general-purpose | deepagents 内置 | 始终 |
+| 2 | explore-agent | 项目 default_specs | 始终 |
+| 2 | bash-agent | 项目 default_specs | 始终 |
+| 2 | browser-agent | 项目 default_specs | 始终 |
+| 3 | 自定义 | .maibot/agents/*.yaml | 按需（与 default 合并，不替换） |
+
+规划与执行：由主 Agent 在 Plan 模式下完成「规划阶段 → 用户确认 → 执行阶段」，不默认使用 planning/executor 子代理。YAML 中的 planning/executor/knowledge 为可选扩展（高级/实验）。
+
+纯本地模式：Layer 1+2 串行执行；有云端资源：Layer 1+2+3 可并行。
+
+## 并行执行策略
+
+| 任务类型 | 并行能力 |
+|---------|---------|
+| 工具调用（read_file, grep, python_run） | ✅ 可并行（MAX_PARALLEL_TOOLS） |
+| SubAgent 委派（纯本地） | ❌ 串行（MAX_PARALLEL_LLM=1） |
+| SubAgent 委派（有云端资源） | ✅ 可并行（MAX_PARALLEL_LLM=3-5） |
+
+## 配置项
+
+| 配置 | 默认 | 说明 |
+|------|------|------|
+| MAX_PARALLEL_LLM | 1 | LLM 并发数 |
+| MAX_PARALLEL_TOOLS | 4 | 工具并发数 |
+| ENABLE_LANGMEM | true | langmem 记忆 |
+| ENABLE_SELF_LEARNING | false | 自动学习 |

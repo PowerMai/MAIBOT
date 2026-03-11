@@ -1,0 +1,67 @@
+{
+  "agent_id": "agent-001",
+  "name": "通用 Agent",
+  "description": "全能力通用 Agent。领域专长通过安装 Plugin 扩展。",
+  "capabilities": {
+    "skills": [
+      "bidding"
+    ],
+    "domains": [
+      "global",
+      "domain",
+      "learned",
+      "users"
+    ],
+    "modes": [
+      "agent",
+      "ask",
+      "plan",
+      "debug",
+      "review"
+    ],
+    "max_parallel_tasks": 2,
+    "supported_input_types": [
+      "text",
+      "document",
+      "data",
+      "image"
+    ],
+    "supported_output_types": [
+      "document",
+      "report",
+      "analysis",
+      "code"
+    ]
+  },
+  "resources": {
+    "compute_tier": "medium",
+    "available_models": [
+      "auto",
+      "seed-oss-36b",
+      "qwen3-coder-30b"
+    ],
+    "max_context_tokens": 128000,
+    "storage_available_mb": 1024
+  },
+  "pricing": {
+    "currency": "credit",
+    "base_rate_per_task": 0,
+    "token_cost_per_1k": 0
+  },
+  "network": {
+    "openclaw_enabled": false,
+    "openclaw_gateway": null,
+    "openclaw_node_id": null,
+    "channels": [
+      "local"
+    ]
+  },
+  "features": {
+    "organization_mode": false,
+    "tradeable_mode": false,
+    "wallet_enabled": false
+  },
+  "active_role_id": "default",
+  "skill_profile": "general",
+  "role_id": "default"
+}

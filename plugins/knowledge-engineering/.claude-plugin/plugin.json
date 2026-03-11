@@ -1,0 +1,20 @@
+{
+  "name": "knowledge-engineering",
+  "version": "1.0.0",
+  "description": "Claude-style knowledge engineering workflows for ingestion, schema governance, audits, and gap planning.",
+  "compatibility": {
+    "min_version": "0.378.0"
+  },
+  "components": {
+    "skills": [],
+    "commands": [],
+    "agents": [],
+    "hooks": [],
+    "mcp": []
+  },
+  "author": {
+    "name": "maibot"
+  },
+  "license": "commercial",
+  "requires_tier": "pro"
+}

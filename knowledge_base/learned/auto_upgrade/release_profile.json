@@ -1,0 +1,8 @@
+{
+  "timestamp": "2026-02-26T00:43:42.980106+00:00",
+  "stage": "broad",
+  "rollout_percentage": 60,
+  "gate_passed": true,
+  "policy_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/auto_upgrade/rollout_policy.json",
+  "state_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/auto_upgrade/rollout_state.json"
+}

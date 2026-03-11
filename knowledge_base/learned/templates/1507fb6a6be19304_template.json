@@ -1,0 +1,16 @@
+{
+  "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/1507fb6a6be19304.md",
+  "domain": "legal",
+  "created_at": "2026-03-08T14:56:44.556017",
+  "template": {
+    "doc_type": "md",
+    "sections": [
+      "# Web cache: openclaw 六阶段流水线 深度剖析 汤师爷 架构设计 2026 年 2 月",
+      "## 1."
+    ],
+    "placeholders": [
+      "1"
+    ],
+    "template_excerpt": "# Web cache: openclaw 六阶段流水线 深度剖析 汤师爷 架构设计 2026 年 2 月\n\n> 时间: 2026-03-08 06:55\n\n\n## 1. \n- 来源: duckduckgo\n\n2 weeks ago - 本文基于2026年2月阿里云官方最新部署方案、开发者社区实测数据及高频问题反馈，打造真正意义上的保姆级教程，全程无复杂操作，所有代码命令均可直接复制执行，不改变原意、不添加冗余内容，兼顾零基础新手与有一定基础的开发者[1]。教程重点拆解阿里云部署OpenClaw（Clawdbot）的完整流程，详细讲解必装Skills的安装、配置、测试每一个步骤，包含避坑技巧及异常排查方法，同时适配阿里云轻量应用服务器、ECS云服务器两种部署载体，满足不同用 3 weeks ago - 文章浏览阅读1.4k次，点赞14次，收藏14次。编辑（相对于 docker-compose.yml 目录）在channels\"wecom\": {\"token\": \"\",\"encodingAESKey\": \"\"手动注册插件（关键步骤）这是最容易踩的坑！OpenClaw 的 doctor 会自动尝试在中以通道 ID（wecom）注册插件，但实际的插件 ID 是，导致错误。必须手动在注意的 key 必须是 openclaw-wecom（npm 包名去掉前缀），而不是。_device identity"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/global/domain/bidding/基础资料/产品资料/服务器产品投标知识库/0105-AI 服务器/010507-擎天GA7280 V4产品资料/擎天GA7280 V4彩页.docx",
+  "domain": "bidding",
+  "created_at": "2026-03-05T22:19:35.460531",
+  "template": {
+    "doc_type": "docx",
+    "sections": [],
+    "placeholders": [],
+    "template_excerpt": "\n\n\n擎天GA7280 V4\n\nAMD Milan平台高性价比8卡GPU服务器\n\n\n\n\n\n\n\n擎天GA7280 V4是一款具有广泛用途的双路4U8卡GPU服务器，基于AMD SP3平台，支持Rome和Milan全系列CPU，支持8张450W的双宽GPU，具备性能卓越、扩展性强和可靠性高等特点，适用于人工智能、大模型推理、渲染、云游戏等应用场景。\n\n\n\n\n\n卓越性能 高性价比\n〉 支持2颗AMD EPYC™ 7002/7003系列处理器，最多128个核心；\n〉 支持8张450W GPU卡，提供极致异构算力；\n〉 GPU直通设计，无需PCIe Switch转接，超高性价比。\n灵活配置 按需选择\n〉 最多支持11个PCIe 4.0标准插槽，多种PCIe配置可选；\n〉 可选1张OCP 3.0网卡，多种速率可选；\n〉 支持8个3.5\"/2.5\" SAS/SATA硬盘，可选支持2/4个NVMe SSD，兼顾大容量和高性能本地存储。\n稳定可靠 智能管理\n〉 系统关键部件均采用冗余、热插拔设计，同时支持免工具拆装，提升故障维护效率，提升系统的可用性；\n〉 集成智能管理芯片，提供开放的管理平台，支持IPMI2.0、Redfish、SNMP等多种管理协议；\n〉 支持KVM、虚拟媒介、关键部件状态监控、异常报警等各种管理功能，实现了全面的远程系统级智能管理。\n\n\n产品外观与配置以实物为准，本公司可能对产品进行升级或更改，造成与图示中的不一致，敬请见谅。\n\n\n\n\n\n\n\n\n\n\n\n\n\nCEC\n中电\n\n®\nGatII\n\n\n中 国长城科技集团股份有限公司\n\n电话:4008118888    传真:0755 -26610568\n地址：广东省深圳市南山区科技园科发路3号长城科技大厦"
+  }
+}

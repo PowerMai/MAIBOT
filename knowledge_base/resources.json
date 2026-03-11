@@ -1,0 +1,169 @@
+{
+  "version": "2.0",
+  "description": "优化的资源配置 - 精简资源源，添加文档映射",
+  "resources": {
+    "memory": {
+      "path": "../backend/tmp/.context",
+      "pattern": "**/*.md",
+      "resource_type": "memory",
+      "priority": 1.0,
+      "file_types": [".md"],
+      "tags": ["preference", "experience", "lesson", "project"],
+      "domains": [],
+      "task_types": ["all"],
+      "enabled": true,
+      "description": "用户记忆（偏好、经验、项目上下文）"
+    },
+    "skills": {
+      "path": "skills",
+      "pattern": "**/SKILL.md",
+      "resource_type": "skill",
+      "priority": 0.95,
+      "file_types": [".md"],
+      "tags": ["workflow", "method", "skill"],
+      "domains": ["bidding", "contracts", "reports"],
+      "task_types": ["all"],
+      "enabled": false,
+      "description": "技能定义（工作流程、方法论）- 由 SkillsMiddleware 管理，不参与向量索引"
+    },
+    "domain_knowledge": {
+      "path": "global/domain",
+      "pattern": "**/*.{md,pdf,docx,xlsx}",
+      "resource_type": "guide",
+      "priority": 0.80,
+      "file_types": [".md", ".pdf", ".docx", ".xlsx"],
+      "tags": ["template", "case", "rule", "data", "spec"],
+      "domains": ["bidding", "contracts", "reports"],
+      "task_types": ["all"],
+      "enabled": true,
+      "exclude_patterns": ["**/02_operations/**", "**/02_writing_guide/**", "**/SKILL.md"],
+      "description": "领域内容（模板、案例、规则、数据）- 不含方法论"
+    },
+    "domain_structured": {
+      "path": "domain",
+      "pattern": "**/*.md",
+      "resource_type": "guide",
+      "priority": 0.78,
+      "file_types": [".md"],
+      "tags": ["template", "case", "rule", "concept", "checklist"],
+      "domains": ["bidding", "contracts", "reports"],
+      "task_types": ["all"],
+      "enabled": true,
+      "description": "结构化领域知识（概念、模板、规则、清单）- 与 global/domain 互补"
+    },
+    "tools": {
+      "path": "tools",
+      "pattern": "*.md",
+      "resource_type": "guide",
+      "priority": 0.60,
+      "file_types": [".md"],
+      "tags": ["tool", "optimization"],
+      "domains": [],
+      "task_types": ["all"],
+      "enabled": true,
+      "description": "工具和优化指南"
+    },
+    "user_files": {
+      "path": "../backend/tmp/uploads",
+      "pattern": "**/*",
+      "resource_type": "user_file",
+      "priority": 0.90,
+      "file_types": [".md", ".txt", ".docx", ".pdf", ".xlsx"],
+      "tags": ["user", "upload", "document", "project"],
+      "domains": [],
+      "task_types": ["all"],
+      "enabled": true,
+      "description": "用户上传文件（项目文件）"
+    },
+    "project_outputs": {
+      "path": "../backend/tmp/outputs",
+      "pattern": "**/*",
+      "resource_type": "user_file",
+      "priority": 0.85,
+      "file_types": [".md", ".txt", ".docx", ".pdf", ".xlsx", ".png", ".jpg"],
+      "tags": ["output", "result", "report", "chart", "process"],
+      "domains": [],
+      "task_types": ["all"],
+      "enabled": true,
+      "description": "项目输出和过程文件"
+    }
+  },
+  "docmap": {
+    "description": "文档结构映射 - 帮助 Agent 快速定位领域内容（不含方法论）",
+    "bidding": {
+      "skill": "/knowledge_base/skills/marketing/bidding/SKILL.md",
+      "index": "/knowledge_base/global/domain/00_KB_INDEX.md",
+      "structured_index": "domain/procurement/README.md",
+      "guide": "/knowledge_base/global/domain/bidding/bidding_guide.md",
+      "sections": {
+        "domain_procurement": {
+          "path": "domain/procurement/",
+          "purpose": "结构化概念、模板、规则、案例",
+          "when_to_use": "检索概念、模板、规则、案例时"
+        },
+        "basics": {
+          "path": "global/domain/bidding/01_basics/",
+          "purpose": "基础概念和术语",
+          "when_to_use": "新手入门、术语查询"
+        },
+        "templates": {
+          "path": "global/domain/bidding/03_templates/",
+          "purpose": "文档模板",
+          "when_to_use": "生成报告、方案"
+        },
+        "best_practices": {
+          "path": "global/domain/bidding/04_best_practices/",
+          "purpose": "最佳实践案例",
+          "when_to_use": "优化策略、提升质量"
+        },
+        "cases": {
+          "path": "global/domain/bidding/05_case_studies/",
+          "purpose": "历史案例研究",
+          "when_to_use": "参考历史经验"
+        },
+        "company": {
+          "path": "global/domain/bidding/05_company_info/",
+          "purpose": "公司资质信息",
+          "when_to_use": "匹配资格要求"
+        },
+        "products": {
+          "path": "global/domain/bidding/06_product_specs/",
+          "purpose": "产品规格参数",
+          "when_to_use": "匹配技术参数"
+        },
+        "rules": {
+          "path": "global/domain/bidding/06_rules/",
+          "purpose": "法规规则",
+          "when_to_use": "合规检查"
+        }
+      }
+    },
+    "contracts": {
+      "skill": "/knowledge_base/skills/legal/contracts/SKILL.md",
+      "guide": "/knowledge_base/global/domain/contracts/contract_guide.md",
+      "sections": {
+        "basics": {"path": "global/domain/contracts/01_basics/", "purpose": "基础概念"},
+        "templates": {"path": "global/domain/contracts/03_templates/", "purpose": "合同模板"},
+        "best_practices": {"path": "global/domain/contracts/04_best_practices/", "purpose": "最佳实践"},
+        "cases": {"path": "global/domain/contracts/05_case_studies/", "purpose": "案例研究"},
+        "rules": {"path": "global/domain/contracts/06_rules/", "purpose": "法规规则"}
+      }
+    },
+    "reports": {
+      "skill": "/knowledge_base/skills/reports/SKILL.md",
+      "sections": {
+        "templates": {"path": "global/domain/reports/01_templates/", "purpose": "报告模板"},
+        "formats": {"path": "global/domain/reports/03_formats/", "purpose": "格式规范"}
+      }
+    }
+  },
+  "_workflows_note": "工作流定义已移至 workflows.json，支持原子操作组合",
+  "settings": {
+    "auto_discover": false,
+    "index_on_startup": false,
+    "index_on_demand": true,
+    "max_file_size_mb": 10,
+    "supported_extensions": [".md", ".txt", ".json", ".yaml", ".docx", ".pdf", ".xlsx"],
+    "exclude_patterns": ["**/README.md", "**/.git/**", "**/__pycache__/**", "**/基础资料/**", "**/02_operations/**", "**/02_writing_guide/**"]
+  }
+}

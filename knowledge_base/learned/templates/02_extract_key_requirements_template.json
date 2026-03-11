@@ -1,0 +1,52 @@
+{
+  "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/global/domain/bidding/operations/02_extract_key_requirements.md",
+  "domain": "technical",
+  "created_at": "2026-03-05T21:07:25.970879",
+  "template": {
+    "doc_type": "md",
+    "sections": [
+      "# 操作指南：提取关键要求",
+      "## 🎯 目的",
+      "## ⏱️ 执行时间",
+      "## 📊 输入输出",
+      "## 🔧 执行步骤",
+      "### Step 1: 分类检索",
+      "# 分类检索策略",
+      "### Step 2: 需求解析和标准化",
+      "1. 具体需求项描述",
+      "2. 优先级（必须/应该/可选）",
+      "3. 验收标准",
+      "4. 相关约束",
+      "# 对每个类别的需求进行解析",
+      "### Step 3: 冲突检测和合并",
+      "# 检查同类需求中的冲突",
+      "# 使用简单的关键词匹配或 embedding 相似度检测",
+      "# 合并相似的需求",
+      "# 提取关键特征",
+      "# 处理所有类别",
+      "# 用 LLM 解决冲突",
+      "### Step 4: 生成需求文档",
+      "## 功能需求",
+      "## 性能需求",
+      "## 安全需求",
+      "## 集成需求",
+      "## 维护需求",
+      "## 冲突项目（需要澄清）",
+      "## 需求覆盖度评估",
+      "# 保存到文件",
+      "## ✅ 成功标志"
+    ],
+    "placeholders": [
+      "\"requirement_text\"",
+      "'功能需求'",
+      "'安全需求'",
+      "'性能需求'",
+      "'维护需求'",
+      "'集成需求'",
+      "category",
+      "f\"{category}_conflicts\"",
+      "i+1:"
+    ],
+    "template_excerpt": "# 操作指南：提取关键要求\n\n## 🎯 目的\n从招标文件中准确、完整地提取所有关键要求，包括技术要求、商务要求、资格要求等。\n\n## ⏱️ 执行时间\n5-8 分钟\n\n## 📊 输入输出\n\n| 项目 | 内容 |\n|------|------|\n| **输入** | 招标文件 + 初步分析结果 |\n| **输出** | 详细的需求清单（结构化） |\n| **工具调用数** | 5-8 次 |\n\n---\n\n## 🔧 执行步骤\n\n### Step 1: 分类检索\n**工具**：`BM25Retriever`\n\n按照以下类别进行多次检索，避免遗漏：\n\n```python\nfrom langchain_community.retrievers import BM25Retriever\n\nretriever = BM25Retriever.from_texts(chunks)\n\n# 分类检索策略\nrequirement_categories = {\n    \"功能需求\": [\n        \"系统功能 应该提供 必须具有\",\n        \"核心功能 主要功能 辅助功能\",\n        \"集成 接口 数据交换\"\n    ],\n    \"性能需求\": [\n        \"性能 响应时间 吞吐量\",\n        \"并发 用户数 数据量\",\n        \"可用性 容错 备份\"\n    ],\n    \"安全需求\": [\n        \"安全 加密 认证\",\n        \"数据保护 隐私 审计\",\n        \"权限 访问控制 日志\"\n    ],\n    \"集成需求\": [\n        \"集成 接口 API\",\n        \"数据格式 数据库 系统\",\n        \"第三方 兼容性 适配\"\n    ],\n    \"维护需求\": [\n        \"文档 培训 支持\",\n        \"维护 升级 扩展\",\n        \"技术规范 标准\"\n    ]\n}\n\nextracted_requirements = {}\nfor category, keywords in requirement_categories.items():\n    extracted_requirements[category] = []\n    for keyword_query in keywords:\n        results = retriever.invoke(keyword_query, k=3)\n        for doc in results:\n            if doc.page_content not in extracted_requirements[category]:\n                extracted"
+  }
+}

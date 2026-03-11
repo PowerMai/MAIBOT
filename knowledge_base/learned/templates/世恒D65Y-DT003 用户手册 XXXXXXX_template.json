@@ -1,0 +1,13 @@
+{
+  "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/global/domain/bidding/基础资料/产品资料/终端部材料/02-终端整机资料/0207-X86台式终端/世恒D65Y 所有资料/世恒D65Y-DT003 用户手册 XXXXXXX.pdf",
+  "domain": "bidding",
+  "created_at": "2026-03-05T21:18:15.976333",
+  "template": {
+    "doc_type": "pdf",
+    "sections": [
+      "2、连接电脑主机"
+    ],
+    "placeholders": [],
+    "template_excerpt": "\n版本（V1.0）(2024年02月)\n\n\n主机前视图 主机后视图\n机箱提手\nPS/2接口 USB 2.0\n开关按键\nHDMI口\nUSB 3.2\nDP接口\nUSB 3.2\nUSB 3.2\nType-c VGA接口\nSlim光驱\n麦克风 USB 3.2\n耳机 USB 2.0 千兆网口\n麦克风 音频接口\n音频输出\n电源接口\n2、连接电脑主机\n请按如图所示用随附显示器连接线，将显示器与电脑主机连接，用随附的\n电源线将显示器连接至电源插座\n6\n\n\nXXXXXXX"
+  }
+}

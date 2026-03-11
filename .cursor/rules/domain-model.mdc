@@ -1,0 +1,63 @@
+---
+description: 会话-角色-工作区领域模型规范
+alwaysApply: true
+---
+
+# 会话-角色-工作区领域模型
+
+## 1. 基础对象定义
+
+- User（全局唯一）：身份、配额、偏好，贯穿整个应用生命周期。
+- Workspace（窗口级）：一个窗口绑定一个工作区路径，文件操作作用域由工作区决定。
+- Session/Thread（会话级）：会话属于某个工作区，承载消息历史、会话角色、会话模式。
+- Role（会话绑定）：角色是会话级上下文，切换角色只影响当前会话。
+- Task（任务级）：任务可关联到会话执行，支持独立状态流转与协作。
+
+## 2. 关键归属规则
+
+- 用户是全局的；会话和角色是局部的。
+- 同一窗口内多个会话共享同一个工作区文件上下文。
+- 跨窗口通常对应不同工作区；跨窗口信息传递通过文件访问与系统剪贴板。
+- 新建会话默认继承上一个会话的角色与模式。
+
+### 2.1 Workspace 与 Thread 绑定
+
+- **当前窗口**：单一工作区由 `maibot_workspace_path` 表示；WorkspaceFileTree、editor_tool、文件读写工具均以该路径为根。
+- **工作区切换**：用户切换工作区后，前端**先**调用后端 `POST /workspace/switch`，成功后再写入 `maibot_workspace_path` 并派发 `EVENTS.WORKSPACE_CONTEXT_CHANGED`；失败则 toast、不写本地，避免前后端分叉。**清空工作区**：同样先调 `POST /workspace/switch`（path 为空字符串），成功后再清除本地 `maibot_workspace_path` 并派发事件。建议新建对话（NEW_THREAD_REQUEST）以避免跨工作区上下文污染；不自动把当前 thread 绑定到新工作区。
+- **校验**：sessionState、WorkspaceFileTree 等读取工作区时以 `maibot_workspace_path` 为优先；跨窗口事件（如 BroadcastChannel）按需按 `workspacePath` 过滤，避免错误应用他窗口的工作区。
+
+## 3. 存储分层约定
+
+- 全局键（用户偏好）：`maibot_active_role`、`maibot_chat_mode` 等。
+- 会话键（线程覆盖）：
+  - `maibot_active_role_thread_{threadId}`
+  - `maibot_chat_mode_thread_{threadId}`
+- 会话切换指针：
+  - `maibot_current_thread_id`
+  - `maibot_active_thread`
+- 工作区键：
+  - `maibot_workspace_path`
+
+读取优先级统一采用：会话键 > 全局键。
+
+### 3.1 工作区与 @ 文件列表
+
+- **工作区**：窗口级根路径（`maibot_workspace_path`），文件读写与树展示均以此根为作用域。
+- **@ 文件候选**：Composer 输入 @ 时的文件列表 = **当前打开的文件**（优先） + **工作区内的文件列表**（由 MyRuntimeProvider 按 `workspacePath` 拉取或由父级传入 `workspaceFiles`），去重后限制条数；无工作区时仅展示打开文件。数据由 `OpenFilesContext` 提供，与 Cursor「工作区即项目根、@ 可引用项目内文件」对齐。
+
+## 4. 事件协议约定
+
+- `EVENTS.SESSION_CHANGED`：切换会话后广播，必须携带 `threadId`。
+- `EVENTS.SESSION_CREATED`：新建会话后广播，建议携带 `threadId`、`roleId`、`mode`、`workspacePath`。
+- `EVENTS.ROLE_CHANGED`：角色切换事件，必须携带 `threadId`。
+- `EVENTS.CHAT_MODE_CHANGED`：模式切换事件，必须携带 `threadId`。
+
+禁止继续使用字符串字面量 `thread_changed`，统一使用 `EVENTS.SESSION_CHANGED`。
+
+后端：每次 run 流开始时通过流事件 `type: "session_context"` 下发当前 `threadId`、`mode`、`roleId`，前端可据此同步状态并按需广播上述 EVENTS，并校验 `threadId`。前端消费处在 `MyRuntimeProvider` 的 custom 事件分支（`d?.type === 'session_context'`），仅当流所属 threadId 与当前激活会话一致时写存储并派发 EVENTS；契约详见 `docs/main_pipeline_and_middleware_rationality.md` §九。
+
+## 5. 开发约束
+
+- UI 展示“当前角色/模式”时，必须按当前激活会话读取。
+- 新增会话相关状态时，先判断是否应为会话级而非全局级。
+- 会话切换联动组件（状态栏、仪表盘、欢迎卡、Composer）必须监听统一事件并校验 `threadId`。

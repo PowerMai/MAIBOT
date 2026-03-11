@@ -1,0 +1,18 @@
+{
+  "name": "product-management",
+  "version": "1.0.0",
+  "description": "Claude-style product management workflows for specs, roadmap, and stakeholder alignment.",
+  "compatibility": {
+    "min_version": "0.378.0"
+  },
+  "components": {
+    "skills": [],
+    "commands": [],
+    "agents": [],
+    "hooks": [],
+    "mcp": []
+  },
+  "author": {
+    "name": "maibot"
+  }
+}

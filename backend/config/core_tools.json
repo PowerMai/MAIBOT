@@ -1,0 +1,71 @@
+{
+  "orchestrator_core_tools": [
+    "python_run",
+    "shell_run",
+    "web_search",
+    "web_fetch",
+    "ask_user",
+    "enter_plan_mode",
+    "exit_plan_mode",
+    "think_tool",
+    "search_knowledge",
+    "analyze_image",
+    "create_chart",
+    "batch_read_files",
+    "generate_image",
+    "generate_ppt"
+  ],
+  "orchestrator_advanced_tools": [
+    "knowledge_graph",
+    "ontology_import",
+    "search_learning_experience",
+    "critic_review"
+  ],
+  "orchestrator_skill_tools": [
+    "list_skills",
+    "match_skills",
+    "run_skill_script",
+    "get_skill_info"
+  ],
+  "human_in_the_loop_interrupt_tools": [
+    "shell_run",
+    "write_file",
+    "edit_file",
+    "delete_file",
+    "python_run"
+  ],
+  "subagent_tools": {
+    "explore": [
+      "read_file",
+      "glob",
+      "grep",
+      "shell_run"
+    ],
+    "bash": [
+      "shell_run",
+      "read_file"
+    ],
+    "browser": [
+      "web_fetch"
+    ],
+    "plan": [
+      "read_file",
+      "glob",
+      "grep",
+      "shell_run"
+    ],
+    "knowledge": [
+      "search_knowledge"
+    ],
+    "executor": [
+      "python_run",
+      "shell_run"
+    ],
+    "media": [
+      "generate_image",
+      "generate_ppt",
+      "analyze_image",
+      "generate_video"
+    ]
+  }
+}

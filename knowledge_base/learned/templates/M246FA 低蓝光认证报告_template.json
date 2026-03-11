@@ -1,0 +1,36 @@
+{
+  "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/global/domain/bidding/基础资料/产品资料/终端部材料/02-终端整机资料/0209-显示器/显示器 M246FA 23.8_V%20H%20DVI%20DP%20U_喇叭HKC（PN：5202727）/M246FA 低蓝光认证报告.pdf",
+  "domain": "technical",
+  "created_at": "2026-03-05T21:19:36.900266",
+  "template": {
+    "doc_type": "pdf",
+    "sections": [
+      "1. General Information",
+      "1. Product details LCD Monitor",
+      "2. Rated voltage and rated frequency 100-240VAC, 50/60Hz",
+      "3. Rated current and / or rated power 1.1A",
+      "4. Screen refresh rate 60Hz",
+      "5. Key components used (e.g. panel) Panel: HKM238F***（* can be 0-9，",
+      "6. other N/A",
+      "2. Summary of test",
+      "3. Low Blue Light test specification and test results",
+      "5.2",
+      "5.2.1 Products must meet local compliance See CCC report No.: C-",
+      "5.2.2 Photobiological Safety: Remark:",
+      "5.2.3 Blue Light Radiation Level",
+      "5.2.4 Color Gamut Coverage",
+      "5.2.5 HEV Blue light content",
+      "12.97%",
+      "5.3",
+      "5.3.1",
+      "5.3.2 Health recommendations",
+      "5.3.3 Low blue light content modes",
+      "5.3.4 Port used",
+      "4. Measurement data",
+      "5.2.3 Blue light radiation level",
+      "5. Photo documentation"
+    ],
+    "placeholders": [],
+    "template_excerpt": "_______________________________________________________________________________\nTest Report Report No.: SZES240800564401\nDate: 2024-08-30\nApplicant: China Great Wall Technology Group Co., Ltd.\nGreat Wall Bd.,Science & Technology industrial Park, Nanshan Zone, Shenzhen,\nGuangdong, China\nManufacturer: Same as applicant\nFactory: Chongqing HKC Technology Co., Ltd.\nBuilding 1, No.2388, Dongcheng Dadao, Jieshi Town, Ba'nan District, Chongqing, China\nTest Item: LCD Monitor\nType Designation: M246FA, M24**************** (* can be A-Z, a-z, 0-9, “+”, “-” or blank)\nTrademark: Great Wall长城\nRating: 100-240VAC, 50/60Hz, 1.1A\nTesting Standard: PP-20-001-300020\nLow Blue Light Technical specification\nTest Results: Pass\nConclusion: The product compliances with PP-20-001-300020\nSGS Low Blue Light Technical specification\nRemark: Blue Light Radiation Level: 0.81\nHEV Blue Light Content: 12.97%\nPanel: HKM238F***（* can be 0-9，A-Z or blank）\nTested with: HKM238FJ09 (HKC)\nDeclared by the client, all models are identical, only model names are different, for\nmarketing purpose. The model M246FA is selected for test to represent the other\nmodels.\n______________________ ______________________\nSherry Chen John Mo\n"
+  }
+}

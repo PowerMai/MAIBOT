@@ -1,0 +1,433 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main, master]
+  schedule:
+    # UTC 01:17 每日自动执行运维巡检
+    - cron: "17 1 * * *"
+  workflow_dispatch:
+    inputs:
+      release_profile:
+        description: "Release profile: staging or production"
+        required: false
+        default: "staging"
+
+jobs:
+  module-boundary-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate module boundary isolation (warn mode)
+        run: python backend/scripts/check_module_boundary.py
+      - name: Validate module boundary isolation (strict new violations only)
+        env:
+          BOUNDARY_STRICT: "1"
+        run: python backend/scripts/check_module_boundary.py
+
+  backend-tests:
+    if: github.event_name == 'pull_request' || github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Detect backend-related changes
+        id: changes
+        uses: dorny/paths-filter@v3
+        with:
+          filters: |
+            backend_core:
+              - 'backend/**'
+              - 'Makefile'
+              - '.github/workflows/ci.yml'
+      - uses: actions/setup-python@v5
+        if: steps.changes.outputs.backend_core == 'true'
+        with:
+          python-version: "3.12"
+      - name: Install backend dependencies
+        if: steps.changes.outputs.backend_core == 'true'
+        working-directory: backend
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+      - name: Run backend core regression subset
+        working-directory: .
+        if: steps.changes.outputs.backend_core == 'true'
+        run: make test-backend-core-regression
+      - name: Run single-agent backend API acceptance
+        if: steps.changes.outputs.backend_core == 'true'
+        working-directory: .
+        env:
+          STRICT_RATE_LIMIT_CHECK: "true"
+        run: make test-single-agent-api
+      - name: Run task status projection e2e
+        if: steps.changes.outputs.backend_core == 'true'
+        working-directory: .
+        run: make test-task-status-projection
+      - name: Run task status projection guard-off e2e
+        if: steps.changes.outputs.backend_core == 'true'
+        working-directory: .
+        run: make test-task-status-projection-guard-off
+      - name: Run task execution reliability e2e
+        if: steps.changes.outputs.backend_core == 'true'
+        working-directory: .
+        run: make test-task-execution-reliability-e2e
+      - name: Run task status wiring check
+        if: steps.changes.outputs.backend_core == 'true'
+        working-directory: .
+        run: make check-task-status-wiring
+      - name: Run backend contract guard checks
+        if: steps.changes.outputs.backend_core == 'true'
+        working-directory: .
+        run: make check-board-contract
+      - name: Run plugins compatibility smoke
+        if: steps.changes.outputs.backend_core == 'true'
+        working-directory: .
+        env:
+          RELEASE_PROFILE: "staging"
+        run: make plugins-compat-smoke
+      - name: Run plugin runtime compatibility smoke
+        if: steps.changes.outputs.backend_core == 'true'
+        working-directory: .
+        run: make plugin-runtime-compat-smoke
+      - name: Run skills compatibility smoke
+        if: steps.changes.outputs.backend_core == 'true'
+        working-directory: .
+        run: make skills-compat-smoke
+      - name: Run skills semantic consistency gate
+        if: steps.changes.outputs.backend_core == 'true'
+        working-directory: .
+        run: make skills-semantic-gate
+      - name: Run plugin command conflict gate
+        if: steps.changes.outputs.backend_core == 'true'
+        working-directory: .
+        run: make plugin-command-conflict-gate
+      - name: Run knowledge source compliance gate
+        if: steps.changes.outputs.backend_core == 'true'
+        working-directory: .
+        run: make knowledge-source-compliance-gate
+      - name: Build observability snapshots
+        if: steps.changes.outputs.backend_core == 'true'
+        working-directory: .
+        run: |
+          make build-unified-observability-snapshot
+          make build-knowledge-pipeline-snapshot
+      - name: Run CI release gate checks
+        if: steps.changes.outputs.backend_core == 'true'
+        working-directory: .
+        env:
+          RELEASE_PROFILE: "staging"
+        run: python backend/scripts/check_ci_release_gates.py
+      - name: Run unit tests
+        if: steps.changes.outputs.backend_core == 'true'
+        working-directory: backend
+        run: pytest tests -q
+
+  frontend-build:
+    if: github.event_name == 'pull_request' || github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Detect frontend-related changes
+        id: changes
+        uses: dorny/paths-filter@v3
+        with:
+          filters: |
+            frontend_core:
+              - 'frontend/**'
+              - '.github/workflows/ci.yml'
+      - uses: actions/setup-node@v4
+        if: steps.changes.outputs.frontend_core == 'true'
+        with:
+          node-version: "20"
+      - name: Setup pnpm
+        if: steps.changes.outputs.frontend_core == 'true'
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - name: Install frontend dependencies
+        if: steps.changes.outputs.frontend_core == 'true'
+        working-directory: frontend/desktop
+        run: pnpm install --frozen-lockfile
+      - name: Check frontend event literals
+        if: steps.changes.outputs.frontend_core == 'true'
+        working-directory: frontend/desktop
+        run: pnpm check:events
+      - name: Check frontend session state wiring
+        if: steps.changes.outputs.frontend_core == 'true'
+        working-directory: frontend/desktop
+        run: pnpm check:session-state
+      - name: Check frontend session flow readiness
+        if: steps.changes.outputs.frontend_core == 'true'
+        working-directory: frontend/desktop
+        run: pnpm check:session-flow
+      - name: Check frontend single-agent readiness
+        if: steps.changes.outputs.frontend_core == 'true'
+        working-directory: frontend/desktop
+        run: pnpm check:single-agent
+      - name: Check slash mode consistency
+        if: steps.changes.outputs.frontend_core == 'true'
+        working-directory: frontend/desktop
+        run: pnpm check:slash-mode
+      - name: Check role mode contract
+        if: steps.changes.outputs.frontend_core == 'true'
+        working-directory: frontend/desktop
+        run: pnpm check:role-mode-contract
+      - name: Check task entry consistency
+        if: steps.changes.outputs.frontend_core == 'true'
+        working-directory: frontend/desktop
+        run: pnpm check:task-entry
+      - name: Check editor keyboard wiring
+        if: steps.changes.outputs.frontend_core == 'true'
+        working-directory: frontend/desktop
+        run: pnpm check:editor-keys
+      - name: Check command palette liveness
+        if: steps.changes.outputs.frontend_core == 'true'
+        working-directory: frontend/desktop
+        run: pnpm check:command-palette
+      - name: Build frontend
+        if: steps.changes.outputs.frontend_core == 'true'
+        working-directory: frontend/desktop
+        run: pnpm build
+
+  release-readiness:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - name: Install backend dependencies
+        working-directory: backend
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+      - name: Install frontend dependencies
+        working-directory: frontend/desktop
+        run: pnpm install --frozen-lockfile
+      - name: Code gate - frontend contract and build
+        working-directory: frontend/desktop
+        run: |
+          pnpm check:events
+          pnpm check:session-state
+          pnpm check:session-flow
+          pnpm check:single-agent
+          pnpm check:slash-mode
+          pnpm check:role-mode-contract
+          pnpm check:task-entry
+          pnpm check:editor-keys
+          pnpm check:command-palette
+          pnpm build
+      - name: Link gate - backend regression and contracts
+        working-directory: .
+        run: |
+          profile="${{ github.event.inputs.release_profile }}"
+          echo "release_profile=$profile strict_task_status_write=true"
+
+          make test-backend-core-regression
+          STRICT_RATE_LIMIT_CHECK=true make test-single-agent-api
+          TASK_STATUS_STRICT_WRITE=true TASK_STATUS_AUTHORITY=board make test-task-status-projection
+          make test-task-execution-reliability-e2e
+          make collect-task-status-projection-evidence
+          make check-board-contract
+          RELEASE_PROFILE="$profile" make plugins-compat-smoke
+          make plugin-runtime-compat-smoke
+          make skills-compat-smoke
+          make skills-semantic-gate
+          make plugin-command-conflict-gate
+          make knowledge-source-compliance-gate
+      - name: Ops gate - slo and legacy semantic scan
+        working-directory: .
+        run: |
+          profile="${{ github.event.inputs.release_profile }}"
+          echo "release_profile=$profile strict_slo=true strict_legacy_terms=true strict_signoff=true"
+          python backend/scripts/check_reliability_slo.py --env "$profile" --strict
+          # 收紧守卫为观察信号：用于判断是否可把 blocked_recovery_rate 从 0.27 提升到 0.30
+          python backend/scripts/check_slo_tightening_guard.py \
+            --env "$profile" \
+            --metric min_blocked_recovery_rate \
+            --target 0.30 \
+            --required-pass-runs 3 || true
+          python backend/scripts/scan_legacy_bidding_terms.py --strict
+          python backend/scripts/check_release_signoff.py --strict
+      - name: Build release gate summary
+        working-directory: .
+        run: |
+          python backend/scripts/build_release_gate_summary.py \
+            --release-profile "${{ github.event.inputs.release_profile }}" \
+            --projection-evidence-report backend/data/task_status_projection_evidence.json \
+            --strict-required
+      - name: Build memory scope contract report
+        working-directory: .
+        run: |
+          python backend/scripts/build_memory_scope_contract_report.py
+      - name: Build knowledge pipeline snapshot
+        working-directory: .
+        run: |
+          make build-knowledge-pipeline-snapshot
+      - name: Build memory quality report
+        working-directory: .
+        run: |
+          python backend/scripts/build_memory_quality_report.py
+      - name: Build memory quality trend report
+        working-directory: .
+        run: |
+          python backend/scripts/build_memory_quality_trend_report.py
+      - name: Build policy decision report
+        working-directory: .
+        run: |
+          make build-policy-decision-report
+      - name: Build unified observability snapshot
+        working-directory: .
+        run: |
+          python backend/scripts/build_unified_observability_snapshot.py
+      - name: Build parity scorecard
+        working-directory: .
+        run: |
+          python backend/scripts/build_parity_scorecard.py
+      - name: Build parity trend report
+        working-directory: .
+        run: |
+          python backend/scripts/build_parity_trend_report.py
+      - name: Run release postcheck
+        working-directory: .
+        run: |
+          python backend/scripts/release_postcheck.py \
+            --summary-json backend/data/release_gate_summary.json \
+            --output-json backend/data/release_postcheck_report.json
+      - name: Run compatibility matrix and regression gates
+        working-directory: .
+        env:
+          RELEASE_GATES_STRICT: "1"
+        run: |
+          python backend/scripts/check_ci_release_gates.py \
+            --release-profile "${{ github.event.inputs.release_profile }}" \
+            --require-fresh-artifacts \
+            --max-age-minutes 180 \
+            --warn-cost-quality \
+            --hard-fail-cost-quality
+      - name: Build release-readiness job summary
+        if: always()
+        working-directory: .
+        run: |
+          python backend/scripts/build_ci_job_summary.py --mode release-readiness --freshness-max-age-minutes 180
+      - name: Upload release gate artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-readiness-artifacts
+          path: |
+            backend/data/reliability_slo_history.jsonl
+            backend/data/legacy_bidding_scan_report.json
+            backend/data/task_status_projection_report.json
+            backend/data/task_status_projection_guard_off_report.json
+            backend/data/task_execution_reliability_e2e_report.json
+            backend/data/task_status_projection_evidence.json
+            backend/data/release_gate_summary.json
+            backend/data/policy_decision_report.json
+            backend/data/unified_observability_snapshot.json
+            backend/data/memory_scope_contract_report.json
+            backend/data/memory_quality_report.json
+            backend/data/memory_quality_trend_report.json
+            backend/data/parity_scorecard.json
+            backend/data/parity_trend_report.json
+            backend/data/release_postcheck_report.json
+            backend/data/release_drill_steps.json
+            backend/data/release_signoff_report.json
+            backend/data/slo_tightening_guard_report.json
+            backend/data/plugins_compat_smoke_report.json
+            backend/data/plugin_command_conflicts_report.json
+            backend/data/knowledge_source_compliance_report.json
+            backend/data/skills_compat_smoke_report.json
+            backend/data/skills_semantic_consistency_report.json
+
+  ops-daily-check:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install backend dependencies
+        working-directory: backend
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+      - name: Run daily ops check
+        working-directory: .
+        env:
+          OPS_WEBHOOK_URL: ${{ secrets.OPS_DAILY_WEBHOOK_URL }}
+        run: |
+          bash scripts/ops_daily_check.sh --snapshot --watcher
+      - name: Run release postcheck snapshot
+        if: always()
+        working-directory: .
+        run: |
+          python backend/scripts/release_postcheck.py \
+            --summary-json backend/data/release_gate_summary.json \
+            --output-json backend/data/release_postcheck_report.json || true
+      - name: Build memory scope contract snapshot
+        if: always()
+        working-directory: .
+        run: |
+          python backend/scripts/build_memory_scope_contract_report.py || true
+      - name: Build memory quality snapshot
+        if: always()
+        working-directory: .
+        run: |
+          python backend/scripts/build_memory_quality_report.py || true
+      - name: Build memory quality trend snapshot
+        if: always()
+        working-directory: .
+        run: |
+          python backend/scripts/build_memory_quality_trend_report.py || true
+      - name: Build parity scorecard snapshot
+        if: always()
+        working-directory: .
+        run: |
+          python backend/scripts/build_parity_scorecard.py || true
+      - name: Build parity trend snapshot
+        if: always()
+        working-directory: .
+        run: |
+          python backend/scripts/build_parity_trend_report.py || true
+      - name: Build ops daily job summary
+        if: always()
+        working-directory: .
+        run: |
+          python backend/scripts/build_ci_job_summary.py --mode ops-daily
+      - name: Upload daily ops artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ops-daily-artifacts
+          path: |
+            backend/data/reliability_slo_history.jsonl
+            backend/data/task_status_projection_evidence.json
+            backend/data/release_gate_summary.json
+            backend/data/unified_observability_snapshot.json
+            backend/data/memory_scope_contract_report.json
+            backend/data/memory_quality_report.json
+            backend/data/memory_quality_trend_report.json
+            backend/data/skills_semantic_consistency_report.json
+            backend/data/plugin_command_conflicts_report.json
+            backend/data/knowledge_source_compliance_report.json
+            backend/data/parity_scorecard.json
+            backend/data/parity_trend_report.json
+            backend/data/release_postcheck_report.json
+            backend/data/release_drill_steps.json
+            backend/data/task_execution_reliability_e2e_report.json
+            backend/data/ops-daily/*.json
+            backend/data/ops-daily/*.md

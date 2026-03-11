@@ -1,0 +1,2 @@
+# 向量索引（VECTOR_STORE_IN_KB=true 时生成，体积大且可重建）
+.vectorstore/

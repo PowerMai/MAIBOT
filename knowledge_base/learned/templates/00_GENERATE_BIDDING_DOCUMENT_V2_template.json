@@ -1,0 +1,19 @@
+{
+  "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/global/domain/bidding/02_operations/00_GENERATE_BIDDING_DOCUMENT_V2.md",
+  "domain": "bidding",
+  "created_at": "2026-03-05T21:07:24.479948",
+  "template": {
+    "doc_type": "md",
+    "sections": [
+      "# 00_GENERATE_BIDDING_DOCUMENT",
+      "## KEYWORDS",
+      "## TASK",
+      "## INPUT",
+      "## OUTPUT",
+      "## WORKFLOW",
+      "## DOCUMENT_CHECKLIST"
+    ],
+    "placeholders": [],
+    "template_excerpt": "# 00_GENERATE_BIDDING_DOCUMENT\n\n## KEYWORDS\n`生成投标文件` `做标书` `编写投标书` `end-to-end` `投标文件组成` `投标函 资格 技术 商务 偏离表`\n\n---\n\n## TASK\nOrchestrate end-to-end generation of bidding documents: analyze → optional item-by-item → outline → write → generate by checklist → compliance check.\n\n## INPUT\n- Bidding document (PDF/Word/Text)\n- Optional: existing company materials, templates path\n\n## OUTPUT\n- 按招标要求的完整投标文件集合（投标函、资格证明、技术方案、商务报价、偏离表、承诺书等）\n- 输出路径或清单；合规检查结果\n\n---\n\n## WORKFLOW\n\n| Step | Action | Doc/Ref | Check |\n|------|--------|---------|-------|\n| 1 | 分析招标文件 | 01_ANALYZE_BIDDING_DOCUMENT_V2 | 项目、需求、评分、强制条件 |\n| 2 | 可选：逐项分析 | 11_ITEM_BY_ITEM_ANALYSIS_V2 | 条款矩阵、强制项 |\n| 3 | 生成大纲 | 02_PARSE + 04_GENERATE_PROPOSAL_OUTLINE_V2 | 章节与评分对应 |\n| 4 | 撰写技术/商务 | 06_WRITE_TECHNICAL + 07_WRITE_COMMERCIAL | 按大纲与评分 |\n| 5 | 按清单生成各卷 | 投标函、资格、技术、商务、偏离表、承诺书等 | 见 reference 组成清单 |\n| 6 | 合规与格式 | 08_COMPLIANCE_FORMATTING_CHECK_V2 | 字体、页码、签章 |\n\n---\n\n## DOCUMENT_CHECKLIST\n\n| 文件/卷 | 内容 | 对应步骤/能力 |\n|---------|------|----------------|\n| 投标函 | 标准模板填写、签章 | proposal-writing / 招标格式 |\n| 法定代表人身份证明/授权委托书 | 按招标要求 | 招标格式 |\n| 资格证明 | 营业执照、资质、业绩、人员、财务 | 01 分析 + proposal-writing |\n| 技术方案 | 按 04 大纲与 06 撰写 | 04 + 06_WRITE_TECHNICAL |\n| 商务报价 | "
+  }
+}

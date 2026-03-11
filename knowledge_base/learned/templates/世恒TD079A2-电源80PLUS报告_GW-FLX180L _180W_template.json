@@ -1,0 +1,16 @@
+{
+  "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/global/domain/bidding/基础资料/产品资料/终端部材料/02-终端整机资料/0201-飞腾终端/020102-通用终端/世恒TD079A2 所有资料/世恒TD079A2-电源80PLUS报告_GW-FLX180L _180W.pdf",
+  "domain": "bidding",
+  "created_at": "2026-03-05T21:53:23.311242",
+  "template": {
+    "doc_type": "pdf",
+    "sections": [
+      "0.13 0.78 34.25% 10% 23.90 12.45/1.42 5.06/0.19 18.69 78.21%",
+      "0.22 0.88 27.73% 20% 43.45 12.45/2.85 5.05/0.38 37.40 86.07%",
+      "0.47 0.95 18.90% 50% 103.14 12.42/7.14 5.01/0.95 93.40 90.56%",
+      "0.93 0.98 14.01% 100% 209.90 12.38/14.29 4.93/1.89 186.22 88.72%"
+    ],
+    "placeholders": [],
+    "template_excerpt": "80 PLUS Verification and Testing Report\nTYPICAL EFFICIENCY (50% Load): 90.56%\nAVERAGE EFFICIENCY : 88.45%\n80 PLUS COMPLIANT: YES\nID Number EU-841\nInput Current and Voltage Waveforms\nManufacturer CHINA GREATWALL TECHNOLOGY GROUP CO., LTD.\nModel Number GW-FLX180L 400 1.0\nSerial Number N/A 300\nYear 2021 200 0.5\nType FLX )V 100 )A\nTest Date 5/10/21 ( e g a 0 0.0 ( tn e\ntlo\n-100\n-0.001 0.003 0.008 0.013 rru\nV C\n-200 -0.5\nRated Specifications Value Units\n-300\nInput Voltage 220 Volts\n-400 -1.0\nInput Current 3 Amps Time (s)\nInput Frequency 50/60 Hz\nVoltage Current\nRated Output Power 180 Watts\nNote: All measurements were taken with input voltage at 230 V nominal at 50 Hz. Input AC Current Waveform (ITHD = 18.9%, 50% Load)\nInput DC Terminal Voltage (V)/ DC Load Current (A) Output\nI PF I Load Efficiency\nRMS THD Watts 12V (cumulative of 12V1, 12V2, etc.) 5Vsb Watts\n0.13 0.78 34.25% 10% 23.90 12.45/1.42 5.06/0.19 18.69 78.21%\n0.22 0.88 27.73% 20% 43.45 12.45/2.85 5.05/0.38 37.40 86.07%\n0.47 0.95 18.90% 50% 103.14 12.42/7.14 5.01/0.95 93.40 90.56%\n0.93 0.98 14.01% 100% 209.90 12.38/14.29 4.93/1.89 186.22 88.72%\nInput and Output Power Efficiency of the Power Supply\n250 100%\n90%\n200 80%\n70%\n) s t "
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/a89432afaade21ca.md",
+  "domain": "technical",
+  "created_at": "2026-03-08T15:25:44.599592",
+  "template": {
+    "doc_type": "md",
+    "sections": [
+      "# Web cache: LangGraph LangChain agent framework orchestration 智能体编排",
+      "## 1."
+    ],
+    "placeholders": [],
+    "template_excerpt": "# Web cache: LangGraph LangChain agent framework orchestration 智能体编排\n\n> 时间: 2026-03-08 07:21\n\n\n## 1. \n- 来源: duckduckgo\n\n2025/07/16 · 文章深度测评CrewAI与LangGraph两大智能体编排平台，从技术架构、编排方式等维度对比，给出量化评分，还提供选型建议及学习资源，助开发者了解下一代AI系统构建技术。 2025/11/12 · 这里主要是汇总了我了解过的当前比较知名的Agent框架框架汇总OpenAI Agents SDK定位：轻量级多-Agent 开发包，核心原语为Agent 与Handoff，支持Python 与TypeScript。 2025/12/28 · LangGraph是LangChain团队推出的开源框架，专为构建有状态、长时间运行的AI工作流而生。 它不像别的工具那样, 封装太多细节. LangGraph 给你底层控制权，像搭积木一样组装AI ... 2025/12/03 · 一份系统化、求职导向的AI Agent 学习与面试指南，涵盖：. Agent 开发：LangChain、LangGraph、AutoGen、CrewAI、Swarm 框架教程; RAG 系统：向量数据库、Embedding、文档解析 ... 2025/10/06 · 本文详细介绍了LangGrap"
+  }
+}

@@ -1,0 +1,8 @@
+# 媒体 SubAgent：图片生成、PPT 配图、图像分析等
+# 由主 Agent 在「生成配图」「做图」「插入图片到 PPT」等场景下 task(media-agent, ...) 委派
+name: media-agent
+description: 负责图片生成、PPT 配图与图像分析等媒体任务；使用 VL 模型时适合多模态输入。
+tool_group: media
+prompt_template: general-purpose
+use_bundle_context: false
+model_alias: vision

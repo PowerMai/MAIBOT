@@ -1,0 +1,38 @@
+{
+  "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/global/domain/bidding/基础资料/产品资料/终端部材料/02-终端整机资料/0209-显示器/显示器 24F3_T92_23.8 FHD_英文_V%20H AOC（PN：5201752）/Great Wall Monitor PDD_24F3T92_20250219（中文版）.pdf",
+  "domain": "technical",
+  "created_at": "2026-03-05T21:20:20.159473",
+  "template": {
+    "doc_type": "pdf",
+    "sections": [
+      "2. 外观、结构描述",
+      "2.1.支架、壁挂",
+      "2.2.尺寸",
+      "2.3. 重量",
+      "2.4.间隙和段差标准",
+      "2.5.外观图片【产品效果图仅供参考，请以机器实物为准】",
+      "2.6.外观数据【产品图片仅供参考，请以机器实物为准】",
+      "2.7.后铭牌【产品图片仅供参考，请以机器实物为准】",
+      "2.8.纸箱贴纸【产品图片仅供参考，请以机器实物为准】",
+      "2.9.能效标签【产品图片仅供参考，请以机器实物为准】",
+      "2.10.纸箱【产品图片仅供参考，请以机器实物为准】",
+      "3. 环境描述",
+      "3.1.操作环境",
+      "3.2.储存环境",
+      "3.3.可靠度标准",
+      "4.1.CCC证书",
+      "4.2.节能证书",
+      "4.3.环境证书",
+      "4.4.China RoHS 申明",
+      "4.5.低蓝光证书",
+      "5. 附件",
+      "5.1.信号线 【产品图片仅供参考，请以机器实物为准】",
+      "5.2.电源适配器【产品图片仅供参考，请以机器实物为准】"
+    ],
+    "placeholders": [
+      "产品图片仅供参考，请以机器实物为准",
+      "产品效果图仅供参考，请以机器实物为准"
+    ],
+    "template_excerpt": "Product Definition Document\n Internal Document  External Document\nDocument Name: Doc. No.: GW-MNT-PDD-2024111901\nPDD(Product Definition Document) Release Date: 2025/2/19 Page: 1 / 23\n产品规格书\n项目 内容 备注说明\n产品尺寸 23.8英寸\n产品名称 液晶显示器\n产品型号 N24188\n艾德蒙机种名 24F3/T92\n长城物料编码 5201752\n备注说明1 两芯墙插式适配器\nIPS屏\n备注说明2\nBOE/HKC\n备注说明3 黑色外观\n- Confidential -\nProduct Definition Document\n Internal Document  External Document\nDocument Name: Doc. No.: GW-MNT-PDD-2024111901\nPDD(Product Definition Document) Release Date: 2025/2/19 Page: 2 / 23\n1 规格描述\n本规范描述 RTD2313AR-CG主芯片带VGA 和 HDMI兼容接口23.8 英寸 LCD彩色显示器，\n的电气、光学、机械和功能性能要求的解决方案\n本产品彩色有源矩阵液晶显示器具有发光二极管（白色 LED）背光系统，该矩阵采用a-\nSi 薄膜晶体管作为有源元件，采用FHD解决方案（1920 水平像素阵列 x1080 垂直像\n素）。每个像素被划分为以垂直条纹排列的红、绿和蓝子像素或点。每个点用8 位灰度信号确\n定子像素颜色的灰度或亮度，呈现超过 16.7M 种颜色的调色板。\n屏幕尺寸(对角) 23.8\"W\n屏幕比例 16:09\n面板类型 IPS\n防蓝光模式 支持，蓝光加权辐射亮度比 0.000963\n屏占比 ≥90%\n色准 ΔE≤4\n屏幕亮度一致性 ≥75%\n像素密度 92.56\n位深 8 位\n色域 99% sRGB\n屏幕低频闪 ≤-35dB\n显示屏防炫目 显示屏镜面反射率≤10%\n可视尺寸(对角)(mm) 604.7mm(Diagonal)\n点距(水平/垂直)(mm) 0.2745(H)*0.2745(V)\n画面尺寸(水平/垂直)(mm) 527.04(H)*296.46(V)\n亮度(典型值)(cd/m2) 300cd/m²\n对比度(典型值) 1,000:1\n动态对比度(典型值) 5 千万:1\n响应时间(典型值) ≤5ms(OD)\n可视角度(水平/垂直)(典型值)(CR≥10) 178°/178°(CR≥10)\n- Confidential -\nProduct Definition Document\n Internal Docu"
+  }
+}

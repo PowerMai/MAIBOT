@@ -1,0 +1,11 @@
+{
+  "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/global/domain/bidding/基础资料/产品资料/终端部材料/02-终端整机资料/0201-飞腾终端/020102-通用终端/世恒BD200C2(飞腾版) 所有资料/世恒BD200C2 ESD.pdf",
+  "domain": "technical",
+  "created_at": "2026-03-05T21:34:21.145993",
+  "template": {
+    "doc_type": "pdf",
+    "sections": [],
+    "placeholders": [],
+    "template_excerpt": "深圳信测标准技术服务股份有限公司\n深圳市南山区马家龙工业区69栋(518052)\nwww.emtek.com.cn Tel: +86-755-2695 4280 Fax: +86-755-2695 4282\nESD Immunity Test Data\nAPPLICATION No:\n中国长城\nAPPLICANT:\nDESCRIPTION OF SAMPLE(S)\nProduct: 台式机 Prepared By: PJH\nBrand Name: Reviewed By: CSL\nModel Number(s): 世恒BD200C2 Date: 2023-06-02\nRating: AC 230V/50HZ EUT Test Result: Pass\nGrounding: Grounded Ungrounded Fail\nTest Specification: Test Method: EN61000-4-2 IEC61000-4-2\nPerformance Criterion accepted by Test Specification: A B C\nOperation Mode: Refer to EMC Test Requirements Form ON\nLocation *Test Method Test Voltage Result **\nHCP IC DC ±2kV ±4kV ±6kV ±8kV A B\nA ±10kV ±15kV C D\nVCP IC DC ±2kV ±4kV ±6kV ±8kV A B\nA ±10kV ±15kV C D\nMETAL /前置USB/后 IC DC ±2kV ±4kV ±6kV ±8kV A B\n置USB/HDMI /LAN A ±10kV ±15kV C D\nSCREW /前置AUDIO IC DC ±2kV ±4kV ±6kV ±8kV A B\n/VGA/COM口\nA ±10kV ±15kV C D\nSLOT/HDMI/LED/DP IC DC ±2kV ±4kV ±6kV ±8kV A B\nA ±10kV ±15kV C D\n前置USB/后置USB IC DC ±2kV ±4kV ±6kV ±8kV A B\nA ±10kV ±15kV C D\n* A: Air Contact Discharge DC Direct Contact Discharge IC: Indirect Contact Discharge\n** A: Normal performance within the specification limits\nB: Temporary degradation or loss of function or performance which is self-recoverable\nC: Temp"
+  }
+}

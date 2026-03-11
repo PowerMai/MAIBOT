@@ -1,0 +1,11 @@
+{
+  "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/global/domain/bidding/基础资料/产品资料/服务器产品投标知识库/0105-AI 服务器/010502-擎天GI7280 V5产品资料/擎天GI7280 V5 服务器产品彩页.pdf",
+  "domain": "bidding",
+  "created_at": "2026-03-05T22:19:48.585673",
+  "template": {
+    "doc_type": "pdf",
+    "sections": [],
+    "placeholders": [],
+    "template_excerpt": "擎天GI7280 V5服务器\n产品定位\n擎天GI7280 V5服务器是基于Intel 最新Eagle stream平台\n开发的最强大、最弹性的GPU 云服务器，支持多种CPU-\nGPU 以及GPU-GPU 互联拓扑，满足各种AI业务场景下的应\n用需求\n应用场景\nAI云计算、线下训练、线上推理、视频加速应用等\n产品特性\n领先的架构设计\n Intel 至强可扩展第四代处理器平台，TDP 350W\n DDR5技术+PCIe Gen5 最新技术支撑\n PCIe 直通配置低时延打造极致性能\n 前后IO维护兼容设计，适用新旧不同机房\n灵活的拓扑方案\n CPU-GPU 支持直通及Switch方案，最大支持10张双宽GPU卡\n CPU-Switch可选X16 或X32 lane 互联，实现高带宽通信\n 支持common和performance等不同CPU-GPU 互联拓扑，适用更多应用场景\n丰富的生态适配\n 支持单双宽GPU 卡\n 支持国内外品牌GPU卡\n 专属团队支撑定制化开发需求\n产品规格\n擎天GI7280 V5服务器\nCPU  2 个第四代英特尔®至强®可扩展处理器，TDP 350W\n内存  最大支持32条DDR5内存，每颗CPU支持8个内存通道\n最大支持12块3.5寸硬盘\n存储 最大支持24块2.5寸硬盘，最大支持16个NVMe\n支 持 1 个 M.2SSD\n后置直通最大支持8个双宽GPU+4 个标准PCIe插槽+1个OCP插槽\n\nPCIe 扩展\n后置Switch最大支持8个双宽GPU+5 个标准PCIe插槽+1个OCP插槽\n\n前置最大支持2 个标准PCIe插槽+1个OCP插槽或1和1个标准PCIe插槽\n\n管理  AST2600, 1 个RJ45 千兆管理网口\n前置IO\n• 1* USB3.0+1* USB2.0 Type-A\n• 1x PWR BTN with LED\n基础 IO\n• 1x Status LED\n• 1x UART PORT, TypeC\n• 1x Front UID BTN with LED\n• 1x FrontVGA\n• 1* GbE 带外管理口 (与后置管理口互斥)\n后置IO\n• 1x Rear UIDLED\n• 1* GbE 带外管理口 (与前置管理口互斥)\n 12 个高性能热插拔风扇，支持N+1 冗余\n散热\n 可选冷板散热\n温度  5ºC - 35ºC\n电源  4个CRPS电源，支持3+1或2+2 冗余\n尺寸  900mm*447mm*175mm\n版权所有©中国长城科技集团股份有限公司2023。保留一切权利。\n文中相关图片及文字仅供参考，详细规格请咨询长城销售网点或代理商"
+  }
+}

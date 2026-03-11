@@ -1,0 +1,8 @@
+# 高级/实验：规划由主 Agent Plan 模式承担，此子代理为可选扩展。仅当 enable_yaml_subagents 且理解与 Plan 模式区别时启用。
+name: planning-agent
+description: Read-only planning agent that produces structured executable plans.
+tool_group: planning
+prompt_template: planning
+use_bundle_context: true
+structured_output: planning
+model_alias: planning

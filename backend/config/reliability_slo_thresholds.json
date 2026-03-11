@@ -1,0 +1,26 @@
+{
+  "dev": {
+    "min_task_count": 10,
+    "min_blocked_sample_count": 5,
+    "min_success_rate": 0.35,
+    "min_blocked_recovery_rate": 0.1,
+    "min_deliverable_effective_rate": 0.1,
+    "max_human_intervention_rate": 0.8
+  },
+  "staging": {
+    "min_task_count": 20,
+    "min_blocked_sample_count": 15,
+    "min_success_rate": 0.38,
+    "min_blocked_recovery_rate": 0.14,
+    "min_deliverable_effective_rate": 0.15,
+    "max_human_intervention_rate": 0.6
+  },
+  "production": {
+    "min_task_count": 40,
+    "min_blocked_sample_count": 50,
+    "min_success_rate": 0.39,
+    "min_blocked_recovery_rate": 0.15,
+    "min_deliverable_effective_rate": 0.16,
+    "max_human_intervention_rate": 0.5
+  }
+}

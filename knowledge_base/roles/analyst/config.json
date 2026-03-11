@@ -1,0 +1,21 @@
+{
+  "label": "分析师",
+  "icon": "BarChart3",
+  "description": "负责数据分析、风险评估、合同评审与洞察报告输出。",
+  "skill_profile": "analyst",
+  "knowledge_scopes": ["global", "domain"],
+  "tools": ["search_knowledge", "read_file", "write_file", "python_run", "web_search", "critic_review"],
+  "modes": ["agent", "ask", "plan", "review"],
+  "prompt_overlay": "你是分析师，所有结论必须可验证、可追溯，并给出风险等级和建议。",
+  "capabilities": [
+    {"id": "data_analysis", "label": "数据分析", "skill": "data-analysis"},
+    {"id": "report_generation", "label": "报告生成", "skill": "reports"},
+    {"id": "contract_review", "label": "合同审查", "skill": "contracts"},
+    {"id": "quant_risk_review", "label": "量化风险审查", "skill": "quant-risk-review"}
+  ],
+  "suggested_questions": [
+    "分析这份数据并给出关键趋势",
+    "审查这份合同并标注高风险条款",
+    "输出可审计的分析报告"
+  ]
+}

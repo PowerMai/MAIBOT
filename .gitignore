@@ -1,0 +1,52 @@
+# 环境与密钥
+.env
+.env.local
+*.pem
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.ruff_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Node
+node_modules/
+.pnpm-store/
+.npm
+*.tsbuildinfo
+
+# 本地/运行时
+.langgraph_api/
+.pids/
+.memory/
+.learnings/
+
+# 日志与临时
+logs/
+*.log
+tmp/
+temp/
+
+# 系统
+.DS_Store
+Thumbs.db
+
+# 构建/产出与大数据（不推送，节省仓库体积）
+outputs/
+uploads/
+data/
+backend/data/
+knowledge_base/global/
+knowledge_base/learned/.vectorstore/
+frontend/desktop/workspace/
+
+# Cursor 计划/缓存（规则 .cursor/rules 可保留提交）
+.cursor/plans/
+.cursor/cache/

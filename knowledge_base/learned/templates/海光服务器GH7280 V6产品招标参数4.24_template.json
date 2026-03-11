@@ -1,0 +1,11 @@
+{
+  "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/global/domain/bidding/基础资料/产品资料/服务器产品投标知识库/0105-AI 服务器/010511-擎天GH7280 V6产品资料/海光服务器GH7280 V6产品招标参数4.24.xlsx",
+  "domain": "bidding",
+  "created_at": "2026-03-05T22:20:53.997693",
+  "template": {
+    "doc_type": "xlsx",
+    "sections": [],
+    "placeholders": [],
+    "template_excerpt": "   擎天GH7280 V6招标参数 Unnamed: 1 Unnamed: 2                                                           Unnamed: 3\n0               序号        重要性       技术指标                                                                 招标参数\n1                1          ★       品牌要求                                                           国产品牌，4U服务器\n2                2         ★★        处理器                 配置≥2颗CPU，每颗CPU核心数≥48核，每颗CPU主频≥2.6GHz，每颗CPU三级缓存≥256MB\n3                3          ★         内存      最大支持1.5TB DDR5  RDIMM/LRDIMM内存，支持≥24个内存插槽，支持ECC，内存最高速率≥4800MT/s\n4                4        NaN         硬盘                        前置：最高支持24个3.5英寸SAS/SATA硬盘或8个2.5英寸NVMe U.2 SSD\n5                5          ★        M.2                                                   板载支持2个SATA M.2 SSD\n6                6        NaN      RAID卡                      配置独立磁盘阵列卡，缓存≥4G,支持RAID0/1/10/5/50/6/60,支持超级电容保护\n7                7          ★     PCIe扩展                                     可支持12个PCIe5.0 x16插槽\\n1个OCP 3.0插槽\n8                8          ★       GPU卡                                                   最大支持8张全高全长国产GPU卡接入\n9                9        NaN         网络                                    支持1G/10G/25G/40G/100G/20"
+  }
+}

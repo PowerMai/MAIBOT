@@ -1,0 +1,46 @@
+Metadata-Version: 2.4
+Name: ccb-backend
+Version: 0.1.0
+Summary: CCB Orchestrator Agent - 通用AI决策支持系统
+Requires-Python: >=3.9
+Requires-Dist: langchain>=0.3.0
+Requires-Dist: langchain-community>=0.3.0
+Requires-Dist: langchain-text-splitters>=0.3.0
+Requires-Dist: langchain-experimental>=0.3.0
+Requires-Dist: langchain-openai>=1.0.2
+Requires-Dist: langchain-tavily>=0.2.13
+Requires-Dist: langgraph-cli[inmem]>=0.4.0
+Requires-Dist: deepagents>=0.2.6
+Requires-Dist: pydantic>=2.0.0
+Requires-Dist: python-dotenv>=1.0.0
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: rich>=14.0.0
+Requires-Dist: rank-bm25>=0.2.2
+Requires-Dist: python-docx>=1.1.0
+Requires-Dist: pandas>=2.0.0
+Requires-Dist: openpyxl>=3.1.0
+Requires-Dist: python-pptx>=0.6.21
+Requires-Dist: pdfplumber>=0.10.0
+Requires-Dist: pypdf>=3.17.0
+Requires-Dist: fastapi>=0.100.0
+Requires-Dist: uvicorn>=0.20.0
+Requires-Dist: python-multipart>=0.0.9
+Requires-Dist: langchain-mcp-adapters>=0.1.0
+Provides-Extra: dev
+Requires-Dist: mypy>=1.11.1; extra == "dev"
+Requires-Dist: ruff>=0.6.1; extra == "dev"
+Provides-Extra: notebook
+Requires-Dist: jupyter>=1.0.0; extra == "notebook"
+Requires-Dist: ipykernel>=6.20.0; extra == "notebook"
+Provides-Extra: llm-providers
+Requires-Dist: langchain-anthropic>=1.0.3; extra == "llm-providers"
+Requires-Dist: langchain-google-genai>=3.1.0; extra == "llm-providers"
+Provides-Extra: local-embedding
+Requires-Dist: faiss-cpu>=1.7.0; extra == "local-embedding"
+Requires-Dist: sentence-transformers>=2.2.0; extra == "local-embedding"
+Provides-Extra: advanced-docs
+Requires-Dist: unstructured[local-inference]>=0.11.0; extra == "advanced-docs"
+Provides-Extra: external-knowledge
+Requires-Dist: wikipedia>=1.4.0; extra == "external-knowledge"
+Requires-Dist: wikibase-rest-api-client>=0.0.6; extra == "external-knowledge"
+Requires-Dist: mediawikiapi>=0.6.0; extra == "external-knowledge"

@@ -1,0 +1,46 @@
+{
+  "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/global/domain/bidding/CORE_FILES_DESIGN.md",
+  "domain": "contract",
+  "created_at": "2026-03-05T21:07:20.347904",
+  "template": {
+    "doc_type": "md",
+    "sections": [
+      "# 招投标知识库核心文件清单",
+      "## 📋 **文件结构设计原则**",
+      "### KB 检索机制",
+      "1. **高密度关键词** - 便于 BM25 命中",
+      "2. **表格+矩阵+代码** - 信息密度高",
+      "3. **真实可用数据** - 不是示例占位符",
+      "4. **结构化清晰** - 便于片段阅读",
+      "## 🎯 **核心指导文件清单**",
+      "### 第一层：操作指南 (Operations)",
+      "### 第二层：专业知识库 (Domain Knowledge)",
+      "### 第三层：数据参考库 (Data References)",
+      "### 第四层：模板库 (Templates)",
+      "## 📝 **重构示例：操作指南**",
+      "### 示例 1: `01_analyze_bidding_doc.md` (重构版)",
+      "# ANALYZE_BIDDING_DOCUMENT",
+      "## Keywords",
+      "## Quick Reference",
+      "## Workflow Matrix",
+      "## Tool Parameters",
+      "## Query Keywords Library",
+      "## Extraction Patterns (Regex)",
+      "## Error Handling Matrix",
+      "## Performance Benchmarks",
+      "## Next Steps",
+      "### 示例 2: `terminology.md` (专业术语表)",
+      "# BIDDING_TERMINOLOGY",
+      "## Keywords",
+      "## Quick Index",
+      "## Terms (A-Z)",
+      "## Synonyms Matrix"
+    ],
+    "placeholders": [
+      " ",
+      "10-50",
+      "万亿"
+    ],
+    "template_excerpt": "# 招投标知识库核心文件清单\n\n## 📋 **文件结构设计原则**\n\n### KB 检索机制\n```\nretrieve_kb(query) → BM25关键词 + 向量语义 → 返回片段(chunks)\n```\n\n**设计要求**:\n1. **高密度关键词** - 便于 BM25 命中\n2. **表格+矩阵+代码** - 信息密度高\n3. **真实可用数据** - 不是示例占位符\n4. **结构化清晰** - 便于片段阅读\n\n---\n\n## 🎯 **核心指导文件清单**\n\n### 第一层：操作指南 (Operations)\n**用途**: 告诉 LLM 如何执行任务的步骤\n\n| 文件 | 关键词 | 内容结构 |\n|------|--------|---------|\n| `01_analyze_bidding_doc.md` | analyze bidding document steps | 步骤表+工具矩阵+参数表 |\n| `02_extract_requirements.md` | extract requirements key info | 提取字段表+正则表+示例 |\n| `03_risk_assessment.md` | risk assessment identify evaluate | 风险类型矩阵+判断规则+等级表 |\n| `04_cost_analysis.md` | cost analysis pricing budget | 成本构成表+计算公式+对标数据 |\n| `05_competitor_analysis.md` | competitor analysis benchmarking | 对比维度表+数据来源+分析框架 |\n| `06_scoring_evaluation.md` | scoring evaluation criteria weights | 评分方法表+权重矩阵+计算示例 |\n| `07_generate_proposal.md` | generate proposal report template | 报告结构+必需章节+格式规范 |\n\n### 第二层：专业知识库 (Domain Knowledge)\n**用途**: 提供领域专业知识和数据\n\n| 文件 | 关键词 | 内容结构 |\n|------|--------|---------|\n| `terminology.md` | bidding terminology vocabulary glossary | 术语表（A-Z排序） |\n| `legal_requirements.md` | legal requirements regulations compliance | 法规清单+要点+引用 |\n| `pricing_rules.md` | pr"
+  }
+}

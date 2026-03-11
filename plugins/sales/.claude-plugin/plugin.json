@@ -1,0 +1,18 @@
+{
+  "name": "sales",
+  "version": "1.0.0",
+  "description": "Claude-style sales workflows for account targeting, outreach, pipeline execution, and bidding lifecycle support.",
+  "compatibility": {
+    "min_version": "0.378.0"
+  },
+  "components": {
+    "skills": [],
+    "commands": [],
+    "agents": ["sales-review-agent"],
+    "hooks": ["task-lifecycle"],
+    "mcp": ["mcp-macos"]
+  },
+  "author": {
+    "name": "maibot"
+  }
+}

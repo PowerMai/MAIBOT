@@ -1,0 +1,52 @@
+{
+  "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/global/domain/bidding/基础资料/产品资料/终端部材料/02-终端整机资料/0209-显示器/显示器 M276QC_2K_100Hz_H%20DP%20USB_3%20Type-C（PN：5200073）/Great%U00A0Wall%U00A0Monitor%U00A0M276Q(100Hz）.pdf",
+  "domain": "technical",
+  "created_at": "2026-03-05T21:20:23.678862",
+  "template": {
+    "doc_type": "pdf",
+    "sections": [
+      "1. 简述（ General） ………………………………………………………………….. 3",
+      "2. 电气特性（ Electrical） ………………………………………………………………….. 4",
+      "3. 光学特性（ Optical） ………………………………………………………………….. 8",
+      "4. 结构特性 Mechanical ………………………………………………………………….. 10",
+      "5. 环境（ Environmental） ………………………………………………………………….. 20",
+      "6. 认证（Approval） ………………………………………………………………….. 23",
+      "7. 配件（Accessories） ………………………………………………………………….. 31",
+      "1.General",
+      "2.电气特性（ Electrical）",
+      "2.1.最大亮度（ Max.brightness)",
+      "2.2.最小亮度（ Min.brightness)",
+      "2.3.对比度（Contrast Ratio）",
+      "2.4.白色坐标（White Colour Coordinates）",
+      "2.5.白色均匀度（White Colour Uniformity ）",
+      "2.6.色纯（ Purity ）",
+      "2.7.反应时间（ Response Time）",
+      "1. Gray to Gray (GTG) refers to the time required for a liquid crystal display to",
+      "2. white to black For the transition from white (100%) to black (0%) and then to",
+      "2.8.视角（Viewing Angle）",
+      "3.光学参数（Optical）",
+      "4.结构",
+      "4.1.功能",
+      "4.2.尺寸",
+      "4.3.重量",
+      "4.4.Gap& Step",
+      "4.5.ID Photos【产品效果图仅供参考 ，请以机器实物为准】",
+      "4.6.ID Drawing",
+      "4.7.Rating Label Drawing",
+      "4.8.Carton Label Drawing",
+      "4.9.CEL Label Drawing"
+    ],
+    "placeholders": [
+      "5000K",
+      "6500K",
+      "9300K",
+      "CIE 1931",
+      "Cool",
+      "NTSC",
+      "Normal",
+      "SRGB",
+      "产品效果图仅供参考 ，请以机器实物为准"
+    ],
+    "template_excerpt": "定制物料承认书\n长城物料 PN 5200073 版本信息 V1.1\n规格描述 显示器 MB27V17QS4 黑 27 HDMI 线 惠科\n供应商公司名称 惠科股份有限公司 供应商料号 100101066830\n适用机型\n供应商签核栏 中国长城签核栏\nPM/日期 研发工程师/日期\nQA/日期 项目经理/日期\n核准/日期 质量工程师/日期\n记录编号： QR840 - 19 记录版次：A1 记录顺序号：\n第 1 页\n承认书修订记录\n版本 修订日期 修订内容 修订人\nV1.0 2022/08/02 New Version Release sunxuduo\nV1.1 2022/10/31 增加 5.2 可靠性内容 sunxuduo\n□样品实物3 份\n□产品规格书（必须提供纸质档）\n□包装方式（可提供电子档）\n□可靠性测试报告（可提供电子档）\n承认书内容\n□CPK（过程能力指数）（可提供电子档）\n□QCP（质量控制计划）（可提供电子档）\n□QC 工程图（可提供电子档）\n□环保认证证书（包括 RoHS2.0 报告）（可提供电子档）\n□安全认证证书\n关于承认书模板的说明 ：\n1 . 承认书需按照GWRD-QM-004《定制物料承认及封样管理规范》表 1 定制物料承认书资料要求提\n供物料产品规格书、 可靠性测试报告 、 环保认证报告 、 安全认证报告等资料 、 样品 3 份；\n2 . 环保认证报告（ 如RoHS、 REACH等 ） 、 安全认证报告（ 如CCC等 ） 必须是第三方（ 国家认可\n的 ） 的测试结果 ；\n3 . 供应商名称栏， 需加盖供应商公章或受控章 ；\n4 . 承认书封皮需用中 国长城公司封样封皮（ A4 纸打印即可 ） ；\n5 . 承认书需要纸档 3 份（ 1 份中国长城质量部门存档， 1 份回寄厂商 ， 1 份给到湖南长城工\n厂） ；\n6 . 承认书打印纸档前需要先发给中国长城质量部门电子档案审核 ， 审核OK方可进行打印 ， 连同样\n本一起进行签核承认；\n7 . 承认资料的格式如无特殊要求提出 ， 均采用厂商内部格式。\n第 2 页\n产 品 规 格 书\nDoc. No:M276QC 规格书\n型号:M276QC\n日期: 2022/10/31 版本: 1.1\nM272F 产品规格书\n项目 内容 备注说明\n产品尺寸 27英寸\n产品名称 液晶显示器\n长城产品型号 M276QC\n长城机种名 GW276\n长城物料编码 5200073\n惠科型号 MB27V17QS4\n备注说明1 内置电源\n备注说明2 IPS屏\n备注说明3 黑色外观\n第 1 页\n产 品 规 格 书\nDoc. No:M276QC 规格书\n型号:M276QC\n日期: 2022/10/31 版本: 1.1\nTable of Content\n1. 简述（ General） ……………………………………………………"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/88876d930620b1c4.md",
+  "domain": "legal",
+  "created_at": "2026-03-08T14:56:44.662619",
+  "template": {
+    "doc_type": "md",
+    "sections": [
+      "# Web cache: openclaw 六阶段流水线 深度剖析 汤师爷 site:juejin.cn",
+      "## 1."
+    ],
+    "placeholders": [],
+    "template_excerpt": "# Web cache: openclaw 六阶段流水线 深度剖析 汤师爷 site:juejin.cn\n\n> 时间: 2026-03-08 06:54\n\n\n## 1. \n- 来源: duckduckgo\n\n大家好，我是 汤 师 爷 ，南京大学硕士，前华为、阿里 AI架构 师 。今天 汤 师 爷 就来给大家扒一扒 OpenClaw 的架构设计。 OpenClaw 的爆火，直接催生了一个怪诞而生机勃勃的生态系统。这场风暴的中心，是来自维也纳的软件工程 师 Peter Steinberger。 几个月前，他还在默默开发 OpenClaw ；上周，他飞抵硅谷，受到了英雄般的礼遇。 对 OpenClaw 来说，这意味着三件事同时成立：推理中间状态可以实时 stream 出来、用户确认可以随时插入 流 程、多个客户端能同步看到同一个 Agent 的状态变化。 Agent. OpenClaw 客户端层分 析 .NanoClaw 深 度 剖 析 ：一个\"AI 原生\"架构的个人助手是如何运转的？ 2026 年 1 月底，整个 AI 圈的目光都被一个名叫 OpenClaw 的项目所吸引，它以极快的速 度 拿下了超过20万颗星标，成为了GitHub 史上增长最快的项目之列，截止目前总星. 标数已经来到 2."
+  }
+}

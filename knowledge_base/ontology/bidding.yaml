@@ -1,0 +1,16 @@
+version: 1
+domain: bidding
+entities:
+  TenderDocument:
+    fields: [project_name, owner, deadline, scoring_criteria, qualification_rules]
+  BidPlan:
+    fields: [technical_score, business_score, risk_level, total_score]
+  Clause:
+    fields: [chapter, item, text, mandatory, penalty]
+relations:
+  - from: TenderDocument
+    to: Clause
+    type: contains
+  - from: BidPlan
+    to: TenderDocument
+    type: targets

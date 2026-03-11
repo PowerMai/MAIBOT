@@ -1,0 +1,15 @@
+---
+description: 
+alwaysApply: true
+---
+
+rule: 
+  description: |
+    本项目规定：
+    1. 项目后端开发必须依赖 deepagent、langchain、langgraph 等库的相关能力。
+    2. 前端应采用 langchain chatui 及生成式 UI 作为主要界面开发方式。
+    3. 所有能通过 langchain 生态相关库实现的功能，禁止重复造轮子，避免自行开发。
+    4. 每次修改仅允许最小必要改动，避免无谓调整如注释、调试信息等，防止凑数行为。
+
+  rationale: |
+    最大限度利用 langchain 生态的稳定与先进能力，提高开发效率和系统可靠性，确保项目实现的前沿性与可持续扩展性。

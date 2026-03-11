@@ -1,0 +1,6 @@
+{
+  "qwen/qwen3-coder-30b": {
+    "success": 3,
+    "fail": 1
+  }
+}

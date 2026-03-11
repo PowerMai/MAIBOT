@@ -1,0 +1,14 @@
+{
+  "watcher_observability": {
+    "strict": {
+      "min_search_calls": 1,
+      "max_fallback_ratio": 0.3,
+      "max_loop_errors": 0
+    },
+    "non_strict": {
+      "min_search_calls": 0,
+      "max_fallback_ratio": 0.5,
+      "max_loop_errors": 5
+    }
+  }
+}

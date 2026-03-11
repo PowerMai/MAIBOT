@@ -1,0 +1,119 @@
+{
+  "servers": [
+    {
+      "name": "filesystem",
+      "transport": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "{workspace_path}"
+      ],
+      "description": "本地文件系统操作 (read, write, edit, ls, glob, grep)",
+      "enabled": true
+    },
+    {
+      "name": "puppeteer",
+      "transport": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-puppeteer"
+      ],
+      "description": "浏览器自动化 (navigate, screenshot, click, type)",
+      "enabled": true
+    },
+    {
+      "name": "sqlite",
+      "transport": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sqlite",
+        "--db-path",
+        "{db_path}"
+      ],
+      "description": "SQLite 数据库操作 (query, execute)",
+      "enabled": true
+    },
+    {
+      "name": "postgres",
+      "transport": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-postgres",
+        "{connection_string}"
+      ],
+      "description": "PostgreSQL 数据库操作",
+      "enabled": false
+    },
+    {
+      "name": "drive",
+      "transport": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-google-drive"
+      ],
+      "description": "Google Drive 文件读取与写入（网盘扩展）",
+      "enabled": false
+    },
+    {
+      "name": "notion",
+      "transport": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-notion"
+      ],
+      "description": "Notion 文档/数据库对接（协同平台扩展）",
+      "enabled": false
+    },
+    {
+      "name": "slack",
+      "transport": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-slack"
+      ],
+      "description": "Slack 消息与频道操作（通信平台扩展）",
+      "enabled": false
+    },
+    {
+      "name": "github",
+      "transport": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "description": "GitHub 发布渠道对接（Issues/PR/Releases）",
+      "enabled": false
+    },
+    {
+      "name": "macos-automation",
+      "transport": "stdio",
+      "command": "node",
+      "args": [
+        "plugins/mcp-macos/index.js"
+      ],
+      "description": "macOS 自动化（AppleScript、Shortcuts、截图、剪贴板）",
+      "enabled": true
+    },
+    {
+      "name": "telegram",
+      "transport": "stdio",
+      "command": "node",
+      "args": [
+        "plugins/mcp-telegram/index.js"
+      ],
+      "env": {
+        "TELEGRAM_BOT_TOKEN": "{telegram_bot_token}"
+      },
+      "description": "Telegram Bot 双向通信接口",
+      "enabled": false
+    }
+  ]
+}

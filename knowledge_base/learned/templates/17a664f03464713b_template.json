@@ -1,0 +1,14 @@
+{
+  "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/17a664f03464713b.md",
+  "domain": "legal",
+  "created_at": "2026-03-08T14:56:45.157015",
+  "template": {
+    "doc_type": "md",
+    "sections": [
+      "# Web cache: openclaw 架构详解 六阶段流水线 深度剖析",
+      "## 1."
+    ],
+    "placeholders": [],
+    "template_excerpt": "# Web cache: openclaw 架构详解 六阶段流水线 深度剖析\n\n> 时间: 2026-03-08 06:53\n\n\n## 1. \n- 来源: duckduckgo\n\n3 weeks ago - OpenClaw是一款由彼得·斯坦伯格开发的、可本地部署的个人AI智能体，其核心架构包括Gateway（网关）、Agent（智能体）、Skills（技能）和Memory（记忆）等模块。Gateway（网关/控制平面）：作为系统的“神经中枢”，它是一个基于WebSocket的全双工控制总线，负责管理会话生命周期、通道路由、工具调度以及状态同步。其架构可以从两个互补的视角理解：一是由Gateway、Agent、Skills、Memory构成的核心组件视角；二是由六层构成的系统分层视角。 · 树莓派5部署OpenClaw教程，低成本7×24小时在线 February 3, 2026 - “热启动”的核心技术原理是上下文蒸馏（In-Context Distillation, ICD）。这是一种将复杂的推理过程压缩为简洁指令的技术。在 OpenClaw 的日常运行中，ICD 遵循以下步骤： · 探索阶段（Exploration）：代理在日常任务中可能会尝试多种工具，遭遇错误，产生冗长的日志文件（memory/YYYY-MM-DD.md）。这些日志充满了噪音和无效路径。"
+  }
+}

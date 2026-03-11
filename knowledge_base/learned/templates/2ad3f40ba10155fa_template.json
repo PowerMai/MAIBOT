@@ -1,0 +1,14 @@
+{
+  "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/2ad3f40ba10155fa.md",
+  "domain": "management",
+  "created_at": "2026-03-08T14:56:45.390993",
+  "template": {
+    "doc_type": "md",
+    "sections": [
+      "# Web cache: openclaw 六阶段流水线 Agent Loop Tool Calling",
+      "## 1."
+    ],
+    "placeholders": [],
+    "template_excerpt": "# Web cache: openclaw 六阶段流水线 Agent Loop Tool Calling\n\n> 时间: 2026-03-08 06:52\n\n\n## 1. \n- 来源: duckduckgo\n\nOpenClaw在外部调用AI大模型处理时，是一个非常典型的 Agent 主执行循环。其处理过程可以概括成一句话：不断让大模型生成回复；如果回复里包含 tool calls，就执行工具并把结果继续喂回模型；如果期间有用户插入的… OpenClaw Agent Loop 机制核心要点： 架构设计 模块化 - 分离运行、尝试、压缩等功能 状态管理 - 跟踪运行状态和等待者 错误恢复 - 多种错误类型对应不同恢复策略 上下文优化 - 自动压缩避免超出窗口限制 关键流程 是 否 消息 构建提示词 LLM 调用 工具? 执行工具 ... Pi's agent loop executes: LLM proposes tool calls → OpenClaw executes them → results are fed back → loop continues until resolution or limits are hit. If the model produces a tool call, it runs in OpenClaw's controlled environment wi"
+  }
+}

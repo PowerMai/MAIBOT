@@ -1,0 +1,9 @@
+{
+  "status": "pending_verification",
+  "phase": "canary",
+  "target_scope": "small_user_group",
+  "rules": {
+    "promote_when": "gate_passed_for_consecutive_runs >= 3",
+    "rollback_when": "gate_failed_after_promotion"
+  }
+}

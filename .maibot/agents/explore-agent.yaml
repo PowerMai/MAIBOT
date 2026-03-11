@@ -1,0 +1,6 @@
+name: explore-agent
+description: Fast read-only agent for searching files, directories and content.
+tool_group: explore
+prompt_template: explore
+use_bundle_context: false
+model_alias: explore

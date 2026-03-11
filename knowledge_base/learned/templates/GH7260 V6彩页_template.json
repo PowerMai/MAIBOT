@@ -1,0 +1,11 @@
+{
+  "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/global/domain/bidding/基础资料/产品资料/服务器产品投标知识库/0105-AI 服务器/010510-擎天GH7260 V6产品资料/GH7260 V6彩页.pdf",
+  "domain": "bidding",
+  "created_at": "2026-03-05T22:18:00.107842",
+  "template": {
+    "doc_type": "pdf",
+    "sections": [],
+    "placeholders": [],
+    "template_excerpt": "擎天GH7260 V6\n基于海光新一代7400处理器的\n2U双路旗舰AI服务器\n长城擎天GH7260 V6是基于海光7400系列处理器的一款全新高端2U双路机架式AI服\n务器 。采用全新框架设计 、引入全新技术优势 ，具有高性能 、高扩展 、高可靠 、高安\n全等特性 ，适用于各行业客户数据中心主流应用需求。\n高性能\n搭载海光全新7400系列处理器 ，单处理器最高可支持64个物理核心。\n支持DDR5内存和PCIe 5.0 ， 内存和IO性能全面提升。\n高扩展\n模块化设计，计算、网络、存储灵活扩展。\n最大支持24个内存插槽 、10个PCIe槽位。\n灵活存储配置，可支持16块3.5寸或32块2.5寸硬盘。\n高可靠\n全新、多维RAS特性 ，有效提升产品整体可靠性。\n高安全\n全新加密特性，提供多样化加密方式，适用不同业务需求，保障数据机密性与完整性。\n擎天GH7260 V6\n处理器 最大支持两颗海光7400系列处理器\n内存 提供24个DDR5内存插槽 ， 支持RDIMM内存 ，支持ECC\n可选 1 个 OCP3.0 1G/10G/25G/100G 网卡\n网络\n支持标准PCIe 1G/10G/25G/40G/100G/200G网卡\nPCIe 扩展 最大支持10个PCIe 槽位，支持8个单宽或者4个双宽GPU卡\n板载SATA硬盘控制器\nSAS卡控制器 ，支持RAID 0/1/10\n存储控制器\nRAID卡控制器 ，支持RAID 0/1/5/6/10/50/60\n支持Cache超级电容保护 ，提供RAID状态迁移 、RAID配置记忆等功能\n前置 ：24个2.5”或12个3.5”SAS/SATA/NVMe\n存储方案 后置 ：4个2.5”SAS/SATA/NVMe +4个3.5 ”SAS/SATA\n支持 2个M.2 SSD\n4个USB 接口 ，2个位于机箱后部 、2个位于机箱前部\n其他端口 1 个 RJ-45 管理接口位于机箱后部\n2个VGA接口，1个位于机箱前部，1个位于机箱后部\n1个Type-C Debug接口位于机箱前部\n可选1个COM口位于机箱后部\n电源 1+1冗余 ，支持1300W/2000W CRPS标准电源\n散热 6 个热插拔N+1冗余风扇模组\n集成 BMC 芯片 ，对外提供 1 个 RJ45 管理口 ，支持 IPMI2.0 、Redfish 、SNMP 等标准接口\n管理功能\n基于IKVM/HTML5的远程管理界面 ，提供全面的故障诊断 、自动化运维和远程管理的功能\n光驱 可选外置 USB DVD-RW 光驱\n显示 集成显示控制器 ，最大分辨率1920x1080\n支持操作系统 方德高可信服务器操作系统 、Ubuntu Server 、Red Hat Enterprise Linux 、CentOS等\n电源电压 100-240V交流\n机箱 2U机架式服务器机箱\n机箱尺"
+  }
+}

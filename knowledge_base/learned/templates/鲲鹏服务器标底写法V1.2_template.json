@@ -1,0 +1,11 @@
+{
+  "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/global/domain/bidding/基础资料/产品资料/服务器产品投标知识库/0101-鲲鹏服务器/010110-标底参数&规格速查/鲲鹏服务器标底写法V1.2.xlsx",
+  "domain": "bidding",
+  "created_at": "2026-03-05T22:47:47.307701",
+  "template": {
+    "doc_type": "xlsx",
+    "sections": [],
+    "placeholders": [],
+    "template_excerpt": "   序号                     修订记录    版本\n0   1                       初稿  V1.0\n1   2           更新SK5280V5标底参数  V1.1\n2   3  更新RK7460V5、RK8460V5标底参数  V1.2"
+  }
+}

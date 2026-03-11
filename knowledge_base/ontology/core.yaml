@@ -1,0 +1,16 @@
+version: 1
+domain: core
+entities:
+  Document:
+    fields: [title, source, created_at, author]
+  Organization:
+    fields: [name, qualification, location, contact]
+  Requirement:
+    fields: [name, value, unit, mandatory]
+relations:
+  - from: Document
+    to: Requirement
+    type: contains
+  - from: Organization
+    to: Requirement
+    type: satisfies

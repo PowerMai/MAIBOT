@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "slack": {},
+    "notion": {},
+    "jira": {},
+    "asana": {},
+    "google-drive": {},
+    "confluence": {},
+    "zendesk": {}
+  }
+}

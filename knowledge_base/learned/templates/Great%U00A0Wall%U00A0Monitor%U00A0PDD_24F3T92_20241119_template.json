@@ -1,0 +1,49 @@
+{
+  "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/global/domain/bidding/基础资料/产品资料/终端部材料/02-终端整机资料/0209-显示器/显示器 24F3_T92_23.8 FHD_英文_V%20H AOC（PN：5201752）/Great%U00A0Wall%U00A0Monitor%U00A0PDD_24F3T92_20241119.pdf",
+  "domain": "bidding",
+  "created_at": "2026-03-05T21:20:17.938990",
+  "template": {
+    "doc_type": "pdf",
+    "sections": [
+      "# Revision Date Edited By Contents",
+      "1. General ………………………………………………………………….. 4",
+      "2. Electrical ………………………………………………………………….. 5",
+      "3. Optical ………………………………………………………………….. 8",
+      "4. Mechanical ………………………………………………………………….. 9",
+      "5. Environmental ………………………………………………………………….. 21",
+      "6. Approval ………………………………………………………………….. 22",
+      "7. Accessories ………………………………………………………………….. 27",
+      "8. Quality ………………………………………………………………….. 28",
+      "9. 参考文献和附录 ………………………………………………………………….. 29",
+      "1.General",
+      "2.Electrical",
+      "2.1.Max. Brightness",
+      "2.2.Min. Brightness",
+      "2.3.Contrast Ratio",
+      "2.4.White Colour Coordinates",
+      "2.5.White Colour Uniformity",
+      "2.6.Purity",
+      "2.7.Response Time",
+      "2.8.Viewing Angle",
+      "3.Optical",
+      "4. Mechanical",
+      "4.1.Function",
+      "4.2.Dimension",
+      "4.3.Weight",
+      "4.4.Gap & Step",
+      "4.5.ID Photos【产品效果图仅供参考，请以机器实物为准】",
+      "4.6.ID Drawing【产品图片仅供参考，请以机器实物为准】",
+      "4.7.Rating Label Drawing【产品图片仅供参考，请以机器实物为准】",
+      "4.8.Carton Label Drawing【产品图片仅供参考，请以机器实物为准】"
+    ],
+    "placeholders": [
+      "6500K",
+      "CIE 1931",
+      "Cool",
+      "SRGB",
+      "产品图片仅供参考，请以机器实物为准",
+      "产品效果图仅供参考，请以机器实物为准"
+    ],
+    "template_excerpt": "Product Definition Document\n Internal Document  External Document\nDocument Name: Doc. No.: GW-MNT-PDD-2024111901\nPDD(Product Definition Document) Release Date: 2024/11/19 Page: 1 / 31\nProduct Definition Document (PDD)\n项目 内容 备注说明\n产品尺寸 23.8英寸\n产品名称 液晶显示器\n产品型号 N24188\n艾德蒙机种名 24F3/T92\n长城物料编码 5201752\n备注说明1 两芯墙插式适配器\nIPS屏\n备注说明2\nBOE/HKC\n备注说明3 黑色外观\n- Confidential -\nProduct Definition Document\n Internal Document  External Document\nDocument Name: Doc. No.: GW-MNT-PDD-2024111901\nPDD(Product Definition Document) Release Date: 2024/11/19 Page: 2 / 31\nRevision History\n# Revision Date Edited By Contents\n1 1.0 2024/03/01 Yangfan Sun New Version Release\n2 2.0 2024/04/10 Yangfan Sun Update AW& Certification\n3 2.1 2024/8/9 Junhua Zhu 更新型号响应时间 BW 数值\n4 2.2 2024/8/29 Junhua Zhu Update AW\n5 2.3 2024/11/19 Junhua Zhu 亮度规格更新为 300nits\n- Confidential -\nProduct Definition Document\n Internal Document  External Document\nDocument Name: Doc. No.: GW-MNT-PDD-2024111901\nPDD(Product Definition Document) Release Date: 2024/11/19 Page: 3 / 31\nTable of Content\n1. General ………………………………………………………………….. 4\n2. Electrical ………………………………………………………………….. 5\n3. Optical ………………………………………………………………….. 8\n4. Mechanical ………………………………………………"
+  }
+}

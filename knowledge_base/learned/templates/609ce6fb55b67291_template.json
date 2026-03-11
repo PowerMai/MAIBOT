@@ -1,0 +1,14 @@
+{
+  "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/609ce6fb55b67291.md",
+  "domain": "legal",
+  "created_at": "2026-03-08T14:56:43.577687",
+  "template": {
+    "doc_type": "md",
+    "sections": [
+      "# Web cache: openclaw gateway agent skills memory 核心组件",
+      "## 1."
+    ],
+    "placeholders": [],
+    "template_excerpt": "# Web cache: openclaw gateway agent skills memory 核心组件\n\n> 时间: 2026-03-08 06:53\n\n\n## 1. \n- 来源: duckduckgo\n\nRemote macOS nodes (Linux gateway ). Skills watcher (auto-refresh). Token impact ( skills list). OpenClaw uses AgentSkills-compatible skill folders to teach the agent how to use tools. Each skill is a directory containing a SKILL .md with YAML frontmatter and instructions. Doctor/ Memory : query gateway -side default- agent memory embedding readiness during openclaw doctor (instead of inferring from generic gateway health), and warn when the gateway memory probe is unavailable or not ready while"
+  }
+}

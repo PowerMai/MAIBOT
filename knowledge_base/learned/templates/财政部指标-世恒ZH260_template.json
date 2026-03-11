@@ -1,0 +1,11 @@
+{
+  "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/global/domain/bidding/基础资料/产品资料/终端部材料/02-终端整机资料/0201-飞腾终端/020101-专用终端/世恒ZH260 所有资料/财政部指标-世恒ZH260.xlsx",
+  "domain": "bidding",
+  "created_at": "2026-03-05T21:25:51.682180",
+  "template": {
+    "doc_type": "xlsx",
+    "sections": [],
+    "placeholders": [],
+    "template_excerpt": "      序号         指标\\n分类              一级\\n指标                         二级\\n指标                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            指标要求                                                                                                                                                                                           世恒ZH260\n0      1         产品\\n规格            *CPU\\n规格                          *CPU信息                                                                                                                                                                                                                                                                                                        "
+  }
+}

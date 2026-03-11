@@ -1,0 +1,94 @@
+{
+  "generated_at": "2026-02-26T06:17:04.964069+00:00",
+  "total": 6,
+  "failed": 0,
+  "passed": true,
+  "checks": [
+    {
+      "section": "all",
+      "passed": true,
+      "errors": [],
+      "keys": [
+        "capability_registry_meta",
+        "components",
+        "gate",
+        "health",
+        "health_score",
+        "health_trend",
+        "knowledge_audit_meta",
+        "prompt_module_health_meta",
+        "rollout",
+        "section",
+        "status",
+        "status_command_regression_meta",
+        "summary"
+      ]
+    },
+    {
+      "section": "health",
+      "passed": true,
+      "errors": [],
+      "keys": [
+        "components",
+        "health",
+        "health_score",
+        "health_trend",
+        "section",
+        "status",
+        "summary"
+      ]
+    },
+    {
+      "section": "rollout",
+      "passed": true,
+      "errors": [],
+      "keys": [
+        "components",
+        "health_score",
+        "rollout",
+        "section",
+        "status",
+        "summary"
+      ]
+    },
+    {
+      "section": "gate",
+      "passed": true,
+      "errors": [],
+      "keys": [
+        "components",
+        "gate",
+        "health_score",
+        "section",
+        "status",
+        "summary"
+      ]
+    },
+    {
+      "section": "prompt_modules",
+      "passed": true,
+      "errors": [],
+      "keys": [
+        "components",
+        "health_score",
+        "prompt_module_health_meta",
+        "section",
+        "status",
+        "summary"
+      ]
+    },
+    {
+      "section": "status_commands",
+      "passed": true,
+      "errors": [],
+      "keys": [
+        "components",
+        "health_score",
+        "section",
+        "status",
+        "status_command_regression_meta",
+        "summary"
+      ]
+    }
+  ]
+}

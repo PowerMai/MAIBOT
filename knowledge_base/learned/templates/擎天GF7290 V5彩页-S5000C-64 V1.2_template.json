@@ -1,0 +1,11 @@
+{
+  "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/global/domain/bidding/基础资料/产品资料/服务器产品投标知识库/0105-AI 服务器/010509-擎天GF7290 V5产品资料/擎天GF7290 V5彩页-S5000C-64 V1.2.pdf",
+  "domain": "technical",
+  "created_at": "2026-03-05T22:18:03.801588",
+  "template": {
+    "doc_type": "pdf",
+    "sections": [],
+    "placeholders": [],
+    "template_excerpt": "中 电\n擎天GF7290 V5\n8U O A M GPU服 务 器\n飞腾新一代通用人工智能训练服务器\n擎天GF7290 V5是中国长城研发的国产品牌OAM GPU服务器，基于最新的飞腾S5000C处理器设计，产品采用PCIe\nSwitch设计，配合国产化OAM模组，支持液冷和风冷两种散热模式，是算力最高的深度推理、训练平台。\n强劲算力\n〉2颗飞腾S5000C处理器，总物理核心128。\n〉内存容量高达2T,支持32-RDIMMDDR5-4800内存。\n〉适配国产化OAM模组，半精算力高达3200TFLOPS，双精算力不小于192TFLOPS。\n极致扩展\n〉支持最高400Gb网络高速互联，为GPU计算集群提供高密度、高性能节点平台。\n〉8U空间支持12个标准PCIE5.0插槽，提供强大的PCIE扩展性能。\n〉最多支持29个2.5寸SAS/SATA硬盘，最高支持12个NVMeSSD，提供丰富的存储扩展能力。\n优化设计\n〉CPU和GPU解耦合设计，CPU和GPU独立演进，兼容符合OAM规范的GPU模组。\n〉PCIeSwtich直出资源GPU/NIC/NVMe为2:2:2配置，支持GDS和GDR，通信效率最优。\n擎天GF7290V5技术参数\n处理器 支持2个飞腾(Phytium)S5000C-64处理器，ARMv8.2\n内存 提供32个DDR5内存插槽，支持RDIMM内存，支持ECC，最高支持2T容量，最高工作频率4800MHz\n网络 支持1G/10G/25G/100G/200G/400G等多种网络\n典型配置2个千兆以太网口\n最大可扩展12个PCle5.0 X16全速插槽\nPCIe扩展 1个OCP 3.0网卡插槽\n主板支持智能加速卡直连PCIeSwitch\nGPU 支持符合OAM2.0规范的模组，支持8块国产智能加速卡\n支持单卡64GB HBM，FP16性能≥280TFlops, FP64性能≥18TFlops\nRAID卡控制器，支持RAID 0/1/5/6/10/50/60\n存储控制器 支持Cache超级电容保护，提供RAID状态迁移、RAID配置记忆等功能\n前置：最高支持25x2.5”SAS/SATA，最高支持12x2.5”NVMe U.2 SSD\n存储方案\n内置：支持2个板载M.2 SSD（PCIe5.0x1+SATA3.0）\n后置：最高支持4x2.5”SAS/SATA\n采用模块化设计，GPU加速模块、CPU计算模块、硬盘模块、风扇模块、电源模块均可实现独立插拔维护\n模块化设计\n2个VGA接口\n其他端口 4个USB3.0接口+1个USB2.0内部接口\n2个USB Type-C接口\n1个RJ-45管理接口\n12V电源 CPU计算模块电源，独立供电\n可配置2个CRPS电源模块，支持热插拔，支持N+N冗余\n支持2000W CRPS铂金电源（转化效率≥92%）\n54V电"
+  }
+}

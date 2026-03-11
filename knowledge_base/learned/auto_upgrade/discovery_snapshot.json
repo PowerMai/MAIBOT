@@ -1,0 +1,73 @@
+{
+  "runs": [
+    {
+      "command": "/Users/workspace/DevelopProjects/ccb-v0.378/backend/.venv/bin/python /Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/skills/auto-discovery/scripts/discover_mcp_servers.py",
+      "exit_code": 0,
+      "stdout": "{\"keywords\": [\"mcp server filesystem\", \"mcp server database\", \"model context protocol server list\"], \"sources\": [{\"url\": \"https://glama.ai/mcp/servers\", \"ok\": false, \"error\": \"HTTP Error 103: Early Hints\"}, {\"url\": \"https://github.com/modelcontextprotocol\", \"status_code\": 200, \"ok\": true}], \"notes\": [\"建议优先选官方 MCP 或 star/维护活跃度高的仓库。\"]}\n",
+      "stderr": "",
+      "parsed_stdout": {
+        "keywords": [
+          "mcp server filesystem",
+          "mcp server database",
+          "model context protocol server list"
+        ],
+        "sources": [
+          {
+            "url": "https://glama.ai/mcp/servers",
+            "ok": false,
+            "error": "HTTP Error 103: Early Hints"
+          },
+          {
+            "url": "https://github.com/modelcontextprotocol",
+            "status_code": 200,
+            "ok": true
+          }
+        ],
+        "notes": [
+          "建议优先选官方 MCP 或 star/维护活跃度高的仓库。"
+        ]
+      }
+    },
+    {
+      "command": "/Users/workspace/DevelopProjects/ccb-v0.378/backend/.venv/bin/python /Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/skills/auto-discovery/scripts/discover_skills.py",
+      "exit_code": 0,
+      "stdout": "{\"queries\": [\"SKILL.md agent workflow examples\", \"anthropic agent skills\", \"cursor skill template\"], \"selection_rules\": [\"优先官方文档或高质量仓库\", \"必须含触发条件、工作流、约束与示例\", \"优先可执行 scripts/ 资源\"]}\n",
+      "stderr": "",
+      "parsed_stdout": {
+        "queries": [
+          "SKILL.md agent workflow examples",
+          "anthropic agent skills",
+          "cursor skill template"
+        ],
+        "selection_rules": [
+          "优先官方文档或高质量仓库",
+          "必须含触发条件、工作流、约束与示例",
+          "优先可执行 scripts/ 资源"
+        ]
+      }
+    },
+    {
+      "command": "/Users/workspace/DevelopProjects/ccb-v0.378/backend/.venv/bin/python /Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/skills/auto-discovery/scripts/discover_ontologies.py",
+      "exit_code": 0,
+      "stdout": "{\"targets\": [{\"url\": \"https://lov.linkeddata.es/dataset/lov/\", \"ok\": true, \"status_code\": 200}, {\"url\": \"https://schema.org/docs/schemas.html\", \"ok\": true, \"status_code\": 200}], \"recommendation\": [\"优先导入与当前 domain 直接相关的 ontology，避免过宽泛本体污染。\"]}\n",
+      "stderr": "",
+      "parsed_stdout": {
+        "targets": [
+          {
+            "url": "https://lov.linkeddata.es/dataset/lov/",
+            "ok": true,
+            "status_code": 200
+          },
+          {
+            "url": "https://schema.org/docs/schemas.html",
+            "ok": true,
+            "status_code": 200
+          }
+        ],
+        "recommendation": [
+          "优先导入与当前 domain 直接相关的 ontology，避免过宽泛本体污染。"
+        ]
+      }
+    }
+  ]
+}

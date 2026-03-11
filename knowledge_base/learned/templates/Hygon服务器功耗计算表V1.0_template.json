@@ -1,0 +1,11 @@
+{
+  "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/global/domain/bidding/基础资料/产品资料/服务器产品投标知识库/0103-海光服务器/010307-海光标底参数&规格速查/Hygon服务器功耗计算表V1.0.xlsx",
+  "domain": "bidding",
+  "created_at": "2026-03-05T22:33:37.738512",
+  "template": {
+    "doc_type": "xlsx",
+    "sections": [],
+    "placeholders": [],
+    "template_excerpt": "                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  Unnamed: 0                                                                                                                       AMD/Hygon机架服务器功耗计算表V2.4 Unnamed: 2 拟制：产品中心服务器部门 Unnamed: 4 Unnamed: 5  Unnamed: 6\n0   说明：\\n1.\"部件型号\"一栏为可选项，根据实际配置进行选择；部件型号是参考的BOM表，后续会根据BOM表的变化而及时更新部件的种类。\\n2.\"单体功率\"一栏根据选择部件型号，自动带出相应值；\\n3.\"部件数量\"一栏输入需求的数量值，需要用户手动输入；\\n4.*为必选项\\n5.△为可选项\\n6.负载系数：由于列出的部件功耗均为Idle和Max的功耗值，但现实中根据用户不同的应用场景，实际的服务器功率一般是介于Idle和Max之间的，这里的负载系数可以理解为服务器的工作繁忙程度，负载系数决定了输入功率的大小\\n7.此表格目前支持RH3110/RH3160/RH5260/RH6260等系列机型及其衍生机型。\\n8.系统功耗：包含系统风扇和板载网卡、主板及南桥等耗电芯片\\n9.系统功耗的max值：由于用户设置或者环境的不同，系统风扇的转速变化也较大，这里的系统功耗max值是在系"
+  }
+}

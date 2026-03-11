@@ -1,0 +1,15 @@
+{
+  "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/global/domain/bidding/基础资料/产品资料/服务器产品投标知识库/0101-鲲鹏服务器/010117-鲲鹏产品CRM选配指导及功耗计算器使用说明/长城鲲鹏服务器功耗计算器使用指南.pdf",
+  "domain": "bidding",
+  "created_at": "2026-03-05T22:47:48.957632",
+  "template": {
+    "doc_type": "pdf",
+    "sections": [
+      "1、功耗计算器链接：",
+      "2、长城机型对照参考说明：",
+      "3、功耗计算结果说明"
+    ],
+    "placeholders": [],
+    "template_excerpt": "长城鲲鹏服务器功耗计算器使用指南\n1、功耗计算器链接：\nhttps://info.support.huawei.com/computing/ftpa/zh/product/taishan-\nserver\n说明：需要联网状态下使用。\n2、长城机型对照参考说明：\n3、功耗计算结果说明\n如出现“告警提示：服务器电源选型不满足 1+1 冗余要求”，CRM\n需要选配更大电源模块"
+  }
+}

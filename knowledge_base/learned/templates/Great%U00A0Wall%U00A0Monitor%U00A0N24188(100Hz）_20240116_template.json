@@ -1,0 +1,11 @@
+{
+  "source_path": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/global/domain/bidding/基础资料/产品资料/终端部材料/02-终端整机资料/0209-显示器/显示器 N24188(MB24V13FS135 100Hz) 23.8 HDMI线 惠科 （PN：5199787）/Great%U00A0Wall%U00A0Monitor%U00A0N24188(100Hz）_20240116.docx",
+  "domain": "bidding",
+  "created_at": "2026-03-05T21:19:57.003648",
+  "template": {
+    "doc_type": "docx",
+    "sections": [],
+    "placeholders": [],
+    "template_excerpt": "\n\n\n\n\n\n\n\n\n\n\nNote 1:Definition of Viewing Angle Viewing angle range(CR ≥10) (Fig.1)\n\nNote2：Definition of Contrast Ratio（CR）\nThe contrast ratio can be calculated by the following expression,\nContrast Ratio (CR):    CR =\n : Luminance of LCD module with full screen white pattern (255, 255, 255) at center point. \n : Luminance of LCD module with full screen Dark pattern (0, 0, 0) at center point.\nNote3：Definition of color chromaticity\nEach chromaticity coordinates (x, y) are measured in CIE1931 color space when full-screen displaying (Red, Green, Blue) ，Measurements shall be made at the center of the LCD module.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+  }
+}
