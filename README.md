@@ -1,6 +1,15 @@
-# MAIBOT - AI 编辑器项目
+# MAIBOT - AI 编辑器项目（参考代码）
 
-基于 LangChain/LangGraph/DeepAgent 框架的智能编辑器系统。
+基于 LangChain / LangGraph / DeepAgent 的智能编辑器系统。**本项目已归档**，仓库仅作**参考实现**供学习与二次参考使用。
+
+> **归档说明**：开发已暂停，不提供维护与功能更新。详见 **[ARCHIVE.md](ARCHIVE.md)**。  
+> **参考使用**：如何克隆、运行与阅读代码见 **[docs/REFERENCE_USAGE.md](docs/REFERENCE_USAGE.md)**。
+
+## 技术栈与定位
+
+- **后端**：Python、LangGraph、FastAPI、DeepAgent 中间件与 Skills  
+- **前端**：Electron、React、LangChain Chat UI、@assistant-ui  
+- **用途**：全栈 AI 对话/工作台/任务管线、知识库与可插拔插件的参考实现  
 
 ## 快速开始
 
@@ -171,7 +180,14 @@ vim .env
 ## 文档
 
 详细文档位于 `docs/` 目录：
-- [docs/resources-and-capabilities.md](docs/resources-and-capabilities.md) - 资源与能力（Skills 安装、Planning/Ask、自我增强、知识图谱与自我学习、资源放置）
+- [ARCHIVE.md](ARCHIVE.md) - 项目归档说明与参考用途
+- [docs/REFERENCE_USAGE.md](docs/REFERENCE_USAGE.md) - 如何将本仓库作为参考代码使用（阅读顺序、关键模块）
+- [docs/PROJECT_STRUCTURE.md](docs/PROJECT_STRUCTURE.md) - 项目结构
+- [docs/resources-and-capabilities.md](docs/resources-and-capabilities.md) - 资源与能力（Skills、知识图谱、自我学习等）
 - [docs/operations.md](docs/operations.md) - 运行与调试
-- `docs/archive/` - 开发过程文档
+- `docs/archive/` - 开发过程与历史文档
 - `backend/docs/` - 后端架构文档
+
+## 许可
+
+本仓库以参考代码形式提供，使用许可见 [LICENSE](LICENSE)。
