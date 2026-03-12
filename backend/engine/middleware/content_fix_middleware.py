@@ -111,7 +111,13 @@ class ContentFixMiddleware(AgentMiddleware):
         # 处理 content 为非字符串的情况（如 list）：部分云端 API 只接受 content 为 string，list 会触发 400 No schema matches
         if message.content is not None and not isinstance(message.content, str):
             if isinstance(message.content, list):
-                logger.debug("[ContentFix] content 为 list，转为 string 避免 No schema matches (msg type=%s)", type(message).__name__)
+                if DEBUG_400_REQUEST:
+                    logger.info(
+                        "[ContentFix] content 为 list 已归一为 string (msg type=%s, len=%s)",
+                        type(message).__name__, len(message.content),
+                    )
+                else:
+                    logger.debug("[ContentFix] content 为 list，转为 string 避免 No schema matches (msg type=%s)", type(message).__name__)
             content_str = self._content_blocks_to_string(message.content)
             if isinstance(message, AIMessage):
                 return AIMessage(
@@ -155,6 +161,8 @@ class ContentFixMiddleware(AgentMiddleware):
                 others.append(m)
         if not system_parts:
             return messages
+        if DEBUG_400_REQUEST:
+            logger.info("[ContentFix] 已将 %d 条 SystemMessage 合并到开头（满足 System message must be at the beginning）", len(system_parts))
         return [SystemMessage(content="\n\n".join(system_parts))] + others
 
     def _dedupe_system_messages(self, messages: List[BaseMessage]) -> List[BaseMessage]:

@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "实体关系定义",
-    "updated": "2026-03-11T18:06:28.699955"
+    "updated": "2026-03-11T23:55:21.520186"
   },
   "relations": [
     {
@@ -49355,10 +49355,10 @@
       "object_id": "bce566186d0f",
       "properties": {},
       "confidence": 0.99,
-      "evidence": "> 时间: 2026-03-11 03:26\n---\n> 时间: 2026-03-11 03:27\n---\n> 时间: 2026-03-11 05:04\n---\n> 时间: 2026-03-11 05:05\n---\n> 时间: 2026-03-11 05:34\n---\n> 时间: 2026-03-11 05:35\n---\n> 时间: 2026-03-11 05:36\n---\n> 时间: 2026-03-11 06:07\n---\n> 时间: 2026-03-11 06:50\n---\n> 时间: 2026-03-11 06:59\n---\n> 时间: 2026-03-11 07:43\n---\n> 时间: 2026-03-11 08:44",
+      "evidence": "> 时间: 2026-03-11 03:26\n---\n> 时间: 2026-03-11 03:27\n---\n> 时间: 2026-03-11 05:04\n---\n> 时间: 2026-03-11 05:05\n---\n> 时间: 2026-03-11 05:34\n---\n> 时间: 2026-03-11 05:35\n---\n> 时间: 2026-03-11 05:36\n---\n> 时间: 2026-03-11 06:07\n---\n> 时间: 2026-03-11 06:50\n---\n> 时间: 2026-03-11 06:59\n---\n> 时间: 2026-03-11 07:43\n---\n> 时间: 2026-03-11 08:44\n---\n> 时间: 2026-03-11 12:20\n---\n> 时间: 2026-03-11 12:34\n---\n> 时间: 2026-03-11 13:33\n---\n> 时间: 2026-03-11 14:14\n---\n> 时间: 2026-03-11 14:58\n---\n> 时间: 2026-03-11 14:57\n---\n> 时间: 2026-03-11 14:59\n---\n> 时间: 2026-03-11 15:50",
       "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/4c28b37dfe3f6484.md",
       "source_location": "",
-      "evidence_count": 98
+      "evidence_count": 117
     },
     {
       "id": "43ba827912f9",
@@ -49502,7 +49502,7 @@
       "evidence": "国逾100个城市。当局随即展开强力镇压，包括大规模屠杀抗议民众，其中2026年1月8日至10日为伤亡最惨重时段。伊朗最高领袖阿里·哈梅内伊在最高\n---\n国逾100个城市。当局随即展开强力镇压，包括大规模屠杀抗议民众，其中2026年1月8日... 1 week ago - 根据历史统计，2019年",
       "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/7fa13ce4803ad886.md",
       "source_location": "",
-      "evidence_count": 2
+      "evidence_count": 3
     },
     {
       "id": "237887c1b315",
@@ -49594,11 +49594,11 @@
       "predicate": "leads_to",
       "object_id": "76d1e5114d42",
       "properties": {},
-      "confidence": 1.0,
+      "confidence": 0.99,
       "evidence": "加剧民众担忧。一些抗议者认为伊朗经济困境是政府外交政策优先所导致的。2025年12月，部分示威者在示威活动中高喊「不為加沙、",
       "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/a7dd1d1b9125afbb.md",
       "source_location": "",
-      "evidence_count": 1
+      "evidence_count": 2
     },
     {
       "id": "1f50b716672e",
@@ -50269,6 +50269,138 @@
       "confidence": 1.0,
       "evidence": "6年伊朗抗议活动也是其中最具有象征性的示威活动之一，该示威也造成数万人死伤。随后在2026年美以空袭伊朗一役中，哈",
       "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/2078bc51eeb669dc.md",
+      "source_location": "",
+      "evidence_count": 1
+    },
+    {
+      "id": "7ceb5be99b71",
+      "subject_id": "a1e48a1d2793",
+      "predicate": "leads_to",
+      "object_id": "560f8d03f7d9",
+      "properties": {},
+      "confidence": 1.0,
+      "evidence": "2月31日，伊朗德黑兰一家货币兑换处。伊朗外汇汇率的快速上涨导致市场物价上涨，并扰乱经济平",
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/97950952acbc4f8b.md",
+      "source_location": "",
+      "evidence_count": 1
+    },
+    {
+      "id": "492aacde5e78",
+      "subject_id": "b323110e6f0b",
+      "predicate": "provides",
+      "object_id": "377109480ba1",
+      "properties": {},
+      "confidence": 1.0,
+      "evidence": ".. 2025/03/31 · 《手册》提供了金砖国家主要经济社会指标的全面统计数据。迄今为止，金砖国家统计. 机构共发布了13 卷《手册》，本",
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/db6f93fa042271ef.md",
+      "source_location": "",
+      "evidence_count": 1
+    },
+    {
+      "id": "2590ae6c71cd",
+      "subject_id": "bf359ee900cd",
+      "predicate": "leads_to",
+      "object_id": "03f5a3ffb79a",
+      "properties": {},
+      "confidence": 0.99,
+      "evidence": "20%以上的通胀中挣扎度日。为遏制物价，政府仓促紧缩开支，却导致企业大 ... 2026/02/28 · 伊朗官方数据显示，",
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/c3f3de12151d1d51.md",
+      "source_location": "",
+      "evidence_count": 2
+    },
+    {
+      "id": "89408eb81081",
+      "subject_id": "03aa077d5cfd",
+      "predicate": "provides",
+      "object_id": "03a393f360b3",
+      "properties": {},
+      "confidence": 1.0,
+      "evidence": "领域缺乏各项熟练人才的情况，如今则转变为拥有充足的人才，以应付国家的需求。伊朗拥有488家政府医院。根据各种资料，伊朗在2004年，每1,000",
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/aba858c14a636442.md",
+      "source_location": "",
+      "evidence_count": 1
+    },
+    {
+      "id": "3c6838c71471",
+      "subject_id": "c069da41c0ca",
+      "predicate": "leads_to",
+      "object_id": "0684f6ef0c55",
+      "properties": {},
+      "confidence": 1.0,
+      "evidence": "平民被拦截导弹的碎片击中身亡。叙利亚境内有房屋被伊朗导弹击中造成人员死伤。英美油轮在波斯湾和霍尔木兹海峡遭到伊朗攻击。 1 ",
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/ce1690c81ddb4d72.md",
+      "source_location": "",
+      "evidence_count": 1
+    },
+    {
+      "id": "2cf3e0247882",
+      "subject_id": "eed5fbd108b4",
+      "predicate": "leads_to",
+      "object_id": "c870b9ec44dc",
+      "properties": {},
+      "confidence": 1.0,
+      "evidence": "抗议 的暴力镇压，以及对 妇女 和女孩普遍存在的制度性歧视，导致 伊朗 政府犯下了严重的侵犯人权行为，其中许多可构成危害人类罪",
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/e5640268874c5645.md",
+      "source_location": "",
+      "evidence_count": 1
+    },
+    {
+      "id": "2a2ac930e5b5",
+      "subject_id": "7df89daf506b",
+      "predicate": "deadline_is",
+      "object_id": "d45f642cea31",
+      "properties": {},
+      "confidence": 1.0,
+      "evidence": "，王毅还强调今年对中美关系十分关键。发表时间： 10/03/ 2026 ",
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/1f413db8de49fd0b.md",
+      "source_location": "",
+      "evidence_count": 1
+    },
+    {
+      "id": "2187dd6bf827",
+      "subject_id": "d3f6f0613215",
+      "predicate": "deadline_is",
+      "object_id": "7197be56b9bc",
+      "properties": {},
+      "confidence": 1.0,
+      "evidence": "- 来源: duckduckgo\n\n时间： 2026 年03月11日 15:46:58 中财网. 近两周",
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/75e945259f6c43a0.md",
+      "source_location": "",
+      "evidence_count": 1
+    },
+    {
+      "id": "f539cbacff96",
+      "subject_id": "edbe84b9c31f",
+      "predicate": "deadline_is",
+      "object_id": "5d0e4eceea97",
+      "properties": {},
+      "confidence": 1.0,
+      "evidence": "仍然准备接待特 朗 普本月底访华. 发表时间： 10/03/ 2026 - 00:37. 俄罗斯卫星通讯社.",
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/3aa63f20186839ff.md",
+      "source_location": "",
+      "evidence_count": 1
+    },
+    {
+      "id": "ca68daf1b147",
+      "subject_id": "0f4321ab4263",
+      "predicate": "contains",
+      "object_id": "676b19b5b542",
+      "properties": {},
+      "confidence": 1.0,
+      "evidence": "： 伊 朗 持续对沙特发 动 袭击，目标包括 民 用基础设施和石油设施，这将给沙特和 伊 朗 在北京达成的和解协议带来什么影响？ 3月8日，在年度",
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/3aa63f20186839ff.md",
+      "source_location": "",
+      "evidence_count": 1
+    },
+    {
+      "id": "a60c3c9cb794",
+      "subject_id": "de7fb133d0a4",
+      "predicate": "provides",
+      "object_id": "570880bd4306",
+      "properties": {},
+      "confidence": 1.0,
+      "evidence": " 伊 朗 传统海军一起有效控制着该海峡,具备部署分散式布雷艇、装载炸药的船只和岸基导弹炮台的能力。提供者 财联社. 2026 年3月09日. 热",
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/c885eee5d5c893bc.md",
       "source_location": "",
       "evidence_count": 1
     }

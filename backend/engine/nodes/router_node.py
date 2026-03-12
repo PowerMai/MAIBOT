@@ -39,7 +39,9 @@ def router_node(state: AgentState, config: Optional[RunnableConfig] = None) -> A
     ℹ️  文件已在消息的 content blocks 中（官方格式）
     ℹ️  不复制任何信息到 state（state 保持最小化）
     """
-    # 在 state 被使用前统一将 messages 的 content 归一化为 string，避免多轮后 list content 导致 400（就地写回，不通过返回值避免 add_messages 重复追加）
+    # API/流入口等效归一化：主图由 LangGraph Server 挂载，无法在项目内于 astream/ainvoke 前拦截，
+    # 故在图的唯一入口（本节点）对 state.messages 做 content 归一化，从源头避免 list content 进入图或 checkpoint 导致 400。
+    # 就地写回，不通过返回值避免 add_messages 重复追加。
     try:
         from backend.engine.utils.message_normalize import normalize_messages_content_to_string
         msgs = state.get("messages") or []

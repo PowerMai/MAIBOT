@@ -878,6 +878,135 @@ except ImportError:
 # 全局存储实例（懒加载）
 _checkpointer = None
 _store = None
+
+
+def _normalizing_checkpointer_normalize(checkpoint: Dict[str, Any]) -> Dict[str, Any]:
+    """对 checkpoint 的 channel_values[\"messages\"] 做 content 归一化。"""
+    if not checkpoint:
+        return checkpoint
+    channel_values = checkpoint.get("channel_values")
+    if not isinstance(channel_values, dict):
+        return checkpoint
+    messages = channel_values.get("messages")
+    if messages is None:
+        return checkpoint
+    try:
+        from backend.engine.utils.message_normalize import normalize_messages_content_to_string
+        channel_values = dict(channel_values)
+        channel_values["messages"] = normalize_messages_content_to_string(list(messages))
+        return dict(checkpoint, channel_values=channel_values)
+    except Exception as e:
+        logger.debug("NormalizingCheckpointer _normalize: %s", e)
+        return checkpoint
+
+
+try:
+    from langgraph.checkpoint.base import BaseCheckpointSaver
+except ImportError:
+    BaseCheckpointSaver = object  # type: ignore[misc, assignment]
+
+
+class NormalizingCheckpointer(BaseCheckpointSaver):
+    """包装底层 checkpointer，在 get_tuple/aget_tuple 返回前对 channel_values[\"messages\"] 做 content 归一化，避免 list content 导致上游 API 400。"""
+
+    def __init__(self, underlying: Any):
+        super().__init__()
+        self._underlying = underlying
+
+    def _normalize_checkpoint(self, checkpoint: Dict[str, Any]) -> Dict[str, Any]:
+        return _normalizing_checkpointer_normalize(checkpoint)
+
+    def get_tuple(self, config: Dict[str, Any]) -> Any:
+        try:
+            from langgraph.checkpoint.base import CheckpointTuple
+        except ImportError:
+            CheckpointTuple = None
+        out = self._underlying.get_tuple(config)
+        if out is None or CheckpointTuple is None:
+            return out
+        try:
+            cp = getattr(out, "checkpoint", None) or (out[1] if isinstance(out, (list, tuple)) and len(out) > 1 else None)
+            if cp is None:
+                return out
+            normalized_cp = self._normalize_checkpoint(cp if isinstance(cp, dict) else dict(cp))
+            if normalized_cp is cp:
+                return out
+            return CheckpointTuple(
+                config=getattr(out, "config", out[0]) if hasattr(out, "config") else out[0],
+                checkpoint=normalized_cp,
+                metadata=getattr(out, "metadata", out[2]) if hasattr(out, "metadata") else out[2],
+                parent_config=getattr(out, "parent_config", None) if hasattr(out, "parent_config") else (out[3] if len(out) > 3 else None),
+                pending_writes=getattr(out, "pending_writes", None) if hasattr(out, "pending_writes") else (out[4] if len(out) > 4 else None),
+            )
+        except Exception as e:
+            logger.debug("NormalizingCheckpointer get_tuple: %s", e)
+            return out
+
+    async def aget_tuple(self, config: Dict[str, Any]) -> Any:
+        try:
+            from langgraph.checkpoint.base import CheckpointTuple
+        except ImportError:
+            CheckpointTuple = None
+        out = await self._underlying.aget_tuple(config)
+        if out is None or CheckpointTuple is None:
+            return out
+        try:
+            cp = getattr(out, "checkpoint", None) or (out[1] if isinstance(out, (list, tuple)) and len(out) > 1 else None)
+            if cp is None:
+                return out
+            normalized_cp = self._normalize_checkpoint(cp if isinstance(cp, dict) else dict(cp))
+            if normalized_cp is cp:
+                return out
+            return CheckpointTuple(
+                config=getattr(out, "config", out[0]) if hasattr(out, "config") else out[0],
+                checkpoint=normalized_cp,
+                metadata=getattr(out, "metadata", out[2]) if hasattr(out, "metadata") else out[2],
+                parent_config=getattr(out, "parent_config", None) if hasattr(out, "parent_config") else (out[3] if len(out) > 3 else None),
+                pending_writes=getattr(out, "pending_writes", None) if hasattr(out, "pending_writes") else (out[4] if len(out) > 4 else None),
+            )
+        except Exception as e:
+            logger.debug("NormalizingCheckpointer aget_tuple: %s", e)
+            return out
+
+    def get(self, config: Dict[str, Any]) -> Any:
+        t = self.get_tuple(config)
+        return t.checkpoint if t and hasattr(t, "checkpoint") else None
+
+    def put(self, config: Dict[str, Any], checkpoint: Any, metadata: Any, new_versions: Any) -> Any:
+        if checkpoint is not None and isinstance(checkpoint, dict):
+            normalized = self._normalize_checkpoint(checkpoint)
+            if normalized is not checkpoint:
+                checkpoint = normalized
+        return self._underlying.put(config, checkpoint, metadata, new_versions)
+
+    def put_writes(self, config: Dict[str, Any], writes: Any, task_id: str, task_path: str = "") -> None:
+        return self._underlying.put_writes(config, writes, task_id, task_path)
+
+    def list(self, config: Optional[Dict[str, Any]] = None, *, filter: Optional[Dict[str, Any]] = None, before: Any = None, limit: Optional[int] = None) -> Any:
+        return self._underlying.list(config, filter=filter, before=before, limit=limit)
+
+    def delete_thread(self, thread_id: str) -> None:
+        return self._underlying.delete_thread(thread_id)
+
+    async def aget(self, config: Dict[str, Any]) -> Any:
+        t = await self.aget_tuple(config)
+        return t.checkpoint if t and hasattr(t, "checkpoint") else None
+
+    async def aput(self, config: Dict[str, Any], checkpoint: Any, metadata: Any, new_versions: Any) -> Any:
+        if checkpoint is not None and isinstance(checkpoint, dict):
+            normalized = self._normalize_checkpoint(checkpoint)
+            if normalized is not checkpoint:
+                checkpoint = normalized
+        return await self._underlying.aput(config, checkpoint, metadata, new_versions)
+
+    async def aput_writes(self, config: Dict[str, Any], writes: Any, task_id: str, task_path: str = "") -> None:
+        return await self._underlying.aput_writes(config, writes, task_id, task_path)
+
+    async def alist(self, config: Optional[Dict[str, Any]] = None, *, filter: Optional[Dict[str, Any]] = None, before: Any = None, limit: Optional[int] = None) -> Any:
+        return await self._underlying.alist(config, filter=filter, before=before, limit=limit)
+
+    async def adelete_thread(self, thread_id: str) -> None:
+        return await self._underlying.adelete_thread(thread_id)
 _init_lock = threading.Lock()
 _store_fallback_reason: Optional[str] = None  # 非空表示 Store 已降级，健康检查可读
 
@@ -922,7 +1051,7 @@ def get_sqlite_checkpointer():
         if SqliteSaver is None:
             try:
                 from langgraph.checkpoint.memory import MemorySaver
-                _checkpointer = MemorySaver()
+                _checkpointer = NormalizingCheckpointer(MemorySaver())
                 logger.warning("⚠️ SQLite 不可用，使用 MemorySaver（会话重启后丢失状态）")
                 return _checkpointer
             except ImportError as e:
@@ -962,7 +1091,7 @@ def get_sqlite_checkpointer():
             cursor.execute("PRAGMA page_size=4096")
             cursor.close()
             
-            _checkpointer = SqliteSaver(conn)
+            _checkpointer = NormalizingCheckpointer(SqliteSaver(conn))
             conn = None  # 所有权已交给 SqliteSaver，不再在此处关闭
             logger.info(f"✅ SQLite Checkpointer 初始化完成: {CHECKPOINTS_DB}")
         except Exception as e:
@@ -976,7 +1105,7 @@ def get_sqlite_checkpointer():
             # 降级到 MemorySaver
             try:
                 from langgraph.checkpoint.memory import MemorySaver
-                _checkpointer = MemorySaver()
+                _checkpointer = NormalizingCheckpointer(MemorySaver())
                 logger.warning("⚠️ 降级到 MemorySaver")
             except ImportError:
                 _checkpointer = None
@@ -1890,7 +2019,7 @@ def create_router_graph(
                         and len(reasoning_str.strip()) < _REASONING_STREAM_MIN_CHARS
                     ):
                         return
-                    # Cursor 式按步展示：本段顺序 reasoning → text → tool-calls，追加到 run 级 ordered_parts，跨多轮累积。
+                    # 按执行顺序：reasoning → tool-calls → text，追加到 run 级 ordered_parts，便于前端一步一步展示。
                     run_key = getattr(self, "_initial_msg_id", None) or eff_id
                     run_parts = self._run_ordered_parts.setdefault(run_key, [])
                     this_turn: list[dict[str, Any]] = []
@@ -1898,15 +2027,15 @@ def create_router_graph(
                         filtered_reasoning = _filter_content_leakage(reasoning_str)
                         if filtered_reasoning:
                             this_turn.append({"type": "reasoning", "text": filtered_reasoning})
+                    for x in tc:
+                        _g = x.get if hasattr(x, "get") and callable(x.get) else lambda k, d=None: getattr(x, k, d)
+                        this_turn.append({"type": "tool-call", "id": _g("id", ""), "name": _g("name", ""), "args": _g("args", {})})
                     if content_str:
                         filtered_str = _filter_content_leakage(content_str)
                         if this_turn and (this_turn[-1] or {}).get("type") == "text":
                             this_turn[-1]["text"] = (this_turn[-1].get("text") or "") + filtered_str
                         else:
                             this_turn.append({"type": "text", "text": filtered_str})
-                    for x in tc:
-                        _g = x.get if hasattr(x, "get") and callable(x.get) else lambda k, d=None: getattr(x, k, d)
-                        this_turn.append({"type": "tool-call", "id": _g("id", ""), "name": _g("name", ""), "args": _g("args", {})})
                     run_parts.extend(this_turn)
                     if run_parts:
                         try:
@@ -2381,18 +2510,18 @@ def create_router_graph(
                                     "tool_calls": [_tc_dict(tc) for tc in (tool_calls or [])],
                                     "tool_call_chunks": [_tcc_dict(tc) for tc in (tool_call_chunks or [])],
                                 }
-                                # Cursor 式：按执行顺序的 content_parts（reasoning → text → tool-calls），与 TokenStreamHandler 一致，单源展示。
+                                # 按执行顺序：reasoning → tool-calls → text，与 TokenStreamHandler 一致，单源一步一步展示。
                                 _text_so_far = "".join(current_ai_content_parts)
                                 _op = []
                                 if reasoning_content:
                                     _filtered_r = _filter_content_leakage(reasoning_content)
                                     if _filtered_r:
                                         _op.append({"type": "reasoning", "text": _filtered_r})
-                                if _text_so_far:
-                                    _op.append({"type": "text", "text": _filter_content_leakage(_text_so_far)})
                                 for _t in (current_ai_tool_calls or []):
                                     _d = _tc_dict(_t)
                                     _op.append({"type": "tool-call", "id": _d.get("id", ""), "name": _d.get("name", ""), "args": _d.get("args", {})})
+                                if _text_so_far:
+                                    _op.append({"type": "text", "text": _filter_content_leakage(_text_so_far)})
                                 if _op:
                                     payload_chunk["content_parts"] = _op
                                 chunk_data = {"type": "messages_partial", "data": [payload_chunk]}
@@ -3721,6 +3850,7 @@ _IS_LANGGRAPH_API = (
 # 如果提供了自定义存储，会抛出 ValueError
 if _IS_LANGGRAPH_API:
     # LangGraph API 模式：不使用自定义存储（由平台管理）
+    # 注意：此模式下 checkpoint 由平台写入，无法做 messages content 归一化；若出现工具调用后 400，可改用独立运行（不设 LANGGRAPH_API/LANGGRAPH_DEV）以使用 NormalizingCheckpointer。
     logger.info("🌐 检测到 LangGraph API 模式，使用平台管理的持久化")
     logger.info("   持久化由 LangGraph API 自动处理，无需自定义 checkpointer/store")
     graph = create_router_graph(use_sqlite=False)  # 不使用自定义存储

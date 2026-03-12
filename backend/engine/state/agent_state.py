@@ -16,10 +16,8 @@ class AgentState(TypedDict):
     
     ℹ️  路由信息（source, request_type 等）从消息的 additional_kwargs 中提取
     ℹ️  执行结果、错误信息等都放在消息内容中，不在 state 中
-    ℹ️  文件、编辑器上下文等都在消息 content blocks 中
+    ℹ️  content 归一化在 router_node、deepagent 入口、yield 前完成（无自定义 reducer 以保证后端起得来）
     """
-    # ✅ 官方标准：唯一必需的字段
-    # 使用 LangGraph 官方推荐的 add_messages reducer
     messages: Annotated[list[AnyMessage], add_messages]
 
 
