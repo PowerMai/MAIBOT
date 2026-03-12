@@ -26,9 +26,10 @@
 ## 参考时建议
 
 1. **克隆与运行**：见 [README.md](README.md) 的「快速开始」与 [docs/REFERENCE_USAGE.md](docs/REFERENCE_USAGE.md) 的阅读顺序。  
-2. **文档**：`docs/` 下保留架构、运维、契约等说明；历史过程文档在 `docs/archive/`。  
-3. **许可**：见仓库根目录 [LICENSE](LICENSE)。  
-4. **二次使用**：可在遵守 LICENSE 的前提下 fork、修改与自用；本仓库不提供官方支持。
+2. **项目优势与合作**：技术优势、适用场景及**合作交流方式**（Issues、Fork、衍生项目链接）见 [docs/ADVANTAGES.md](docs/ADVANTAGES.md)。  
+3. **文档**：`docs/` 下保留架构、运维、契约等说明；历史过程文档在 `docs/archive/`。  
+4. **许可**：见仓库根目录 [LICENSE](LICENSE)。  
+5. **二次使用**：可在遵守 LICENSE 的前提下 fork、修改与自用；欢迎在 Issues 中分享使用心得或衍生项目，以增加交流机会。
 
 ---
 

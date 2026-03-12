@@ -13,6 +13,7 @@
 ## 如何参考本仓库
 
 - 克隆与运行：见 [README.md](README.md) 与 [docs/REFERENCE_USAGE.md](docs/REFERENCE_USAGE.md)。  
+- 项目优势与合作交流：见 [docs/ADVANTAGES.md](docs/ADVANTAGES.md)。  
 - 环境与结构：Python 使用 `backend/.venv`，前端在 `frontend/desktop` 使用 pnpm；完整结构见 [docs/PROJECT_STRUCTURE.md](docs/PROJECT_STRUCTURE.md)。  
 - 许可：使用与二次开发请遵守 [LICENSE](LICENSE)。
 
