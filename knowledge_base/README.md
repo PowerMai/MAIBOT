@@ -1,14 +1,16 @@
 # 知识库说明
 
+**说明**：本仓库中 `domain/`、`learned/`、`docs/`、`global/` 等资料与学习产出**不纳入版本控制**（见根目录 `.gitignore`），克隆后需从本地归档或自行按需生成。
+
 ## 向量化
 
-- **执行位置**：在 ccb 项目内完成，由 `backend/tools/base/embedding_tools.py` 与 `storage_manager.py` 负责。
+- **执行位置**：在 MAIBOT 项目内完成，由 `backend/tools/base/embedding_tools.py` 与 `storage_manager.py` 负责。
 - **Embedding 模型**：使用项目配置的模型，默认 `text-embedding-qwen3-embedding-0.6b`，API 地址 `http://localhost:1234/v1`（本地服务，如 Ollama 等）。可通过环境变量覆盖：
   - `EMBEDDING_MODEL`
   - `EMBEDDING_BASE_URL`
 - **索引方式**：按需索引（首次检索或调用重建索引时生成）；支持 `.md`、`.txt`、`.pdf`、`.docx`、`.xlsx`。
 
-## 向量化管理（Claude 方式）
+## 向量化管理
 
 - **已向量化不重做**：检索时只加载已有 FAISS 索引，不会对已索引文件重新做向量化。
 - **增量更新**：调用重建索引且未传 `force=True` 时，仅对**新增或内容变更**的文件做向量化（按文件内容 hash 判断）；未变更文件跳过，避免重复计算。
