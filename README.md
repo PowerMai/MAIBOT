@@ -22,6 +22,7 @@
 | **文档与契约** | 架构、运维、管线与中间件、Skills/知识库等文档集中，推荐阅读路径清晰。 |
 
 更完整的优势说明、适用场景与**合作交流方式**见 **[docs/ADVANTAGES.md](docs/ADVANTAGES.md)**。  
+若本参考实现对你有帮助，欢迎在 GitHub 给个 **Star**，便于更多人发现。
 
 ## 快速开始
 
@@ -219,6 +220,12 @@ vim .env
 - **Fork 与链接**：在遵守 [LICENSE](LICENSE) 的前提下欢迎 Fork；若形成公开项目，可考虑在 README 或 [docs/ADVANTAGES.md](docs/ADVANTAGES.md) 中交换链接。  
 
 详见 [docs/ADVANTAGES.md](docs/ADVANTAGES.md) 第五部分。
+
+## 关于 Star 与发现
+
+- **Star（点赞）≠ 下载/克隆**：有人可能已 `git clone` 使用但未点 Star，故「暂无 Star」不代表没人使用。
+- **提高被发现概率**：在仓库 About 中填写 **Description**（如：LangChain/LangGraph 全栈 AI 编辑器参考实现，已归档供学习）并添加 **Topics**（见上方标签说明）；发一个 **Release** 可增加入口与可信度。
+- 若本仓库对你有帮助，欢迎点 **Star** 或分享给同行。
 
 ## 安全与敏感信息
 
