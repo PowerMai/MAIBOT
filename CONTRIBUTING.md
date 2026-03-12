@@ -1,34 +1,21 @@
 # Contributing
 
-感谢对本项目的关注。贡献前请先阅读本说明。
+感谢对本项目的关注。
 
-## 开发环境
+## 归档状态说明
 
-- **Python**：仅使用 **`backend/.venv`** 作为项目唯一虚拟环境；根目录若有旧 `.venv` 可删除以节省空间。
-- **Node**：前端在 `frontend/desktop` 下使用 pnpm 安装依赖。
+**本项目已归档**，仓库以**参考代码**形式保留，供学习与二次参考使用。
 
-```bash
-# 后端
-cd backend && uv sync
+- **暂不接受**：新功能开发、Bug 修复、依赖升级等常规 PR。  
+- **欢迎**：Fork 后自行修改与使用；若你基于本仓库做了有价值的学习笔记或适配说明，可考虑在自己的仓库或讨论区分享。  
+- 详细说明见 [ARCHIVE.md](ARCHIVE.md)。
 
-# 前端
-cd frontend/desktop && pnpm install
-```
+## 如何参考本仓库
 
-## 运行与测试
-
-- 统一入口：`./start dev`（开发）、`./start prod`（生产）、`./start status`、`./start stop`。
-- 测试与门禁：见根目录 `Makefile`（如 `make test-quick`、`make gate-release`）。
-
-## 提交与推送
-
-- 请勿提交：`.env`、`.venv`、`node_modules`、`knowledge_base/global`、`data/`、`outputs/`、大文件。
-- 项目结构说明见 [docs/PROJECT_STRUCTURE.md](docs/PROJECT_STRUCTURE.md)。
+- 克隆与运行：见 [README.md](README.md) 与 [docs/REFERENCE_USAGE.md](docs/REFERENCE_USAGE.md)。  
+- 环境与结构：Python 使用 `backend/.venv`，前端在 `frontend/desktop` 使用 pnpm；完整结构见 [docs/PROJECT_STRUCTURE.md](docs/PROJECT_STRUCTURE.md)。  
+- 许可：使用与二次开发请遵守 [LICENSE](LICENSE)。
 
 ## 行为准则
 
 - 保持礼貌、就事论事；遵守仓库与社区规范。
-
-## 开源许可
-
-- 若需开源，请在仓库根目录添加 `LICENSE` 文件（如 MIT、Apache-2.0）并在 README 中注明。
