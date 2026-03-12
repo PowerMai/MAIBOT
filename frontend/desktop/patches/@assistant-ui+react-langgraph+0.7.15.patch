@@ -11,6 +11,7 @@ index 0000000..1111111 100644
 +                    type: "tool-call",
 +                    toolCallId: part.id ?? "",
 +                    toolName: part.name ?? "",
++                    toolCall: { id: part.id ?? "", name: part.name ?? "" },
 +                    args: part.args ?? {},
 +                    argsText: JSON.stringify(part.args ?? {}),
 +                    ...(part.result !== undefined && part.result !== null && { result: typeof part.result === "string" ? part.result : String(part.result) }),
@@ -78,7 +79,29 @@ index 0000000..1111111 100644
 +    return merged.length ? merged : undefined;
  }
  export const appendLangChainChunk = (prev, curr) => {
-@@ -60,22 +60,49 @@ export const appendLangChainChunk = (prev, curr) => {
++@@ -35,6 +35,19 @@ export const appendLangChainChunk = (prev, curr) => {
++     if (!prev || prev.type !== "ai") {
++-        return {
++-            ...curr,
++-            type: curr.type.replace("MessageChunk", "").toLowerCase(),
++-        };
++        if (curr.content_parts && Array.isArray(curr.content_parts)) {
++            const mergedContent = contentPartsToMerged(curr.content_parts);
++            if (mergedContent && mergedContent.length > 0) {
++                return {
++                    ...curr,
++                    type: curr.type.replace("MessageChunk", "").toLowerCase(),
++                    content: mergedContent,
++                    content_parts: curr.content_parts,
++                };
++            }
++        }
++        return {
++            ...curr,
++            type: curr.type.replace("MessageChunk", "").toLowerCase(),
++        };
++    }
+ @@ -60,22 +60,49 @@ export const appendLangChainChunk = (prev, curr) => {
          else {
              newContent.push({ type: "text", text: curr.content });
          }
@@ -118,6 +141,7 @@ index 0000000..1111111 100644
 +                    type: "tool-call",
 +                    id: item.id ?? "",
 +                    name: item.name ?? "",
++                    toolCall: { id: item.id ?? "", name: item.name ?? "" },
 +                    args: item.args ?? {},
 +                };
 +                if (item.result !== undefined && item.result !== null)

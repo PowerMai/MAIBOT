@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "实体定义（Lattice 风格知识图谱）",
-    "updated": "2026-03-11T18:06:28.699955"
+    "updated": "2026-03-11T23:55:21.520186"
   },
   "entities": [
     {
@@ -22,7 +22,7 @@
       "confidence": 0.99,
       "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/3a54af2dcd9973a2.md",
       "source_location": "",
-      "mention_count": 320
+      "mention_count": 339
     },
     {
       "id": "e8ed74ae1dac",
@@ -580,7 +580,7 @@
       "confidence": 0.99,
       "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/6d5bf0350e85205a.md",
       "source_location": "",
-      "mention_count": 22
+      "mention_count": 36
     },
     {
       "id": "dd6694b821c9",
@@ -1114,7 +1114,7 @@
       "confidence": 0.99,
       "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/ad76645d57c661b6.md",
       "source_location": "",
-      "mention_count": 24
+      "mention_count": 28
     },
     {
       "id": "409f0fe532e8",
@@ -1126,7 +1126,7 @@
       "confidence": 0.99,
       "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/ad76645d57c661b6.md",
       "source_location": "",
-      "mention_count": 20
+      "mention_count": 30
     },
     {
       "id": "d8bdcb37fa5c",
@@ -2651,7 +2651,7 @@
       "confidence": 0.99,
       "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/74da0804e8d6f078.md",
       "source_location": "",
-      "mention_count": 4
+      "mention_count": 6
     },
     {
       "id": "20716d7c9151",
@@ -2761,7 +2761,7 @@
       "confidence": 0.99,
       "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/cf7d4ffe496cd5b9.md",
       "source_location": "",
-      "mention_count": 2
+      "mention_count": 4
     },
     {
       "id": "1fb6fc04109a",
@@ -3063,7 +3063,7 @@
       "confidence": 0.99,
       "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/a12c644da0607a57.md",
       "source_location": "",
-      "mention_count": 2
+      "mention_count": 8
     },
     {
       "id": "a1c5b7b1f83c",
@@ -3175,7 +3175,7 @@
       "confidence": 0.99,
       "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/f07beee8c85a7225.md",
       "source_location": "",
-      "mention_count": 2
+      "mention_count": 4
     },
     {
       "id": "1a9639370a79",
@@ -3237,7 +3237,7 @@
       "confidence": 0.99,
       "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/c82e907f4ede364c.md",
       "source_location": "",
-      "mention_count": 26
+      "mention_count": 30
     },
     {
       "id": "6763d92dce5c",
@@ -3261,7 +3261,7 @@
       "confidence": 0.99,
       "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/c82e907f4ede364c.md",
       "source_location": "",
-      "mention_count": 18
+      "mention_count": 24
     },
     {
       "id": "e1a8f57d7018",
@@ -3387,7 +3387,7 @@
       "confidence": 0.99,
       "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/ac91829d44af1907.md",
       "source_location": "",
-      "mention_count": 12
+      "mention_count": 16
     },
     {
       "id": "0e5d58ce101a",
@@ -3407,7 +3407,7 @@
       "confidence": 0.99,
       "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/ac91829d44af1907.md",
       "source_location": "",
-      "mention_count": 6
+      "mention_count": 8
     },
     {
       "id": "8ad44a4a282b",
@@ -3657,7 +3657,7 @@
       "confidence": 0.99,
       "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/92133d6b1a421e89.md",
       "source_location": "",
-      "mention_count": 2
+      "mention_count": 4
     },
     {
       "id": "2ea6f22b322f",
@@ -4471,7 +4471,7 @@
       "confidence": 0.99,
       "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/c526b1e8813acb7d.md",
       "source_location": "",
-      "mention_count": 2
+      "mention_count": 4
     },
     {
       "id": "1fa6136687e5",
@@ -4840,7 +4840,7 @@
       "confidence": 0.99,
       "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/a1f8b0d9b3d1fb46.md",
       "source_location": "",
-      "mention_count": 4
+      "mention_count": 6
     },
     {
       "id": "7eb2c3e756e1",
@@ -5166,7 +5166,7 @@
       "confidence": 0.99,
       "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/de25cb816d093751.md",
       "source_location": "",
-      "mention_count": 2
+      "mention_count": 4
     },
     {
       "id": "0c6cf11b8d77",
@@ -6010,7 +6010,7 @@
       "confidence": 0.99,
       "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/eefa325fbb65ea5e.md",
       "source_location": "",
-      "mention_count": 4
+      "mention_count": 8
     },
     {
       "id": "e44beebe9859",
@@ -6092,7 +6092,7 @@
       "confidence": 0.99,
       "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/46bf29ac439cf347.md",
       "source_location": "",
-      "mention_count": 2
+      "mention_count": 4
     },
     {
       "id": "136adf66e469",
@@ -6394,7 +6394,7 @@
       "confidence": 0.99,
       "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/4c28b37dfe3f6484.md",
       "source_location": "",
-      "mention_count": 196
+      "mention_count": 234
     },
     {
       "id": "c8561219d218",
@@ -6514,7 +6514,7 @@
       "confidence": 0.99,
       "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/c4208ae49d85955c.md",
       "source_location": "",
-      "mention_count": 12
+      "mention_count": 18
     },
     {
       "id": "24b68a0c38cb",
@@ -6656,7 +6656,7 @@
       "confidence": 0.99,
       "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/8159277e4bcb7591.md",
       "source_location": "",
-      "mention_count": 2
+      "mention_count": 6
     },
     {
       "id": "c47e7199604b",
@@ -6666,7 +6666,7 @@
       "confidence": 0.99,
       "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/8159277e4bcb7591.md",
       "source_location": "",
-      "mention_count": 2
+      "mention_count": 6
     },
     {
       "id": "73b56da75e9c",
@@ -6786,7 +6786,7 @@
       "confidence": 0.99,
       "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/7fa13ce4803ad886.md",
       "source_location": "",
-      "mention_count": 4
+      "mention_count": 6
     },
     {
       "id": "62a06b6ca52a",
@@ -6806,7 +6806,7 @@
       "confidence": 0.99,
       "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/7fa13ce4803ad886.md",
       "source_location": "",
-      "mention_count": 2
+      "mention_count": 4
     },
     {
       "id": "88c8b1fec2ff",
@@ -6816,7 +6816,7 @@
       "confidence": 0.99,
       "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/7fa13ce4803ad886.md",
       "source_location": "",
-      "mention_count": 2
+      "mention_count": 3
     },
     {
       "id": "b1dac21de7fc",
@@ -7033,20 +7033,20 @@
       "name": "加剧民众担忧。一些抗议者认为伊朗经济困境是政府外交政策优先所",
       "type": "requirement",
       "properties": {},
-      "confidence": 1.0,
+      "confidence": 0.99,
       "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/a7dd1d1b9125afbb.md",
       "source_location": "",
-      "mention_count": 1
+      "mention_count": 2
     },
     {
       "id": "76d1e5114d42",
       "name": "的。2025年12月，部分示威者在示威活动中高喊「不為加沙、",
       "type": "requirement",
       "properties": {},
-      "confidence": 1.0,
+      "confidence": 0.99,
       "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/a7dd1d1b9125afbb.md",
       "source_location": "",
-      "mention_count": 1
+      "mention_count": 2
     },
     {
       "id": "6a8a0555feaf",
@@ -7130,7 +7130,7 @@
       "confidence": 0.99,
       "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/eed226fa07fd5d1b.md",
       "source_location": "",
-      "mention_count": 2
+      "mention_count": 4
     },
     {
       "id": "5691642b0cb0",
@@ -7322,7 +7322,7 @@
       "confidence": 0.99,
       "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/7368d4be112ca134.md",
       "source_location": "",
-      "mention_count": 2
+      "mention_count": 4
     },
     {
       "id": "c8d15ae32e70",
@@ -7780,7 +7780,7 @@
       "confidence": 0.99,
       "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/dead4f7fddf7659e.md",
       "source_location": "",
-      "mention_count": 2
+      "mention_count": 3
     },
     {
       "id": "2ce4f70b7dec",
@@ -8332,7 +8332,7 @@
       "confidence": 0.99,
       "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/93706a8f26b45072.md",
       "source_location": "",
-      "mention_count": 2
+      "mention_count": 4
     },
     {
       "id": "8ff0f19f73d8",
@@ -8460,7 +8460,7 @@
       "confidence": 0.99,
       "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/cfbe49ec666b1ca8.md",
       "source_location": "",
-      "mention_count": 2
+      "mention_count": 6
     },
     {
       "id": "5979b14ac5f7",
@@ -8490,7 +8490,7 @@
       "confidence": 0.99,
       "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/f171b579b41039c0.md",
       "source_location": "",
-      "mention_count": 2
+      "mention_count": 4
     },
     {
       "id": "16a6f330513a",
@@ -8845,6 +8845,500 @@
       "properties": {},
       "confidence": 1.0,
       "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/2078bc51eeb669dc.md",
+      "source_location": "",
+      "mention_count": 1
+    },
+    {
+      "id": "da6e34f756b6",
+      "name": "2026年1月12日",
+      "type": "date",
+      "properties": {},
+      "confidence": 0.99,
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/97950952acbc4f8b.md",
+      "source_location": "",
+      "mention_count": 2
+    },
+    {
+      "id": "14068f8b58cb",
+      "name": "2026/02/27",
+      "type": "date",
+      "properties": {},
+      "confidence": 0.99,
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/97950952acbc4f8b.md",
+      "source_location": "",
+      "mention_count": 6
+    },
+    {
+      "id": "faafb84db6fe",
+      "name": "2026/01/02",
+      "type": "date",
+      "properties": {},
+      "confidence": 0.99,
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/97950952acbc4f8b.md",
+      "source_location": "",
+      "mention_count": 4
+    },
+    {
+      "id": "7cd45ee39167",
+      "name": "72.3%",
+      "type": "percentage",
+      "properties": {
+        "value": "72.3"
+      },
+      "confidence": 0.99,
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/97950952acbc4f8b.md",
+      "source_location": "",
+      "mention_count": 2
+    },
+    {
+      "id": "a1e48a1d2793",
+      "name": "2月31日，伊朗德黑兰一家货币兑换处。伊朗外汇汇率的快速上涨",
+      "type": "requirement",
+      "properties": {},
+      "confidence": 1.0,
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/97950952acbc4f8b.md",
+      "source_location": "",
+      "mention_count": 1
+    },
+    {
+      "id": "560f8d03f7d9",
+      "name": "市场物价上涨，并扰乱经济平",
+      "type": "requirement",
+      "properties": {},
+      "confidence": 1.0,
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/97950952acbc4f8b.md",
+      "source_location": "",
+      "mention_count": 1
+    },
+    {
+      "id": "4931dc5ccad6",
+      "name": "2025年9月29日",
+      "type": "date",
+      "properties": {},
+      "confidence": 0.99,
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/db6f93fa042271ef.md",
+      "source_location": "",
+      "mention_count": 2
+    },
+    {
+      "id": "b22520a5d2d1",
+      "name": "2025/09/29",
+      "type": "date",
+      "properties": {},
+      "confidence": 0.99,
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/db6f93fa042271ef.md",
+      "source_location": "",
+      "mention_count": 2
+    },
+    {
+      "id": "1f4eda4372b9",
+      "name": "2025/09/12",
+      "type": "date",
+      "properties": {},
+      "confidence": 0.99,
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/db6f93fa042271ef.md",
+      "source_location": "",
+      "mention_count": 2
+    },
+    {
+      "id": "52fe1c87a417",
+      "name": "3.3%",
+      "type": "percentage",
+      "properties": {
+        "value": "3.3"
+      },
+      "confidence": 0.99,
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/db6f93fa042271ef.md",
+      "source_location": "",
+      "mention_count": 2
+    },
+    {
+      "id": "a2f0b95863a1",
+      "name": "7.7%",
+      "type": "percentage",
+      "properties": {
+        "value": "7.7"
+      },
+      "confidence": 0.99,
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/db6f93fa042271ef.md",
+      "source_location": "",
+      "mention_count": 2
+    },
+    {
+      "id": "377109480ba1",
+      "name": "了金砖国家主要经济社会指标的全面统计数据。迄今为止，金砖国家统计. 机构共发布了13 卷《手册》，本",
+      "type": "requirement",
+      "properties": {},
+      "confidence": 1.0,
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/db6f93fa042271ef.md",
+      "source_location": "",
+      "mention_count": 1
+    },
+    {
+      "id": "4746cd622b3f",
+      "name": "2026/01/18",
+      "type": "date",
+      "properties": {},
+      "confidence": 0.99,
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/c3f3de12151d1d51.md",
+      "source_location": "",
+      "mention_count": 2
+    },
+    {
+      "id": "eb1bf4d330e7",
+      "name": "42%",
+      "type": "percentage",
+      "properties": {
+        "value": "42"
+      },
+      "confidence": 0.99,
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/c3f3de12151d1d51.md",
+      "source_location": "",
+      "mention_count": 8
+    },
+    {
+      "id": "49dcd6cd693f",
+      "name": "7.8%",
+      "type": "percentage",
+      "properties": {
+        "value": "7.8"
+      },
+      "confidence": 0.99,
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/c3f3de12151d1d51.md",
+      "source_location": "",
+      "mention_count": 2
+    },
+    {
+      "id": "41a3069a8877",
+      "name": "70%",
+      "type": "percentage",
+      "properties": {
+        "value": "70"
+      },
+      "confidence": 0.99,
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/c3f3de12151d1d51.md",
+      "source_location": "",
+      "mention_count": 4
+    },
+    {
+      "id": "76f222108180",
+      "name": "7.5%",
+      "type": "percentage",
+      "properties": {
+        "value": "7.5"
+      },
+      "confidence": 0.99,
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/c3f3de12151d1d51.md",
+      "source_location": "",
+      "mention_count": 2
+    },
+    {
+      "id": "bf359ee900cd",
+      "name": "中挣扎度日",
+      "type": "disqualification",
+      "properties": {},
+      "confidence": 0.99,
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/c3f3de12151d1d51.md",
+      "source_location": "",
+      "mention_count": 2
+    },
+    {
+      "id": "4594d4c4fa1e",
+      "name": "32%",
+      "type": "percentage",
+      "properties": {
+        "value": "32"
+      },
+      "confidence": 0.99,
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/aba858c14a636442.md",
+      "source_location": "",
+      "mention_count": 2
+    },
+    {
+      "id": "566805d40230",
+      "name": "46%",
+      "type": "percentage",
+      "properties": {
+        "value": "46"
+      },
+      "confidence": 0.99,
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/aba858c14a636442.md",
+      "source_location": "",
+      "mention_count": 2
+    },
+    {
+      "id": "6b97fca4049f",
+      "name": "82.7%",
+      "type": "percentage",
+      "properties": {
+        "value": "82.7"
+      },
+      "confidence": 0.99,
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/aba858c14a636442.md",
+      "source_location": "",
+      "mention_count": 2
+    },
+    {
+      "id": "03aa077d5cfd",
+      "name": "领域缺乏各项熟练人才的情况，如今则转变为",
+      "type": "requirement",
+      "properties": {},
+      "confidence": 1.0,
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/aba858c14a636442.md",
+      "source_location": "",
+      "mention_count": 1
+    },
+    {
+      "id": "03a393f360b3",
+      "name": "充足的人才，以应付国家的需求。伊朗拥有488家政府医院。根据各种资料，伊朗在2004年，每1,000",
+      "type": "requirement",
+      "properties": {},
+      "confidence": 1.0,
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/aba858c14a636442.md",
+      "source_location": "",
+      "mention_count": 1
+    },
+    {
+      "id": "02d12016b43e",
+      "name": "兰共和国正面临着远超政治动荡的局",
+      "type": "organization",
+      "properties": {},
+      "confidence": 0.99,
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/c6d418f74e9378d0.md",
+      "source_location": "",
+      "mention_count": 2
+    },
+    {
+      "id": "c069da41c0ca",
+      "name": "平民被拦截导弹的碎片击中身亡。叙利亚境内有房屋被伊朗导弹击中",
+      "type": "requirement",
+      "properties": {},
+      "confidence": 1.0,
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/ce1690c81ddb4d72.md",
+      "source_location": "",
+      "mention_count": 1
+    },
+    {
+      "id": "0684f6ef0c55",
+      "name": "人员死伤。英美油轮在波斯湾和霍尔木兹海峡遭到伊朗攻击。 1",
+      "type": "requirement",
+      "properties": {},
+      "confidence": 1.0,
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/ce1690c81ddb4d72.md",
+      "source_location": "",
+      "mention_count": 1
+    },
+    {
+      "id": "7734b209e0d4",
+      "name": "2026/02/21",
+      "type": "date",
+      "properties": {},
+      "confidence": 0.99,
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/9a42b6b3dba5f8c7.md",
+      "source_location": "",
+      "mention_count": 2
+    },
+    {
+      "id": "282d7745d2b8",
+      "name": "这已经开始对委",
+      "type": "organization",
+      "properties": {},
+      "confidence": 0.99,
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/9a42b6b3dba5f8c7.md",
+      "source_location": "",
+      "mention_count": 2
+    },
+    {
+      "id": "19e736b7968f",
+      "name": "2026/03/03",
+      "type": "date",
+      "properties": {},
+      "confidence": 0.99,
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/583f0a3ac1b2d4a5.md",
+      "source_location": "",
+      "mention_count": 2
+    },
+    {
+      "id": "0b55d23802a8",
+      "name": "95%",
+      "type": "percentage",
+      "properties": {
+        "value": "95"
+      },
+      "confidence": 0.99,
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/583f0a3ac1b2d4a5.md",
+      "source_location": "",
+      "mention_count": 2
+    },
+    {
+      "id": "e470c1b51e7d",
+      "name": "得了自疫情爆发以来最好的年度开局",
+      "type": "organization",
+      "properties": {},
+      "confidence": 0.99,
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/583f0a3ac1b2d4a5.md",
+      "source_location": "",
+      "mention_count": 2
+    },
+    {
+      "id": "eed5fbd108b4",
+      "name": "抗议 的暴力镇压，以及对 妇女 和女孩普遍存在的制度性歧视，",
+      "type": "requirement",
+      "properties": {},
+      "confidence": 1.0,
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/e5640268874c5645.md",
+      "source_location": "",
+      "mention_count": 1
+    },
+    {
+      "id": "c870b9ec44dc",
+      "name": "伊朗 政府犯下了严重的侵犯人权行为，其中许多可构成危害人类罪",
+      "type": "requirement",
+      "properties": {},
+      "confidence": 1.0,
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/e5640268874c5645.md",
+      "source_location": "",
+      "mention_count": 1
+    },
+    {
+      "id": "7df89daf506b",
+      "name": "，王毅还强调今年对中美关系十分关键。发表",
+      "type": "requirement",
+      "properties": {},
+      "confidence": 1.0,
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/1f413db8de49fd0b.md",
+      "source_location": "",
+      "mention_count": 1
+    },
+    {
+      "id": "d45f642cea31",
+      "name": "10/03/ 2026",
+      "type": "requirement",
+      "properties": {},
+      "confidence": 1.0,
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/1f413db8de49fd0b.md",
+      "source_location": "",
+      "mention_count": 1
+    },
+    {
+      "id": "d3f6f0613215",
+      "name": "- 来源: duckduckgo",
+      "type": "requirement",
+      "properties": {},
+      "confidence": 1.0,
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/75e945259f6c43a0.md",
+      "source_location": "",
+      "mention_count": 1
+    },
+    {
+      "id": "7197be56b9bc",
+      "name": "2026 年03月11日 15:46:58 中财网. 近两周",
+      "type": "requirement",
+      "properties": {},
+      "confidence": 1.0,
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/75e945259f6c43a0.md",
+      "source_location": "",
+      "mention_count": 1
+    },
+    {
+      "id": "edbe84b9c31f",
+      "name": "仍然准备接待特 朗 普本月底访华. 发表",
+      "type": "requirement",
+      "properties": {},
+      "confidence": 1.0,
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/3aa63f20186839ff.md",
+      "source_location": "",
+      "mention_count": 1
+    },
+    {
+      "id": "5d0e4eceea97",
+      "name": "10/03/ 2026 - 00:37. 俄罗斯卫星通讯社.",
+      "type": "requirement",
+      "properties": {},
+      "confidence": 1.0,
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/3aa63f20186839ff.md",
+      "source_location": "",
+      "mention_count": 1
+    },
+    {
+      "id": "0f4321ab4263",
+      "name": "： 伊 朗 持续对沙特发 动 袭击，目标",
+      "type": "requirement",
+      "properties": {},
+      "confidence": 1.0,
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/3aa63f20186839ff.md",
+      "source_location": "",
+      "mention_count": 1
+    },
+    {
+      "id": "676b19b5b542",
+      "name": "民 用基础设施和石油设施，这将给沙特和 伊 朗 在北京达成的和解协议带来什么影响？ 3月8日，在年度",
+      "type": "requirement",
+      "properties": {},
+      "confidence": 1.0,
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/3aa63f20186839ff.md",
+      "source_location": "",
+      "mention_count": 1
+    },
+    {
+      "id": "d67bfbe4641a",
+      "name": "年第四季度国家自然科学基金委",
+      "type": "organization",
+      "properties": {},
+      "confidence": 0.99,
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/15784ac8b43a1380.md",
+      "source_location": "",
+      "mention_count": 2
+    },
+    {
+      "id": "d77bdc0bb7e9",
+      "name": "布国家自然科学基金委",
+      "type": "organization",
+      "properties": {},
+      "confidence": 0.99,
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/15784ac8b43a1380.md",
+      "source_location": "",
+      "mention_count": 2
+    },
+    {
+      "id": "f35ddc1d0b08",
+      "name": "治局委",
+      "type": "organization",
+      "properties": {},
+      "confidence": 0.99,
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/15784ac8b43a1380.md",
+      "source_location": "",
+      "mention_count": 2
+    },
+    {
+      "id": "7e05e4aa9ff4",
+      "name": "2026/01/22",
+      "type": "date",
+      "properties": {},
+      "confidence": 0.99,
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/5c8d787d84252572.md",
+      "source_location": "",
+      "mention_count": 2
+    },
+    {
+      "id": "51307bd85395",
+      "name": "79.47%",
+      "type": "percentage",
+      "properties": {
+        "value": "79.47"
+      },
+      "confidence": 0.99,
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/5c8d787d84252572.md",
+      "source_location": "",
+      "mention_count": 4
+    },
+    {
+      "id": "570880bd4306",
+      "name": "部署分散式布雷艇、装载炸药的船只和岸基导弹炮台的能力。提供者 财联社. 2026 年3月09日. 热",
+      "type": "requirement",
+      "properties": {},
+      "confidence": 1.0,
+      "source": "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/learned/web_cache/c885eee5d5c893bc.md",
       "source_location": "",
       "mention_count": 1
     }
