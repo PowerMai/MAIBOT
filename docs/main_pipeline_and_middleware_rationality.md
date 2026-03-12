@@ -1,6 +1,6 @@
 # 主链路与中间件举一反三检查及合理性分析
 
-本文档基于前述已发现问题（模型选择、推理流、35B 调用）做举一反三式检查，并参照 LangGraph / DeepAgent / Cursor-Claude 官方模式对主链路与所有中间件做合理性分析。
+本文档基于前述已发现问题（模型选择、推理流、35B 调用）做举一反三式检查，并参照 LangGraph / DeepAgent 与主流实践对主链路与所有中间件做合理性分析。
 
 ---
 
@@ -64,7 +64,7 @@ deepagent_node 内部：
 |--------|------|------------|
 | **streaming** | 最后 | 必须在最内层包住 model 调用，才能把 config 中的 callbacks 注入到 LLM；与 LangChain/DeepAgent 的「流式包住 invoke」一致。✅ |
 | **inject_runtime_context** | streaming 前 | 动态 prompt 在调用前注入，再交给内层流式；顺序正确。✅ |
-| **mode_permission / license_gate / cloud_call_gate** | 靠前 | 鉴权/许可/云调用门控应先于模型与工具调用，与 Cursor/Claude 的「先鉴权再执行」一致。✅ |
+| **mode_permission / license_gate / cloud_call_gate** | 靠前 | 鉴权/许可/云调用门控应先于模型与工具调用，与业界「先鉴权再执行」一致。✅ |
 | **model_fallback / tool_retry / model_retry** | 中段 | 回退与重试包住实际调用，顺序合理；且 get_fallback_model_for 已优先 default_model，避免误用 35B。✅ |
 | **human_in_the_loop** | 靠前 | 与官方 HumanInTheLoopMiddleware 用法一致，在 agent 执行前决定是否中断。**Plan 模式**的「先出计划再确认」不由本中间件实现：由**图与前端**通过 `plan_confirmed` / `plan_phase` 协作完成（main_graph 中 configurable.plan_confirmed、plan_phase），故 plan 链未包含 human_in_the_loop。✅ |
 | **execution_trace** | 可选 | 可观测性，不改变语义，按需启用。✅ |
@@ -157,7 +157,7 @@ flowchart TB
 | config 与 callbacks | ✅ | config 透传，callbacks 在节点内注入，StreamingMiddleware 注入到 model |
 | 模型选择与回退 | ✅ | 已统一优先 default_model，避免 35B 误用 |
 | 推理流契约 | ✅ | reasoning start/content/end 带 msg_id，有测试与文档 |
-| 中间件顺序 | ✅ | 鉴权/门控在前，流式在最后，与 Cursor/Claude/LangChain 实践一致 |
+| 中间件顺序 | ✅ | 鉴权/门控在前，流式在最后，与 LangChain 等主流实践一致 |
 | 配置与代码一致 | ⚠️ | inject_* 合并逻辑需在配置或文档中说明；review 链可显式配置 |
 
 整体上，**主链路与中间件设计符合 LangGraph / DeepAgent 官方用法**；前述已修复的模型选择、推理流、35B 回退等问题，已通过举一反三在 fallback、resolve_best_local、create_llm(config=None) 等路径统一处理，并辅以测试与文档说明。
@@ -170,19 +170,19 @@ flowchart TB
 
 | 中间件 | 功能 | 业务合理性 | 顺序合理性 |
 |--------|------|------------|------------|
-| context_editing | 上下文编辑/裁剪 | 与 Cursor 的「可编辑上下文」理念一致，按需启用。**约定**：仅做消息裁剪/格式规范化，不依据用户身份或权限改写内容；若将来扩展为可编辑任意片段，须将 context_editing 移至 mode_permission 之后。✅ | 靠前，在鉴权前即可生效。✅ |
+| context_editing | 上下文编辑/裁剪 | 与「可编辑上下文」理念一致，按需启用。**约定**：仅做消息裁剪/格式规范化，不依据用户身份或权限改写内容；若将来扩展为可编辑任意片段，须将 context_editing 移至 mode_permission 之后。✅ | 靠前，在鉴权前即可生效。✅ |
 | human_in_the_loop | 人工确认/中断 | 与 DeepAgent HumanInTheLoopMiddleware 一致，Plan 模式等需确认。✅ | 靠前。✅ |
 | execution_trace | 执行轨迹记录 | 可观测与调试，不改变语义。✅ | 中段。✅ |
-| mode_permission | 模式权限（如 Ask 禁用写文件） | 与 Cursor 模式约束一致。✅ | 鉴权类靠前。✅ |
+| mode_permission | 模式权限（如 Ask 禁用写文件） | 与模式权限约束一致。✅ | 鉴权类靠前。✅ |
 | content_fix | 内容合规/修复 | 合规与安全，可选。✅ | 鉴权附近。✅ |
 | ontology_context | 本体/知识上下文注入 | 业务知识增强，与 Skills 互补。✅ | 在 model 调用前。✅ |
 | cloud_call_gate | 云模型调用门控 | 成本与合规控制。✅ | 鉴权类靠前。✅ |
-| license_gate | 许可/配额门控 | 与 Cursor 许可一致。✅ | 鉴权类靠前。✅ |
+| license_gate | 许可/配额门控 | 与许可/配额门控一致。✅ | 鉴权类靠前。✅ |
 | reflection | 反思/自我检查 | 与 Agent 反思模式一致，可选。✅ | 中段。✅ |
 | llm_tool_selector | 按模式/场景选工具集 | 减少无关工具干扰。✅ | 在 model 前。✅ |
 | model_fallback | 模型不可用时的回退 | 与 LangChain fallback 一致；已优先 default_model。✅ | 包住 model 调用。✅ |
 | pii_redact | PII 脱敏 | 隐私合规。✅ | 在发往模型前。✅ |
-| mcp | MCP 工具桥接 | 扩展能力，与 Cursor MCP 一致。✅ | 工具相关中段。✅ |
+| mcp | MCP 工具桥接 | 扩展能力，与 MCP 桥接一致。✅ | 工具相关中段。✅ |
 | skill_evolution | 技能演化/学习 | 与自学习架构一致，可选。✅ | 中段。✅ |
 | self_improvement | 自我改进 | 实验性，可选。✅ | 中段。✅ |
 | distillation | 蒸馏/压缩 | 实验性，可选。✅ | 中段。✅ |
@@ -190,10 +190,10 @@ flowchart TB
 | model_call_limit | 模型调用次数限制 | 防滥用。✅ | 与 scheduling_guard 邻近。✅ |
 | tool_call_limit | 工具调用次数限制 | 防死循环与滥用。✅ | 同上。✅ |
 | tool_retry / model_retry | 工具/模型重试 | 与 LangChain retry 一致。✅ | 包住实际调用。✅ |
-| inject_runtime_context | 注入角色/用户/ WAL 等运行时上下文 | 与 Cursor 动态 prompt 一致。✅ | streaming 前最后一层注入。✅ |
+| inject_runtime_context | 注入角色/用户/ WAL 等运行时上下文 | 与动态 prompt 注入一致。✅ | streaming 前最后一层注入。✅ |
 | streaming | 流式 callback 注入 | 必须包住 model 调用。✅ | 最后。✅ |
 
-结论：**自研中间件数量虽多，但各有明确职责（鉴权、门控、可观测、合规、扩展、流式）**；顺序上鉴权/门控在前、流式在最后，与 Cursor/Claude/LangChain 实践一致，**合理**。建议：optional 中间件通过配置按需启用，避免默认全开增加复杂度和 token 消耗。
+结论：**自研中间件数量虽多，但各有明确职责（鉴权、门控、可观测、合规、扩展、流式）**；顺序上鉴权/门控在前、流式在最后，与 LangChain 等主流实践一致，**合理**。建议：optional 中间件通过配置按需启用，避免默认全开增加复杂度和 token 消耗。
 
 ### 4.2 Guardrails 与链上安全/上下文中间件
 
@@ -302,9 +302,9 @@ flowchart TB
 
 当前顺序（从外到内）：CORS → RequestID → 业务路由；限流（SlowAPIMiddleware）在 CORS 内侧（若启用）。约定：任何需要 request_id 的中间件（如访问日志、审计）应加在 RequestID 之后，以保证 request_id 已写入 request.state。
 
-### 十.2、坚韧性：不因延时简单中止（对齐 Cursor 行为）
+### 十.2、坚韧性：不因延时简单中止
 
-与 Cursor 一致：系统在延时或单次失败时**不轻易放弃**，通过重试与等待预算提高任务完成率。
+与主流行为一致：系统在延时或单次失败时**不轻易放弃**，通过重试与等待预算提高任务完成率。
 
 | 层面 | 策略 | 位置/环境变量 |
 |------|------|----------------|

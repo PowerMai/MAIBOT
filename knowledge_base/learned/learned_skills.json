@@ -26,11 +26,11 @@
       "read_file"
     ],
     "source_docs": [
-      "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/domain/procurement/chapter_scoring_mapping.md",
-      "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/domain/legal/references/negotiation_script.md",
-      "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/domain/legal/references/review_report.md",
-      "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/domain/legal/references/clause_templates.md",
-      "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/domain/legal/references/contract_checklist.md"
+      "/Users/workspace/DevelopProjects/MAIBOT/knowledge_base/domain/procurement/chapter_scoring_mapping.md",
+      "/Users/workspace/DevelopProjects/MAIBOT/knowledge_base/domain/legal/references/negotiation_script.md",
+      "/Users/workspace/DevelopProjects/MAIBOT/knowledge_base/domain/legal/references/review_report.md",
+      "/Users/workspace/DevelopProjects/MAIBOT/knowledge_base/domain/legal/references/clause_templates.md",
+      "/Users/workspace/DevelopProjects/MAIBOT/knowledge_base/domain/legal/references/contract_checklist.md"
     ],
     "confidence": 0.9,
     "created_at": "2026-03-05T23:04:10.253762"
@@ -62,11 +62,11 @@
       "read_file"
     ],
     "source_docs": [
-      "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/domain/procurement/README.md",
-      "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/domain/procurement/bidding_guide.md",
-      "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/domain/procurement/references/communication.md",
-      "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/domain/procurement/references/commercial_terms.md",
-      "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/domain/procurement/references/pricing_strategy.md"
+      "/Users/workspace/DevelopProjects/MAIBOT/knowledge_base/domain/procurement/README.md",
+      "/Users/workspace/DevelopProjects/MAIBOT/knowledge_base/domain/procurement/bidding_guide.md",
+      "/Users/workspace/DevelopProjects/MAIBOT/knowledge_base/domain/procurement/references/communication.md",
+      "/Users/workspace/DevelopProjects/MAIBOT/knowledge_base/domain/procurement/references/commercial_terms.md",
+      "/Users/workspace/DevelopProjects/MAIBOT/knowledge_base/domain/procurement/references/pricing_strategy.md"
     ],
     "confidence": 0.9,
     "created_at": "2026-03-05T23:04:10.260367"
@@ -98,11 +98,11 @@
       "read_file"
     ],
     "source_docs": [
-      "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/domain/procurement/references/technical_proposals.md",
-      "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/global/domain/00_VISUALIZATION_LIBRARY.md",
-      "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/global/domain/bidding/02_operations/06_WRITE_TECHNICAL_PROPOSAL_V2.md",
-      "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/global/domain/bidding/02_operations/09_HANDLE_TECHNICAL_DEVIATIONS_V2.md",
-      "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/global/domain/bidding/operations/02_extract_key_requirements.md"
+      "/Users/workspace/DevelopProjects/MAIBOT/knowledge_base/domain/procurement/references/technical_proposals.md",
+      "/Users/workspace/DevelopProjects/MAIBOT/knowledge_base/global/domain/00_VISUALIZATION_LIBRARY.md",
+      "/Users/workspace/DevelopProjects/MAIBOT/knowledge_base/global/domain/bidding/02_operations/06_WRITE_TECHNICAL_PROPOSAL_V2.md",
+      "/Users/workspace/DevelopProjects/MAIBOT/knowledge_base/global/domain/bidding/02_operations/09_HANDLE_TECHNICAL_DEVIATIONS_V2.md",
+      "/Users/workspace/DevelopProjects/MAIBOT/knowledge_base/global/domain/bidding/operations/02_extract_key_requirements.md"
     ],
     "confidence": 0.9,
     "created_at": "2026-03-05T23:04:10.264296"
@@ -134,11 +134,11 @@
       "read_file"
     ],
     "source_docs": [
-      "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/global/domain/contracts/06_rules/legal_requirements.md",
-      "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/global/domain/bidding/基础资料/产品资料/终端部材料/03-专用服务器/0303-服务器方案/长城国密堡垒机  擎天ZH720/长城堡垒机_产品介绍2c-V1.2.pdf",
-      "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/global/domain/bidding/基础资料/产品资料/终端部材料/03-专用服务器/0302-软防护服务器/擎天DF729（ZH720） 所有资料/擎天DF7系列服务器_用户手册 _V1.7.pdf",
-      "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/global/domain/bidding/基础资料/产品资料/终端部材料/03-专用服务器/0302-软防护服务器/擎天ZH720 所有资料/擎天ZH720_用户手册 _V1.0.pdf",
-      "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/global/domain/bidding/基础资料/产品资料/终端部材料/02-终端整机资料/0202-兆芯终端/长城TN140C2 所有资料/长城TN140C2_用户手册_V1.1.pdf"
+      "/Users/workspace/DevelopProjects/MAIBOT/knowledge_base/global/domain/contracts/06_rules/legal_requirements.md",
+      "/Users/workspace/DevelopProjects/MAIBOT/knowledge_base/global/domain/bidding/基础资料/产品资料/终端部材料/03-专用服务器/0303-服务器方案/长城国密堡垒机  擎天ZH720/长城堡垒机_产品介绍2c-V1.2.pdf",
+      "/Users/workspace/DevelopProjects/MAIBOT/knowledge_base/global/domain/bidding/基础资料/产品资料/终端部材料/03-专用服务器/0302-软防护服务器/擎天DF729（ZH720） 所有资料/擎天DF7系列服务器_用户手册 _V1.7.pdf",
+      "/Users/workspace/DevelopProjects/MAIBOT/knowledge_base/global/domain/bidding/基础资料/产品资料/终端部材料/03-专用服务器/0302-软防护服务器/擎天ZH720 所有资料/擎天ZH720_用户手册 _V1.0.pdf",
+      "/Users/workspace/DevelopProjects/MAIBOT/knowledge_base/global/domain/bidding/基础资料/产品资料/终端部材料/02-终端整机资料/0202-兆芯终端/长城TN140C2 所有资料/长城TN140C2_用户手册_V1.1.pdf"
     ],
     "confidence": 0.9,
     "created_at": "2026-03-05T23:04:10.266343"
@@ -170,11 +170,11 @@
       "read_file"
     ],
     "source_docs": [
-      "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/global/domain/bidding/基础资料/服务资料/售后资料/投标方案/售后服务方案/售后服务方案-AI服务器V2024.docx",
-      "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/global/domain/bidding/基础资料/产品资料/终端部材料/03-专用服务器/0303-服务器方案/长城备份软件 所有资料/02-长城备份与恢复系统产品介绍.pdf",
-      "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/global/domain/bidding/基础资料/产品资料/终端部材料/04-中国长城及长城信安公司资质资料/0401-中国长城资质/040101-商务资质/两化融合管理体系评定证书A级(20250127-20280126)-中国长城-GBT23001-2017,GBT23006-2022.pdf",
-      "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/global/domain/bidding/基础资料/产品资料/终端部材料/05-产品兼容性互认证明/0507-终端系统激活操作流程/麒麟扫码激活操作手册-202408.pdf",
-      "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/global/domain/bidding/基础资料/资质/中国长城/知识产权汇总表-中国长城.xlsx"
+      "/Users/workspace/DevelopProjects/MAIBOT/knowledge_base/global/domain/bidding/基础资料/服务资料/售后资料/投标方案/售后服务方案/售后服务方案-AI服务器V2024.docx",
+      "/Users/workspace/DevelopProjects/MAIBOT/knowledge_base/global/domain/bidding/基础资料/产品资料/终端部材料/03-专用服务器/0303-服务器方案/长城备份软件 所有资料/02-长城备份与恢复系统产品介绍.pdf",
+      "/Users/workspace/DevelopProjects/MAIBOT/knowledge_base/global/domain/bidding/基础资料/产品资料/终端部材料/04-中国长城及长城信安公司资质资料/0401-中国长城资质/040101-商务资质/两化融合管理体系评定证书A级(20250127-20280126)-中国长城-GBT23001-2017,GBT23006-2022.pdf",
+      "/Users/workspace/DevelopProjects/MAIBOT/knowledge_base/global/domain/bidding/基础资料/产品资料/终端部材料/05-产品兼容性互认证明/0507-终端系统激活操作流程/麒麟扫码激活操作手册-202408.pdf",
+      "/Users/workspace/DevelopProjects/MAIBOT/knowledge_base/global/domain/bidding/基础资料/资质/中国长城/知识产权汇总表-中国长城.xlsx"
     ],
     "confidence": 0.9,
     "created_at": "2026-03-05T23:04:10.268352"
@@ -199,11 +199,11 @@
       "read_file"
     ],
     "source_docs": [
-      "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/global/domain/sales/user_uploads/auto_ingest_1772436529.md",
-      "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/global/domain/sales/user_uploads/workspace_ws-gamma/thread_th-003/wkauto_1772436966.md",
-      "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/global/domain/sales/user_uploads/workspace_ws-fix/thread_th-005/wkauto_fix_1772437512.md",
-      "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/global/domain/sales/user_uploads/workspace_ws-meta/thread_th-meta/meta_scope_1772438005.md",
-      "/Users/workspace/DevelopProjects/ccb-v0.378/knowledge_base/global/domain/sales/user_uploads/workspace_ws-alpha/thread_th-001/wkseg_1772436816.md"
+      "/Users/workspace/DevelopProjects/MAIBOT/knowledge_base/global/domain/sales/user_uploads/auto_ingest_1772436529.md",
+      "/Users/workspace/DevelopProjects/MAIBOT/knowledge_base/global/domain/sales/user_uploads/workspace_ws-gamma/thread_th-003/wkauto_1772436966.md",
+      "/Users/workspace/DevelopProjects/MAIBOT/knowledge_base/global/domain/sales/user_uploads/workspace_ws-fix/thread_th-005/wkauto_fix_1772437512.md",
+      "/Users/workspace/DevelopProjects/MAIBOT/knowledge_base/global/domain/sales/user_uploads/workspace_ws-meta/thread_th-meta/meta_scope_1772438005.md",
+      "/Users/workspace/DevelopProjects/MAIBOT/knowledge_base/global/domain/sales/user_uploads/workspace_ws-alpha/thread_th-001/wkseg_1772436816.md"
     ],
     "confidence": 0.9,
     "created_at": "2026-03-08T00:39:23.334981"

@@ -1,4 +1,4 @@
-# Todo 任务管理业务流程（与 Cursor/Claude/Cowork 一致）
+# Todo 任务管理业务流程
 
 ## 1. 目标
 
@@ -11,7 +11,7 @@
 用户发送消息
     → 后端 run 开始
     → Agent 若为多步任务则调用 write_todos(todos: [{id, content, status}, ...])
-    → 后端在「见到 write_todos 的 tool_call」时立即推送 task_progress { data: { todos } }（与 Cursor 一致：规划即展示）
+    → 后端在「见到 write_todos 的 tool_call」时立即推送 task_progress { data: { todos } }（规划即展示）
     → 工具执行返回后，后端再次推送 task_progress（便于状态更新，如某条 completed）
     → 前端 MyRuntimeProvider 收到 stream 中 type=task_progress、data.todos 时，带 threadId 派发 TASK_PROGRESS
     → 当前会话 thread 收到 TASK_PROGRESS（threadId 匹配且 run 未结束）→ setCurrentRunTodos(list)
@@ -47,7 +47,7 @@
 - `frontend/desktop/src/components/ChatComponents/thread.tsx`：TASK_PROGRESS 监听、currentRunTodos 更新与展示条件、stream 事件清理。  
 - `frontend/desktop/src/components/ChatComponents/RunTracker.tsx`：RunTodoSummaryButton、RunTodoListCard（k/n、进度条、展开列表）。
 
-## 5. 与 Cursor/Claude/Cowork 的对齐点
+## 5. 与主流 AI 工作流的对齐点
 
 - **规划即展示**：Agent 一旦调用 write_todos，前端立即收到并展示任务列表，不等工具返回。  
 - **进度实时更新**：Agent 每步完成后再次 write_todos 更新状态时，后端再次推送，前端用全量列表覆盖，展示最新 k/n 与 completed/in_progress。  
@@ -56,6 +56,6 @@
 
 ## 6. 相关文档
 
-- 工具展示与 Cursor 对齐：`tool_display_cursor_alignment.md`  
+- 工具展示规范：`tool_display_cursor_alignment.md`  
 - 对齐检查清单：`cursor_alignment_checklist.md`  
 - write_todos 的 Prompt 与强制使用场景：`backend/engine/prompts/agent_prompts.py`（write_todos 相关段落）。

@@ -20,7 +20,7 @@
 - **LangGraph 主图与流式**：主图结构（router → deepagent / editor_tool）、子图内 `astream(stream_mode="messages")` 与 custom 事件、Checkpointer/Store 注入方式，可直接参考 [main_pipeline_and_middleware_rationality.md](main_pipeline_and_middleware_rationality.md)。  
 - **DeepAgent 中间件链**：从鉴权、人机确认、回退重试到流式输出的**洋葱模型顺序**与配置化（`middleware_chain.json`），适合需要「可插拔策略」的 Agent 系统。  
 - **Skills 与知识库**：预装 Skills 扫描、skill_profile 按场景加载、知识检索/知识图谱/自我学习的开关与资源放置约定，见 [resources-and-capabilities.md](resources-and-capabilities.md)。  
-- **前端对话与状态**：会话-工作区-角色-模式绑定、事件契约与 LangChain Chat UI / @assistant-ui 集成，便于做「类 Cursor/Claude 工作台」的参考。  
+- **前端对话与状态**：会话-工作区-角色-模式绑定、事件契约与 LangChain Chat UI / @assistant-ui 集成，便于做「AI 工作台」的参考。  
 - **可观测与门禁**：执行轨迹、SLO、发布门禁、契约测试等脚本与文档齐全，便于在参考基础上做质量与合规扩展。  
 
 ---

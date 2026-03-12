@@ -2,7 +2,7 @@
 
 ## 1. 错误来源（非本机 FastAPI）
 
-- 报错 **不是** 本后端 FastAPI 返回的，而是 **上游 LLM 服务**（如云端 Qwen 网关 `https://your-cloud-endpoint/v1`）在收到我们的 chat completions 请求后，对 **请求体做 JSON schema 校验** 失败返回的。
+- 报错 **不是** 本后端 FastAPI 返回的，而是 **上游 LLM 服务**（如云端网关）在收到我们的 chat completions 请求后，对 **请求体做 JSON schema 校验** 失败返回的。
 - 调用链：前端 → 本后端 LangGraph/DeepAgent → `agent.astream()` → LangChain `init_chat_model`（OpenAI 兼容客户端）→ HTTP POST 到 `base_url/chat/completions` → **上游返回 400**，错误信息里带 `Validation error for body application/json: No schema matches`。
 
 ## 2. “No schema matches” 的含义
@@ -46,7 +46,7 @@
 4. **对比同一网关的“无 tools”请求**  
    - 若能在同一环境用同一模型、同一 URL 发一个**不带 tools** 的简单 chat 请求且成功，而带 tools 就 400，则根因在 **tools 的序列化或 schema**；再收窄到是某个/某几个 tool 的 parameters 导致。
 5. **确认模型与 URL**  
-   - 确认当前使用的 `model_id` 和实际请求的 `base_url`（例如是否仍为 `https://your-cloud-endpoint/v1`），排除配错模型或网关导致 schema 不一致。
+   - 确认当前使用的 `model_id` 和实际请求的 `base_url`，排除配错模型或网关导致 schema 不一致。
 
 ## 6. 小结
 

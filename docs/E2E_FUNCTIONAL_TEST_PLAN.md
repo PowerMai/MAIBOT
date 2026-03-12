@@ -250,10 +250,10 @@ backend/.venv/bin/python backend/scripts/test_frontend_backend_integration.py
 ### 7.6 常见问题
 
 - **是否使用云端 35B**：在聊天区或设置中将主模型选为「云 35B」或 `qwen3.5-35b-a3b` 即会使用；模型选择器与运行摘要中会显示当前模型 id。
-- **响应慢**：云端 35B 依赖 `CLOUD_QWEN_API_KEY` 与端点（如 `https://your-cloud-endpoint/v1`），延迟受网络与端点负载影响；思考链较长时首 token 会更晚。
+- **响应慢**：云端 35B 依赖 `CLOUD_QWEN_API_KEY` 与所配置的云端端点，延迟受网络与端点负载影响；思考链较长时首 token 会更晚。
 - **第二次输入不处理**：若 run 在 Plan 确认或 human_checkpoint 处暂停，后端会发送 `stream_paused`，前端会退出流循环并清除 `isStreamingRef`，即可再次发送；若仍无法发送，请检查是否未收到 `stream_paused` 或控制台是否有报错。
 - **聊天面板重复/混乱**：前端仅使用单一消息通道（custom 或 SDK 二选一）；思考内容仅展示一块（原生 reasoning 或 <think> 内联，不重复）。若仍见重复，请提供截图与复现步骤。
-- **首屏黑屏/白屏不一致**：首屏主题由 `index.html` 内联脚本与 App 共同保证，统一读取 `maibot_settings_darkMode`（兼容 `ccb_settings_darkMode`）。若仍出现随机黑/白，请确认未在其他处写入冲突的 storage key，或通过设置页切换一次深色/浅色后刷新验证。
+- **首屏黑屏/白屏不一致**：首屏主题由 `index.html` 内联脚本与 App 共同保证，统一读取 `maibot_settings_darkMode`。若仍出现随机黑/白，请确认未在其他处写入冲突的 storage key，或通过设置页切换一次深色/浅色后刷新验证。
 - **Agent 自测**：建议由 Agent 使用浏览器 MCP 对 `http://localhost:3000` 进行 E2E 自测（导航 → 快照 → 填表 → 发送 → 断言），可获取完整运行状态；能力说明见 [AGENT_E2E_CAPABILITIES.md](./AGENT_E2E_CAPABILITIES.md)。
 - **返回信息正确性**：测试时用明确指令（如「请只回复数字 1」），在快照或断言中检查 AI 回复是否包含预期内容；若回复与问题无关或为空，需查后端日志与 Network 是否 4xx/5xx 或 run_error。
 - **多次输入后不响应**：运行中「发送消息」会禁用或变为「加入队列」；必须等当前 run 结束（状态「已结束」）或收到 `stream_paused`/`run_error` 后，前端才会清除 `isStreamingRef` 并恢复发送。若 run 未正常结束（如后端挂起、未发 run_error），会出现「第二次输入不处理」；已修复 run_error 时 break 并清 isStreamingRef。

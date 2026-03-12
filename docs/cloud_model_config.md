@@ -13,7 +13,7 @@
    - **内联 Key**：在端点的「API Key / 环境变量」栏直接填写 `sk-` 开头的 Key（会写入 `models.json`，仅本地）。
 
 2. **配置云端端点**（任选其一）：
-   - **设置面板**：打开 设置 → 通用 → **云端端点（动态发现）** →「+ 添加端点」，填写 Base URL（如 `https://your-cloud-endpoint/v1`）和 API Key（环境变量名或 sk- 直填），保存后会自动刷新并发现该端点下所有模型；每个端点行会显示「Key：已配置/未配置」和「发现 N 个模型」。
+   - **设置面板**：打开 设置 → 通用 → **云端端点（动态发现）** →「+ 添加端点」，填写 Base URL（如 `https://api.openai.com/v1` 或你的网关地址）和 API Key（环境变量名或 sk- 直填），保存后会自动刷新并发现该端点下所有模型；每个端点行会显示「Key：已配置/未配置」和「发现 N 个模型」。
    - **配置文件**：在 `backend/config/models.json` 中增加顶层键 `cloud_endpoints`：
      ```json
      "cloud_endpoints": [

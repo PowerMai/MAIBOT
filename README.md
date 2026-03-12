@@ -204,6 +204,12 @@ vim .env
 | `docs/archive/` | 开发过程与历史文档 |
 | `backend/docs/` | 后端架构文档 |
 
+## GitHub 仓库 Topics（标签）设置说明
+
+在仓库 About 中设置 Topics 时，GitHub 要求：**仅小写字母或数字开头、总长 ≤50 字符、可含连字符**。请勿使用大写、空格或过长词。推荐标签（逐个添加）：
+
+`langchain` `langgraph` `deepagent` `fastapi` `electron` `react` `python` `typescript` `reference-implementation` `archived` `ai-editor`
+
 ## 合作与交流
 
 本仓库以**参考代码**形式公开发布，欢迎借鉴与交流，以增加可见度与协作机会：
@@ -213,6 +219,10 @@ vim .env
 - **Fork 与链接**：在遵守 [LICENSE](LICENSE) 的前提下欢迎 Fork；若形成公开项目，可考虑在 README 或 [docs/ADVANTAGES.md](docs/ADVANTAGES.md) 中交换链接。  
 
 详见 [docs/ADVANTAGES.md](docs/ADVANTAGES.md) 第五部分。
+
+## 安全与敏感信息
+
+**请勿在仓库中提交 API Key、密钥或内网地址。** 云端 Key 请仅写在本地 `.env` 中，配置里只填环境变量名（如 `CLOUD_QWEN_API_KEY`）。详见 [SECURITY.md](SECURITY.md)。
 
 ## 许可
 
